@@ -87,7 +87,9 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
-							<li><a href="/tags/快捷键">快捷键</a></li>
+							<li><a href="/tags/Android">Android</a></li>
+				        
+							<li><a href="/tags/杂记">杂记</a></li>
 				        
 						</ul>
 					</nav>
@@ -107,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/快捷键/" style="font-size: 10px;">快捷键</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/快捷键/" style="font-size: 10px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a>
 					</div>
 				</section>
 				
@@ -150,7 +152,9 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-					<li><a href="/tags/快捷键">快捷键</a></li>
+					<li><a href="/tags/Android">Android</a></li>
+		        
+					<li><a href="/tags/杂记">杂记</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -171,10 +175,68 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ViewPager设置滑动速度" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20151125/hello-world/" class="article-date">
+      <a href="/20151126/ViewPager设置滑动速度/" class="article-date">
+  	<time datetime="2015-11-26T03:21:41.000Z" itemprop="datePublished">2015-11-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151126/ViewPager设置滑动速度/">ViewPager设置滑动速度</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.搜一下,原来可以利用反射机制,修改Viewpager的滑动速度。</p>
+<h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span><br><span class="line"> * reflection mechanism.</span><br><span class="line"> *  </span><br><span class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</span><br><span class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * set animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@param</span> time</span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * get current animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@return</span></span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="需要在初始化Viewpager的地方，加入以下代码：">需要在初始化Viewpager的地方，加入以下代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;  </span><br><span class="line">    Field mField;  </span><br><span class="line"></span><br><span class="line">    mField = ViewPager.class.getDeclaredField(<span class="string">"mScroller"</span>);  </span><br><span class="line">    mField.setAccessible(<span class="keyword">true</span>);  </span><br><span class="line"></span><br><span class="line">    mScroller = <span class="keyword">new</span> FixedSpeedScroller(mMainHolder.main_viewpager.getContext(),<span class="keyword">new</span> AccelerateInterpolator());  <span class="comment">//你可以根据你的需要更换插值器</span></span><br><span class="line">    mScroller.setmDuration(<span class="number">2000</span>); <span class="comment">// 2000ms  </span></span><br><span class="line">    mField.set(mMainHolder.main_viewpager, mScroller);  </span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;  </span><br><span class="line">    e.printStackTrace();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大概看了一下,挺悖论的一件事.如果你把Scroller.mDuration设置在1000ms以上,插值器的动画效果也出来了,切换看起来也自然点,<br>但是就影响到了手动切换,基本不能用.</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-杂记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20151125/杂记/" class="article-date">
   	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished">2015-11-25</time>
 </a>
     </div>
@@ -188,7 +250,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/20151125/hello-world/">Hello World</a>
+      <a class="article-title" href="/20151125/杂记/">杂记</a>
     </h1>
   
 
@@ -197,15 +259,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h3 id="Angular_1-x">Angular 1.x</h3><ul>
+<li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
+</li>
+<li><p><a href="https://gitcafe.com/Angularjs/Angularjs-Developer-Guide/blob/master/README.md" target="_blank" rel="external">Angular中文开发指南</a></p>
+</li>
+</ul>
+<h3 id="Markdown">Markdown</h3><ul>
+<li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">MarkDown简明语法</a></p>
+</li>
+<li><p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">MarkDown语法说明</a></p>
+</li>
+</ul>
+<h3 id="Git">Git</h3><ul>
+<li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
+</li>
+<li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="external">Git分支管理策略</a></p>
+</li>
+<li><p><a href="http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png" target="_blank" rel="external">Git 常用命令图</a></p>
+</li>
+<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></p>
+</li>
+</ul>
+<h3 id="Hexo">Hexo</h3><ul>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
+<li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="external">Hexo后台插件</a></li>
+<li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia主题</a></li>
+</ul>
 
       
     </div>
@@ -213,6 +295,243 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Android相关文章" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20151125/Android相关文章/" class="article-date">
+  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished">2015-11-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151125/Android相关文章/">Android 相关文章</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="external">Animation动画详解（二）——Interpolator插值器</a></p>
+<h3 id="安全">安全</h3><p><a href="http://segmentfault.com/a/1190000002590577" target="_blank" rel="external">Android 属性 allowBackup 安全风险浅析</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Android 优化文章" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20151125/Android 优化文章/" class="article-date">
+  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished">2015-11-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151125/Android 优化文章/">Android优化文章</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a><br><br><br><br></li>
+<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a><br><br><br><br></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
+</ul>
+<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/test/">test</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-MarkDown语法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20151101/MarkDown语法/" class="article-date">
+  	<time datetime="2015-11-01T10:36:41.000Z" itemprop="datePublished">2015-11-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151101/MarkDown语法/">MarkDown语法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="强调">强调</h3><p><strong>一个人来到田纳西</strong></p>
+<p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
+<h3 id="分割线">分割线</h3><p>三个或更多-_*，必须单独一行，可含空格</p>
+<hr>
+<h3 id="引用">引用</h3><blockquote>
+<p>引用 哈哈哈</p>
+</blockquote>
+<p>内层符号前的空格必须要</p>
+<blockquote>
+<p>引用</p>
+<blockquote>
+<p>引用中的引用</p>
+</blockquote>
+</blockquote>
+<h3 id="链接">链接</h3><ul>
+<li><p>文字超链接<br><a href="http://bruce-sha.github.io" title="不如的博客" target="_blank" rel="external">不如</a></p>
+</li>
+<li><p>自动链接<br><a href="http://ibruce.info" target="_blank" rel="external">http://ibruce.info</a></p>
+</li>
+<li><p>索引链接<br><a href="http://bruce-sha.github.io" target="_blank" rel="external">不如</a></p>
+</li>
+</ul>
+<p><img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=160" alt="GitHub Octocat"></p>
+<h3 id="代码">代码</h3><ul>
+<li>每行文字前加4个空格或者1个Tab</li>
+</ul>
+<pre><code>val s = <span class="string">"hello Markdown"</span>
+<span class="function"><span class="title">println</span><span class="params">( s )</span></span>
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ABC mAbc = <span class="keyword">new</span> ABC();</span><br></pre></td></tr></table></figure>
+<h3 id="表格">表格</h3><table>
+<thead>
+<tr>
+<th><em>Year</em></th>
+<th><em>Temperature (low)</em></th>
+<th><em>Temperature (high)</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1900</td>
+<td>-10</td>
+<td>25</td>
+</tr>
+<tr>
+<td> 1910</td>
+<td>-15</td>
+<td>30</td>
+</tr>
+<tr>
+<td> 1920</td>
+<td>-10</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+	</div>
+
       
 
       
@@ -233,8 +552,8 @@
     <article id="post-Atom编辑器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20151125/Atom编辑器/" class="article-date">
-  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished">2015-11-25</time>
+      <a href="/20151018/Atom编辑器/" class="article-date">
+  	<time datetime="2015-10-18T10:36:41.000Z" itemprop="datePublished">2015-10-18</time>
 </a>
     </div>
   
@@ -247,7 +566,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/20151125/Atom编辑器/">Atom编辑器</a>
+      <a class="article-title" href="/20151018/Atom编辑器/">Atom编辑器</a>
     </h1>
   
 
@@ -433,8 +752,8 @@
     <article id="post-Android Studio 快捷键" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20151125/Android Studio 快捷键/" class="article-date">
-  	<time datetime="2015-11-25T08:52:15.000Z" itemprop="datePublished">2015-11-25</time>
+      <a href="/20150924/Android Studio 快捷键/" class="article-date">
+  	<time datetime="2015-09-24T08:52:15.000Z" itemprop="datePublished">2015-09-24</time>
 </a>
     </div>
   
@@ -447,7 +766,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/20151125/Android Studio 快捷键/">Android Studio 快捷键</a>
+      <a class="article-title" href="/20150924/Android Studio 快捷键/">Android Studio 快捷键</a>
     </h1>
   
 
@@ -676,7 +995,71 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/快捷键/">快捷键</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/快捷键/">快捷键</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-macbook不识别部分Android手机" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20141215/macbook不识别部分Android手机/" class="article-date">
+  	<time datetime="2014-12-15T07:20:00.000Z" itemprop="datePublished">2014-12-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20141215/macbook不识别部分Android手机/">macbook不识别部分Android手机</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开发过程中,有时候会遇到macbook识别不了Android手机的情况.之前我的MX4出现过.</p>
+<ol>
+<li>打开终端，输入：”system_profiler SPUSBDataType”，查看Mac系统所有USB设备信息，找到相应的厂商Vender ID。<br>或者在”关于本机-&gt;系统报告-&gt;USB”列表里找到MX4 的厂商ID</li>
+</ol>
+<ul>
+<li><p>终端进入/Users/user/.android，应该有一个adb_usb.ini文件，如果没有就创建，然后将上面的Vender ID 单独一行加入到该文件，然后退出。</p>
+</li>
+<li><p>重启adb server进程。试试？</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
 	</div>
 
       
