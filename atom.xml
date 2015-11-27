@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2015-11-27T07:50:05.000Z</updated>
+  <updated>2015-11-27T08:17:07.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151127/Mac笔记/</id>
     <published>2015-11-27T06:36:00.000Z</published>
-    <updated>2015-11-27T07:50:05.000Z</updated>
+    <updated>2015-11-27T08:17:07.000Z</updated>
     <content type="html"><![CDATA[<ol>
 <li><p>添加命令行快捷方式</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
@@ -28,10 +28,10 @@
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=/Users/zhangweiwei/Dev/apache-ant-<span class="number">1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=/Users/zhangweiwei/Dev/adt-bundle-mac/sdk</span><br><span class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID</span>_HOME/platform-tools:<span class="variable">$ANDROID</span>_HOME/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANT</span>_HOME/bin</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>chrome 添加启动参数</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="operator">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="operator">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
 <p><a href="http://chenpeng.info/html/3393" target="_blank" rel="external">Chromium命令行启动参数</a></p>
 <ol>
 <li><p>charles ssl设置<br><a href="http://www.charlesproxy.com/ssl.zip" target="_blank" rel="external">下载链接</a></p>
@@ -56,10 +56,10 @@
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=/Users/zhangweiwei/Dev/apache-ant-<span class="number">1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=/Users/zhangweiwei/Dev/adt-bundle-mac/sdk</span><br><span class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID</span>_HOME/platform-tools:<span class="variable">$ANDROID</span>_HOME/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANT</span>_HOME/bin</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>chrome 添加启动参数</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="operator">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="operator">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
 <p><a href="http://chenpeng.info/html/3393">Chromium命令行启动参数</a></p>
 <ol>
 <li><p>charles ssl设置<br><a href="http://www.charlesproxy.com/ssl.zip">下载链接</a></p>
@@ -80,15 +80,17 @@
     <link href="http://willnewii.github.io/20151126/ViewPager%E8%AE%BE%E7%BD%AE%E6%BB%91%E5%8A%A8%E9%80%9F%E5%BA%A6/"/>
     <id>http://willnewii.github.io/20151126/ViewPager设置滑动速度/</id>
     <published>2015-11-26T03:21:41.000Z</published>
-    <updated>2015-11-26T03:37:16.000Z</updated>
-    <content type="html"><![CDATA[<p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.搜一下,原来可以利用反射机制,修改Viewpager的滑动速度。</p>
+    <updated>2015-11-27T12:30:12.000Z</updated>
+    <content type="html"><![CDATA[<p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
 <h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span><br><span class="line"> * reflection mechanism.</span><br><span class="line"> *  </span><br><span class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</span><br><span class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * set animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@param</span> time</span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * get current animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@return</span></span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h4 id="需要在初始化Viewpager的地方，加入以下代码：">需要在初始化Viewpager的地方，加入以下代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;  </span><br><span class="line">    Field mField;  </span><br><span class="line"></span><br><span class="line">    mField = ViewPager.class.getDeclaredField(<span class="string">"mScroller"</span>);  </span><br><span class="line">    mField.setAccessible(<span class="keyword">true</span>);  </span><br><span class="line"></span><br><span class="line">    mScroller = <span class="keyword">new</span> FixedSpeedScroller(mMainHolder.main_viewpager.getContext(),<span class="keyword">new</span> AccelerateInterpolator());  <span class="comment">//你可以根据你的需要更换插值器</span></span><br><span class="line">    mScroller.setmDuration(<span class="number">2000</span>); <span class="comment">// 2000ms  </span></span><br><span class="line">    mField.set(mMainHolder.main_viewpager, mScroller);  </span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;  </span><br><span class="line">    e.printStackTrace();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>大概看了一下,挺悖论的一件事.如果你把Scroller.mDuration设置在1000ms以上,插值器的动画效果也出来了,切换看起来也自然点,<br>但是就影响到了手动切换,基本不能用.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.搜一下,原来可以利用反射机制,修改Viewpager的滑动速度。</p>
-<h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScolle]]>
+    <![CDATA[<p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
+<h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span><br><span class="line"> * reflection mechanism.</span><br><span class="line"> *  </span><br><span class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</span><br><span class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * set animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@param</span> time</span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * get current animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@return</span></span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]>
+    
     </summary>
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
@@ -100,7 +102,7 @@
     <link href="http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151125/杂记/</id>
     <published>2015-11-25T10:36:41.000Z</published>
-    <updated>2015-11-26T09:02:40.000Z</updated>
+    <updated>2015-11-27T09:46:43.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
 <li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
 </li>
@@ -126,9 +128,16 @@
 </li>
 </ul>
 <h3 id="Hexo">Hexo</h3><ul>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客(推荐:非常详细)</a></li>
 <li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
 <li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="external">Hexo后台插件</a></li>
 <li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia主题</a></li>
+<li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子网站计数</a></li>
+</ul>
+<h3 id="iTerm_2">iTerm 2</h3><ul>
+<li>command + ;  自动补全命令</li>
+<li>command + shift +h 全部显示出来</li>
+<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="external">iTerm 2 color schemes</a></li>
 </ul>
 <h3 id="design">design</h3><ul>
 <li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="external">material design 文档动画部分的学习笔记</a></li>
@@ -179,10 +188,12 @@
     <link href="http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/"/>
     <id>http://willnewii.github.io/20151125/Android 优化文章/</id>
     <published>2015-11-25T10:36:00.000Z</published>
-    <updated>2015-11-26T05:33:41.000Z</updated>
+    <updated>2015-11-27T12:31:58.000Z</updated>
     <content type="html"><![CDATA[<ul>
-<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a><br><br><br><br></li>
-<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a><br><br><br><br></li>
+<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a><br><br></li>
+<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a><br><br></li>
+</ul>
+<ul>
 <li><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></li>
 <li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
 <li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
@@ -207,7 +218,7 @@
     <link href="http://willnewii.github.io/20151101/MarkDown%E8%AF%AD%E6%B3%95/"/>
     <id>http://willnewii.github.io/20151101/MarkDown语法/</id>
     <published>2015-11-01T10:36:41.000Z</published>
-    <updated>2015-11-26T04:28:03.000Z</updated>
+    <updated>2015-11-27T12:30:55.000Z</updated>
     <content type="html"><![CDATA[<h3 id="强调">强调</h3><p><strong>一个人来到田纳西</strong></p>
 <p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
 <h3 id="分割线">分割线</h3><p>三个或更多-_*，必须单独一行，可含空格</p>
@@ -219,10 +230,10 @@
 <blockquote>
 <p>引用</p>
 <blockquote>
-<p>引用中的引用</p>
+<p>引用中的引用<br><a id="more"></a></p>
+<h3 id="链接">链接</h3></blockquote>
 </blockquote>
-</blockquote>
-<h3 id="链接">链接</h3><ul>
+<ul>
 <li><p>文字超链接<br><a href="http://bruce-sha.github.io" title="不如的博客" target="_blank" rel="external">不如</a></p>
 </li>
 <li><p>自动链接<br><a href="http://ibruce.info" target="_blank" rel="external">http://ibruce.info</a></p>
@@ -267,7 +278,17 @@
     <summary type="html">
     <![CDATA[<h3 id="强调">强调</h3><p><strong>一个人来到田纳西</strong></p>
 <p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
-<h3 id="分割线">分割线]]>
+<h3 id="分割线">分割线</h3><p>三个或更多-_*，必须单独一行，可含空格</p>
+<hr>
+<h3 id="引用">引用</h3><blockquote>
+<p>引用 哈哈哈</p>
+</blockquote>
+<p>内层符号前的空格必须要</p>
+<blockquote>
+<p>引用</p>
+<blockquote>
+<p>引用中的引用<br>]]>
+    
     </summary>
     
       <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
@@ -279,7 +300,7 @@
     <link href="http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     <id>http://willnewii.github.io/20151018/Atom编辑器/</id>
     <published>2015-10-18T10:36:41.000Z</published>
-    <updated>2015-11-26T05:10:00.000Z</updated>
+    <updated>2015-11-27T12:37:43.000Z</updated>
     <content type="html"><![CDATA[<h4 id="基础操作">基础操作</h4><table>
 <thead>
 <tr>
@@ -364,6 +385,7 @@
 </tr>
 </tbody>
 </table>
+<a id="more"></a>
 <pre><code>自定义部分快捷键是为了统一<span class="keyword">android </span>studio的操作.你也可以改为你熟悉的按键
 </code></pre><h4 id="插件">插件</h4><table>
 <thead>
@@ -440,7 +462,79 @@
 <tbody>
 <tr>
 <td>命令行</td>
-<td>co]]>
+<td>command line</td>
+<td>cmd+shift+p</td>
+<td></td>
+</tr>
+<tr>
+<td>项目跳转面板</td>
+<td>delete line</td>
+<td>cmd+ctrl+p</td>
+<td></td>
+</tr>
+<tr>
+<td>文件跳转面板</td>
+<td>Fuzzy Finder</td>
+<td>cmd+p</td>
+<td></td>
+</tr>
+<tr>
+<td>变量、函数跳转面板</td>
+<td>Symbol-view</td>
+<td>cmd+r</td>
+<td></td>
+</tr>
+<tr>
+<td>语法选择</td>
+<td>Grammar Selector</td>
+<td>ctrl+Shift+l</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="编辑">编辑</h4><table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复制行</td>
+<td>Duplicate Line</td>
+<td>ctrl-d(自定义)</td>
+<td></td>
+</tr>
+<tr>
+<td>删除行</td>
+<td>Delete Line</td>
+<td>cmd-delete(自定义:未设置成功)</td>
+<td></td>
+</tr>
+<tr>
+<td>小写转换</td>
+<td>lower-case</td>
+<td>cmd+k+l</td>
+<td></td>
+</tr>
+<tr>
+<td>大写转换</td>
+<td>upper-case</td>
+<td>cmd+k+u</td>
+<td></td>
+</tr>
+<tr>
+<td>选择下一个</td>
+<td>find-and-replace:select-next</td>
+<td>ctrl-g(自定义)</td>
+<td></td>
+</tr>
+</tbody>
+</table>]]>
+    
     </summary>
     
       <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
@@ -452,7 +546,7 @@
     <link href="http://willnewii.github.io/20150924/Android%20Studio%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20150924/Android Studio 快捷键/</id>
     <published>2015-09-24T08:52:15.000Z</published>
-    <updated>2015-11-27T05:42:40.000Z</updated>
+    <updated>2015-11-27T12:34:18.000Z</updated>
     <content type="html"><![CDATA[<p>坑逼AS2.0…你升级就升级,你更新毛快捷键哇！！！！<br>这货把osX 和 win 的统一了…  统一你妹呀！！！！</p>
 <h4 id="常用快捷键">常用快捷键</h4><table>
 <thead>
@@ -562,12 +656,13 @@
 </tr>
 <tr>
 <td>扩大/收缩选中部分</td>
-<td></td>
+<td>Collapse</td>
 <td>cmd+ -/+</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<a id="more"></a>
 <h4 id="跳转">跳转</h4><table>
 <thead>
 <tr>
@@ -675,7 +770,7 @@
 </tr>
 <tr>
 <td>隐藏所有面板</td>
-<td></td>
+<td>hide all tool windows</td>
 <td>cmd+shift+F12</td>
 </tr>
 </tbody>
@@ -704,7 +799,7 @@
 </tr>
 <tr>
 <td>显示书签</td>
-<td></td>
+<td>Show Bookmark</td>
 <td>shift+F3</td>
 <td></td>
 </tr>
@@ -717,7 +812,117 @@
 <thead>
 <tr>
 <th>名称</th>
-<th>action</th]]>
+<th>action</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复制当前行</td>
+<td>duplicate Line or block</td>
+<td>cmd+d</td>
+<td></td>
+</tr>
+<tr>
+<td>删除当前行</td>
+<td>delete line</td>
+<td>cmd+backspace</td>
+<td></td>
+</tr>
+<tr>
+<td>上下移动当前行</td>
+<td>move line up/down</td>
+<td>alt+shift+up/down</td>
+<td></td>
+</tr>
+<tr>
+<td>移动到指定行</td>
+<td>Line</td>
+<td>cmd+g</td>
+<td></td>
+</tr>
+<tr>
+<td>多文本选择</td>
+<td>add selection for next occurrence</td>
+<td>Ctrl+G</td>
+<td></td>
+</tr>
+<tr>
+<td>列选择</td>
+<td></td>
+<td>Alt+MouseDrag</td>
+<td></td>
+</tr>
+<tr>
+<td>当前文件方法列表</td>
+<td>File Structure</td>
+<td>cmd+F12</td>
+<td></td>
+</tr>
+<tr>
+<td>合并行和文字</td>
+<td>join lines</td>
+<td>ctrl+shift+j</td>
+<td></td>
+</tr>
+<tr>
+<td>代码提示</td>
+<td>basic</td>
+<td>ctrl+/</td>
+<td></td>
+</tr>
+<tr>
+<td>显示文件路径</td>
+<td>File Path</td>
+<td>alt+cmd+F12</td>
+<td>不用再目录里右键Reveal in Finder</td>
+</tr>
+<tr>
+<td>路径中查找</td>
+<td>Find in Path</td>
+<td>shift+ctrl+F</td>
+<td>有个预览功能,屌</td>
+</tr>
+<tr>
+<td>方法调用路径</td>
+<td></td>
+<td>ctrl+alt+h</td>
+<td></td>
+</tr>
+<tr>
+<td>显示参数信息</td>
+<td>Parameter Info</td>
+<td>cmd+p</td>
+<td>显示方法需要的参数</td>
+</tr>
+<tr>
+<td>打开文件</td>
+<td>class</td>
+<td>cmd+o</td>
+<td></td>
+</tr>
+<tr>
+<td>重写方法列表</td>
+<td>override method</td>
+<td>cmd+n</td>
+<td></td>
+</tr>
+<tr>
+<td>快速查看定义</td>
+<td>quick definition</td>
+<td>cmd+shift+i</td>
+<td></td>
+</tr>
+<tr>
+<td>扩大/收缩选中部分</td>
+<td>Collapse</td>
+<td>cmd+ -/+</td>
+<td></td>
+</tr>
+</tbody>
+</table>]]>
+    
     </summary>
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
