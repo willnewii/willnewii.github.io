@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2015-11-27T08:17:07.000Z</updated>
+  <updated>2015-12-09T14:51:26.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -13,6 +13,99 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[appStore 血泪史]]></title>
+    <link href="http://willnewii.github.io/20151209/appStore-%E8%A1%80%E6%B3%AA%E5%8F%B2/"/>
+    <id>http://willnewii.github.io/20151209/appStore-血泪史/</id>
+    <published>2015-12-09T14:45:00.000Z</published>
+    <updated>2015-12-09T14:51:26.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="14-3_Details">14.3 Details</h3><p>Your app enables the display of user-generated content but does not have the required precautions in place.</p>
+<p>Next Steps</p>
+<p>It is necessary that you put all of the following precautions in place:</p>
+<ul>
+<li>Require that users agree to terms (EULA) and these terms must make it clear that there is no tolerance for objectionable content</li>
+<li>Use moderators to flag and remove inappropriate content and offensive users</li>
+<li>Users need a mechanism to block abusive users (for example: 用户黑名单)</li>
+<li>Developer must act on objectionable content reports within 24 hours by removing the content and ejecting the user who provided the offending content</li>
+<li>Developer needs a method for ejecting users who violate the terms of the EULA</li>
+</ul>
+<blockquote>
+<p>添加投诉功能，添加还有就是用户协议.被拒的时候自己写了一个投诉功能.说是没有用户协议,类似告知用户那些是不可以做的东西.</p>
+</blockquote>
+<h3 id="8-5_Details">8.5 Details</h3><p>We found that your app includes lyrics which may be copyrighted. The use of third-party copyrighted materials requires documented evidence of your right to use such content in your app.</p>
+<p>Next Steps</p>
+<p>Please provide documentary evidence of rights to use this content. Once Legal has reviewed your documentation and confirms its validity, we will proceed with the review of your app.</p>
+<blockquote>
+<p>使用了第三方内容,需要授权文件</p>
+</blockquote>
+<h3 id="22-2_Details">22.2 Details</h3><p>Your app or its metadata contains misleading content. Specifically, your app name misleads the user this app containing lyrics info.</p>
+<p>Next Steps</p>
+<p>Please remove or revise any misleading content in your app and its metadata.</p>
+<p>Since your iTunes Connect Application State is Rejected, a new binary will be required. Make the desired metadata changes when you upload the new binary.</p>
+<blockquote>
+<p>因为应用提供歌词内容，但是歌词属于使用第三方内容需要授权,所以只能拿掉.拿掉以后说我的名称与内容不符,所以只能更换应用名称.</p>
+</blockquote>
+<h3 id="17-2_Details">17.2 Details</h3><p>In addition, we noticed that your app requires users to register with personal information to access non account-based features. Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.</p>
+<p>Next Steps</p>
+<p>User registration that requires the sharing of personal information must be optional or tied to account-specific functionality. Additionally, the requested information must be relevant to the features.</p>
+<blockquote>
+<p>因为应用有注册模块,需要填写性别.但是他们又没发现哪里有用到性别的地方,于是乎他们就认为你收集用户信息(性别).</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="14-3_Details">14.3 Details</h3><p>Your app enables the display of user-generated content but does not have the required precautions ]]>
+    </summary>
+    
+      <category term="ios" scheme="http://willnewii.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[cordova]]></title>
+    <link href="http://willnewii.github.io/20151207/cordova/"/>
+    <id>http://willnewii.github.io/20151207/cordova/</id>
+    <published>2015-12-07T09:46:52.000Z</published>
+    <updated>2015-12-09T08:41:37.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">widget</span> <span class="attribute">id</span>=<span class="value">"io.cordova.hellocordova"</span></span><br><span class="line">	  <span class="attribute">version</span>=<span class="value">"0.0.1"</span> 				//版本号</span><br><span class="line">      <span class="attribute">android-versionCode</span>=<span class="value">"7"</span>	    //<span class="attribute">android</span> <span class="attribute">build</span></span><br><span class="line">      <span class="attribute">ios-CFBundleVersion</span>=<span class="value">"7"</span>		//<span class="attribute">ios</span>     <span class="attribute">build</span></span><br><span class="line">      <span class="attribute">windows-packageVersion</span>=<span class="value">"1.0.1.2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2" target="_blank" rel="external">http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2</a></p>
+<ol>
+<li>提交appstore会收到邮件“Missing push notification entitlement”的邮件</li>
+</ol>
+<p><a href="http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti" target="_blank" rel="external">http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[前端-小学生]]></title>
+    <link href="http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/"/>
+    <id>http://willnewii.github.io/20151202/前端-小学生/</id>
+    <published>2015-12-02T08:14:41.000Z</published>
+    <updated>2015-12-09T05:47:26.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
+<p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
+<h4 id="三年级">三年级</h4><p><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></p>
+<h4 id="其他">其他</h4><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
+<p><a href="http://www.css88.com/book/css/quicksearch.htm" target="_blank" rel="external">CSS3参考手册</a></p>
+<p><a href="https://github.com/dyygtfx/WebDev-Source" target="_blank" rel="external">web开发的一些资料，不仅仅是前端资料</a></p>
+<h4 id="ionic">ionic</h4><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="external">ionic 文本选择</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
+<p><a href]]>
+    </summary>
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Mac笔记]]></title>
@@ -102,7 +195,7 @@
     <link href="http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151125/杂记/</id>
     <published>2015-11-25T10:36:41.000Z</published>
-    <updated>2015-11-27T09:46:43.000Z</updated>
+    <updated>2015-12-02T08:26:55.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
 <li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
 </li>
@@ -142,6 +235,7 @@
 <h3 id="design">design</h3><ul>
 <li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="external">material design 文档动画部分的学习笔记</a></li>
 </ul>
+<h3 id="其他">其他</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
@@ -154,47 +248,18 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Android 相关文章]]></title>
-    <link href="http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/"/>
-    <id>http://willnewii.github.io/20151125/Android相关文章/</id>
-    <published>2015-11-25T10:36:00.000Z</published>
-    <updated>2015-11-27T07:35:25.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）</a></p>
-<p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="external">Animation动画详解（二）——Interpolator插值器</a></p>
-<p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41541269/" target="_blank" rel="external">android官方技术文档翻译——设计时布局属性</a></p>
-<p>这些属性用于布局在工具里渲染时期，但是对运行时没有任何影响。这一点很有用，比如如果你想在编辑布局的时候把 示例数据数据放到文本框中，但又不想这些属性影响到你的应用的运行。</p>
-<p><strong>tools:context</strong></p>
-<p>这个属性通常在一个布局XML文件的根元素中设置，记录了这个布局关联到哪一个activity（例如它会用于布局编辑器中以推断默认的主题，由于主题定义在Manifest中，并与activity而不是布局相关联。你可以和在manifests中一样使用点前缀，来指定activity类，而不需要使用完整的程序包名作为前缀。</p>
-<h3 id="插件">插件</h3><ul>
-<li><a href="http://www.jianshu.com/p/c03a8959d1a5" target="_blank" rel="external">Stetho 调试工具</a></li>
-<li><a href="http://www.jianshu.com/p/7db231163168" target="_blank" rel="external">LeakCanary 内存泄露</a></li>
-<li><a href="https://github.com/Vektah/CodeGlance" target="_blank" rel="external">Android Studio plugin – CodeGlance 代码地图</a></li>
-<li><a href="https://github.com/pbreault/adb-idea" target="_blank" rel="external">Android Studio plugin – adb-idea</a></li>
-<li><a href="https://github.com/zzz40500/GsonFormat" target="_blank" rel="external">Android Studio plugin – GsonFormat </a></li>
-</ul>
-<h3 id="Android_Studio">Android Studio</h3><p><a href="http://blog.csdn.net/growth58/article/details/46729803" target="_blank" rel="external">Android Studio使用技巧系列教程（一）</a></p>
-<h3 id="安全">安全</h3><p><a href="http://segmentfault.com/a/1190000002590577" target="_blank" rel="external">Android 属性 allowBackup 安全风险浅析</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）<]]>
-    </summary>
-    
-      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Android优化文章]]></title>
     <link href="http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/"/>
     <id>http://willnewii.github.io/20151125/Android 优化文章/</id>
     <published>2015-11-25T10:36:00.000Z</published>
-    <updated>2015-11-27T12:31:58.000Z</updated>
+    <updated>2015-12-02T08:20:44.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a><br><br></li>
 <li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a><br><br></li>
-</ul>
-<ul>
-<li><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></li>
+<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
+</li>
 <li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
 <li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
 <li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
@@ -210,6 +275,60 @@
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
     
       <category term="test" scheme="http://willnewii.github.io/categories/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android 相关文章]]></title>
+    <link href="http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/"/>
+    <id>http://willnewii.github.io/20151125/Android相关文章/</id>
+    <published>2015-11-25T10:36:00.000Z</published>
+    <updated>2015-11-30T06:32:17.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）</a></p>
+<p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="external">Animation动画详解（二）——Interpolator插值器</a></p>
+<p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41541269/" target="_blank" rel="external">android官方技术文档翻译——设计时布局属性</a></p>
+<p>这些属性用于布局在工具里渲染时期，但是对运行时没有任何影响。这一点很有用，比如如果你想在编辑布局的时候把 示例数据数据放到文本框中，但又不想这些属性影响到你的应用的运行。</p>
+<p><strong>tools:context</strong></p>
+<p>这个属性通常在一个布局XML文件的根元素中设置，记录了这个布局关联到哪一个activity（例如它会用于布局编辑器中以推断默认的主题，由于主题定义在Manifest中，并与activity而不是布局相关联。你可以和在manifests中一样使用点前缀，来指定activity类，而不需要使用完整的程序包名作为前缀。</p>
+<h3 id="插件">插件</h3><ul>
+<li><a href="http://www.jianshu.com/p/c03a8959d1a5" target="_blank" rel="external">Stetho 调试工具</a></li>
+<li><a href="http://www.jianshu.com/p/7db231163168" target="_blank" rel="external">LeakCanary 内存泄露</a></li>
+</ul>
+<h3 id="Android_Studio">Android Studio</h3><p><a href="http://blog.csdn.net/growth58/article/details/46729803" target="_blank" rel="external">Android Studio使用技巧系列教程（一）</a></p>
+<h3 id="安全">安全</h3><p><a href="http://segmentfault.com/a/1190000002590577" target="_blank" rel="external">Android 属性 allowBackup 安全风险浅析</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）<]]>
+    </summary>
+    
+      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android 相关文章]]></title>
+    <link href="http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A00/"/>
+    <id>http://willnewii.github.io/20151125/Android相关文章0/</id>
+    <published>2015-11-25T10:36:00.000Z</published>
+    <updated>2015-12-02T08:13:42.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）</a></p>
+<p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="external">Animation动画详解（二）——Interpolator插值器</a></p>
+<p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41541269/" target="_blank" rel="external">android官方技术文档翻译——设计时布局属性</a></p>
+<p>这些属性用于布局在工具里渲染时期，但是对运行时没有任何影响。这一点很有用，比如如果你想在编辑布局的时候把 示例数据数据放到文本框中，但又不想这些属性影响到你的应用的运行。</p>
+<p><strong>tools:context</strong></p>
+<p>这个属性通常在一个布局XML文件的根元素中设置，记录了这个布局关联到哪一个activity（例如它会用于布局编辑器中以推断默认的主题，由于主题定义在Manifest中，并与activity而不是布局相关联。你可以和在manifests中一样使用点前缀，来指定activity类，而不需要使用完整的程序包名作为前缀。</p>
+<h3 id="插件">插件</h3><ul>
+<li><a href="http://www.jianshu.com/p/c03a8959d1a5" target="_blank" rel="external">Stetho 调试工具</a></li>
+<li><a href="http://www.jianshu.com/p/7db231163168" target="_blank" rel="external">LeakCanary 内存泄露</a></li>
+</ul>
+<h3 id="Android_Studio">Android Studio</h3><p><a href="http://blog.csdn.net/growth58/article/details/46729803" target="_blank" rel="external">Android Studio使用技巧系列教程（一）</a></p>
+<h3 id="安全">安全</h3><p><a href="http://segmentfault.com/a/1190000002590577" target="_blank" rel="external">Android 属性 allowBackup 安全风险浅析</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）<]]>
+    </summary>
+    
+      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
     
   </entry>
   
@@ -300,7 +419,7 @@
     <link href="http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     <id>http://willnewii.github.io/20151018/Atom编辑器/</id>
     <published>2015-10-18T10:36:41.000Z</published>
-    <updated>2015-11-27T12:37:43.000Z</updated>
+    <updated>2015-11-30T04:19:17.000Z</updated>
     <content type="html"><![CDATA[<h4 id="基础操作">基础操作</h4><table>
 <thead>
 <tr>
@@ -446,6 +565,10 @@
 <td>格式化json文件</td>
 <td>有个不方便的地方,你需要先选择文件的语言为json</td>
 </tr>
+<tr>
+<td>activate-power-mode</td>
+<td>超级酷炫的插件…</td>
+</tr>
 </tbody>
 </table>
 ]]></content>
@@ -546,7 +669,7 @@
     <link href="http://willnewii.github.io/20150924/Android%20Studio%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20150924/Android Studio 快捷键/</id>
     <published>2015-09-24T08:52:15.000Z</published>
-    <updated>2015-11-27T12:34:18.000Z</updated>
+    <updated>2015-11-30T06:40:46.000Z</updated>
     <content type="html"><![CDATA[<p>坑逼AS2.0…你升级就升级,你更新毛快捷键哇！！！！<br>这货把osX 和 win 的统一了…  统一你妹呀！！！！</p>
 <h4 id="常用快捷键">常用快捷键</h4><table>
 <thead>
@@ -610,7 +733,7 @@
 <td>代码提示</td>
 <td>basic</td>
 <td>ctrl+/</td>
-<td></td>
+<td>记得按tab…</td>
 </tr>
 <tr>
 <td>显示文件路径</td>
@@ -805,6 +928,33 @@
 </tr>
 </tbody>
 </table>
+<h4 id="插件">插件</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>下载</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CodeGlance</td>
+<td><a href="https://github.com/Vektah/CodeGlance" target="_blank" rel="external">https://github.com/Vektah/CodeGlance</a></td>
+<td>代码地图</td>
+<td></td>
+</tr>
+<tr>
+<td>adb-idea</td>
+<td><a href="https://github.com/pbreault/adb-idea" target="_blank" rel="external">https://github.com/pbreault/adb-idea</a></td>
+<td>快速清空应用缓存,删除,重新启动,停止</td>
+</tr>
+<tr>
+<td>GsonFormat</td>
+<td><a href="https://github.com/zzz40500/GsonFormat" target="_blank" rel="external">https://github.com/zzz40500/GsonFormat</a></td>
+<td>json转换对象</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>坑逼AS2.0…你升级就升级,你更新毛快捷键哇！！！！<br>这货把osX 和 win 的统一了…  统一你妹呀！！！！</p>
@@ -870,7 +1020,7 @@
 <td>代码提示</td>
 <td>basic</td>
 <td>ctrl+/</td>
-<td></td>
+<td>记得按tab…</td>
 </tr>
 <tr>
 <td>显示文件路径</td>

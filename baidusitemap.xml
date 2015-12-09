@@ -4,14 +4,100 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    <lastmod>2015-11-27T12:37:43.000Z</lastmod>
+    <loc>http://willnewii.github.io/20151209/appStore-%E8%A1%80%E6%B3%AA%E5%8F%B2/</loc>
+    <lastmod>2015-12-09T14:51:26.000Z</lastmod>
     <data>
         <display>
-        <title>Atom编辑器</title>
-        <pubTime>2015-10-18T10:36:41.000Z</pubTime>
+        <title>appStore 血泪史</title>
+        <pubTime>2015-12-09T14:45:00.000Z</pubTime>
         
-        <tag>快捷键</tag>
+        <tag>ios</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151207/cordova/</loc>
+    <lastmod>2015-12-09T08:41:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>cordova</title>
+        <pubTime>2015-12-07T09:46:52.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/</loc>
+    <lastmod>2015-12-09T05:47:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端-小学生</title>
+        <pubTime>2015-12-02T08:14:41.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/</loc>
+    <lastmod>2015-12-02T08:26:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>杂记</title>
+        <pubTime>2015-11-25T10:36:41.000Z</pubTime>
+        
+        <tag>杂记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2015-12-02T08:20:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android优化文章</title>
+        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="test" url="http://willnewii.github.io/categories/test/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A00/</loc>
+    <lastmod>2015-12-02T08:13:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android 相关文章</title>
+        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
+        
+        <tag>Android</tag>
          
          
            
@@ -22,7 +108,7 @@
     
   <url>
     <loc>http://willnewii.github.io/20150924/Android%20Studio%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2015-11-27T12:34:18.000Z</lastmod>
+    <lastmod>2015-11-30T06:40:46.000Z</lastmod>
     <data>
         <display>
         <title>Android Studio 快捷键</title>
@@ -40,20 +126,34 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2015-11-27T12:31:58.000Z</lastmod>
+    <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2015-11-30T06:32:17.000Z</lastmod>
     <data>
         <display>
-        <title>Android优化文章</title>
+        <title>Android 相关文章</title>
         <pubTime>2015-11-25T10:36:00.000Z</pubTime>
         
         <tag>Android</tag>
          
          
            
-             
-              <breadCrumb title="test" url="http://willnewii.github.io/categories/test/"/>
-          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <lastmod>2015-11-30T04:19:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>Atom编辑器</title>
+        <pubTime>2015-10-18T10:36:41.000Z</pubTime>
+        
+        <tag>快捷键</tag>
+         
+         
+           
         </display>
     </data>
     </url>
@@ -94,23 +194,6 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/</loc>
-    <lastmod>2015-11-27T09:46:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>杂记</title>
-        <pubTime>2015-11-25T10:36:41.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2015-11-27T08:17:07.000Z</lastmod>
     <data>
@@ -119,23 +202,6 @@
         <pubTime>2015-11-27T06:36:00.000Z</pubTime>
         
         <tag>mac</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2015-11-27T07:35:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 相关文章</title>
-        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
-        
-        <tag>Android</tag>
          
          
            
