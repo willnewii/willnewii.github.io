@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2015-12-09T14:51:26.000Z</updated>
+  <updated>2015-12-13T13:57:44.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[appStore 血泪史]]></title>
+    <title><![CDATA[appStore 大坑逼]]></title>
     <link href="http://willnewii.github.io/20151209/appStore-%E8%A1%80%E6%B3%AA%E5%8F%B2/"/>
     <id>http://willnewii.github.io/20151209/appStore-血泪史/</id>
     <published>2015-12-09T14:45:00.000Z</published>
-    <updated>2015-12-09T14:51:26.000Z</updated>
+    <updated>2015-12-13T13:57:44.000Z</updated>
     <content type="html"><![CDATA[<h3 id="14-3_Details">14.3 Details</h3><p>Your app enables the display of user-generated content but does not have the required precautions in place.</p>
 <p>Next Steps</p>
 <p>It is necessary that you put all of the following precautions in place:</p>
@@ -31,7 +31,7 @@
 <li>Developer needs a method for ejecting users who violate the terms of the EULA</li>
 </ul>
 <blockquote>
-<p>添加投诉功能，添加还有就是用户协议.被拒的时候自己写了一个投诉功能.说是没有用户协议,类似告知用户那些是不可以做的东西.</p>
+<p>添加投诉功能，添加还有就是用户协议.被拒的时候自己写了一个投诉功能.说是没有用户协议,类似告知用户那些是不可以做的东西.有杯具,说是还要一个黑名单功能.这些不一定要后台实现的…假的就行.</p>
 </blockquote>
 <h3 id="8-5_Details">8.5 Details</h3><p>We found that your app includes lyrics which may be copyrighted. The use of third-party copyrighted materials requires documented evidence of your right to use such content in your app.</p>
 <p>Next Steps</p>
@@ -42,7 +42,6 @@
 <h3 id="22-2_Details">22.2 Details</h3><p>Your app or its metadata contains misleading content. Specifically, your app name misleads the user this app containing lyrics info.</p>
 <p>Next Steps</p>
 <p>Please remove or revise any misleading content in your app and its metadata.</p>
-<p>Since your iTunes Connect Application State is Rejected, a new binary will be required. Make the desired metadata changes when you upload the new binary.</p>
 <blockquote>
 <p>因为应用提供歌词内容，但是歌词属于使用第三方内容需要授权,所以只能拿掉.拿掉以后说我的名称与内容不符,所以只能更换应用名称.</p>
 </blockquote>
