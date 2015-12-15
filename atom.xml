@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2015-12-14T14:15:18.000Z</updated>
+  <updated>2015-12-15T08:07:30.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -19,23 +19,32 @@
     <link href="http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
     <id>http://willnewii.github.io/20151214/MayDay歌词本更新日志/</id>
     <published>2015-12-14T14:11:00.000Z</published>
-    <updated>2015-12-14T14:15:18.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2015-12-14">2015.12.14</h5><ol>
+    <updated>2015-12-15T08:07:30.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2015-12-15">2015.12.15</h5><ol>
+<li>关于页面样式(ipad样式有问题)</li>
+<li>InAppBrowser调用bug</li>
+<li>回复后自动刷新</li>
+</ol>
+<h5 id="2015-12-14">2015.12.14</h5><ol>
 <li>整理设置页面</li>
 </ol>
 <h5 id="待整理">待整理</h5><ol>
 <li>登录流程,2次授权</li>
 <li>登录引导对话框</li>
-<li>歌词页面</li>
+<li><del>歌词页面</del></li>
+<li>…我操…忘了…</li>
+<li>更新提示(需要双击home键,杀死app后重新启动.)</li>
+<li>默认首页(歌词/我想说)</li>
+<li>添加登陆后自动更新状态接口.</li>
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2015-12-14">2015.12.14</h5><ol>
-<li>整理设置页面</li>
+    <![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2015-12-15">2015.12.15</h5><ol>
+<li>关于页面样式(ipad样式有问题)</li>
+<li>InAppBrowser调用bug</li>
+<li>回复后自动刷新</li>
 </ol>
-<h5 id="待整理">待整理</h5><ol>
-<li>登录流程,2次授权</li>
-<li>登录引导对话]]>
+]]>
     </summary>
     
       <category term="MayDay歌词本" scheme="http://willnewii.github.io/tags/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC/"/>
