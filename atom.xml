@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2015-12-20T13:04:55.000Z</updated>
+  <updated>2015-12-25T03:19:46.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -19,8 +19,22 @@
     <link href="http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
     <id>http://willnewii.github.io/20151214/MayDay歌词本更新日志/</id>
     <published>2015-12-14T14:11:00.000Z</published>
-    <updated>2015-12-20T13:04:55.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2015-12-20">2015.12.20</h5><ol>
+    <updated>2015-12-25T03:19:46.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="issue">issue</h5><ol>
+<li>禁止重复提交</li>
+<li>发送页面，内容换行后遮挡</li>
+<li>多次失败后，提示弹框不消失</li>
+<li>手机网络发送失败，提示完整错误信息</li>
+<li>个人信息页，收件箱加载问题</li>
+<li>登陆页样式问题</li>
+</ol>
+<h5 id="2015-12-14">2015.12.14</h5><ol>
+<li>圣诞主题发布</li>
+<li>完善iconfont使用</li>
+<li>index不能做UI处理</li>
+<li>修复图片路径问题</li>
+</ol>
+<h5 id="2015-12-20">2015.12.20</h5><ol>
 <li>修改我想说详情页 样式</li>
 </ol>
 <h5 id="2015-12-18">2015.12.18</h5><ol>
@@ -39,27 +53,25 @@
 <li>InAppBrowser调用bug</li>
 <li>回复后自动刷新</li>
 </ol>
-<h5 id="2015-12-14">2015.12.14</h5><ol>
+<h5 id="2015-12-14-1">2015.12.14</h5><ol>
 <li>整理设置页面</li>
 </ol>
 <h5 id="待整理">待整理</h5><ol>
 <li>登录流程,2次授权</li>
 <li>登录引导对话框</li>
 <li><del>歌词页面</del></li>
-<li>…我操…忘了…</li>
-<li>更新提示(需要双击home键,杀死app后重新启动.)</li>
-<li>默认首页(歌词/我想说)</li>
+<li><del>…我操…忘了…</del></li>
+<li><del>更新提示(需要双击home键,杀死app后重新启动.)</del></li>
 <li>添加登陆后自动更新状态接口.</li>
 <li>签到日历</li>
-<li>禁止重复提交</li>
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2015-12-20">2015.12.20</h5><ol>
-<li>修改我想说详情页 样式</li>
-</ol>
-<h5 id="2015-12-18">2015.12.18</h5><ol>
-<li>更新ioni]]>
+    <![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="issue">issue</h5><ol>
+<li>禁止重复提交</li>
+<li>发送页面，内容换行后遮挡</li>
+<li>多次失败后，提示弹框不消失</li>
+<li>手机网络发送失败，提示完整错误信息</li>]]>
     </summary>
     
       <category term="MayDay歌词本" scheme="http://willnewii.github.io/tags/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC/"/>
@@ -149,10 +161,12 @@
     <link href="http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/"/>
     <id>http://willnewii.github.io/20151202/前端-小学生/</id>
     <published>2015-12-02T08:14:41.000Z</published>
-    <updated>2015-12-22T03:37:16.000Z</updated>
+    <updated>2015-12-23T16:07:52.000Z</updated>
     <content type="html"><![CDATA[<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
 <p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
-<h4 id="三年级">三年级</h4><p><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></p>
+<h4 id="三年级">三年级</h4><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
+<p><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
 <h4 id="其他">其他</h4><p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
 <p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
 <p><a href="http://www.htmleaf.com/" target="_blank" rel="external">jQuery之家(不少特效可以偷点来用~)</a></p>
@@ -160,6 +174,8 @@
 <p><a href="https://github.com/dyygtfx/WebDev-Source" target="_blank" rel="external">web开发的一些资料，不仅仅是前端资料</a></p>
 <p><a href="http://tool.oschina.net/codeformat/js/" target="_blank" rel="external">在线工具-代码格式化</a></p>
 <h4 id="ionic">ionic</h4><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="external">ionic 文本选择</a></p>
+<h4 id="iconfont">iconfont</h4><p><a href="http://www.iconfont.cn/" target="_blank" rel="external">淘宝的iconfont库</a></p>
+<h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
