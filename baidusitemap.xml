@@ -4,8 +4,152 @@
 
     
   <url>
+    <loc>http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/</loc>
+    <lastmod>2016-01-06T11:31:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>杂记</title>
+        <pubTime>2015-11-25T10:36:41.000Z</pubTime>
+        
+        <tag>杂记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160106/dialog-fox/</loc>
+    <lastmod>2016-01-06T10:33:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>android dialog</title>
+        <pubTime>2016-01-06T10:22:00.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-01-06T03:30:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac笔记</title>
+        <pubTime>2015-11-27T06:36:00.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160105/Flex-%E5%B8%83%E5%B1%80/</loc>
+    <lastmod>2016-01-06T02:51:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>Flex 布局</title>
+        <pubTime>2016-01-05T04:17:00.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151228/sacc/</loc>
+    <lastmod>2016-01-05T13:20:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>sass笔记</title>
+        <pubTime>2015-12-28T07:08:00.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/</loc>
+    <lastmod>2016-01-05T09:13:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端-小学生</title>
+        <pubTime>2015-12-02T08:14:41.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151229/compass%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-01-05T02:01:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>compass笔记</title>
+        <pubTime>2015-12-29T03:57:00.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160104/css/</loc>
+    <lastmod>2016-01-05T02:00:25.000Z</lastmod>
+    <data>
+        <display>
+        <title> css定位</title>
+        <pubTime>2016-01-04T02:54:00.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2015-12-25T07:05:25.000Z</lastmod>
+    <lastmod>2016-01-04T06:35:11.000Z</lastmod>
     <data>
         <display>
         <title>MayDay歌词本更新日志</title>
@@ -21,14 +165,29 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/</loc>
-    <lastmod>2015-12-23T16:07:52.000Z</lastmod>
+    <loc>http://willnewii.github.io/20151207/cordova/</loc>
+    <lastmod>2015-12-29T02:51:28.000Z</lastmod>
     <data>
         <display>
-        <title>前端-小学生</title>
-        <pubTime>2015-12-02T08:14:41.000Z</pubTime>
+        <title>cordova</title>
+        <pubTime>2015-12-07T09:46:52.000Z</pubTime>
         
-        <tag>前端</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2015-12-28T03:21:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android 相关文章</title>
+        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
+        
+        <tag>Android</tag>
          
          
            
@@ -58,21 +217,6 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151207/cordova/</loc>
-    <lastmod>2015-12-18T05:31:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>cordova</title>
-        <pubTime>2015-12-07T09:46:52.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://willnewii.github.io/20151209/appStore%20%E5%A4%A7%E5%9D%91%E9%80%BC/</loc>
     <lastmod>2015-12-15T15:48:03.000Z</lastmod>
     <data>
@@ -81,57 +225,6 @@
         <pubTime>2015-12-09T14:45:00.000Z</pubTime>
         
         <tag>ios</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2015-12-11T07:17:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 相关文章</title>
-        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/</loc>
-    <lastmod>2015-12-02T08:26:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>杂记</title>
-        <pubTime>2015-11-25T10:36:41.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A00/</loc>
-    <lastmod>2015-12-02T08:13:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 相关文章</title>
-        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
-        
-        <tag>Android</tag>
          
          
            
@@ -202,23 +295,6 @@
         <pubTime>2015-11-26T03:21:41.000Z</pubTime>
         
         <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2015-11-27T08:17:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mac笔记</title>
-        <pubTime>2015-11-27T06:36:00.000Z</pubTime>
-        
-        <tag>mac</tag>
          
          
            

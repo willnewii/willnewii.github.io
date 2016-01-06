@@ -4,48 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>前端-小学生 | 诗人的咸鱼</title>
+  <title>android dialog | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一年级HTML 最佳实践
-各种「弹窗」有学名，从此不再分不清
-三年级JavaScript教程(推荐-廖雪峰的教程)
-前端构建工具gulp入门教程
-Flex 布局教程：语法篇
-其他awesomes「 也许是最好的开源前端库、框架和插件集合 」
-ECMAScript 6 入门
-jQuery之家(不少特效可以偷点来用~)
-CSS3参考手册
-CSS 参考手册(有示例)
-web开发的一些资料，不仅仅是前端资">
+  <meta name="description" content="dialog自定义View,弹出键盘
+
+1InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);     		  	     imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端-小学生">
-<meta property="og:url" content="http://willnewii.github.io/20151202/前端-小学生/index.html">
+<meta property="og:title" content="android dialog">
+<meta property="og:url" content="http://willnewii.github.io/20160106/dialog-fox/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="一年级HTML 最佳实践
-各种「弹窗」有学名，从此不再分不清
-三年级JavaScript教程(推荐-廖雪峰的教程)
-前端构建工具gulp入门教程
-Flex 布局教程：语法篇
-其他awesomes「 也许是最好的开源前端库、框架和插件集合 」
-ECMAScript 6 入门
-jQuery之家(不少特效可以偷点来用~)
-CSS3参考手册
-CSS 参考手册(有示例)
-web开发的一些资料，不仅仅是前端资">
-<meta property="og:updated_time" content="2016-01-05T09:13:24.000Z">
+<meta property="og:description" content="dialog自定义View,弹出键盘
+
+1InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);     		  	     imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHO">
+<meta property="og:updated_time" content="2016-01-06T10:33:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端-小学生">
-<meta name="twitter:description" content="一年级HTML 最佳实践
-各种「弹窗」有学名，从此不再分不清
-三年级JavaScript教程(推荐-廖雪峰的教程)
-前端构建工具gulp入门教程
-Flex 布局教程：语法篇
-其他awesomes「 也许是最好的开源前端库、框架和插件集合 」
-ECMAScript 6 入门
-jQuery之家(不少特效可以偷点来用~)
-CSS3参考手册
-CSS 参考手册(有示例)
-web开发的一些资料，不仅仅是前端资">
+<meta name="twitter:title" content="android dialog">
+<meta name="twitter:description" content="dialog自定义View,弹出键盘
+
+1InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);     		  	     imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHO">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -218,11 +194,11 @@ web开发的一些资料，不仅仅是前端资">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-前端-小学生" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-dialog-fox" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20151202/前端-小学生/" class="article-date">
-  	<time datetime="2015-12-02T08:14:41.000Z" itemprop="datePublished">2015-12-02</time>
+      <a href="/20160106/dialog-fox/" class="article-date">
+  	<time datetime="2016-01-06T10:22:00.000Z" itemprop="datePublished">2016-01-06</time>
 </a>
     </div>
   
@@ -235,7 +211,7 @@ web开发的一些资料，不仅仅是前端资">
         
   
     <h1 class="article-title" itemprop="name">
-      前端-小学生
+      android dialog
     </h1>
   
 
@@ -244,7 +220,7 @@ web开发的一些资料，不仅仅是前端资">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
         
@@ -255,23 +231,14 @@ web开发的一些资料，不仅仅是前端资">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
-<p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
-<h4 id="三年级">三年级</h4><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
-<p><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
-<h4 id="其他">其他</h4><p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
-<p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
-<p><a href="http://www.htmleaf.com/" target="_blank" rel="external">jQuery之家(不少特效可以偷点来用~)</a></p>
-<p><a href="http://www.css88.com/book/css/quicksearch.htm" target="_blank" rel="external">CSS3参考手册</a></p>
-<p><a href="http://www.ziqiangxuetang.com/cssref/css-reference.html" target="_blank" rel="external">CSS 参考手册(有示例)</a></p>
-<p><a href="https://github.com/dyygtfx/WebDev-Source" target="_blank" rel="external">web开发的一些资料，不仅仅是前端资料</a></p>
-<p><a href="http://tool.oschina.net/codeformat/js/" target="_blank" rel="external">在线工具-代码格式化</a></p>
-<p><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus 大漠</a></p>
-<p><a href="http://caniuse.com/" target="_blank" rel="external">caniuse…</a></p>
-<h4 id="ionic">ionic</h4><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="external">ionic 文本选择</a></p>
-<h4 id="iconfont">iconfont</h4><p><a href="http://www.iconfont.cn/" target="_blank" rel="external">淘宝的iconfont库</a></p>
-<h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
+        <ol>
+<li>dialog自定义View,弹出键盘</li>
+</ol>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = <span class="list">(<span class="keyword">InputMethodManager</span>)</span>getSystemService<span class="list">(<span class="keyword">Context</span>.INPUT_METHOD_SERVICE)</span><span class="comment">;     		  	     imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT);</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>dialog 触发点击事件,不关闭</li>
+</ol>
+<p>是通过改变mShowing状态实现的,记得在其他地方修正状态.<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 是否可以关闭对话框</span><br><span class="line"> *</span><br><span class="line"> * <span class="doctag">@param</span> dialog</span><br><span class="line"> * <span class="doctag">@param</span> isCan</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">isCanDismiss</span><span class="params">(DialogInterface dialog, <span class="keyword">boolean</span> isCan)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Field field = dialog.getClass().getSuperclass().getDeclaredField(<span class="string">"mShowing"</span>);</span><br><span class="line">        field.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        field.set(dialog, isCan);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -281,18 +248,9 @@ web开发的一些资料，不仅仅是前端资">
     
 <nav id="article-nav">
   
-    <a href="/20151207/cordova/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          cordova
-        
-      </div>
-    </a>
   
-  
-    <a href="/20151127/Mac笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac笔记</div>
+    <a href="/20160105/Flex-布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flex 布局</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -327,7 +285,7 @@ web开发的一些资料，不仅仅是前端资">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="前端-小学生" data-title="前端-小学生" data-url="http://willnewii.github.io/20151202/前端-小学生/"></div>
+	<div class="ds-thread" data-thread-key="dialog-fox" data-title="android dialog" data-url="http://willnewii.github.io/20160106/dialog-fox/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
