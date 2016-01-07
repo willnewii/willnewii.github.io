@@ -189,6 +189,63 @@
 
       <div class="body-wrap">
   
+    <article id="post-Kindle-Calibre" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160106/Kindle-Calibre/" class="article-date">
+  	<time datetime="2016-01-06T12:01:12.000Z" itemprop="datePublished">2016-01-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160106/Kindle-Calibre/">Kindle &amp; Calibre</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="编写Recipe">编写Recipe</h3><h3 id="资料">资料</h3><p><a href="http://www.jianshu.com/p/aeb72b50c20b" target="_blank" rel="external">用calibre抓取乌云知识库并生成电子书</a></p>
+<p><a href="http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html" target="_blank" rel="external">抓取网页内容生成Kindle电子书</a></p>
+<p><a href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
+<p><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id40" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
+<p><a href="http://manual.calibre-ebook.com/news_recipe.html" target="_blank" rel="external">base_news_recipe API</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-dialog-fox" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -218,7 +275,7 @@
         <ol>
 <li>dialog自定义View,弹出键盘</li>
 </ol>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = <span class="list">(<span class="keyword">InputMethodManager</span>)</span>getSystemService<span class="list">(<span class="keyword">Context</span>.INPUT_METHOD_SERVICE)</span><span class="comment">;     		  	     imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)<span class="comment">;</span></span><br><span class="line">imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>dialog 触发点击事件,不关闭</li>
 </ol>
@@ -1037,85 +1094,6 @@
 
       
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Mac笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151127/Mac笔记/" class="article-date">
-  	<time datetime="2015-11-27T06:36:00.000Z" itemprop="datePublished">2015-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151127/Mac笔记/">Mac笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>添加命令行快捷方式</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>环境变量</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=/Users/zhangweiwei/Dev/apache-ant-<span class="number">1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=/Users/zhangweiwei/Dev/adt-bundle-mac/sdk</span><br><span class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID</span>_HOME/platform-tools:<span class="variable">$ANDROID</span>_HOME/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANT</span>_HOME/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>chrome 添加启动参数</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="operator">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
-<pre><code>[<span class="link_label">Chromium命令行启动参数</span>](<span class="link_url">http://chenpeng.info/html/3393</span>)
-</code></pre><ol>
-<li><p>charles ssl设置<br><a href="http://www.charlesproxy.com/ssl.zip">下载链接</a></p>
-</li>
-<li><p>设置magic mouse灵敏度</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">defaults</span> <span class="tag">write</span> <span class="tag">-g</span> <span class="tag">com</span><span class="class">.apple</span><span class="class">.mouse</span><span class="class">.scaling</span> 6<span class="class">.5</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/20151127/Mac笔记/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

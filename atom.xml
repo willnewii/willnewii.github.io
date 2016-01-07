@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-01-06T10:33:56.000Z</updated>
+  <updated>2016-01-07T03:19:29.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -15,15 +15,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Kindle & Calibre]]></title>
+    <link href="http://willnewii.github.io/20160106/Kindle-Calibre/"/>
+    <id>http://willnewii.github.io/20160106/Kindle-Calibre/</id>
+    <published>2016-01-06T12:01:12.000Z</published>
+    <updated>2016-01-07T03:19:29.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="编写Recipe">编写Recipe</h3><h3 id="资料">资料</h3><p><a href="http://www.jianshu.com/p/aeb72b50c20b" target="_blank" rel="external">用calibre抓取乌云知识库并生成电子书</a></p>
+<p><a href="http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html" target="_blank" rel="external">抓取网页内容生成Kindle电子书</a></p>
+<p><a href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
+<p><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id40" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
+<p><a href="http://manual.calibre-ebook.com/news_recipe.html" target="_blank" rel="external">base_news_recipe API</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="编写Recipe">编写Recipe</h3><h3 id="资料">资料</h3><p><a href="http://www.jianshu.com/p/aeb72b50c20b" target="_blank" rel="external">用calibre]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[android dialog]]></title>
     <link href="http://willnewii.github.io/20160106/dialog-fox/"/>
     <id>http://willnewii.github.io/20160106/dialog-fox/</id>
     <published>2016-01-06T10:22:00.000Z</published>
-    <updated>2016-01-06T10:33:56.000Z</updated>
+    <updated>2016-01-06T11:51:32.000Z</updated>
     <content type="html"><![CDATA[<ol>
 <li>dialog自定义View,弹出键盘</li>
 </ol>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = <span class="list">(<span class="keyword">InputMethodManager</span>)</span>getSystemService<span class="list">(<span class="keyword">Context</span>.INPUT_METHOD_SERVICE)</span><span class="comment">;     		  	     imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)<span class="comment">;</span></span><br><span class="line">imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>dialog 触发点击事件,不关闭</li>
 </ol>
@@ -33,7 +51,7 @@
     <![CDATA[<ol>
 <li>dialog自定义View,弹出键盘</li>
 </ol>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pr]]>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span]]>
     </summary>
     
       <category term="android" scheme="http://willnewii.github.io/tags/android/"/>
@@ -629,7 +647,7 @@
     <link href="http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151125/杂记/</id>
     <published>2015-11-25T10:36:41.000Z</published>
-    <updated>2016-01-06T11:31:49.000Z</updated>
+    <updated>2016-01-06T12:02:23.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
 <li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
 </li>
@@ -670,9 +688,6 @@
 <li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="external">material design 文档动画部分的学习笔记</a></li>
 </ul>
 <h3 id="其他">其他</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
-<p><a href="http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html" target="_blank" rel="external">抓取网页内容生成Kindle电子书</a></p>
-<p><a href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
-<p><a href="http://manual.calibre-ebook.com/news_recipe.html" target="_blank" rel="external">base_news_recipe API</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
