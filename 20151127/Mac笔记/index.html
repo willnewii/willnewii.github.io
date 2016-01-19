@@ -20,7 +20,7 @@
 
 环境变量
 12345export ANT_HOME=/Users/zhangweiwei/Dev/apache-ant-1.9.4export ANDROID_HOME=/Users/z">
-<meta property="og:updated_time" content="2016-01-06T03:30:42.000Z">
+<meta property="og:updated_time" content="2016-01-14T11:35:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac笔记">
 <meta name="twitter:description" content="添加命令行快捷方式
@@ -128,7 +128,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a>
+						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
 					</div>
 				</section>
 				
@@ -249,23 +249,22 @@
 </li>
 </ol>
 <figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
-<pre><code>[<span class="link_label">Chromium命令行启动参数</span>](<span class="link_url">http://chenpeng.info/html/3393</span>)
-</code></pre><ol>
-<li><p>charles ssl设置<br><a href="http://www.charlesproxy.com/ssl.zip" target="_blank" rel="external">下载链接</a></p>
-</li>
+<p><a href="http://chenpeng.info/html/3393" target="_blank" rel="external">Chromium命令行启动参数</a></p>
+<ol>
 <li><p>设置magic mouse灵敏度</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">defaults</span> <span class="tag">write</span> <span class="tag">-g</span> <span class="tag">com</span><span class="class">.apple</span><span class="class">.mouse</span><span class="class">.scaling</span> 6<span class="class">.5</span></span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<a id="more"></a> 
+<li><p>Apache 的启动</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="operator"><span class="keyword">start</span></span><br><span class="line">/<span class="keyword">Library</span>/WebServer/<span class="keyword">Document</span>/</span><br><span class="line">sudo launchctl unload -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span><br><span class="line">如果哪天你想让它开机启动了,则将unload 改为 <span class="keyword">load</span>:</span><br><span class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打印目录树</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . \( ! -regex '.<span class="keyword">*</span>/\..<span class="keyword">*</span>' \) -type f -depth -3 -print |<span class="string"> sed -e 's;[^/]*/;</span>|<span class="string">____;g;s;____</span>|<span class="string">; </span>|<span class="string">;g'</span></span><br></pre></td></tr></table></figure>
 <ol>
-<li>Apache 的启动</li>
+<li>( ! -regex ‘.<em>/..</em>‘ ) -type f 匹配非隐藏文件</li>
+<li>-depth -3 递归深度</li>
 </ol>
-<p>sudo apachectl start</p>
-<p>/Library/WebServer/Document/</p>
-<p>sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist</p>
-<p>如果哪天你想让它开机启动了,则将unload 改为 load:</p>
-<p>sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist</p>
+</li>
+</ol>
 <p><a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="external">每天一个linux命令目录</a></p>
 
       
