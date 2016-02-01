@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-01-13T07:37:22.000Z</updated>
+  <updated>2016-01-25T07:50:06.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -13,6 +13,102 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[git笔记]]></title>
+    <link href="http://willnewii.github.io/20160120/git/"/>
+    <id>http://willnewii.github.io/20160120/git/</id>
+    <published>2016-01-20T03:47:00.000Z</published>
+    <updated>2016-01-25T07:50:06.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
+<p>git rm -r –cached  <em>/Runtime/\</em>      //最终执行命令.</p>
+<p>git commit -m”移除Runtime目录下所有文件的版本控制”    //提交</p>
+<p>git push origin master   //提交到远程服务器</p>
+<p>若用git status命令查看，则Apps/Runtime/目录下文件出现在结果列表里， 我们不希望这个目录下的文件出现，则在项目根目录下，和.git 同级目录下，新建一个.gitignore文件，<br>把.gitignore提交到远程服务器。 则.Apps/Runtime目录就不会被提交了。</p>
+<h4 id="git_am">git am</h4><p>git am –abort</p>
+<h4 id="git_flow">git flow</h4><p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></p>
+<h4 id="git_常用指令">git 常用指令</h4><p><a href="http://stormzhang.com/git/2014/01/27/git-common-command/" target="_blank" rel="external">http://stormzhang.com/git/2014/01/27/git-common-command/</a></p>
+<h4 id="git_submodule的使用">git submodule的使用</h4><p><a href="http://www.stormzhang.com/git/2014/02/13/git-submodule/" target="_blank" rel="external">http://www.stormzhang.com/git/2014/02/13/git-submodule/</a></p>
+<h4 id="git_文档">git 文档</h4><ul>
+<li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
+</li>
+<li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="external">Git分支管理策略</a></p>
+</li>
+<li><p><a href="http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png" target="_blank" rel="external">Git 常用命令图</a></p>
+</li>
+<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参]]>
+    </summary>
+    
+      <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JS笔记]]></title>
+    <link href="http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/"/>
+    <id>http://willnewii.github.io/20160120/JS笔记/</id>
+    <published>2016-01-20T03:37:00.000Z</published>
+    <updated>2016-01-20T03:37:38.000Z</updated>
+    <content type="html"><![CDATA[<p>###比较</p>
+<h4 id="1-===">1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
+<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
+<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
+<h4 id="2-NaN">2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
+<pre><code><span class="literal">NaN</span> === <span class="literal">NaN</span>; <span class="comment">// false</span>
+</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
+<pre><code><span class="built_in">isNaN</span>(<span class="literal">NaN</span>); <span class="comment">// true</span>
+</code></pre><h4 id="3-浮点数的相等比较">3.浮点数的相等比较</h4><pre><code><span class="number">1</span> / <span class="number">3</span> === (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>); <span class="comment">// false</span>
+</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
+<pre><code>Math.<span class="built_in">abs</span>(<span class="number">1</span> / <span class="number">3</span> - (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>)) &lt; <span class="number">0.0000001</span>; <span class="comment">// true</span>
+</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
+<ol>
+<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
+<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
+<li>apply &amp; call</li>
+<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
+</ol>
+<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
+<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
+<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
+<p>####严格模式</p>
+<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
+<pre><code><span class="pi">'use strict'</span>;
+</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
+<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
+<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
+<pre><code><span class="string">'toString'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">true</span>
+</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
+<pre><code>var xiaoming = {
+    <span class="symbol">name:</span> <span class="string">'小明'</span>
+};
+xiaoming.hasOwnProperty(<span class="string">'name'</span>); <span class="regexp">//</span> <span class="keyword">true</span>
+xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="regexp">//</span> <span class="keyword">false</span>
+</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
+<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
+<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
+<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
+<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>###比较</p>
+<h4 id="1-===">1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
+<p>第二种是===]]>
+    </summary>
+    
+      <category term="js" scheme="http://willnewii.github.io/tags/js/"/>
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Charles]]></title>
@@ -503,7 +599,7 @@
     <link href="http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151218/Cordova笔记/</id>
     <published>2015-12-18T06:21:00.000Z</published>
-    <updated>2016-01-19T05:44:21.000Z</updated>
+    <updated>2016-02-01T06:16:51.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li><p>Push<br>push选用了jPush.因为貌似只有他们家只官方支持了Cordova.<br><a href="https://github.com/jpush/jpush-phonegap-plugin" target="_blank" rel="external">https://github.com/jpush/jpush-phonegap-plugin</a></p>
 <ul>
@@ -545,6 +641,8 @@
 </li>
 <li><p><a href="http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/" target="_blank" rel="external"> angular的post请求，后台接收参数为null的解决方案</a></p>
 </li>
+<li><p><a href="http://wex5.com/cn/?p=11382" target="_blank" rel="external">cordova插件清单</a></p>
+</li>
 </ol>
 <h3 id="资料">资料</h3><p><a href="http://park.jobdeer.com/discussion/22/%E4%BD%BF%E7%94%A8-html2canvas-%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E6%88%AA%E5%9B%BE%E5%B9%B6%E4%B8%8B%E8%BD%BD" target="_blank" rel="external">使用-html2canvas-实现浏览器截图并下载</a></p>
 ]]></content>
@@ -562,8 +660,28 @@
     <link href="http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
     <id>http://willnewii.github.io/20151214/MayDay歌词本更新日志/</id>
     <published>2015-12-14T14:11:00.000Z</published>
-    <updated>2016-01-18T11:44:15.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2016-01-18">2016.01.18</h5><ol>
+    <updated>2016-02-01T10:24:55.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2016-02-01">2016.02.01</h5><ol>
+<li>优化badge更新</li>
+<li>歌词页有歌曲时播放问题</li>
+<li>更新插件</li>
+</ol>
+<h5 id="2016-01-30">2016.01.30</h5><ol>
+<li>fix 发布按钮无响应</li>
+<li>新版图片存储切换至七牛</li>
+<li>更新专辑图片资源至七牛</li>
+<li>用户信息添加系统icon(ios/android)</li>
+<li>回复列表,点击头像查看用户信息</li>
+<li>终于…把喜欢列表给写了</li>
+</ol>
+<h5 id="2016-01-29">2016.01.29</h5><ol>
+<li>fix badge初始值</li>
+<li>修改wechat,weibo native代码–&gt;需发版</li>
+</ol>
+<h5 id="2016-01-21">2016.01.21</h5><ol>
+<li>添加选取部分歌词生成图片分享</li>
+</ol>
+<h5 id="2016-01-18">2016.01.18</h5><ol>
 <li>更新样式文件 fix大部分问题样式</li>
 <li>添加切换主题功能</li>
 <li>添加截图功能(开发中)</li>
@@ -606,25 +724,29 @@
 </ol>
 <h5 id="issue">issue</h5><ol>
 <li>手机网络发送失败</li>
+<li>badge需要重新登录才能更新状态</li>
+<li>草稿箱</li>
 </ol>
 <h5 id="待完善">待完善</h5><ol>
+<li>签到日历</li>
+<li>草稿箱</li>
+<li>歌词页右上角菜单(评论/喜欢/)</li>
 <li>登录流程,2次授权</li>
-<li>登录引导对话框</li>
+<li><del>登录引导对话框</del></li>
 <li><del>歌词页面</del></li>
 <li><del>…我操…忘了…</del></li>
 <li><del>更新提示(需要双击home键,杀死app后重新启动.)</del></li>
 <li>添加登陆后自动更新状态接口.</li>
-<li>签到日历</li>
 <li><a href="http://electron.atom.io/" target="_blank" rel="external">http://electron.atom.io/</a></li>
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2016-01-18">2016.01.18</h5><ol>
-<li>更新样式文件 fix大部分问题样式</li>
-<li>添加切换主题功能</li>
-<li>添加截图功能(开发中)</li>
+    <![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2016-02-01">2016.02.01</h5><ol>
+<li>优化badge更新</li>
+<li>歌词页有歌曲时播放问题</li>
+<li>更新插件</li>
 </ol>
-<h5 i]]>
+<h5 id="2016-01-3]]>
     </summary>
     
       <category term="MayDay歌词本" scheme="http://willnewii.github.io/tags/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC/"/>
@@ -689,7 +811,7 @@
     <link href="http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/"/>
     <id>http://willnewii.github.io/20151202/前端-小学生/</id>
     <published>2015-12-02T08:14:41.000Z</published>
-    <updated>2016-01-08T03:52:30.000Z</updated>
+    <updated>2016-01-28T05:55:37.000Z</updated>
     <content type="html"><![CDATA[<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
 <p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
 <h4 id="三年级">三年级</h4><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
@@ -698,7 +820,8 @@
 <h4 id="手册/API">手册/API</h4><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
 <p><a href="http://www.css88.com/book/css/quicksearch.htm" target="_blank" rel="external">CSS3参考手册</a></p>
 <p><a href="http://www.ziqiangxuetang.com/cssref/css-reference.html" target="_blank" rel="external">CSS 参考手册(有示例)</a></p>
-<h4 id="资源站">资源站</h4><p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
+<h4 id="资源站">资源站</h4><p><a href="https://github.com/amfe/article/issues" target="_blank" rel="external">貌似是个淘宝前端</a></p>
+<p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
 <p><a href="http://www.zcfy.cc/article/85" target="_blank" rel="external">网页性能： 缓存效率实践</a></p>
 <p><a href="http://www.htmleaf.com/" target="_blank" rel="external">jQuery之家(不少特效可以偷点来用~)</a></p>
 <p><a href="https://github.com/dyygtfx/WebDev-Source" target="_blank" rel="external">web开发的一些资料，不仅仅是前端资料</a></p>
@@ -706,7 +829,6 @@
 <p><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus 大漠</a></p>
 <p><a href="http://caniuse.com/" target="_blank" rel="external">caniuse…</a></p>
 <h4 id="ionic">ionic</h4><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="external">ionic 文本选择</a></p>
-<h4 id="iconfont">iconfont</h4><p><a href="http://www.iconfont.cn/" target="_blank" rel="external">淘宝的iconfont库</a></p>
 <h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
 ]]></content>
     <summary type="html">
@@ -723,7 +845,7 @@
     <link href="http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151127/Mac笔记/</id>
     <published>2015-11-27T06:36:00.000Z</published>
-    <updated>2016-01-14T11:35:26.000Z</updated>
+    <updated>2016-01-20T03:15:56.000Z</updated>
     <content type="html"><![CDATA[<ol>
 <li><p>添加命令行快捷方式</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
@@ -752,7 +874,7 @@
 </ol>
 </li>
 </ol>
-<p><a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="external">每天一个linux命令目录</a></p>
+<p><a href="http://www.waitsun.com/" target="_blank" rel="external">软件下载</a><br><a href="http://www.isofts.org/" target="_blank" rel="external">mac志</a><br><a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="external">每天一个linux命令目录</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<ol>
@@ -791,29 +913,11 @@
     <link href="http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151125/杂记/</id>
     <published>2015-11-25T10:36:41.000Z</published>
-    <updated>2016-01-06T12:02:23.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
-<li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
-</li>
-<li><p><a href="https://gitcafe.com/Angularjs/Angularjs-Developer-Guide/blob/master/README.md" target="_blank" rel="external">Angular中文开发指南</a></p>
-</li>
-</ul>
-<h3 id="Markdown">Markdown</h3><ul>
+    <updated>2016-01-25T07:38:02.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="Markdown">Markdown</h3><ul>
 <li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">MarkDown简明语法</a></p>
 </li>
 <li><p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">MarkDown语法说明</a></p>
-</li>
-</ul>
-<h3 id="Git">Git</h3><ul>
-<li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
-</li>
-<li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
-</li>
-<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="external">Git分支管理策略</a></p>
-</li>
-<li><p><a href="http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png" target="_blank" rel="external">Git 常用命令图</a></p>
-</li>
-<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></p>
 </li>
 </ul>
 <h3 id="Hexo">Hexo</h3><ul>
@@ -831,12 +935,12 @@
 <h3 id="design">design</h3><ul>
 <li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="external">material design 文档动画部分的学习笔记</a></li>
 </ul>
-<h3 id="其他">其他</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
+<h3 id="文档排版">文档排版</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
+<p><a href="http://zhuanlan.zhihu.com/uicircle/20506092" target="_blank" rel="external">中文排版指南</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="Angular_1-x">Angular 1.x</h3><ul>
-<li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
-<]]>
+    <![CDATA[<h3 id="Markdown">Markdown</h3><ul>
+<li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">MarkDown简明语法</a>]]>
     </summary>
     
       <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
@@ -882,8 +986,9 @@
     <link href="http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/"/>
     <id>http://willnewii.github.io/20151125/Android相关文章/</id>
     <published>2015-11-25T10:36:00.000Z</published>
-    <updated>2015-12-28T03:21:58.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XODM4NzA3ODMy.html?f=23088492&amp;from=sub-y1.9-3.1" target="_blank" rel="external">Android自定义视图专辑视频</a></p>
+    <updated>2016-01-21T08:55:16.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://droidyue.com/blog/2014/08/03/great-web-tools-for-android-development/" target="_blank" rel="external">快速提高Android开发效率的Web工具</a></p>
+<p><a href="http://v.youku.com/v_show/id_XODM4NzA3ODMy.html?f=23088492&amp;from=sub-y1.9-3.1" target="_blank" rel="external">Android自定义视图专辑视频</a></p>
 <p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="external">Android Canvas绘图详解（图文）</a></p>
 <p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="external">Animation动画详解（二）——Interpolator插值器</a></p>
 <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41541269/" target="_blank" rel="external">android官方技术文档翻译——设计时布局属性</a></p>
@@ -899,7 +1004,7 @@
 <h3 id="issue">issue</h3><p><a href="http://blog.csdn.net/jiangtianhao13269230/article/details/48757727" target="_blank" rel="external">android 6.0(api 23) SDK，不再提供org.apache.http.*(只保留几个类). 用xUtils会出现问题</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><a href="http://v.youku.com/v_show/id_XODM4NzA3ODMy.html?f=23088492&amp;from=sub-y1.9-3.1" target="_blank" rel="external">Android自定义视图专辑视]]>
+    <![CDATA[<p><a href="http://droidyue.com/blog/2014/08/03/great-web-tools-for-android-development/" target="_blank" rel="external">快速提高Android开发效率的Web]]>
     </summary>
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
@@ -1235,450 +1340,6 @@
     </summary>
     
       <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android Studio 快捷键]]></title>
-    <link href="http://willnewii.github.io/20150924/Android%20Studio%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://willnewii.github.io/20150924/Android Studio 快捷键/</id>
-    <published>2015-09-24T08:52:15.000Z</published>
-    <updated>2015-11-30T06:40:46.000Z</updated>
-    <content type="html"><![CDATA[<p>坑逼AS2.0…你升级就升级,你更新毛快捷键哇！！！！<br>这货把osX 和 win 的统一了…  统一你妹呀！！！！</p>
-<h4 id="常用快捷键">常用快捷键</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>复制当前行</td>
-<td>duplicate Line or block</td>
-<td>cmd+d</td>
-<td></td>
-</tr>
-<tr>
-<td>删除当前行</td>
-<td>delete line</td>
-<td>cmd+backspace</td>
-<td></td>
-</tr>
-<tr>
-<td>上下移动当前行</td>
-<td>move line up/down</td>
-<td>alt+shift+up/down</td>
-<td></td>
-</tr>
-<tr>
-<td>移动到指定行</td>
-<td>Line</td>
-<td>cmd+g</td>
-<td></td>
-</tr>
-<tr>
-<td>多文本选择</td>
-<td>add selection for next occurrence</td>
-<td>Ctrl+G</td>
-<td></td>
-</tr>
-<tr>
-<td>列选择</td>
-<td></td>
-<td>Alt+MouseDrag</td>
-<td></td>
-</tr>
-<tr>
-<td>当前文件方法列表</td>
-<td>File Structure</td>
-<td>cmd+F12</td>
-<td></td>
-</tr>
-<tr>
-<td>合并行和文字</td>
-<td>join lines</td>
-<td>ctrl+shift+j</td>
-<td></td>
-</tr>
-<tr>
-<td>代码提示</td>
-<td>basic</td>
-<td>ctrl+/</td>
-<td>记得按tab…</td>
-</tr>
-<tr>
-<td>显示文件路径</td>
-<td>File Path</td>
-<td>alt+cmd+F12</td>
-<td>不用再目录里右键Reveal in Finder</td>
-</tr>
-<tr>
-<td>路径中查找</td>
-<td>Find in Path</td>
-<td>shift+ctrl+F</td>
-<td>有个预览功能,屌</td>
-</tr>
-<tr>
-<td>方法调用路径</td>
-<td></td>
-<td>ctrl+alt+h</td>
-<td></td>
-</tr>
-<tr>
-<td>显示参数信息</td>
-<td>Parameter Info</td>
-<td>cmd+p</td>
-<td>显示方法需要的参数</td>
-</tr>
-<tr>
-<td>打开文件</td>
-<td>class</td>
-<td>cmd+o</td>
-<td></td>
-</tr>
-<tr>
-<td>重写方法列表</td>
-<td>override method</td>
-<td>cmd+n</td>
-<td></td>
-</tr>
-<tr>
-<td>快速查看定义</td>
-<td>quick definition</td>
-<td>cmd+shift+i</td>
-<td></td>
-</tr>
-<tr>
-<td>扩大/收缩选中部分</td>
-<td>Collapse</td>
-<td>cmd+ -/+</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<h4 id="跳转">跳转</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近打开的文件</td>
-<td>Recent Files</td>
-<td>cmd+e</td>
-<td></td>
-</tr>
-<tr>
-<td>最近编辑的文件</td>
-<td>Recently Changed Files</td>
-<td>cmd+shift+e</td>
-<td></td>
-</tr>
-<tr>
-<td>显示使用的地方</td>
-<td>Find Usage</td>
-<td>alt+F7 cmd+alt+F7</td>
-<td></td>
-</tr>
-<tr>
-<td>跳到声明</td>
-<td>declaration</td>
-<td>cmd+b</td>
-<td></td>
-</tr>
-<tr>
-<td>跳到实现</td>
-<td>implementation</td>
-<td>cmd+alt+b</td>
-<td></td>
-</tr>
-<tr>
-<td>跳到类型声明</td>
-<td>Type declaration</td>
-<td>cmd+shift+b</td>
-<td></td>
-</tr>
-<tr>
-<td>跳到父类</td>
-<td>Super Method</td>
-<td>cmd+u</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="Code">Code</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>格式化代码</td>
-<td>Reformat Code</td>
-<td>cmd+alt+l</td>
-<td></td>
-</tr>
-<tr>
-<td>移动方法</td>
-<td>Move Statement</td>
-<td>cmd+delete+up/down</td>
-<td></td>
-</tr>
-<tr>
-<td>包裹代码块</td>
-<td>Surround With</td>
-<td>cmd+alt+t</td>
-<td>添加包裹代码块(if、for、try等)</td>
-</tr>
-<tr>
-<td>反向包裹代码块</td>
-<td>Surround With</td>
-<td>cmd+shift+delete</td>
-<td>删除包裹的代码块</td>
-</tr>
-<tr>
-<td>选择于</td>
-<td></td>
-<td>alt+F1</td>
-<td>select Target,可用于快速打开文件目录</td>
-</tr>
-<tr>
-<td>弹出VCS操作</td>
-<td>VCS Operations Popup</td>
-<td>Ctrl+V</td>
-<td></td>
-</tr>
-<tr>
-<td>查找方法</td>
-<td>Find Action</td>
-<td>cmd+shift+a</td>
-</tr>
-<tr>
-<td>隐藏所有面板</td>
-<td>hide all tool windows</td>
-<td>cmd+shift+F12</td>
-</tr>
-</tbody>
-</table>
-<h4 id="书签">书签</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>开关书签</td>
-<td>Toggle Bookmark</td>
-<td>F3</td>
-<td></td>
-</tr>
-<tr>
-<td>用助记符开关书签</td>
-<td>Toggle Bookmark with Mnemonic</td>
-<td>cmd+f3</td>
-<td></td>
-</tr>
-<tr>
-<td>显示书签</td>
-<td>Show Bookmark</td>
-<td>shift+F3</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="插件">插件</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>下载</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CodeGlance</td>
-<td><a href="https://github.com/Vektah/CodeGlance" target="_blank" rel="external">https://github.com/Vektah/CodeGlance</a></td>
-<td>代码地图</td>
-<td></td>
-</tr>
-<tr>
-<td>adb-idea</td>
-<td><a href="https://github.com/pbreault/adb-idea" target="_blank" rel="external">https://github.com/pbreault/adb-idea</a></td>
-<td>快速清空应用缓存,删除,重新启动,停止</td>
-</tr>
-<tr>
-<td>GsonFormat</td>
-<td><a href="https://github.com/zzz40500/GsonFormat" target="_blank" rel="external">https://github.com/zzz40500/GsonFormat</a></td>
-<td>json转换对象</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>坑逼AS2.0…你升级就升级,你更新毛快捷键哇！！！！<br>这货把osX 和 win 的统一了…  统一你妹呀！！！！</p>
-<h4 id="常用快捷键">常用快捷键</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>复制当前行</td>
-<td>duplicate Line or block</td>
-<td>cmd+d</td>
-<td></td>
-</tr>
-<tr>
-<td>删除当前行</td>
-<td>delete line</td>
-<td>cmd+backspace</td>
-<td></td>
-</tr>
-<tr>
-<td>上下移动当前行</td>
-<td>move line up/down</td>
-<td>alt+shift+up/down</td>
-<td></td>
-</tr>
-<tr>
-<td>移动到指定行</td>
-<td>Line</td>
-<td>cmd+g</td>
-<td></td>
-</tr>
-<tr>
-<td>多文本选择</td>
-<td>add selection for next occurrence</td>
-<td>Ctrl+G</td>
-<td></td>
-</tr>
-<tr>
-<td>列选择</td>
-<td></td>
-<td>Alt+MouseDrag</td>
-<td></td>
-</tr>
-<tr>
-<td>当前文件方法列表</td>
-<td>File Structure</td>
-<td>cmd+F12</td>
-<td></td>
-</tr>
-<tr>
-<td>合并行和文字</td>
-<td>join lines</td>
-<td>ctrl+shift+j</td>
-<td></td>
-</tr>
-<tr>
-<td>代码提示</td>
-<td>basic</td>
-<td>ctrl+/</td>
-<td>记得按tab…</td>
-</tr>
-<tr>
-<td>显示文件路径</td>
-<td>File Path</td>
-<td>alt+cmd+F12</td>
-<td>不用再目录里右键Reveal in Finder</td>
-</tr>
-<tr>
-<td>路径中查找</td>
-<td>Find in Path</td>
-<td>shift+ctrl+F</td>
-<td>有个预览功能,屌</td>
-</tr>
-<tr>
-<td>方法调用路径</td>
-<td></td>
-<td>ctrl+alt+h</td>
-<td></td>
-</tr>
-<tr>
-<td>显示参数信息</td>
-<td>Parameter Info</td>
-<td>cmd+p</td>
-<td>显示方法需要的参数</td>
-</tr>
-<tr>
-<td>打开文件</td>
-<td>class</td>
-<td>cmd+o</td>
-<td></td>
-</tr>
-<tr>
-<td>重写方法列表</td>
-<td>override method</td>
-<td>cmd+n</td>
-<td></td>
-</tr>
-<tr>
-<td>快速查看定义</td>
-<td>quick definition</td>
-<td>cmd+shift+i</td>
-<td></td>
-</tr>
-<tr>
-<td>扩大/收缩选中部分</td>
-<td>Collapse</td>
-<td>cmd+ -/+</td>
-<td></td>
-</tr>
-</tbody>
-</table>]]>
-    
-    </summary>
-    
-      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
-    
-      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[macbook不识别部分Android手机]]></title>
-    <link href="http://willnewii.github.io/20141215/macbook%E4%B8%8D%E8%AF%86%E5%88%AB%E9%83%A8%E5%88%86Android%E6%89%8B%E6%9C%BA/"/>
-    <id>http://willnewii.github.io/20141215/macbook不识别部分Android手机/</id>
-    <published>2014-12-15T07:20:00.000Z</published>
-    <updated>2015-11-26T05:32:49.000Z</updated>
-    <content type="html"><![CDATA[<p>在开发过程中,有时候会遇到macbook识别不了Android手机的情况.之前我的MX4出现过.</p>
-<ol>
-<li>打开终端，输入：”system_profiler SPUSBDataType”，查看Mac系统所有USB设备信息，找到相应的厂商Vender ID。<br>或者在”关于本机-&gt;系统报告-&gt;USB”列表里找到MX4 的厂商ID</li>
-</ol>
-<ul>
-<li><p>终端进入/Users/user/.android，应该有一个adb_usb.ini文件，如果没有就创建，然后将上面的Vender ID 单独一行加入到该文件，然后退出。</p>
-</li>
-<li><p>重启adb server进程。试试？</p>
-</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在开发过程中,有时候会遇到macbook识别不了Android手机的情况.之前我的MX4出现过.</p>
-<ol>
-<li>打开终端，输入：”system_profiler SPUSBDataType”，查看Mac系统所有USB设备信息，找到相应的厂商Vender ID。<]]>
-    </summary>
-    
-      <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
     
   </entry>
   

@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: mac | 诗人的咸鱼</title>
+  <title>git笔记 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="咸鱼一只...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="诗人的咸鱼">
-<meta property="og:url" content="http://willnewii.github.io/tags/mac/index.html">
+  <meta name="description" content="git移除某文件夹的版本控制thinkphp框架，Apps/Runtime下目录移出版本控制.git rm -r -n –cached  /Runtime/\      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。
+git rm -r –cached  /Runtime/\      //最终执行命令.
+git commit -m”移除Runtime">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git笔记">
+<meta property="og:url" content="http://willnewii.github.io/20160120/git/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="咸鱼一只...">
+<meta property="og:description" content="git移除某文件夹的版本控制thinkphp框架，Apps/Runtime下目录移出版本控制.git rm -r -n –cached  /Runtime/\      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。
+git rm -r –cached  /Runtime/\      //最终执行命令.
+git commit -m”移除Runtime">
+<meta property="og:updated_time" content="2016-01-25T07:50:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="诗人的咸鱼">
-<meta name="twitter:description" content="咸鱼一只...">
+<meta name="twitter:title" content="git笔记">
+<meta name="twitter:description" content="git移除某文件夹的版本控制thinkphp框架，Apps/Runtime下目录移出版本控制.git rm -r -n –cached  /Runtime/\      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。
+git rm -r –cached  /Runtime/\      //最终执行命令.
+git commit -m”移除Runtime">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -187,53 +194,129 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/20151127/Mac笔记/" class="archive-article-date">
-  	<time datetime="2015-11-27T06:36:00.000Z" itemprop="datePublished">Nov 27</time>
+    <div class="article-meta">
+      <a href="/20160120/git/" class="article-date">
+  	<time datetime="2016-01-20T03:47:00.000Z" itemprop="datePublished">2016-01-20</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20151127/Mac笔记/">Mac笔记</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
+<p>git rm -r –cached  <em>/Runtime/\</em>      //最终执行命令.</p>
+<p>git commit -m”移除Runtime目录下所有文件的版本控制”    //提交</p>
+<p>git push origin master   //提交到远程服务器</p>
+<p>若用git status命令查看，则Apps/Runtime/目录下文件出现在结果列表里， 我们不希望这个目录下的文件出现，则在项目根目录下，和.git 同级目录下，新建一个.gitignore文件，<br>把.gitignore提交到远程服务器。 则.Apps/Runtime目录就不会被提交了。</p>
+<h4 id="git_am">git am</h4><p>git am –abort</p>
+<h4 id="git_flow">git flow</h4><p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></p>
+<h4 id="git_常用指令">git 常用指令</h4><p><a href="http://stormzhang.com/git/2014/01/27/git-common-command/" target="_blank" rel="external">http://stormzhang.com/git/2014/01/27/git-common-command/</a></p>
+<h4 id="git_submodule的使用">git submodule的使用</h4><p><a href="http://www.stormzhang.com/git/2014/02/13/git-submodule/" target="_blank" rel="external">http://www.stormzhang.com/git/2014/02/13/git-submodule/</a></p>
+<h4 id="git_文档">git 文档</h4><ul>
+<li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
+</li>
+<li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="external">Git分支管理策略</a></p>
+</li>
+<li><p><a href="http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png" target="_blank" rel="external">Git 常用命令图</a></p>
+</li>
+<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/20160120/JS笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS笔记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="git" data-title="git笔记" data-url="http://willnewii.github.io/20160120/git/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"willnewiiblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -265,9 +348,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

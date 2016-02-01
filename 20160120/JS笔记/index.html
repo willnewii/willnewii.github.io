@@ -4,24 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Charles | 诗人的咸鱼</title>
+  <title>JS笔记 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装SSL证书 链接
-
-使用Charles抓包并篡改返回数据">
+  <meta name="description" content="###比较
+1.===要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：
+第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
+第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
+由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
+2.NaN另一个例外是NaN这个特殊的N">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Charles">
-<meta property="og:url" content="http://willnewii.github.io/20160113/Charles/index.html">
+<meta property="og:title" content="JS笔记">
+<meta property="og:url" content="http://willnewii.github.io/20160120/JS笔记/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="安装SSL证书 链接
-
-使用Charles抓包并篡改返回数据">
-<meta property="og:updated_time" content="2016-01-13T07:37:22.000Z">
+<meta property="og:description" content="###比较
+1.===要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：
+第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
+第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
+由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
+2.NaN另一个例外是NaN这个特殊的N">
+<meta property="og:updated_time" content="2016-01-20T03:37:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Charles">
-<meta name="twitter:description" content="安装SSL证书 链接
-
-使用Charles抓包并篡改返回数据">
+<meta name="twitter:title" content="JS笔记">
+<meta name="twitter:description" content="###比较
+1.===要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：
+第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
+第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
+由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
+2.NaN另一个例外是NaN这个特殊的N">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -194,11 +203,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Charles" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20160113/Charles/" class="article-date">
-  	<time datetime="2016-01-13T06:51:00.000Z" itemprop="datePublished">2016-01-13</time>
+      <a href="/20160120/JS笔记/" class="article-date">
+  	<time datetime="2016-01-20T03:37:00.000Z" itemprop="datePublished">2016-01-20</time>
 </a>
     </div>
   
@@ -211,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Charles
+      JS笔记
     </h1>
   
 
@@ -220,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
         
@@ -231,12 +240,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p>安装SSL证书 <a href="http://www.charlesproxy.com/ssl.zip" target="_blank" rel="external">链接</a></p>
-</li>
-<li><p><a href="http://www.tuicool.com/articles/UzIzIne" target="_blank" rel="external">使用Charles抓包并篡改返回数据</a></p>
-</li>
+        <p>###比较</p>
+<h4 id="1-===">1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
+<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
+<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
+<h4 id="2-NaN">2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
+<pre><code><span class="literal">NaN</span> === <span class="literal">NaN</span>; <span class="comment">// false</span>
+</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
+<pre><code><span class="built_in">isNaN</span>(<span class="literal">NaN</span>); <span class="comment">// true</span>
+</code></pre><h4 id="3-浮点数的相等比较">3.浮点数的相等比较</h4><pre><code><span class="number">1</span> / <span class="number">3</span> === (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>); <span class="comment">// false</span>
+</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
+<pre><code>Math.<span class="built_in">abs</span>(<span class="number">1</span> / <span class="number">3</span> - (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>)) &lt; <span class="number">0.0000001</span>; <span class="comment">// true</span>
+</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
+<ol>
+<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
+<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
+<li>apply &amp; call</li>
+<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
 </ol>
+<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
+<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
+<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
+<p>####严格模式</p>
+<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
+<pre><code><span class="pi">'use strict'</span>;
+</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
+<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
+<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
+<pre><code><span class="string">'toString'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">true</span>
+</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
+<pre><code>var xiaoming = {
+    <span class="symbol">name:</span> <span class="string">'小明'</span>
+};
+xiaoming.hasOwnProperty(<span class="string">'name'</span>); <span class="regexp">//</span> <span class="keyword">true</span>
+xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="regexp">//</span> <span class="keyword">false</span>
+</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
+<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
+<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
+<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
+<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
 
       
     </div>
@@ -246,18 +289,18 @@
     
 <nav id="article-nav">
   
-    <a href="/20160120/JS笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/20160120/git/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          JS笔记
+          git笔记
         
       </div>
     </a>
   
   
-    <a href="/20160106/Kindle-Calibre/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Kindle &amp; Calibre</div>
+    <a href="/20160113/Charles/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Charles</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -292,7 +335,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Charles" data-title="Charles" data-url="http://willnewii.github.io/20160113/Charles/"></div>
+	<div class="ds-thread" data-thread-key="JS笔记" data-title="JS笔记" data-url="http://willnewii.github.io/20160120/JS笔记/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
