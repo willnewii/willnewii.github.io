@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-01-25T07:50:06.000Z</updated>
+  <updated>2016-02-17T10:21:01.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -13,6 +13,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[ES6笔记]]></title>
+    <link href="http://willnewii.github.io/20160215/ES6-%E8%B5%84%E6%BA%90/"/>
+    <id>http://willnewii.github.io/20160215/ES6-资源/</id>
+    <published>2016-02-15T02:47:00.000Z</published>
+    <updated>2016-02-17T10:21:01.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="笔记">笔记</h4><ul>
+<li>Arrow Function<br><br>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</li>
+</ul>
+<h4 id="教程">教程</h4><ul>
+<li><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6入门 - 阮一峰的…</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（上）</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000004368132" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（下）</a></p>
+</li>
+<li><p><a href="http://base-n.github.io/koa-generator-examples/node4/classes.html" target="_blank" rel="external">一起学koa</a></p>
+</li>
+</ul>
+<h4 id="hello_world">hello world</h4><ul>
+<li><a href="https://segmentfault.com/a/1190000004394726?utm_source=APP&amp;utm_medium=iOS&amp;utm_campaign=socialShare" target="_blank" rel="external">使用ES6开发流程</a></li>
+<li><a href="http://www.es6fiddle.net/" target="_blank" rel="external">运行es6代码的网站</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="笔记">笔记</h4><ul>
+<li>Arrow Function<br><br>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的th]]>
+    </summary>
+    
+      <category term="ES6" scheme="http://willnewii.github.io/tags/ES6/"/>
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[git笔记]]></title>
@@ -374,7 +409,7 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     <link href="http://willnewii.github.io/20160104/css/"/>
     <id>http://willnewii.github.io/20160104/css/</id>
     <published>2016-01-04T02:54:00.000Z</published>
-    <updated>2016-01-05T02:00:25.000Z</updated>
+    <updated>2016-02-17T10:19:37.000Z</updated>
     <content type="html"><![CDATA[<h3 id="CSS_定位_(Positioning)">CSS 定位 (Positioning)</h3><p>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们的内容显示在行中，即“行内框”。</p>
 <h4 id="display_属性规定元素应该生成的框的类型。">display <strong><em>属性规定元素应该生成的框的类型。</em></strong></h4><pre><code>您可以使用 <span class="attribute">display</span> 属性改变生成的框的类型。这意味着，通过将 <span class="attribute">display</span> 属性设置为 <span class="value">block</span>，可以让行内元素（比如 &lt;<span class="tag">a</span>&gt; 元素）表现得像块级元素一样。还可以通过把 <span class="attribute">display</span> 设置为 <span class="attribute">none</span>，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间。
 </code></pre><ul>
@@ -599,7 +634,7 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     <link href="http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151218/Cordova笔记/</id>
     <published>2015-12-18T06:21:00.000Z</published>
-    <updated>2016-02-01T06:16:51.000Z</updated>
+    <updated>2016-02-16T03:03:56.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li><p>Push<br>push选用了jPush.因为貌似只有他们家只官方支持了Cordova.<br><a href="https://github.com/jpush/jpush-phonegap-plugin" target="_blank" rel="external">https://github.com/jpush/jpush-phonegap-plugin</a></p>
 <ul>
@@ -644,6 +679,11 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
 <li><p><a href="http://wex5.com/cn/?p=11382" target="_blank" rel="external">cordova插件清单</a></p>
 </li>
 </ol>
+<h4 id="Angular">Angular</h4><ul>
+<li><a href="https://github.com/angular-ui/ui-router/wiki" target="_blank" rel="external">ui-router wiki</a></li>
+<li><a href="http://blog.csdn.net/yy374864125/article/details/43702153" target="_blank" rel="external">angular ui-router - 管理状态</a></li>
+<li><a href="http://blog.jobbole.com/62249/" target="_blank" rel="external">AngularJS 指令实践指南</a></li>
+</ul>
 <h3 id="资料">资料</h3><p><a href="http://park.jobdeer.com/discussion/22/%E4%BD%BF%E7%94%A8-html2canvas-%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E6%88%AA%E5%9B%BE%E5%B9%B6%E4%B8%8B%E8%BD%BD" target="_blank" rel="external">使用-html2canvas-实现浏览器截图并下载</a></p>
 ]]></content>
     <summary type="html">
@@ -660,7 +700,7 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     <link href="http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
     <id>http://willnewii.github.io/20151214/MayDay歌词本更新日志/</id>
     <published>2015-12-14T14:11:00.000Z</published>
-    <updated>2016-02-01T10:24:55.000Z</updated>
+    <updated>2016-02-02T09:14:49.000Z</updated>
     <content type="html"><![CDATA[<h4 id="更新日志">更新日志</h4><h5 id="2016-02-01">2016.02.01</h5><ol>
 <li>优化badge更新</li>
 <li>歌词页有歌曲时播放问题</li>
@@ -724,20 +764,231 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
 </ol>
 <h5 id="issue">issue</h5><ol>
 <li>手机网络发送失败</li>
-<li>badge需要重新登录才能更新状态</li>
-<li>草稿箱</li>
 </ol>
 <h5 id="待完善">待完善</h5><ol>
 <li>签到日历</li>
 <li>草稿箱</li>
-<li>歌词页右上角菜单(评论/喜欢/)</li>
+<li><del>歌词页右上角菜单(评论/喜欢/)</del></li>
 <li>登录流程,2次授权</li>
 <li><del>登录引导对话框</del></li>
 <li><del>歌词页面</del></li>
+<li><del>badge需要重新登录才能更新状态</del></li>
 <li><del>…我操…忘了…</del></li>
 <li><del>更新提示(需要双击home键,杀死app后重新启动.)</del></li>
 <li>添加登陆后自动更新状态接口.</li>
 <li><a href="http://electron.atom.io/" target="_blank" rel="external">http://electron.atom.io/</a></li>
+</ol>
+<h3 id="android更新日志">android更新日志</h3><h5 id="2015_0122(2-2-4)">2015 0122(2.2.4)</h5><ul>
+<li>修复 推送不能成功接收</li>
+<li>动画类更换(未完成,先过年再说 o(≧v≦)o~~).</li>
+</ul>
+<h5 id="2015_0122(2-2-3)">2015 0122(2.2.3)</h5><ul>
+<li>个人信息页面添加签到信息入口.(修复签到静态变量应用的bug);</li>
+<li>修复 查看用户微博时,如果没有安装新浪微博不能打开浏览器的问题</li>
+<li>修改 收信箱新消息提醒策略</li>
+<li>添加 我想说分享功能(限制为自己的帖子)</li>
+<li>添加收件箱功能.(之前的提醒看过就没有了,现在所有提醒会一直在收件箱中,以便查看历史记录).</li>
+<li>修正当提醒(主贴是自己的)和回复(主贴是别人的)同时弹出提醒跳转页面错误的问题.</li>
+<li>设置页面添加是否使用系统默认emoji表情选项.(有些系统会自定义一套emoji,如果你认为比app里的好看,你可以使用系统的.)</li>
+<li>正式支持emoji表情.(//修改数据库相关字段为blob)</li>
+<li>草稿箱添加长按删除.</li>
+<li>修改我想说正文行间距,便于阅读.</li>
+<li>修正了更新数据库,第一次进入看不到数据的问题.</li>
+<li>添加更新签名.  (用户页面现在可以更新头像/更新个性签名)</li>
+</ul>
+<h5 id="1219(2-9-0)">1219(2.9.0)</h5><ul>
+<li>优化注册登录流程</li>
+<li>添加签到小功能.(据说以后会有小礼品…待定)</li>
+<li>添加草稿箱功能.(看到一些小伙伴写那么那么长文,很是感动哇~ so,小伙伴们继续加油吧~)</li>
+</ul>
+<h5 id="1205">1205</h5><ul>
+<li>修改背景模糊选项</li>
+<li>修改歌词页背景选择大图后失败bug</li>
+<li>修复新浪授权SSO方式失败问题</li>
+<li>修复更新头像信息逻辑</li>
+</ul>
+<p>歌词模块</p>
+<ul>
+<li>全新的数据更新策略,专辑信息更新更灵活.</li>
+<li>全新的歌词模块UI.歌词背景模糊特效,让背景图片更加贴合歌词.</li>
+<li>主要页面支持侧滑退出.(如果你是MX,你又不喜欢用小光圈上划手势退出,这个你能用的上.)</li>
+<li>重写歌词选取功能.不再有闪烁的小光标,更轻松的复制和分享.</li>
+</ul>
+<p>悬浮窗功能</p>
+<ul>
+<li>全新的悬浮窗功能模块,由之前单一的快捷方式改为可以支持App/联系人/快捷方式三种方式.</li>
+</ul>
+<p>其他</p>
+<ul>
+<li>新增博客模块,目前收集了阿信和石头的博客内容.(如果你有其他团员的文章数据,欢迎提供,特别是刚结婚那位的,个人超喜欢他的文笔)</li>
+<li>头像支持修改.终于…终于…支持了.后续会添加更多用户信息元,可数据的修改.</li>
+<li>支持图片发送,新版本中去除了板块选择,并开放了图片上传功能.</li>
+<li>我想说图片浏览,支持大图浏览,并保存本地.so,多多分享和五月天有关的图片吧.</li>
+</ul>
+<h5 id="Tips">Tips</h5><ul>
+<li>新的歌词本里需要用到读取联系人权限.用途为:在悬浮窗中添加联系人.如果你介意,现在大部分Android手机都有权限管理模块,关闭就是了,不影响其他功能的使用.</li>
+<li><p>miui(不仅仅是小米用户,刷了miui rom应该都有这个可能)用户如果出现悬浮小人不能动的情况,可以在设置-》应用-》歌词本应用页面 将 “显示悬浮窗”选项开启即可.</p>
+</li>
+<li><p>悬浮框-“快捷方式”的使用.功能原理就是读取桌面上的所有快捷方式,比如你可以先将你经常使用到的微信联系人创建快捷方式到桌面,在使用在悬浮框的设置页面,读取桌面的快捷方式将你需要的内容添加到小阿信里面.</p>
+</li>
+</ul>
+<h5 id="2-2-1">2.2.1</h5><ol>
+<li>更新末日为明日/更新专辑封面。</li>
+<li>67场演唱会数据补全。</li>
+<li>演唱会签到功能。</li>
+<li>个人信息页,添加信息汇总统计。</li>
+<li>在歌词页直接进行字体设置。</li>
+<li>推荐我想说/新增歌词提醒推送功能。</li>
+<li>帮助页添加手动检测版本/和网盘链接(如果升级功能不能正常下载,可以自行至网盘进行下载。)</li>
+<li>头像缓存文件不再显示(请删除之前的文件)。</li>
+<li>增量更新功能。</li>
+</ol>
+<h5 id="2-1">2.1</h5><ol>
+<li>长按悬浮框可更换其他图案.增加了悬浮框的稳定性.</li>
+<li>修改歌词页UI.新增“我喜欢”按钮.</li>
+<li>添加歌词页歌词切换动画</li>
+<li>修改”最佳作词人”排列顺序.</li>
+<li>个人信息页UI修改. 点击个人信息可产看自己的我想说.</li>
+<li>回复自己的背景色区分</li>
+<li>分享</li>
+<li>字体设置移到歌词页</li>
+<li>地理位置彩蛋</li>
+<li>增量更新</li>
+</ol>
+<h5 id="2-0">2.0</h5><ol>
+<li>修改分类页面  更换为ListView 形式.(周一)</li>
+<li>排行榜页面.  跳转至歌词页.   (1,23, 用图片？)(周一)</li>
+<li>个人信息页,添加”我想说”</li>
+<li>个人页 布局 </li>
+<li>个人页/侧滑菜单使用圆形头像</li>
+<li>小悬浮框 雅安加油</li>
+<li>bginfo /悬浮框 添加url属性.  逻辑:url非空,点击动作为跳转至url</li>
+<li>发布页面,去除歌单功能/添加回复页相同表情动画.</li>
+<li>修改获取状态栏高度位置. onTouch时触发</li>
+</ol>
+<h5 id="1-9-0">1.9.0</h5><ol>
+<li>分类页面 ListView动画效果实现</li>
+<li>检测喜欢歌词页面  更多实现.  UI、信息显示的完善</li>
+<li>排行榜页 </li>
+<li>闽南 图标</li>
+<li>歌词页</li>
+<li>选词功能实现</li>
+</ol>
+<h5 id="1-8-0">1.8.0</h5><ol>
+<li>直接调用微博客户端登陆.SSO</li>
+<li>检查快捷方式不稳定. </li>
+<li>快捷方式图片选择Grid</li>
+<li>歌词翻转效果</li>
+<li>修改ActionBar 背景色</li>
+<li>使用prefrence 保存快捷方式位置.</li>
+<li>根据所选歌词掉落相关图片彩蛋</li>
+<li>点击发送弹出分类选择.</li>
+</ol>
+<h5 id="1-7-0">1.7.0</h5><ol>
+<li>微博登录</li>
+<li>多用户选择</li>
+<li>回复自己的用蓝色标记.</li>
+<li>我想说列表滑动到底部自动加载.(去除之前还要按一下”加载更多”)</li>
+<li>桌面的’小阿信’希望在你们的手机上效果还好,你们能喜欢. 类似快捷方式的模块,位置可以自由拖动.默认是打开歌词本,当然你也可以在设置中,选择其他应用,比如微博/QQ等.</li>
+<li>类似微信的小彩蛋.</li>
+<li>明日场次已经添加.</li>
+<li>搜索排序.其他歌词放置最后.</li>
+<li>《天机》之前给忘了,已经添加.</li>
+</ol>
+<h5 id="1-6-0">1.6.0</h5><ol>
+<li>我们模块,刷新后,bitmap的回收。</li>
+<li>添加”我们” 分页加载.</li>
+<li>添加 板块   导航</li>
+<li>诺亚方舟 （倒计时程序）</li>
+<li>修改网络加载模块</li>
+</ol>
+<h5 id="1-5-0">1.5.0</h5><ol>
+<li>新的侧滑菜单UI.用户相关操作请点击用户名.</li>
+<li>新增的”我们”模块.</li>
+<li>个人信息页,增加更新地理位置信息.提交地理位置后会在”我们”模块中显示.(如果你介意位置信息,请不要点.~)</li>
+<li>新启动画面.以后可以使用用户提交的图片来做启动画面.(欢迎大家踊跃提交喽~)</li>
+<li>完整的”夜用型”配色,各种不侧漏,晚上随你怎么用.</li>
+<li>调整了缓存文件夹.</li>
+<li>优化之前刷新崩溃的问题.(貌似没有彻底解决,但是应该会好些.)</li>
+<li>优化提醒结构.超过三分钟无效提醒,将自动清除.</li>
+<li>优化”我想说”的布局,虽然依然是坨屎…</li>
+<li>优化标签的显示效果.</li>
+</ol>
+<h5 id="1-3-9">1.3.9</h5><ol>
+<li>用户信息页  </li>
+<li>提示定位信息(歌词本用户可以在地图上看到你.PS:如果你介意地理信息暴露,可以微博@我,哪个市也好,该功能只是为了玩,没别的意思.)</li>
+</ol>
+<h5 id="1-3-8">1.3.8</h5><p>//完成</p>
+<ul>
+<li>我想说 标签（默认贴/生日贴/笑话贴/晚安贴/连线贴（发号码可直接跳转拨号））</li>
+<li>创建歌单</li>
+<li>下拉刷新 </li>
+<li>用户信息页,查看用户发帖接口</li>
+<li>歌词页,查看该歌曲我想说接口</li>
+<li>好友关系异常,跳转授权页提示绑定.</li>
+<li>根据标签区分颜色(效果不明显,通过前缀代替)</li>
+<li>整理专辑图片(200*200)<br>//修改</li>
+<li>演唱会坐标</li>
+<li>图片浏览</li>
+</ul>
+<p>等待图/下载异常</p>
+<ul>
+<li>Map气泡处理</li>
+<li>演唱会倒数天数异常</li>
+<li>全局亮度调节<br>//优化</li>
+<li>歌单排序部分代码完善</li>
+<li>Item中歌单 内容  进行编辑<br>bug:</li>
+<li>修改Item 宽度,点击title事件</li>
+<li>刷新</li>
+</ul>
+<h5 id="1-3-7">1.3.7</h5><p>新的分享模块.支持带图片的微博和直接@好友.<br>增加个人信息页.右上角,点击自己的用户名可查看.目前仅支持编辑自我描述.(性别和头像均来自新浪微博.). 所以,请先登录歌词本后在进行新浪授权.<br>我想说头像显示. 点击头像可以查看该用户信息(默认性别为女.) 没头像的,可以点击用户名进行查看.<br>如果该用户绑定新浪微博,支持在应用内直接加关注.<br>搜索支持歌名搜索.<br>我想说UI做了一点点小调整.<br>新图标,更换未遂…</p>
+<h5 id="1-3-6">1.3.6</h5><ol>
+<li>修改HeadItem  Bug</li>
+<li>添加倒计时天数</li>
+<li>支持发表情</li>
+<li><p>支持Html代码</p>
+</li>
+<li><p>屏幕亮度调节</p>
+</li>
+<li>关于页添加说明文档</li>
+<li>是否添加’我想说’随意发帖</li>
+<li>继续完善Activity跳转动画.</li>
+<li>提醒(铃音/震动)</li>
+<li>翻页可行性.</li>
+</ol>
+<h5 id="1-3-5">1.3.5</h5><p>Update:</p>
+<ol>
+<li>‘我想说’回复提醒功能.</li>
+<li>点击用户的留言,可以对该用户进行回复.</li>
+<li>歌词字体自定义功能. </li>
+<li>歌词页常亮.<br>Bug:</li>
+<li>繁体无法正常使用搜索功能.</li>
+<li>显示注音时,无简繁体切换.</li>
+<li>回复列表拖动时’黑块’.</li>
+<li>当回复内容过长时,内容被省略.</li>
+<li>当主题内容过长,可能造成部分机型无法拖动回复列表或遮盖.</li>
+<li>部分机型可能出现输入界面字体与背景色混淆看不清输入内容.</li>
+</ol>
+<ul>
+<li>说明:<ul>
+<li>自定义字体功能:<br>请将你喜欢的字体更名为def.ttf 放置SD中 mayday/font/ 目录下.并在设置页勾选即可.<br><em>:当使用自定义字体,并选择显示繁体时,可能会出现字体显示不完整,与歌词本无关,切换一个完整字体即可.
+</em>:部分字体可能显示不便于阅读,可能尝试勾选显示粗体进行微调.</li>
+<li>‘我想说’提醒功能:<br>目前正处于提醒功能的第一版,可能会出现提示的内容有偏差,或错误.如果你有耐心,可能将Bug告知咸鱼,帮咸鱼完善我想说. 如果没有,可以在设置页面勾选关闭提醒,以免影响你的正常使用.</li>
+</ul>
+</li>
+</ul>
+<h5 id="1-3-2">1.3.2</h5><ol>
+<li>地图</li>
+<li>“我想说”回复功能</li>
+<li>闽南语歌词拼音转换</li>
+<li>新UI  左上角 点击可以直接退出.</li>
+</ol>
+<h5 id="1-3-1">1.3.1</h5><ol>
+<li>更新歌曲接口/根据ID  inster操作.</li>
+<li>修改 联合添加 +1的操作.</li>
+<li>发布者  高亮显示</li>
+<li>字数限制,过长用…表示.  添加详细页Activity.</li>
+<li>rootid  （回复内容）</li>
 </ol>
 ]]></content>
     <summary type="html">
@@ -811,15 +1062,28 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     <link href="http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/"/>
     <id>http://willnewii.github.io/20151202/前端-小学生/</id>
     <published>2015-12-02T08:14:41.000Z</published>
-    <updated>2016-01-28T05:55:37.000Z</updated>
+    <updated>2016-02-17T10:22:09.000Z</updated>
     <content type="html"><![CDATA[<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
 <p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
-<h4 id="三年级">三年级</h4><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
-<p><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
+<h4 id="gulp">gulp</h4><ul>
+<li><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></li>
+<li><a href="http://colobu.com/2014/11/17/gulp-plugins-introduction/" target="_blank" rel="external">gulp plugins 插件介绍 ~推荐~</a></li>
+<li><a href="http://www.zuojj.com/archives/550.html" target="_blank" rel="external">Gulp-ruby-sass 介绍</a></li>
+</ul>
+<h4 id="文章">文章</h4><ul>
+<li><p><a href="http://chinagdg.org/2015/12/%E5%83%8F-sublime-text-%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8-chrome-devtools/" target="_blank" rel="external">像 Sublime Text 一样使用 Chrome DevTools</a></p>
+</li>
+<li><p><a href="http://www.w3cplus.com/tools/dev-tips.html" target="_blank" rel="external">Chrome 35个开发者工具的小技巧</a></p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
+</li>
+</ul>
 <h4 id="手册/API">手册/API</h4><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
 <p><a href="http://www.css88.com/book/css/quicksearch.htm" target="_blank" rel="external">CSS3参考手册</a></p>
 <p><a href="http://www.ziqiangxuetang.com/cssref/css-reference.html" target="_blank" rel="external">CSS 参考手册(有示例)</a></p>
+<p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
+<h4 id="iconfont">iconfont</h4><p><a href="http://www.iconfont.cn/" target="_blank" rel="external">淘宝的iconfont库</a></p>
+<p><a href="https://icons8.com/" target="_blank" rel="external">icons8</a></p>
 <h4 id="资源站">资源站</h4><p><a href="https://github.com/amfe/article/issues" target="_blank" rel="external">貌似是个淘宝前端</a></p>
 <p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
 <p><a href="http://www.zcfy.cc/article/85" target="_blank" rel="external">网页性能： 缓存效率实践</a></p>
@@ -828,7 +1092,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
 <p><a href="http://tool.oschina.net/codeformat/js/" target="_blank" rel="external">在线工具-代码格式化</a></p>
 <p><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus 大漠</a></p>
 <p><a href="http://caniuse.com/" target="_blank" rel="external">caniuse…</a></p>
-<h4 id="ionic">ionic</h4><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="external">ionic 文本选择</a></p>
 <h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
 ]]></content>
     <summary type="html">
@@ -1090,256 +1353,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     </summary>
     
       <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atom编辑器]]></title>
-    <link href="http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    <id>http://willnewii.github.io/20151018/Atom编辑器/</id>
-    <published>2015-10-18T10:36:41.000Z</published>
-    <updated>2015-11-30T04:19:17.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="基础操作">基础操作</h4><table>
-<thead>
-<tr>
-<th>中文</th>
-<th>英文</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>命令行</td>
-<td>command line</td>
-<td>cmd+shift+p</td>
-<td></td>
-</tr>
-<tr>
-<td>项目跳转面板</td>
-<td>delete line</td>
-<td>cmd+ctrl+p</td>
-<td></td>
-</tr>
-<tr>
-<td>文件跳转面板</td>
-<td>Fuzzy Finder</td>
-<td>cmd+p</td>
-<td></td>
-</tr>
-<tr>
-<td>变量、函数跳转面板</td>
-<td>Symbol-view</td>
-<td>cmd+r</td>
-<td></td>
-</tr>
-<tr>
-<td>语法选择</td>
-<td>Grammar Selector</td>
-<td>ctrl+Shift+l</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="编辑">编辑</h4><table>
-<thead>
-<tr>
-<th>中文</th>
-<th>英文</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>复制行</td>
-<td>Duplicate Line</td>
-<td>ctrl-d(自定义)</td>
-<td></td>
-</tr>
-<tr>
-<td>删除行</td>
-<td>Delete Line</td>
-<td>cmd-delete(自定义:未设置成功)</td>
-<td></td>
-</tr>
-<tr>
-<td>小写转换</td>
-<td>lower-case</td>
-<td>cmd+k+l</td>
-<td></td>
-</tr>
-<tr>
-<td>大写转换</td>
-<td>upper-case</td>
-<td>cmd+k+u</td>
-<td></td>
-</tr>
-<tr>
-<td>选择下一个</td>
-<td>find-and-replace:select-next</td>
-<td>ctrl-g(自定义)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<pre><code>自定义部分快捷键是为了统一<span class="keyword">android </span>studio的操作.你也可以改为你熟悉的按键
-</code></pre><h4 id="插件">插件</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>说明</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>timecop</td>
-<td>启动时间管理</td>
-<td></td>
-</tr>
-<tr>
-<td>Save Session</td>
-<td>保存会话</td>
-<td></td>
-</tr>
-<tr>
-<td>sublime-style-column-selection</td>
-<td>块操作</td>
-<td></td>
-</tr>
-<tr>
-<td>minimap</td>
-<td>代码地图</td>
-<td></td>
-</tr>
-<tr>
-<td>project-manager</td>
-<td>项目列表/切换</td>
-<td></td>
-</tr>
-<tr>
-<td>filetype-color</td>
-<td>图标美化</td>
-<td></td>
-</tr>
-<tr>
-<td>file-icons</td>
-<td>同上</td>
-<td></td>
-</tr>
-<tr>
-<td>url-encode</td>
-<td>对选中的文本进行编码解码</td>
-<td></td>
-</tr>
-<tr>
-<td>Sync Settings</td>
-<td>保存你的atom的配置到gits</td>
-<td></td>
-</tr>
-<tr>
-<td>Pretty JSON</td>
-<td>格式化json文件</td>
-<td>有个不方便的地方,你需要先选择文件的语言为json</td>
-</tr>
-<tr>
-<td>activate-power-mode</td>
-<td>超级酷炫的插件…</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h4 id="基础操作">基础操作</h4><table>
-<thead>
-<tr>
-<th>中文</th>
-<th>英文</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>命令行</td>
-<td>command line</td>
-<td>cmd+shift+p</td>
-<td></td>
-</tr>
-<tr>
-<td>项目跳转面板</td>
-<td>delete line</td>
-<td>cmd+ctrl+p</td>
-<td></td>
-</tr>
-<tr>
-<td>文件跳转面板</td>
-<td>Fuzzy Finder</td>
-<td>cmd+p</td>
-<td></td>
-</tr>
-<tr>
-<td>变量、函数跳转面板</td>
-<td>Symbol-view</td>
-<td>cmd+r</td>
-<td></td>
-</tr>
-<tr>
-<td>语法选择</td>
-<td>Grammar Selector</td>
-<td>ctrl+Shift+l</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="编辑">编辑</h4><table>
-<thead>
-<tr>
-<th>中文</th>
-<th>英文</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>复制行</td>
-<td>Duplicate Line</td>
-<td>ctrl-d(自定义)</td>
-<td></td>
-</tr>
-<tr>
-<td>删除行</td>
-<td>Delete Line</td>
-<td>cmd-delete(自定义:未设置成功)</td>
-<td></td>
-</tr>
-<tr>
-<td>小写转换</td>
-<td>lower-case</td>
-<td>cmd+k+l</td>
-<td></td>
-</tr>
-<tr>
-<td>大写转换</td>
-<td>upper-case</td>
-<td>cmd+k+u</td>
-<td></td>
-</tr>
-<tr>
-<td>选择下一个</td>
-<td>find-and-replace:select-next</td>
-<td>ctrl-g(自定义)</td>
-<td></td>
-</tr>
-</tbody>
-</table>]]>
-    
-    </summary>
-    
-      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   

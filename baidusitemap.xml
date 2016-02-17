@@ -4,14 +4,52 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2016-02-01T10:24:55.000Z</lastmod>
+    <loc>http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/</loc>
+    <lastmod>2016-02-17T10:22:09.000Z</lastmod>
     <data>
         <display>
-        <title>MayDay歌词本更新日志</title>
-        <pubTime>2015-12-14T14:11:00.000Z</pubTime>
+        <title>前端-小学生</title>
+        <pubTime>2015-12-02T08:14:41.000Z</pubTime>
         
-        <tag>MayDay歌词本</tag>
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160215/ES6-%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2016-02-17T10:21:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>ES6笔记</title>
+        <pubTime>2016-02-15T02:47:00.000Z</pubTime>
+        
+        <tag>ES6</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160104/css/</loc>
+    <lastmod>2016-02-17T10:19:37.000Z</lastmod>
+    <data>
+        <display>
+        <title> css定位</title>
+        <pubTime>2016-01-04T02:54:00.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>前端</tag>
          
          
            
@@ -22,7 +60,7 @@
     
   <url>
     <loc>http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-02-01T06:16:51.000Z</lastmod>
+    <lastmod>2016-02-16T03:03:56.000Z</lastmod>
     <data>
         <display>
         <title>Cordova笔记</title>
@@ -38,14 +76,14 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/</loc>
-    <lastmod>2016-01-28T05:55:37.000Z</lastmod>
+    <loc>http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2016-02-02T09:14:49.000Z</lastmod>
     <data>
         <display>
-        <title>前端-小学生</title>
-        <pubTime>2015-12-02T08:14:41.000Z</pubTime>
+        <title>MayDay歌词本更新日志</title>
+        <pubTime>2015-12-14T14:11:00.000Z</pubTime>
         
-        <tag>前端</tag>
+        <tag>MayDay歌词本</tag>
          
          
            
@@ -237,25 +275,6 @@
         <display>
         <title>compass笔记</title>
         <pubTime>2015-12-29T03:57:00.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20160104/css/</loc>
-    <lastmod>2016-01-05T02:00:25.000Z</lastmod>
-    <data>
-        <display>
-        <title> css定位</title>
-        <pubTime>2016-01-04T02:54:00.000Z</pubTime>
         
         <tag>css</tag>
          
