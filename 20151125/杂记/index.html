@@ -50,7 +50,7 @@ iTerm 2 color schemes
 
 design
 material des">
-<meta property="og:updated_time" content="2016-01-25T07:38:02.000Z">
+<meta property="og:updated_time" content="2016-02-18T04:04:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杂记">
 <meta name="twitter:description" content="Markdown
@@ -305,6 +305,8 @@ material des">
 </ul>
 <h3 id="文档排版">文档排版</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
 <p><a href="http://zhuanlan.zhihu.com/uicircle/20506092" target="_blank" rel="external">中文排版指南</a></p>
+<h3 id="SVN">SVN</h3><p>批量添加新增文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"?"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn add</span><br></pre></td></tr></table></figure></p>
+<p>批量删除文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"!"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn <span class="keyword">rm</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
