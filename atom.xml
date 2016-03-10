@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-02-17T10:21:01.000Z</updated>
+  <updated>2016-03-10T10:36:02.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -13,6 +13,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Git小结]]></title>
+    <link href="http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/"/>
+    <id>http://willnewii.github.io/20160309/Git小结/</id>
+    <published>2016-03-09T07:27:46.000Z</published>
+    <updated>2016-03-10T10:36:02.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="什么是Git">什么是Git</h4><ul>
+<li>集中式 分布式</li>
+<li>代码库的每份拷贝都带有完整的数据库，用户可以在本地修改、提交代码</li>
+<li>分支…分支…分支…重要的事情说三遍</li>
+</ul>
+<h3 id="为什么是git">为什么是git</h3><ul>
+<li>google code关闭了…</li>
+<li>github是全球最大的同性交友网站…</li>
+<li>看看你使用的开源项目都托管在哪里?</li>
+<li>分支…分支…分支…重要的事情说三遍</li>
+</ul>
+<h3 id="提交方式">提交方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'svn提交'</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'git提交'</span></span><br><span class="line">git push origin <span class="keyword">master</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="branch">branch</h3><p>Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
+<p>简单、快速</p>
+<h3 id="gitflow">gitflow</h3><p><img src="/img/gitflog.png" alt="GitHub Octocat"></p>
+<h3 id="工作流程">工作流程</h3><ul>
+<li>永久性分支<ul>
+<li>master分支<br>存放的是随时可供在生产环境中部署的代码.当开发活动告一段落，产生了一份新的可供部署的代码时，master分支上的代码会被更新。同时,每一次更新,最好添加对应的版本号标签（TAG）。</li>
+<li>develop分支<br>保存当前最新开发成果的分支。当develop分支上的代码已实现本次更新的所有功能，并通过了所有的测试后，且代码已经足够稳定时，就可以将所有的开发成果合并回master分支了</li>
+</ul>
+</li>
+<li>临时性分支<ul>
+<li>topic分支<br>修改bug,实验性,优化,更新控件</li>
+<li>个人分支<br>你可以在接到开发任务后,基于develop分支,创建一个本地分支,进行开发.当模块开发完成或阶段性完成后再合并到dev分支.</li>
+</ul>
+</li>
+</ul>
+<p>按模块分配任务.大家以dev分支为基础,创建各自私有分支,进行开发.这个过程中是对其他人不可见,这样在开发过程中不会污染dev分支,出现dev分支不可用的状态.</p>
+<p>如果有交叉任务,可以创建一个topic分支,指定多名人员维护开发.</p>
+<h3 id="rebase_衍合/变基">rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</span><br></pre></td></tr></table></figure>
+<h3 id="持续集成">持续集成</h3><p><a href="http://10.101.26.196:8080/job/build-android/" target="_blank" rel="external">http://10.101.26.196:8080/job/build-android/</a></p>
+<h3 id="其它">其它</h3><ul>
+<li>git log</li>
+<li>stash</li>
+<li>markdown</li>
+</ul>
+<h4 id="资料">资料</h4><ul>
+<li><p>基础知识</p>
+<ul>
+<li><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">猴子都能看懂的git入门</a></li>
+<li><a href="http://www.cnblogs.com/gbyukg/archive/2011/12/12/2285419.html" target="_blank" rel="external">git log 参数</a></li>
+</ul>
+</li>
+<li><p>工作流</p>
+<ul>
+<li><a href="http://www.ituring.com.cn/article/56870" target="_blank" rel="external">基于git的源代码管理模型——git flow</a></li>
+<li><a href="https://coding.net/help/doc/git/git-branch.html" target="_blank" rel="external">coding-Git分支管理</a></li>
+<li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83" target="_blank" rel="external">常见工作流比较</a></li>
+</ul>
+</li>
+<li><p>进阶</p>
+<ul>
+<li><a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="external">Commit message和Change log编写指南</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="什么是Git">什么是Git</h4><ul>
+<li>集中式 分布式</li>
+<li>代码库的每份拷贝都带有完整的数据库，用户可以在本地修改、提交代码</li>
+<li>分支…分支…分支…重要的事情说三遍</li>
+</ul>
+<h3 id="为什么是git"]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[ES6笔记]]></title>
@@ -1219,40 +1293,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
   </entry>
   
   <entry>
-    <title><![CDATA[Android优化文章]]></title>
-    <link href="http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/"/>
-    <id>http://willnewii.github.io/20151125/Android 优化文章/</id>
-    <published>2015-11-25T10:36:00.000Z</published>
-    <updated>2015-12-22T03:30:05.000Z</updated>
-    <content type="html"><![CDATA[<ul>
-<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
-<li><a href="http://www.tuicool.com/articles/yUV3ear" target="_blank" rel="external">Android性能优化之如何避免Overdraw(推荐)</a></li>
-<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a></li>
-<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a></li>
-<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
-</li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
-</ul>
-<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<ul>
-<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
-<li><a]]>
-    </summary>
-    
-      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
-    
-      <category term="test" scheme="http://willnewii.github.io/categories/test/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Android 相关文章]]></title>
     <link href="http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/"/>
     <id>http://willnewii.github.io/20151125/Android相关文章/</id>
@@ -1283,84 +1323,36 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
   </entry>
   
   <entry>
-    <title><![CDATA[MarkDown语法]]></title>
-    <link href="http://willnewii.github.io/20151101/MarkDown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://willnewii.github.io/20151101/MarkDown语法/</id>
-    <published>2015-11-01T10:36:41.000Z</published>
-    <updated>2015-11-27T12:30:55.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="强调">强调</h3><p><strong>一个人来到田纳西</strong></p>
-<p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
-<h3 id="分割线">分割线</h3><p>三个或更多-_*，必须单独一行，可含空格</p>
-<hr>
-<h3 id="引用">引用</h3><blockquote>
-<p>引用 哈哈哈</p>
-</blockquote>
-<p>内层符号前的空格必须要</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用中的引用<br><a id="more"></a></p>
-<h3 id="链接">链接</h3></blockquote>
-</blockquote>
-<ul>
-<li><p>文字超链接<br><a href="http://bruce-sha.github.io" title="不如的博客" target="_blank" rel="external">不如</a></p>
+    <title><![CDATA[Android优化文章]]></title>
+    <link href="http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/"/>
+    <id>http://willnewii.github.io/20151125/Android 优化文章/</id>
+    <published>2015-11-25T10:36:00.000Z</published>
+    <updated>2015-12-22T03:30:05.000Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
+<li><a href="http://www.tuicool.com/articles/yUV3ear" target="_blank" rel="external">Android性能优化之如何避免Overdraw(推荐)</a></li>
+<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a></li>
+<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a></li>
+<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
 </li>
-<li><p>自动链接<br><a href="http://ibruce.info" target="_blank" rel="external">http://ibruce.info</a></p>
+<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
 </li>
-<li><p>索引链接<br><a href="http://bruce-sha.github.io" target="_blank" rel="external">不如</a></p>
-</li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
 </ul>
-<p><img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=160" alt="GitHub Octocat"></p>
-<h3 id="代码">代码</h3><ul>
-<li>每行文字前加4个空格或者1个Tab</li>
-</ul>
-<pre><code>val s = <span class="string">"hello Markdown"</span>
-<span class="function"><span class="title">println</span><span class="params">( s )</span></span>
-</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ABC mAbc = <span class="keyword">new</span> ABC();</span><br></pre></td></tr></table></figure>
-<h3 id="表格">表格</h3><table>
-<thead>
-<tr>
-<th><em>Year</em></th>
-<th><em>Temperature (low)</em></th>
-<th><em>Temperature (high)</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 1900</td>
-<td>-10</td>
-<td>25</td>
-</tr>
-<tr>
-<td> 1910</td>
-<td>-15</td>
-<td>30</td>
-</tr>
-<tr>
-<td> 1920</td>
-<td>-10</td>
-<td>32</td>
-</tr>
-</tbody>
-</table>
+<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="强调">强调</h3><p><strong>一个人来到田纳西</strong></p>
-<p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
-<h3 id="分割线">分割线</h3><p>三个或更多-_*，必须单独一行，可含空格</p>
-<hr>
-<h3 id="引用">引用</h3><blockquote>
-<p>引用 哈哈哈</p>
-</blockquote>
-<p>内层符号前的空格必须要</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用中的引用<br>]]>
-    
+    <![CDATA[<ul>
+<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
+<li><a]]>
     </summary>
     
-      <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
+    
+      <category term="test" scheme="http://willnewii.github.io/categories/test/"/>
     
   </entry>
   

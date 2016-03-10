@@ -189,6 +189,138 @@
 
       <div class="body-wrap">
   
+    <article id="post-sacc" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20151228/sacc/" class="article-date">
+  	<time datetime="2015-12-28T07:08:00.000Z" itemprop="datePublished">2015-12-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151228/sacc/">sass笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Sass_和_SCSS">Sass 和 SCSS</h3><p>其实是同一种东西，我们平时都称之为Sass，两者之间不同之处有以下两点：</p>
+<ol>
+<li><p>文件扩展名不同，Sass是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名</p>
+</li>
+<li><p>语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。</p>
+</li>
+<li><p>Sass 和 CSS 写法的确存在一定的差异，由于 Sass 是基于 Ruby 写出来，所以其延续了 Ruby 的书写规范。在书写 Sass 时不带有大括号和分号，其主要是依靠严格的缩进方式来控制的</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">body</span></span><br><span class="line">     <span class="attribute">color</span>: <span class="hexcolor">#fff</span></span><br><span class="line">     <span class="attribute">background</span>: <span class="hexcolor">#f36</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SCSS 和 CSS 写法无差别，这也是 Sass 后来越来越受大众喜欢原因之一。简单点说，把你现有的“.css”文件直接修改成“.scss”即可使用。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">body</span><span class="rules">&#123;</span><br><span class="line">     <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">     <span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#f36</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Scss编译网站">Scss编译网站</h3><p><a href="http://www.sassmeister.com/" target="_blank" rel="external">http://www.sassmeister.com/</a></p>
+<h3 id="知识点">知识点</h3><ol>
+<li><p>普通变量和默认变量</p>
+<ol>
+<li><p>普通变量定义后可以全局范围使用.</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$fontSize</span>:<span class="number">12</span>px;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>默认变量一般是用来设置默认值，然后根据需求来覆盖的，覆盖的方式也很简单，只需要在默认变量之前重新声明下变量即可。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$baseLineHeight</span>: <span class="number">1.5</span> !<span class="keyword">default</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>混合宏 @mixin @includ      &amp;父类选择 hover</p>
+<ol>
+<li><p>默认值</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@mixin border-radius(<span class="variable">$radius</span>:<span class="number">3</span>px)&#123;</span><br><span class="line">    -webkit-border-radius: <span class="variable">$radius</span>;</span><br><span class="line">    border-radius: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多参数</p>
+</li>
+</ol>
+</li>
+<li><p>继承 @extend</p>
+<ol>
+<li>不能继承选择器序列</li>
+</ol>
+</li>
+<li><p>占位符 %placeholder</p>
+</li>
+<li><p>混合宏 VS 继承 VS 占位符</p>
+<ol>
+<li>如果在样式文件中调用同一个混合宏，会产生多个对应的样式代码，造成代码的冗余，这也是 CSSer 无法忍受的一件事情。不过他并不是一无事处，他可以传参数。<strong>如果你的代码块中涉及到变量，建议使用混合宏来创建相同的代码块。</strong></li>
+<li>使用继承后，编译出来的 CSS 会将使用继承的代码块合并到一起，通过组合选择器的方式向大家展现。<strong>如果你的代码块不需要专任何变量参数，而且有一个基类已在文件中存在，那么建议使用 Sass 的继承。</strong></li>
+<li>“占位符是独立定义，不调用的时候是不会在 CSS 中产生任何代码；继承是首先有一个基类存在，不管调用与不调用，基类的样式都将会出现在编译出来的 CSS 代码中。”<br><img src="/img/混合宏vs继承vs占位符.jpg" alt="混合宏 VS 继承 VS 占位符">  </li>
+</ol>
+</li>
+<li><p>插值语句 #{ }</p>
+</li>
+<li><p>注释</p>
+<ol>
+<li>/<em>显示</em>/        </li>
+<li>//不显示</li>
+</ol>
+</li>
+<li><p>计算</p>
+<ol>
+<li><p>加减乘除</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$list</span>: twitter,facebook,github,weibo;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from <span class="number">1</span> through length(<span class="variable">$list</span>)&#123;</span><br><span class="line">  .icon-#&#123;nth(<span class="variable">$list</span>,<span class="variable">$i</span>)&#125;&#123;</span><br><span class="line">    background-postion: <span class="number">0</span>+<span class="number">20</span>px * <span class="variable">$i</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">/*除法*/</span><br><span class="line">p &#123;</span><br><span class="line">  font: <span class="number">10</span>px/<span class="number">8</span>px;             // 纯 CSS，不是除法运算</span><br><span class="line">  <span class="variable">$width</span>: <span class="number">1000</span>px;</span><br><span class="line">  width: <span class="variable">$width</span>/<span class="number">2</span>;            // 使用了变量，是除法运算</span><br><span class="line">  width: round(<span class="number">1.5</span>)/<span class="number">2</span>;        // 使用了函数，是除法运算</span><br><span class="line">  width: <span class="number">100</span>px / <span class="number">2</span>;           // 编译结果：<span class="number">100</span>px / <span class="number">2</span></span><br><span class="line">  height: (<span class="number">500</span>px/<span class="number">2</span>);          // 使用了圆括号，是除法运算</span><br><span class="line">  margin-left: <span class="number">5</span>px + <span class="number">8</span>px/<span class="number">2</span>px; // 使用了加（+）号，是除法运算</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>颜色运算 <strong>所有算数运算都支持颜色值，并且是分段运算的。也就是说，红、绿和蓝各颜色分段单独进行运算。</strong></p>
+</li>
+<li>字符串计算  <figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Hello"</span> + <span class="string">""</span> + <span class="string">"Sass!"</span>;   ==  <span class="string">" Hello Sass! "</span></span><br><span class="line">e + -<span class="built_in">resize</span>;              ==  e-<span class="built_in">resize</span>;</span><br><span class="line"><span class="string">"Foo "</span> + Bar;             ==  <span class="string">"Foo Bar"</span></span><br><span class="line">sans- + <span class="string">"serif"</span>;          ==  sans-serif;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li>@at-root @if type_of unitless  等操作符<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@mixin col-sm(<span class="variable">$width</span>: <span class="number">50</span>%) &#123;</span><br><span class="line">  @if type_of(<span class="variable">$width</span>) != number &#123;</span><br><span class="line">    @error <span class="string">'$width必须是一个数据类型,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @if not unitless(<span class="variable">$width</span>)&#123;</span><br><span class="line">    @if unit(<span class="variable">$width</span>) != <span class="string">'%'</span>&#123;</span><br><span class="line">      @error  <span class="string">'$width必须是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;@else &#123;</span><br><span class="line">    @warn  <span class="string">'$width应该是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    <span class="variable">$width</span>: (percentage(<span class="variable">$width</span>)/<span class="number">100</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @media (min-width: <span class="number">768</span>px) &#123;</span><br><span class="line">    width: <span class="variable">$width</span>;</span><br><span class="line">    float: left;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="tips">tips</h3><ol>
+<li>类名：应该有语义化的表现,而不是强调视觉性 </li>
+</ol>
+<p><a href="http://www.w3cplus.com/sassguide/syntax.html" target="_blank" rel="external">sass语法</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Cordova笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1053,81 +1185,6 @@
 
 
   
-    <article id="post-Android 优化文章" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151125/Android 优化文章/" class="article-date">
-  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished">2015-11-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151125/Android 优化文章/">Android优化文章</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
-<li><a href="http://www.tuicool.com/articles/yUV3ear" target="_blank" rel="external">Android性能优化之如何避免Overdraw(推荐)</a></li>
-<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a></li>
-<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a></li>
-<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
-</li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
-</ul>
-<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/test/">test</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-Android相关文章" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1199,11 +1256,11 @@
 
 
   
-    <article id="post-MarkDown语法" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Android 优化文章" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20151101/MarkDown语法/" class="article-date">
-  	<time datetime="2015-11-01T10:36:41.000Z" itemprop="datePublished">2015-11-01</time>
+      <a href="/20151125/Android 优化文章/" class="article-date">
+  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished">2015-11-25</time>
 </a>
     </div>
   
@@ -1216,7 +1273,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/20151101/MarkDown语法/">MarkDown语法</a>
+      <a class="article-title" href="/20151125/Android 优化文章/">Android优化文章</a>
     </h1>
   
 
@@ -1225,18 +1282,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="强调">强调</h3><p><strong>一个人来到田纳西</strong></p>
-<p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
-<h3 id="分割线">分割线</h3><p>三个或更多-_*，必须单独一行，可含空格</p>
-<hr>
-<h3 id="引用">引用</h3><blockquote>
-<p>引用 哈哈哈</p>
-</blockquote>
-<p>内层符号前的空格必须要</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用中的引用<br>
+        <ul>
+<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
+<li><a href="http://www.tuicool.com/articles/yUV3ear" target="_blank" rel="external">Android性能优化之如何避免Overdraw(推荐)</a></li>
+<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a></li>
+<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a></li>
+<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
+</li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
+</ul>
+<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
+
       
     </div>
     
@@ -1244,15 +1305,15 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/test/">test</a>
+	</div>
 
-      
-        <p class="article-more-link">
-          <a  href="/20151101/MarkDown语法/#more">more >></a>
-        </p>
+
       
       <div class="clearfix"></div>
     </div>
