@@ -229,7 +229,7 @@
 <h3 id="提交方式">提交方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'svn提交'</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'git提交'</span></span><br><span class="line">git push origin <span class="keyword">master</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="branch">branch</h3><p>Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
 <p>简单、快速</p>
-<h3 id="gitflow">gitflow</h3><p><img src="/img/gitflog.png" alt="GitHub Octocat"></p>
+<h3 id="gitflow">gitflow</h3><p><img src="/img/gitflow.png" alt="GitHub Octocat"></p>
 <h3 id="工作流程">工作流程</h3><ul>
 <li>永久性分支<ul>
 <li>master分支<br>存放的是随时可供在生产环境中部署的代码.当开发活动告一段落，产生了一份新的可供部署的代码时，master分支上的代码会被更新。同时,每一次更新,最好添加对应的版本号标签（TAG）。</li>
