@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-03-13T11:29:19.000Z</updated>
+  <updated>2016-03-14T06:36:39.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -18,18 +18,22 @@
     <title><![CDATA[持续集成 应用-1]]></title>
     <link href="http://willnewii.github.io/20160313/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90-%E5%BA%94%E7%94%A81/"/>
     <id>http://willnewii.github.io/20160313/持续集成-应用1/</id>
-    <published>2016-03-13T09:14:42.000Z</published>
-    <updated>2016-03-13T11:29:19.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="引子">引子</h4><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">现在的工作环境,代码基本处于私有状态,利用起来的只有开发组<span class="built_in">.</span>测试人员就算可以访问,也没有实质性的应用<span class="built_in">.</span>打个包<span class="attribute">...</span>连个真机看个<span class="keyword">log</span><span class="attribute">...</span>你他妈不会么<span class="attribute">...</span>~~测试也是技术人员呀<span class="attribute">...</span>天天干那些戳戳点点的有意思么？~~</span><br><span class="line">最近在看git工作流的相关应用,了解到持续集成方面的应用<span class="built_in">.</span>恰好能解决这方面的问题<span class="built_in">.</span></span><br></pre></td></tr></table></figure>
-<h4 id="什么是持续集成">什么是持续集成</h4><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。</span><br><span class="line">	高大上的答案,来自百度...</span><br><span class="line">```		</span><br><span class="line">#### 说说工作上的场景</span><br><span class="line">-<span class="ruby"> 啥时候发新包</span><br><span class="line"></span></span><br><span class="line">	在测试阶段,当进行一轮测试后,测试人员就要等着发新包.</span><br><span class="line">  -<span class="ruby"> 这是一个被动行为.如果开发人员不推进,测试人员将永远处于等待状态.(为什么测试人员不去搭建一个编译环境...)</span><br><span class="line"></span>  -<span class="ruby"> 大家都有一种<span class="string">"默契"</span>,代码相关的产出物都应该由开发人员来搞.跟其他人没毛关系</span><br><span class="line"></span>  -<span class="ruby"> 理论上,只要代码库被更新,测试人员就可以进行新的测试,不需要等待开发人员的推进.</span><br><span class="line"></span></span><br><span class="line">-<span class="ruby"> 驱动工作的是代码库</span></span><br></pre></td></tr></table></figure>
-<pre><code>一直以来,大家习惯的工作流程是确认bug,修改bug,提交代码,编译新包,交付测试.这一切的行为需要开发人员驱动.
-那么让我们试想一下,把这个流程由开发人员驱动,改为代码库驱动.
-以持续集成的方式:当代码库发生变更,系统就要进行集成工作.自动化构建,产生新包,供测试人员测试.在这个过程中开发人员不需要与测试人员进行沟通,一切由代码库驱动.
-(发散一下,我们使用的mantis,其实跟代码也没有关系.而github的issue,则是紧密围绕代码产生和关闭的.)
-</code></pre><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#### 当前实现效果(使用jenkins构建android应用)</span></span><br></pre></td></tr></table></figure>
-<pre><code>当代码库更新后,相关人员进入jenkins后台,执行build操作即可.当build成功后,jenkins会发邮件通知相关工作人员任务状态.如果构建成功,测试人员下载新包,即可进行测试.
-开发人员的工作是修复bug,提交代码.测试,上线,打渠道包的一系列构建任务都可以交给jenkins完成.
-</code></pre><p>```    </p>
+    <published>2016-03-13T09:14:00.000Z</published>
+    <updated>2016-03-14T06:36:39.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..~测试也是技术人员呀…天天就干那些戳戳点点的有意思么？<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
+<h4 id="什么是持续集成">什么是持续集成</h4><p>　　持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。<br>　　高大上的答案,来自百度…</p>
+<h4 id="说说工作上的场景">说说工作上的场景</h4><ul>
+<li><p>啥时候发新包<br>在测试阶段,当进行一轮测试后,测试人员就要等着发新包.</p>
+<ul>
+<li>这是一个被动行为.如果开发人员不推进,测试人员将永远处于等待状态.(为什么测试人员不去搭建一个编译环境…)</li>
+<li>大家都有一种”默契”,代码相关的产出物都应该由开发人员来搞.跟其他人没毛关系</li>
+<li>理论上,只要代码库被更新,测试人员就可以进行新的测试,不需要等待开发人员的推进.</li>
+</ul>
+</li>
+<li><p>驱动工作的是代码库<br>　　一直以来,大家习惯的工作流程是确认bug,修改bug,提交代码,编译新包,交付测试.这一切的行为需要开发人员驱动.<br>　　那么让我们试想一下,把这个流程由开发人员驱动,改为代码库驱动.<br>　　以持续集成的方式:当代码库发生变更,系统就要进行集成工作.自动化构建,产生新包,供测试人员测试.在这个过程中开发人员不需要与测试人员进行沟通,一切由代码库驱动.<br>　　(发散一下,我们使用的mantis,其实跟代码也没有关系.而github的issue,则是紧密围绕代码产生和关闭的.)</p>
+</li>
+</ul>
+<h4 id="当前实现效果(使用jenkins构建android应用)">当前实现效果(使用jenkins构建android应用)</h4><p>　　当代码库更新后,相关人员进入jenkins后台,执行build操作即可.当build成功后,jenkins会发邮件通知相关工作人员任务状态.如果构建成功,测试人员下载新包,即可进行测试.<br>　　开发人员的工作是修复bug,提交代码.测试,上线,打渠道包的一系列构建任务都可以交给jenkins完成.</p>
 <h4 id="TODO">TODO</h4><ul>
 <li>通过hooks,当版本库发生变化,自动通知jenkins构建新版本</li>
 <li>通过区分branch,可以实现构建不同版本的包.你爱测那个测那个…</li>
@@ -37,8 +41,10 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="引子">引子</h4><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</s]]>
+    <![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..~测试也是技术人员呀…天天就干那些戳戳点点的有意思么？<br>　　最近在看git工作流]]>
     </summary>
+    
+      <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
     
   </entry>
   
@@ -46,9 +52,11 @@
     <title><![CDATA[Git小结]]></title>
     <link href="http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/"/>
     <id>http://willnewii.github.io/20160309/Git小结/</id>
-    <published>2016-03-09T07:27:46.000Z</published>
-    <updated>2016-03-13T09:04:04.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="什么是Git">什么是Git</h4><ul>
+    <published>2016-03-09T07:27:00.000Z</published>
+    <updated>2016-03-14T06:36:54.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="什么是版本控制">什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法， 它伴随着工程图从图的诞生一直到图的定型。 一种简单的版本控制形式，例如，赋给图的初版一个版本等级“A”。当做了第一次改变后，版本等级改为“B”，以此类推等等。</p>
+<h4 id="什么是Git">什么是Git</h4><p>　　Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
+<ul>
 <li>集中式 分布式</li>
 <li>代码库的每份拷贝都带有完整的数据库，用户可以在本地修改、提交代码</li>
 <li>分支…分支…分支…重要的事情说三遍</li>
@@ -60,8 +68,8 @@
 <li>分支…分支…分支…重要的事情说三遍</li>
 </ul>
 <h3 id="提交方式">提交方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'svn提交'</span> //加入版本库&amp;提交服务器</span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'git提交'</span> //加入本地版本库</span><br><span class="line">git push origin <span class="keyword">master</span> //提交到远程分支</span></span><br></pre></td></tr></table></figure>
-<h3 id="branch">branch</h3><p>Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
-<p>简单、快速</p>
+<h3 id="branch">branch</h3><p>　　Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
+<p>　　简单、快速</p>
 <h3 id="gitflow">gitflow</h3><p><img src="/img/gitflow.png" alt="GitHub Octocat"></p>
 <h3 id="工作流程">工作流程</h3><ul>
 <li>永久性分支<ul>
@@ -75,8 +83,8 @@
 </ul>
 </li>
 </ul>
-<p>按模块分配任务.大家以dev分支为基础,创建各自私有分支,进行开发.这个过程中是对其他人不可见,这样在开发过程中不会污染dev分支,出现dev分支不可用的状态.</p>
-<p>如果有交叉任务,可以创建一个topic分支,指定多名人员维护开发.</p>
+<p>按模块分配任务.大家以dev分支为基础,创建各自私有分支（一对一）,进行开发.这个过程中是对其他人不可见,这样在开发过程中不会污染dev分支,出现dev分支不可用的状态.</p>
+<p>如果有交叉任务,可以创建一个topic分支（多对一）,指定多名人员维护开发.</p>
 <h3 id="rebase_衍合/变基">rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</span><br></pre></td></tr></table></figure>
 <h3 id="持续集成">持续集成</h3><p><a href="http://10.101.26.196:8080/job/build-android/" target="_blank" rel="external">http://10.101.26.196:8080/job/build-android/</a></p>
 <h3 id="其它">其它</h3><ul>
@@ -107,13 +115,10 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="什么是Git">什么是Git</h4><ul>
-<li>集中式 分布式</li>
-<li>代码库的每份拷贝都带有完整的数据库，用户可以在本地修改、提交代码</li>
-<li>分支…分支…分支…重要的事情说三遍</li>
-</ul>
-<h3 id="为什么是git"]]>
+    <![CDATA[<h4 id="什么是版本控制">什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法]]>
     </summary>
+    
+      <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
     
   </entry>
   
