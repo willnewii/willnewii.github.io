@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-03-14T06:36:39.000Z</updated>
+  <updated>2016-03-14T06:50:34.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://willnewii.github.io/20160313/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90-%E5%BA%94%E7%94%A81/"/>
     <id>http://willnewii.github.io/20160313/持续集成-应用1/</id>
     <published>2016-03-13T09:14:00.000Z</published>
-    <updated>2016-03-14T06:36:39.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..~测试也是技术人员呀…天天就干那些戳戳点点的有意思么？<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
+    <updated>2016-03-14T06:50:34.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
 <h4 id="什么是持续集成">什么是持续集成</h4><p>　　持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。<br>　　高大上的答案,来自百度…</p>
 <h4 id="说说工作上的场景">说说工作上的场景</h4><ul>
 <li><p>啥时候发新包<br>在测试阶段,当进行一轮测试后,测试人员就要等着发新包.</p>
@@ -41,7 +41,7 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..~测试也是技术人员呀…天天就干那些戳戳点点的有意思么？<br>　　最近在看git工作流]]>
+    <![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面]]>
     </summary>
     
       <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
@@ -53,7 +53,7 @@
     <link href="http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/"/>
     <id>http://willnewii.github.io/20160309/Git小结/</id>
     <published>2016-03-09T07:27:00.000Z</published>
-    <updated>2016-03-14T06:36:54.000Z</updated>
+    <updated>2016-03-14T06:47:07.000Z</updated>
     <content type="html"><![CDATA[<h4 id="什么是版本控制">什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法， 它伴随着工程图从图的诞生一直到图的定型。 一种简单的版本控制形式，例如，赋给图的初版一个版本等级“A”。当做了第一次改变后，版本等级改为“B”，以此类推等等。</p>
 <h4 id="什么是Git">什么是Git</h4><p>　　Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
 <ul>
@@ -79,14 +79,13 @@
 </li>
 <li>临时性分支<ul>
 <li>topic分支<br>修改bug,实验性,优化,更新控件</li>
-<li>个人分支<br>你可以在接到开发任务后,基于develop分支,创建一个本地分支,进行开发.当模块开发完成或阶段性完成后再合并到dev分支.</li>
+<li>一对一<br>按模块分配任务.大家以dev分支为基础,创建各自私有分支（一对一）,进行开发.这个过程中是对其他人不可见,这样在开发过程中不会污染dev分支,出现dev分支不可用的状态.</li>
+<li>一对多<br>如果有交叉任务,可以创建一个topic分支（多对一）,指定多名人员维护开发.</li>
 </ul>
 </li>
 </ul>
-<p>按模块分配任务.大家以dev分支为基础,创建各自私有分支（一对一）,进行开发.这个过程中是对其他人不可见,这样在开发过程中不会污染dev分支,出现dev分支不可用的状态.</p>
-<p>如果有交叉任务,可以创建一个topic分支（多对一）,指定多名人员维护开发.</p>
-<h3 id="rebase_衍合/变基">rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</span><br></pre></td></tr></table></figure>
 <h3 id="持续集成">持续集成</h3><p><a href="http://10.101.26.196:8080/job/build-android/" target="_blank" rel="external">http://10.101.26.196:8080/job/build-android/</a></p>
+<h3 id="rebase_衍合/变基">rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</span><br></pre></td></tr></table></figure>
 <h3 id="其它">其它</h3><ul>
 <li>git log</li>
 <li>stash</li>
