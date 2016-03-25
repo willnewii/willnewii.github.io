@@ -189,11 +189,11 @@
 
       <div class="body-wrap">
   
-    <article id="post-Android 优化文章" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-杂记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20151125/Android 优化文章/" class="article-date">
-  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished">2015-11-25</time>
+      <a href="/20151125/杂记/" class="article-date">
+  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished">2015-11-25</time>
 </a>
     </div>
   
@@ -206,7 +206,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/20151125/Android 优化文章/">Android优化文章</a>
+      <a class="article-title" href="/20151125/杂记/">杂记</a>
     </h1>
   
 
@@ -215,21 +215,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
-<li><a href="http://www.tuicool.com/articles/yUV3ear" target="_blank" rel="external">Android性能优化之如何避免Overdraw(推荐)</a></li>
-<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a></li>
-<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a></li>
-<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
+        <h3 id="Markdown">Markdown</h3><ul>
+<li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">MarkDown简明语法</a></p>
 </li>
-<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
+<li><p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">MarkDown语法说明</a></p>
 </li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
-<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
 </ul>
-<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
+<h3 id="Hexo">Hexo</h3><ul>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客(推荐:非常详细)</a></li>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
+<li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="external">Hexo后台插件</a></li>
+<li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia主题</a></li>
+<li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子网站计数</a></li>
+</ul>
+<h3 id="iTerm_2">iTerm 2</h3><ul>
+<li>command + ;  自动补全命令</li>
+<li>command + shift +h 全部显示出来</li>
+<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="external">iTerm 2 color schemes</a></li>
+</ul>
+<h3 id="design">design</h3><ul>
+<li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="external">material design 文档动画部分的学习笔记</a></li>
+</ul>
+<h3 id="文档排版">文档排版</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
+<p><a href="http://zhuanlan.zhihu.com/uicircle/20506092" target="_blank" rel="external">中文排版指南</a></p>
+<h3 id="SVN">SVN</h3><p>批量添加新增文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"?"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn add</span><br></pre></td></tr></table></figure></p>
+<p>批量删除文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"!"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn <span class="keyword">rm</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -238,14 +248,10 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/test/">test</a>
-	</div>
-
 
       
       <div class="clearfix"></div>
@@ -317,6 +323,81 @@
 	</div>
 
       
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android 优化文章" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20151125/Android 优化文章/" class="article-date">
+  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished">2015-11-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151125/Android 优化文章/">Android优化文章</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a href="https://github.com/desmond1121/Android-Ptr-Comparison" target="_blank" rel="external">安卓下拉刷新开源库对比(推荐，性能优化)</a></li>
+<li><a href="http://www.tuicool.com/articles/yUV3ear" target="_blank" rel="external">Android性能优化之如何避免Overdraw(推荐)</a></li>
+<li><a href="http://blog.liangruijun.com/2015/05/31/Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB/" target="_blank" rel="external">Android性能优化汇总(推荐)</a></li>
+<li><a href="http://www.jianshu.com/p/c49f778e7acf" target="_blank" rel="external">使用Android studio分析内存泄露</a></li>
+<li><p><a href="http://blog.csdn.net/u010687392/article/details/50035061" target="_blank" rel="external">Android性能优化之被忽视的优化点</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/berber78/article/details/47783585" target="_blank" rel="external">Android内存分析工具（一）：Memory Monitor</a></p>
+</li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47784007" target="_blank" rel="external">Android内存分析工具（二）：DDMS</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47786859" target="_blank" rel="external">Android内存分析工具（三）：MAT</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/47819139" target="_blank" rel="external">Android内存分析工具（四）：adb命令</a></li>
+<li><a href="http://blog.csdn.net/berber78/article/details/48180223" target="_blank" rel="external">Android内存分析工具（五）：APT</a></li>
+</ul>
+<p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/test/">test</a>
+	</div>
+
 
       
       <div class="clearfix"></div>

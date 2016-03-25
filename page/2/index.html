@@ -189,6 +189,141 @@
 
       <div class="body-wrap">
   
+    <article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160104/css/" class="article-date">
+  	<time datetime="2016-01-04T02:54:00.000Z" itemprop="datePublished">2016-01-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160104/css/"> css定位</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CSS_定位_(Positioning)">CSS 定位 (Positioning)</h3><p>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们的内容显示在行中，即“行内框”。</p>
+<h4 id="display_属性规定元素应该生成的框的类型。">display <strong><em>属性规定元素应该生成的框的类型。</em></strong></h4><pre><code>您可以使用 <span class="attribute">display</span> 属性改变生成的框的类型。这意味着，通过将 <span class="attribute">display</span> 属性设置为 <span class="value">block</span>，可以让行内元素（比如 &lt;<span class="tag">a</span>&gt; 元素）表现得像块级元素一样。还可以通过把 <span class="attribute">display</span> 设置为 <span class="attribute">none</span>，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间。
+</code></pre><ul>
+<li>block-level elements (块级元素)<ul>
+<li>block元素通常被现实为独立的一块，会单独换一行；</li>
+</ul>
+<ol>
+<li>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>inline elements (内联元素)<ul>
+<li>inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
+</ul>
+<ol>
+<li>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
+</ol>
+</li>
+<li>block，inline和inline-block细节对比<ul>
+<li>display:block<ol>
+<li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
+<li>block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</li>
+<li>block元素可以设置margin和padding属性。</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>display:inline<ol>
+<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
+<li>inline元素设置width,height属性无效。</li>
+<li><del>~inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</del>~</li>
+</ol>
+</li>
+<li>display:inline-block<ol>
+<li>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="position_属性规定元素的定位类型。">position <strong><em>属性规定元素的定位类型。</em></strong></h4><ol>
+<li>relative 生成相对定位的元素，相对于其正常位置进行定位。</li>
+<li>absolute 生成绝对定位的元素，<strong><em>相对于 static 定位以外的第一个父元素进行定位。将对象从文档流中拖出，使用 left ， right ， top ， bottom 等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位。</em></strong></li>
+<li>fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
+<li>static    默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</li>
+</ol>
+<h4 id="overflow_属性规定当内容溢出元素框时发生的事情。">overflow <strong><em>属性规定当内容溢出元素框时发生的事情。</em></strong></h4><ol>
+<li>visible 默认值。内容不会被修剪，会呈现在元素框之外。</li>
+<li>hidden 内容会被修剪，并且其余内容是不可见的。</li>
+<li>scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</li>
+<li>auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</li>
+<li>inherit 规定应该从父元素继承 overflow 属性的值。</li>
+</ol>
+<h3 id="float">float</h3><ol>
+<li>初衷:为了实现文字环绕 <ol>
+<li>浮动会是父元素高度塌陷</li>
+<li>清楚浮动带来的影响 </li>
+</ol>
+</li>
+<li>浮动的影响：<ol>
+<li>元素block块状化（砖头化）</li>
+<li>破坏性造成的紧密排列特性（去空格化）</li>
+<li>滥用浮动容易造成砌砖布局，砌砖布局的问题</li>
+</ol>
+</li>
+<li>尽量少使用 float：left来进行布局：<ol>
+<li>容错性比较糟糕，容易出问题；</li>
+<li>全部用固定尺寸，代码不易重用；</li>
+<li>与IE7不兼容；</li>
+</ol>
+</li>
+</ol>
+<p>css盒模型</p>
+<h4 id="资料">资料</h4><ul>
+<li><a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">block，inline和inline-block概念和区别</a></li>
+<li><a href="http://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank" rel="external">CSS position 属性</a></li>
+<li><a href="http://www.5icool.org/a/200912/28.html" target="_blank" rel="external">CSS样式的postion属性absolute和fixed的区别</a></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-compass笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1242,87 +1377,6 @@
         <p class="article-more-link">
           <a  href="/20151126/ViewPager设置滑动速度/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-杂记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151125/杂记/" class="article-date">
-  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished">2015-11-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151125/杂记/">杂记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Markdown">Markdown</h3><ul>
-<li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">MarkDown简明语法</a></p>
-</li>
-<li><p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">MarkDown语法说明</a></p>
-</li>
-</ul>
-<h3 id="Hexo">Hexo</h3><ul>
-<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客(推荐:非常详细)</a></li>
-<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
-<li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="external">Hexo后台插件</a></li>
-<li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia主题</a></li>
-<li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子网站计数</a></li>
-</ul>
-<h3 id="iTerm_2">iTerm 2</h3><ul>
-<li>command + ;  自动补全命令</li>
-<li>command + shift +h 全部显示出来</li>
-<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="external">iTerm 2 color schemes</a></li>
-</ul>
-<h3 id="design">design</h3><ul>
-<li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="external">material design 文档动画部分的学习笔记</a></li>
-</ul>
-<h3 id="文档排版">文档排版</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="external">文案风格指南</a></p>
-<p><a href="http://zhuanlan.zhihu.com/uicircle/20506092" target="_blank" rel="external">中文排版指南</a></p>
-<h3 id="SVN">SVN</h3><p>批量添加新增文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"?"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn add</span><br></pre></td></tr></table></figure></p>
-<p>批量删除文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"!"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn <span class="keyword">rm</span></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
-	</div>
-
-      
-
       
       <div class="clearfix"></div>
     </div>
