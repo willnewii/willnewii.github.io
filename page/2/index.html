@@ -115,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
+						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
 					</div>
 				</section>
 				
@@ -188,6 +188,349 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Kindle-Calibre" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160106/Kindle-Calibre/" class="article-date">
+  	<time datetime="2016-01-06T12:01:00.000Z" itemprop="datePublished">2016-01-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160106/Kindle-Calibre/">Kindle &amp; Calibre</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="编写Recipe">编写Recipe</h4><ol>
+<li><p>html结构良好</p>
+<p> 可根据Beautiful Soup提供的api,很容易就能找到你需要的相关节点.</p>
+</li>
+<li><p>html坏标签</p>
+<p> 在解析新浪博客的时候出现了返回soup找不到子节点的问题</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">soup = <span class="keyword">self</span>.index_to_soup(<span class="keyword">self</span>.url)</span><br><span class="line">divs = soup.findAll(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'module-categories module'</span>&#125;)</span><br><span class="line"><span class="keyword">print</span> len(divs)</span><br><span class="line"><span class="comment"># 0</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个时候你可以打印一下soup的len.有可能就是html中有坏标签导致解析异常.所以bs只能当做String直接返回.这时你就只能靠正则,或者练练String操作的基本功啦😜,把你想要的内容截取出来.</p>
+<h4 id="BasicNewsRecipe_变量">BasicNewsRecipe 变量</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>电子书标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td>电子书描述</td>
+</tr>
+<tr>
+<td>cover_url</td>
+<td>电子书的封面图片  </td>
+</tr>
+<tr>
+<td>url_prefix</td>
+<td>这是我自用的属性，是内容页面的前缀，用于后面拼装内容页的完整url</td>
+</tr>
+<tr>
+<td>no_stylesheets</td>
+<td>不要使用页面CSS样式</td>
+</tr>
+<tr>
+<td>auto_cleanup</td>
+<td>开启该选项自动清理正文内容</td>
+</tr>
+<tr>
+<td>keep_only_tags</td>
+<td>有时自动解析出来的文章内容是不对的.你可以之前文章的正文范围.</td>
+<td>[{ ‘class’: ‘hentry’ }]</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>延迟下载？</td>
+<td>没有验证</td>
+</tr>
+<tr>
+<td>simultaneous_downloads</td>
+<td>下载线程数</td>
+<td>有些网站/blog可能对爬出做了限制,这样你就可以通过这两个参数做一些调整.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="BasicNewsRecipe_函数">BasicNewsRecipe 函数</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>articles.reverse()</td>
+<td>文章倒序，让其按照时间从前到后排列</td>
+</tr>
+</tbody>
+</table>
+<p>parse_index</p>
+<h4 id="debug">debug</h4><ul>
+<li>ebook-convert<ul>
+<li>vv 显示更多的操作信息</li>
+<li>test 仅下载两篇文章,并将html的内容输出在debug/input目录下</li>
+</ul>
+</li>
+</ul>
+<h4 id="资料">资料</h4><ol>
+<li><p>BasicNewsRecipe 万物基础哇~</p>
+<p> <a href="http://manual.calibre-ebook.com/news_recipe.html" target="_blank" rel="external">base_news_recipe API</a></p>
+</li>
+<li><p>示例</p>
+<p> <a href="http://www.jianshu.com/p/aeb72b50c20b" target="_blank" rel="external">用calibre抓取乌云知识库并生成电子书</a></p>
+<p> <a href="http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html" target="_blank" rel="external">抓取网页内容生成Kindle电子书</a></p>
+</li>
+<li><p>API</p>
+<p> <a href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
+<p> <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="external">Beautiful Soup 中文文档(这个阅读方便一些)</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-dialog-fox" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160106/dialog-fox/" class="article-date">
+  	<time datetime="2016-01-06T10:22:00.000Z" itemprop="datePublished">2016-01-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160106/dialog-fox/">android dialog</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>dialog自定义View,弹出键盘</li>
+</ol>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)<span class="comment">;</span></span><br><span class="line">imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>dialog 触发点击事件,不关闭</li>
+</ol>
+<p>是通过改变mShowing状态实现的,记得在其他地方修正状态.<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 是否可以关闭对话框</span><br><span class="line"> *</span><br><span class="line"> * <span class="doctag">@param</span> dialog</span><br><span class="line"> * <span class="doctag">@param</span> isCan</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">isCanDismiss</span><span class="params">(DialogInterface dialog, <span class="keyword">boolean</span> isCan)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Field field = dialog.getClass().getSuperclass().getDeclaredField(<span class="string">"mShowing"</span>);</span><br><span class="line">        field.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        field.set(dialog, isCan);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Flex-布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160105/Flex-布局/" class="article-date">
+  	<time datetime="2016-01-05T04:17:00.000Z" itemprop="datePublished">2016-01-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160105/Flex-布局/">Flex 布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="容器属性">容器属性</h3><ol>
+<li><p>flex-direction</p>
+<pre><code>属性决定主轴的方向（即项目的排列方向）。
+</code></pre><ol>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。<blockquote>
+<p>LinearLayout.orientation<br>horizontal-&gt;row,vertical-column</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>flex-wrap</p>
+<pre><code>默认情况下，项目都排在一条线（又称<span class="string">"轴线"</span>）上。flex-<span class="operator">wrap</span>属性定义，如果一条轴线排不下，如何换行。
+</code></pre><ol>
+<li>nowrap（默认）：不换行。</li>
+<li>wrap：换行，第一行在上方。</li>
+<li>wrap-reverse：换行，第一行在下方。</li>
+</ol>
+</li>
+<li><p>flex-flow</p>
+<pre><code><span class="attribute">flex-flow</span>属性是<span class="attribute">flex-direction</span>属性和<span class="attribute">flex-wrap</span>属性的简写形式，默认值为row <span class="value">nowrap</span>。
+</code></pre></li>
+<li><p>justify-content</p>
+<pre><code>属性定义了项目在主轴上的对齐方式。
+</code></pre><ol>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ol>
+</li>
+<li><p>align-items</p>
+<pre><code>属性定义项目在交叉轴上如何对齐。
+</code></pre></li>
+<li><p>align-content <strong>5，6没太明白区别在哪里</strong></p>
+<pre><code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+</code></pre><blockquote>
+<p>android:gravity </p>
+</blockquote>
+</li>
+</ol>
+<h3 id="项目属性">项目属性</h3><ol>
+<li>order    default 0<pre><code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为<span class="number">0</span>。
+</code></pre></li>
+<li><p>flex-grow    default 0</p>
+<pre><code>属性定义项目的放大比例，默认为<span class="number">0</span>，即如果存在剩余空间，也不放大。
+</code></pre><p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<blockquote>
+<p>LinearLayout.weight</p>
+</blockquote>
+</li>
+<li><p>flex-shrink  default 1 </p>
+<pre><code>属性定义了项目的缩小比例，默认为<span class="number">1</span>，即如果空间不足，该项目将缩小。
+</code></pre><p> 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+</li>
+<li><p>flex-basis</p>
+<pre><code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<span class="keyword">auto</span>，即项目的本来大小。
+</code></pre></li>
+<li><p>flex default 0 1 auto</p>
+<pre><code><span class="attribute">flex</span>属性是<span class="attribute">flex-grow</span>, <span class="attribute">flex-shrink</span> 和 <span class="attribute">flex-basis</span>的简写，默认值为0 1 <span class="attribute">auto</span>。后两个属性可选。
+</code></pre></li>
+<li><p>align-self</p>
+<pre><code><span class="keyword">align</span>-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<span class="keyword">align</span>-items属性。默认值为<span class="keyword">auto</span>，表示继承父元素的<span class="keyword">align</span>-items属性，如果没有父元素，则等同于stretch。
+</code></pre><blockquote>
+<p>android:layout_gravity</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="资料">资料</h3><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">Flex 布局教程：实例篇</a><br><a href="http://philipwalton.github.io/solved-by-flexbox/" target="_blank" rel="external">solved-by-flexbox</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1124,7 +1467,12 @@
 <li>$ionicView.unloaded<br><br>视图的Controller已经被摧毁并且他的页面元素也从Dom中移除</li>
 </ul>
 </li>
-<li><a href="http://bubkoo.com/2014/01/02/angular/ui-router/guide/url-routing/" target="_blank" rel="external"><br>学习 ui-router - 路由控制</a></li>
+<li><p><a href="http://bubkoo.com/2014/01/02/angular/ui-router/guide/url-routing/" target="_blank" rel="external"><br>学习 ui-router - 路由控制</a></p>
+</li>
+<li><p>state 设置 cache<br> 开发过程中会遇到某些页面重复使用的情况.比如用户信息页. 当我打开了两个用户页面,就是出现element错乱,本来想过去当前页面的,却获取更早的页面.对复用性高的,可以将其缓存关闭.</p>
+</li>
+<li><p><a href="http://www.gajotres.net/using-views-events-to-create-javascript-pure-ionic-splash-screen/" target="_blank" rel="external">自定义启动页面(未验证)</a></p>
+</li>
 </ol>
 
       
@@ -1139,244 +1487,6 @@
 
       
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-前端-小学生" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151202/前端-小学生/" class="article-date">
-  	<time datetime="2015-12-02T08:14:41.000Z" itemprop="datePublished">2015-12-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151202/前端-小学生/">前端-小学生</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
-<p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
-<h4 id="gulp">gulp</h4><ul>
-<li><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></li>
-<li><a href="http://colobu.com/2014/11/17/gulp-plugins-introduction/" target="_blank" rel="external">gulp plugins 插件介绍 ~推荐~</a></li>
-<li><a href="http://www.zuojj.com/archives/550.html" target="_blank" rel="external">Gulp-ruby-sass 介绍</a></li>
-</ul>
-<h4 id="文章">文章</h4><ul>
-<li><p><a href="http://chinagdg.org/2015/12/%E5%83%8F-sublime-text-%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8-chrome-devtools/" target="_blank" rel="external">像 Sublime Text 一样使用 Chrome DevTools</a></p>
-</li>
-<li><p><a href="http://www.w3cplus.com/tools/dev-tips.html" target="_blank" rel="external">Chrome 35个开发者工具的小技巧</a></p>
-</li>
-<li><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
-</li>
-</ul>
-<h4 id="手册/API">手册/API</h4><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
-<p><a href="http://www.css88.com/book/css/quicksearch.htm" target="_blank" rel="external">CSS3参考手册</a></p>
-<p><a href="http://www.ziqiangxuetang.com/cssref/css-reference.html" target="_blank" rel="external">CSS 参考手册(有示例)</a></p>
-<p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
-<h4 id="iconfont">iconfont</h4><p><a href="http://www.iconfont.cn/" target="_blank" rel="external">淘宝的iconfont库</a></p>
-<p><a href="https://icons8.com/" target="_blank" rel="external">icons8</a></p>
-<h4 id="资源站">资源站</h4><p><a href="https://github.com/amfe/article/issues" target="_blank" rel="external">貌似是个淘宝前端</a></p>
-<p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
-<p><a href="http://www.zcfy.cc/article/85" target="_blank" rel="external">网页性能： 缓存效率实践</a></p>
-<p><a href="http://www.htmleaf.com/" target="_blank" rel="external">jQuery之家(不少特效可以偷点来用~)</a></p>
-<p><a href="https://github.com/dyygtfx/WebDev-Source" target="_blank" rel="external">web开发的一些资料，不仅仅是前端资料</a></p>
-<p><a href="http://tool.oschina.net/codeformat/js/" target="_blank" rel="external">在线工具-代码格式化</a></p>
-<p><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus 大漠</a></p>
-<p><a href="http://caniuse.com/" target="_blank" rel="external">caniuse…</a></p>
-<h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Mac笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151127/Mac笔记/" class="article-date">
-  	<time datetime="2015-11-27T06:36:00.000Z" itemprop="datePublished">2015-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151127/Mac笔记/">Mac笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>添加命令行快捷方式</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>环境变量</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=/Users/zhangweiwei/Dev/apache-ant-<span class="number">1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=/Users/zhangweiwei/Dev/adt-bundle-mac/sdk</span><br><span class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID</span>_HOME/platform-tools:<span class="variable">$ANDROID</span>_HOME/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$ANT</span>_HOME/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>chrome 添加启动参数</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="operator">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://chenpeng.info/html/3393" target="_blank" rel="external">Chromium命令行启动参数</a></p>
-<ol>
-<li><p>设置magic mouse灵敏度</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">defaults</span> <span class="tag">write</span> <span class="tag">-g</span> <span class="tag">com</span><span class="class">.apple</span><span class="class">.mouse</span><span class="class">.scaling</span> 6<span class="class">.5</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Apache 的启动</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="operator"><span class="keyword">start</span></span><br><span class="line">/<span class="keyword">Library</span>/WebServer/<span class="keyword">Document</span>/</span><br><span class="line">sudo launchctl unload -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span><br><span class="line">如果哪天你想让它开机启动了,则将unload 改为 <span class="keyword">load</span>:</span><br><span class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打印目录树</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . \( ! -regex '.<span class="keyword">*</span>/\..<span class="keyword">*</span>' \) -type f -depth -3 -print |<span class="string"> sed -e 's;[^/]*/;</span>|<span class="string">____;g;s;____</span>|<span class="string">; </span>|<span class="string">;g'</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>( ! -regex ‘.<em>/..</em>‘ ) -type f 匹配非隐藏文件</li>
-<li>-depth -3 递归深度</li>
-</ol>
-</li>
-<li>mac php默认配置 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd<span class="class">.conf</span></span><br><span class="line">/etc/php<span class="class">.ini</span></span><br><span class="line"><span class="comment">/*资料/soft/mac/php*/</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ul>
-<li><a href="http://www.waitsun.com/" target="_blank" rel="external">软件下载</a></li>
-<li><a href="http://www.isofts.org/" target="_blank" rel="external">mac志</a></li>
-<li><a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="external">每天一个linux命令目录</a></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ViewPager设置滑动速度" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151126/ViewPager设置滑动速度/" class="article-date">
-  	<time datetime="2015-11-26T03:21:41.000Z" itemprop="datePublished">2015-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151126/ViewPager设置滑动速度/">ViewPager设置滑动速度</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
-<h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span><br><span class="line"> * reflection mechanism.</span><br><span class="line"> *  </span><br><span class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</span><br><span class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * set animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@param</span> time</span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * get current animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@return</span></span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/20151126/ViewPager设置滑动速度/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

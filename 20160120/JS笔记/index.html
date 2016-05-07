@@ -6,31 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>JS笔记 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###比较
+  <meta name="description" content="JS合并数组的几种方法及优劣比较
+
+JS中数组的操作
+
+jQuery选择器总结###比较
 1.===要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：
+
+
 第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
 第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
-由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
-2.NaN另一个例外是NaN这个特殊的N">
+由于JavaScript这个设计缺陷，不">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS笔记">
 <meta property="og:url" content="http://willnewii.github.io/20160120/JS笔记/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="###比较
+<meta property="og:description" content="JS合并数组的几种方法及优劣比较
+
+JS中数组的操作
+
+jQuery选择器总结###比较
 1.===要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：
+
+
 第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
 第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
-由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
-2.NaN另一个例外是NaN这个特殊的N">
-<meta property="og:updated_time" content="2016-01-20T03:37:38.000Z">
+由于JavaScript这个设计缺陷，不">
+<meta property="og:updated_time" content="2016-04-16T09:50:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS笔记">
-<meta name="twitter:description" content="###比较
+<meta name="twitter:description" content="JS合并数组的几种方法及优劣比较
+
+JS中数组的操作
+
+jQuery选择器总结###比较
 1.===要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：
+
+
 第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
 第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
-由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
-2.NaN另一个例外是NaN这个特殊的N">
+由于JavaScript这个设计缺陷，不">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -131,7 +146,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
+						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
 					</div>
 				</section>
 				
@@ -240,8 +255,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###比较</p>
+        <ul>
+<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
 <h4 id="1-===">1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+</li>
+</ul>
 <p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
 <p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
 <p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>

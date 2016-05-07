@@ -4,36 +4,48 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Kindle &amp; Calibre | 诗人的咸鱼</title>
+  <title>seajs 资源 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编写Recipe
-html结构良好
- 可根据Beautiful Soup提供的api,很容易就能找到你需要的相关节点.
+  <meta name="description" content="CMD 模块定义规范
 
-html坏标签
- 在解析新浪博客的时候出现了返回soup找不到子节点的问题
-1234soup = self.index_to_soup(self.url)divs = soup.findAll(&apos;div&apos;, &amp;#123;&apos;class&apos;: &apos;module-categories m">
+模块标识
+
+Sea.js 的调试接口
+
+配置
+
+如何改造现有文件为 CMD 模块
+
+文档…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kindle & Calibre">
-<meta property="og:url" content="http://willnewii.github.io/20160106/Kindle-Calibre/index.html">
+<meta property="og:title" content="seajs 资源">
+<meta property="og:url" content="http://willnewii.github.io/20160416/seajs-资源/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="编写Recipe
-html结构良好
- 可根据Beautiful Soup提供的api,很容易就能找到你需要的相关节点.
+<meta property="og:description" content="CMD 模块定义规范
 
-html坏标签
- 在解析新浪博客的时候出现了返回soup找不到子节点的问题
-1234soup = self.index_to_soup(self.url)divs = soup.findAll(&apos;div&apos;, &amp;#123;&apos;class&apos;: &apos;module-categories m">
-<meta property="og:updated_time" content="2016-01-13T06:50:39.000Z">
+模块标识
+
+Sea.js 的调试接口
+
+配置
+
+如何改造现有文件为 CMD 模块
+
+文档…">
+<meta property="og:updated_time" content="2016-04-16T06:50:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kindle & Calibre">
-<meta name="twitter:description" content="编写Recipe
-html结构良好
- 可根据Beautiful Soup提供的api,很容易就能找到你需要的相关节点.
+<meta name="twitter:title" content="seajs 资源">
+<meta name="twitter:description" content="CMD 模块定义规范
 
-html坏标签
- 在解析新浪博客的时候出现了返回soup找不到子节点的问题
-1234soup = self.index_to_soup(self.url)divs = soup.findAll(&apos;div&apos;, &amp;#123;&apos;class&apos;: &apos;module-categories m">
+模块标识
+
+Sea.js 的调试接口
+
+配置
+
+如何改造现有文件为 CMD 模块
+
+文档…">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -206,11 +218,11 @@ html坏标签
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Kindle-Calibre" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-seajs-资源" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/20160106/Kindle-Calibre/" class="article-date">
-  	<time datetime="2016-01-06T12:01:00.000Z" itemprop="datePublished">2016-01-06</time>
+      <a href="/20160416/seajs-资源/" class="article-date">
+  	<time datetime="2016-04-16T03:57:32.000Z" itemprop="datePublished">2016-04-16</time>
 </a>
     </div>
   
@@ -223,7 +235,7 @@ html坏标签
         
   
     <h1 class="article-title" itemprop="name">
-      Kindle &amp; Calibre
+      seajs 资源
     </h1>
   
 
@@ -231,10 +243,6 @@ html坏标签
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -243,101 +251,20 @@ html坏标签
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="编写Recipe">编写Recipe</h4><ol>
-<li><p>html结构良好</p>
-<p> 可根据Beautiful Soup提供的api,很容易就能找到你需要的相关节点.</p>
+        <ul>
+<li><p><a href="https://github.com/seajs/seajs/issues/242" target="_blank" rel="external">CMD 模块定义规范</a></p>
 </li>
-<li><p>html坏标签</p>
-<p> 在解析新浪博客的时候出现了返回soup找不到子节点的问题</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">soup = <span class="keyword">self</span>.index_to_soup(<span class="keyword">self</span>.url)</span><br><span class="line">divs = soup.findAll(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'module-categories module'</span>&#125;)</span><br><span class="line"><span class="keyword">print</span> len(divs)</span><br><span class="line"><span class="comment"># 0</span></span><br></pre></td></tr></table></figure>
+<li><p><a href="https://github.com/seajs/seajs/issues/258" target="_blank" rel="external">模块标识</a></p>
 </li>
-</ol>
-<p>这个时候你可以打印一下soup的len.有可能就是html中有坏标签导致解析异常.所以bs只能当做String直接返回.这时你就只能靠正则,或者练练String操作的基本功啦😜,把你想要的内容截取出来.</p>
-<h4 id="BasicNewsRecipe_变量">BasicNewsRecipe 变量</h4><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>电子书标题</td>
-</tr>
-<tr>
-<td>description</td>
-<td>电子书描述</td>
-</tr>
-<tr>
-<td>cover_url</td>
-<td>电子书的封面图片  </td>
-</tr>
-<tr>
-<td>url_prefix</td>
-<td>这是我自用的属性，是内容页面的前缀，用于后面拼装内容页的完整url</td>
-</tr>
-<tr>
-<td>no_stylesheets</td>
-<td>不要使用页面CSS样式</td>
-</tr>
-<tr>
-<td>auto_cleanup</td>
-<td>开启该选项自动清理正文内容</td>
-</tr>
-<tr>
-<td>keep_only_tags</td>
-<td>有时自动解析出来的文章内容是不对的.你可以之前文章的正文范围.</td>
-<td>[{ ‘class’: ‘hentry’ }]</td>
-</tr>
-<tr>
-<td>delay</td>
-<td>延迟下载？</td>
-<td>没有验证</td>
-</tr>
-<tr>
-<td>simultaneous_downloads</td>
-<td>下载线程数</td>
-<td>有些网站/blog可能对爬出做了限制,这样你就可以通过这两个参数做一些调整.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="BasicNewsRecipe_函数">BasicNewsRecipe 函数</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>articles.reverse()</td>
-<td>文章倒序，让其按照时间从前到后排列</td>
-</tr>
-</tbody>
-</table>
-<p>parse_index</p>
-<h4 id="debug">debug</h4><ul>
-<li>ebook-convert<ul>
-<li>vv 显示更多的操作信息</li>
-<li>test 仅下载两篇文章,并将html的内容输出在debug/input目录下</li>
-</ul>
+<li><p><a href="https://github.com/seajs/seajs/issues/263" target="_blank" rel="external">Sea.js 的调试接口</a></p>
+</li>
+<li><p><a href="https://github.com/seajs/seajs/issues/262" target="_blank" rel="external">配置</a></p>
+</li>
+<li><p><a href="https://github.com/seajs/seajs/issues/971" target="_blank" rel="external">如何改造现有文件为 CMD 模块</a></p>
+</li>
+<li><p><a href="http://seajs.org/docs/#docs" target="_blank" rel="external">文档…</a></p>
 </li>
 </ul>
-<h4 id="资料">资料</h4><ol>
-<li><p>BasicNewsRecipe 万物基础哇~</p>
-<p> <a href="http://manual.calibre-ebook.com/news_recipe.html" target="_blank" rel="external">base_news_recipe API</a></p>
-</li>
-<li><p>示例</p>
-<p> <a href="http://www.jianshu.com/p/aeb72b50c20b" target="_blank" rel="external">用calibre抓取乌云知识库并生成电子书</a></p>
-<p> <a href="http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html" target="_blank" rel="external">抓取网页内容生成Kindle电子书</a></p>
-</li>
-<li><p>API</p>
-<p> <a href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html" target="_blank" rel="external">Beautiful Soup 中文文档</a></p>
-<p> <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="external">Beautiful Soup 中文文档(这个阅读方便一些)</a></p>
-</li>
-</ol>
 
       
     </div>
@@ -347,18 +274,18 @@ html坏标签
     
 <nav id="article-nav">
   
-    <a href="/20160113/Charles/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/20160504/iTerm2-快捷键/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Charles
+          iTerm2 快捷键
         
       </div>
     </a>
   
   
-    <a href="/20160106/dialog-fox/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">android dialog</div>
+    <a href="/20160331/android-问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android 开发问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -393,7 +320,7 @@ html坏标签
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Kindle-Calibre" data-title="Kindle &amp; Calibre" data-url="http://willnewii.github.io/20160106/Kindle-Calibre/"></div>
+	<div class="ds-thread" data-thread-key="seajs-资源" data-title="seajs 资源" data-url="http://willnewii.github.io/20160416/seajs-资源/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
