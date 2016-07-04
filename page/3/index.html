@@ -115,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
+						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
 					</div>
 				</section>
 				
@@ -215,7 +215,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
+        <h4 id="动画">动画</h4><p><a href="http://www.tuicool.com/articles/fIrmueF" target="_blank" rel="external">GSAP，专业的Web动画库</a></p>
+<h4 id="Promise">Promise</h4><p><a href="https://segmentfault.com/a/1190000004476610" target="_blank" rel="external">JavaScript Promise API</a></p>
+<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
 <p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
 <h4 id="gulp">gulp</h4><ul>
 <li><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></li>
@@ -244,6 +246,7 @@
 <p><a href="http://tool.oschina.net/codeformat/js/" target="_blank" rel="external">在线工具-代码格式化</a></p>
 <p><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus 大漠</a></p>
 <p><a href="http://caniuse.com/" target="_blank" rel="external">caniuse…</a></p>
+<p><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="external">JavaScript 标准参考教程 </a></p>
 <h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
 
       
@@ -302,6 +305,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
+<li><p>开启和禁用 Spotlight</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//关闭 关闭后会导致侧边栏标记功能不可用</span></span><br><span class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com<span class="class">.apple</span><span class="class">.metadata</span><span class="class">.mds</span><span class="class">.plist</span></span><br><span class="line"><span class="comment">//开启</span></span><br><span class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com<span class="class">.apple</span><span class="class">.metadata</span><span class="class">.mds</span><span class="class">.plist</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mac chrome 跨域</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> -a /Applications/Google\ Chrome.<span class="keyword">app</span> --<span class="keyword">args</span> --disable-web-security --user-data-<span class="keyword">dir</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>duplicate symbols for architecture arm64</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Build </span>Settings里的No <span class="preprocessor">Common</span> <span class="keyword">Blocks为NO</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载了测试版的Xcode  就把之前的给删除了.然后git就出现了错误</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">xcrun:</span> <span class="string">error:</span> invalid active developer path (<span class="regexp">/Library/</span>Developer<span class="regexp">/CommandLineTools), missing xcrun at: /</span>Library<span class="regexp">/Developer/</span>CommandLineTools<span class="regexp">/usr/</span>bin/xcrun</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决办法:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select -<span class="keyword">switch</span> <span class="regexp">/Applications/</span>Xcode-beta.app<span class="regexp">/Contents/</span>Developer</span><br></pre></td></tr></table></figure></p>
+<ol>
 <li><p>添加命令行快捷方式</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
 </li>

@@ -978,7 +978,7 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     <link href="http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20151218/Cordova笔记/</id>
     <published>2015-12-18T06:21:00.000Z</published>
-    <updated>2016-02-16T03:03:56.000Z</updated>
+    <updated>2016-06-18T14:39:58.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li><p>Push<br>push选用了jPush.因为貌似只有他们家只官方支持了Cordova.<br><a href="https://github.com/jpush/jpush-phonegap-plugin" target="_blank" rel="external">https://github.com/jpush/jpush-phonegap-plugin</a></p>
 <ul>
@@ -1034,6 +1034,10 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     <![CDATA[<ul>
 <li><p>Push<br>push选用了jPush.因为貌似只有他们家只官方支持了Cordova.<br><a href="https://github.com/jpush/jpush-phonegap-plugin" target="_blank" rel="ex]]>
     </summary>
+    
+      <category term="cordova" scheme="http://willnewii.github.io/tags/cordova/"/>
+    
+      <category term="ios" scheme="http://willnewii.github.io/tags/ios/"/>
     
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
