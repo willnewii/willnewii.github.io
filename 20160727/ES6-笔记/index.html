@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>ES6 笔记 | 诗人的咸鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="let var const 区别const
+const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。
+
+const let
+let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用)
+let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块)
+const">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 笔记">
+<meta property="og:url" content="http://willnewii.github.io/20160727/ES6-笔记/index.html">
+<meta property="og:site_name" content="诗人的咸鱼">
+<meta property="og:description" content="let var const 区别const
+const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。
+
+const let
+let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用)
+let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块)
+const">
+<meta property="og:updated_time" content="2016-07-29T02:15:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6 笔记">
+<meta name="twitter:description" content="let var const 区别const
+const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。
+
+const let
+let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用)
+let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块)
+const">
+  
+    <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">诗人的咸鱼</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/Android">Android</a></li>
+				        
+							<li><a href="/tags/前端">前端</a></li>
+				        
+							<li><a href="/tags/快捷键">快捷键</a></li>
+				        
+							<li><a href="/tags/杂记">杂记</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 18px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12px;">cordova</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 14px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 14px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12px;">软件</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">咸鱼一只...</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">诗人的咸鱼</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">诗人的咸鱼</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/Android">Android</a></li>
+		        
+					<li><a href="/tags/前端">前端</a></li>
+		        
+					<li><a href="/tags/快捷键">快捷键</a></li>
+		        
+					<li><a href="/tags/杂记">杂记</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-ES6-笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160727/ES6-笔记/" class="article-date">
+  	<time datetime="2016-07-27T02:35:00.000Z" itemprop="datePublished">2016-07-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6 笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="let_var_const_区别">let var const 区别</h3><h4 id="const">const</h4><ul>
+<li>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。</li>
+</ul>
+<h4 id="const_let">const let</h4><ul>
+<li>let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用)</li>
+<li>let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块)</li>
+<li>const 在声明时必须被赋值</li>
+</ul>
+<h3 id="函数默认值">函数默认值</h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let getFinalPrice = <span class="function"><span class="params">(price, tax=<span class="number">0.7</span>)</span> =&gt;</span> price + price * tax;</span><br><span class="line">getFinalPrice(<span class="number">500</span>); <span class="regexp">//</span> <span class="number">850</span></span><br></pre></td></tr></table></figure>
+<h3 id="模板语法和分隔符">模板语法和分隔符</h3><p>ES6 中有一种十分简洁的方法组装一堆字符串和变量。</p>
+<ul>
+<li>${ … } 用来渲染一个变量</li>
+<li>` 作为分隔符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="string">'Barret'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`Hi <span class="subst">$&#123;user&#125;</span>!`</span>); <span class="comment">// Hi Barret!</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="for…of_VS_for…in">for…of VS for…in</h3><p>for…of 用于遍历一个迭代器，如数组：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</span><br><span class="line">nicknames.size = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">of</span> nicknames) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(nickname);</span><br><span class="line">&#125;</span><br><span class="line">Result: di, boo, punkeye</span><br></pre></td></tr></table></figure></p>
+<p>for…in 用来遍历对象中的属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</span><br><span class="line">nicknames.size = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">in</span> nicknames) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(nickname);</span><br><span class="line">&#125;</span><br><span class="line">Result: <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, size</span><br></pre></td></tr></table></figure></p>
+<h3 id="Map_和_WeakMap">Map 和 WeakMap</h3><p>WeakMap 就是一个 Map，只不过它的所有 key 都是弱引用，意思就是 WeakMap 中的东西垃圾回收时不考虑，使用它不用担心内存泄漏问题。</p>
+<h3 id="Set_和_WeakSet">Set 和 WeakSet</h3><p>Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型(number,string,boolean,null,undefined)和引用类型</p>
+<p>可以通过 forEach 和 for…of 来遍历 Set 对象：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mySet.<span class="keyword">forEach</span>((item) =&gt; &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">    <span class="comment">// 1</span></span><br><span class="line">    <span class="comment">// 2</span></span><br><span class="line">    <span class="comment">// 3</span></span><br><span class="line">    <span class="comment">// 'strings'</span></span><br><span class="line">    <span class="comment">// Object &#123; a: 1, b: 2 &#125;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Promises">Promises</h3><p>ES6 对 Promise 有了原生的支持，一个 Promise 是一个等待被异步执行的对象，当它执行完成后，其状态会变成 resolved 或者 rejected。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">if</span> (<span class="comment">/* condition */</span>) &#123;</span><br><span class="line">    <span class="comment">// fulfilled successfully</span></span><br><span class="line">    resolve(<span class="comment">/* value */</span>);  </span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// error, rejected</span></span><br><span class="line">    reject(<span class="comment">/* reason */</span>);  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>每一个 Promise 都有一个 .then 方法，这个方法接受两个参数，第一个是处理 resolved 状态的回调，一个是处理 rejected 状态的回调：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p.<span class="keyword">then</span>(<span class="function"><span class="params">(val)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Resolved"</span>, val),</span><br><span class="line">       <span class="function"><span class="params">(err)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Rejected"</span>, err));</span><br></pre></td></tr></table></figure></p>
+<h3 id="模块化">模块化</h3><h4 id="export,import_命令">export,import 命令</h4><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"><span class="literal">export</span> <span class="keyword">var</span> name = <span class="string">'Rainbow'</span></span><br></pre></td></tr></table></figure>
+<p>ES6将一个文件视为一个模块，上面的模块通过 export 向外输出了一个变量。一个模块也可以同时往外面输出多个变量。<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'Rainbow'</span>;</span><br><span class="line"><span class="keyword">var</span> age = <span class="string">'24'</span>;</span><br><span class="line"><span class="literal">export</span> &#123;name, age&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>定义好模块的输出以后就可以在另外一个模块通过import引用。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//index.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;name, age&#125; <span class="keyword">from</span> <span class="string">'./test.js'</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="整体输入，module指令">整体输入，module指令</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> name;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> age;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>通过 <strong>import * as</strong> 就完成了模块整体的导入。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> test form <span class="string">'./test.js'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>通过指令 <strong>module</strong> 也可以达到整体的输入。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span> test <span class="keyword">from</span> <span class="string">'test.js'</span>;</span><br><span class="line">test.getName();</span><br></pre></td></tr></table></figure></p>
+<h3 id="资源">资源</h3><ul>
+<li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
+</li>
+<li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/lihongxun945/article/details/49031383" target="_blank" rel="external">ES6详解八：模块（Module）！</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000002789651" target="_blank" rel="external">[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/20160805/Element/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Element
+        
+      </div>
+    </a>
+  
+  
+    <a href="/20160721/Angular-资料/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Angular 资料</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ES6-笔记" data-title="ES6 笔记" data-url="http://willnewii.github.io/20160727/ES6-笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"willnewiiblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 诗人的咸鱼
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+        <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

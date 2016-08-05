@@ -4,6 +4,104 @@
 
     
   <url>
+    <loc>http://willnewii.github.io/20160805/Element/</loc>
+    <lastmod>2016-08-05T10:24:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Element</title>
+        <pubTime>2016-08-05T10:21:33.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160314/%E5%80%A9%E5%80%A9Design/</loc>
+    <lastmod>2016-08-05T10:21:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>储倩 设计 作品</title>
+        <pubTime>2016-03-14T04:23:12.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160727/ES6-%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-07-29T02:15:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>ES6 笔记</title>
+        <pubTime>2016-07-27T02:35:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160106/dialog-fox/</loc>
+    <lastmod>2016-07-19T02:52:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>android dialog</title>
+        <pubTime>2016-01-06T10:22:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-07-19T02:51:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>JS笔记</title>
+        <pubTime>2016-01-20T03:37:00.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160721/Angular-%E8%B5%84%E6%96%99/</loc>
+    <lastmod>2016-07-19T02:50:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>Angular 资料</title>
+        <pubTime>2016-07-21T09:19:00.000Z</pubTime>
+        
+        <tag>angular2</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-07-04T03:12:03.000Z</lastmod>
     <data>
@@ -93,25 +191,6 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-04-16T09:50:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>JS笔记</title>
-        <pubTime>2016-01-20T03:37:00.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://willnewii.github.io/20160416/seajs-%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2016-04-16T06:50:10.000Z</lastmod>
     <data>
@@ -154,21 +233,6 @@
         <display>
         <title>android 开发问题</title>
         <pubTime>2016-03-31T04:12:55.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20160314/%E5%80%A9%E5%80%A9Design/</loc>
-    <lastmod>2016-03-28T16:07:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>储倩 设计 作品</title>
-        <pubTime>2016-03-14T04:23:12.000Z</pubTime>
         
          
            
@@ -362,23 +426,6 @@
         <pubTime>2016-01-06T12:01:00.000Z</pubTime>
         
         <tag>软件</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20160106/dialog-fox/</loc>
-    <lastmod>2016-01-06T11:51:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>android dialog</title>
-        <pubTime>2016-01-06T10:22:00.000Z</pubTime>
-        
-        <tag>android</tag>
          
          
            

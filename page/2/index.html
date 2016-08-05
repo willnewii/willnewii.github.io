@@ -115,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 17.5px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
+						<a href="/tags/Android/" style="font-size: 18px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12px;">cordova</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 14px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 14px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12px;">软件</a>
 					</div>
 				</section>
 				
@@ -188,6 +188,248 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160120/git/" class="article-date">
+  	<time datetime="2016-01-20T03:47:00.000Z" itemprop="datePublished">2016-01-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160120/git/">git笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
+<p>git rm -r –cached  <em>/Runtime/\</em>      //最终执行命令.</p>
+<p>git commit -m”移除Runtime目录下所有文件的版本控制”    //提交</p>
+<p>git push origin master   //提交到远程服务器</p>
+<p>若用git status命令查看，则Apps/Runtime/目录下文件出现在结果列表里， 我们不希望这个目录下的文件出现，则在项目根目录下，和.git 同级目录下，新建一个.gitignore文件，<br>把.gitignore提交到远程服务器。 则.Apps/Runtime目录就不会被提交了。</p>
+<h4 id="git_am">git am</h4><p>git am –abort</p>
+<h4 id="git_flow">git flow</h4><p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></p>
+<h4 id="git_常用指令">git 常用指令</h4><p><a href="http://stormzhang.com/git/2014/01/27/git-common-command/" target="_blank" rel="external">http://stormzhang.com/git/2014/01/27/git-common-command/</a></p>
+<h4 id="git_submodule的使用">git submodule的使用</h4><p><a href="http://www.stormzhang.com/git/2014/02/13/git-submodule/" target="_blank" rel="external">http://www.stormzhang.com/git/2014/02/13/git-submodule/</a></p>
+<h4 id="git_文档">git 文档</h4><ul>
+<li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
+</li>
+<li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="external">Git分支管理策略</a></p>
+</li>
+<li><p><a href="http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png" target="_blank" rel="external">Git 常用命令图</a></p>
+</li>
+<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160120/JS笔记/" class="article-date">
+  	<time datetime="2016-01-20T03:37:00.000Z" itemprop="datePublished">2016-01-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160120/JS笔记/">JS笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
+<h4 id="1-===">1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+</li>
+</ul>
+<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
+<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
+<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
+<h4 id="2-NaN">2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
+<pre><code><span class="literal">NaN</span> === <span class="literal">NaN</span>; <span class="comment">// false</span>
+</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
+<pre><code><span class="built_in">isNaN</span>(<span class="literal">NaN</span>); <span class="comment">// true</span>
+</code></pre><h4 id="3-浮点数的相等比较">3.浮点数的相等比较</h4><pre><code><span class="number">1</span> / <span class="number">3</span> === (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>); <span class="comment">// false</span>
+</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
+<pre><code>Math.<span class="built_in">abs</span>(<span class="number">1</span> / <span class="number">3</span> - (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>)) &lt; <span class="number">0.0000001</span>; <span class="comment">// true</span>
+</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
+<ol>
+<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
+<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
+<li>apply &amp; call</li>
+<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
+</ol>
+<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
+<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
+<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
+<p>####严格模式</p>
+<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
+<pre><code><span class="pi">'use strict'</span>;
+</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
+<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
+<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
+<pre><code><span class="string">'toString'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">true</span>
+</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
+<pre><code>var xiaoming = {
+    <span class="symbol">name:</span> <span class="string">'小明'</span>
+};
+xiaoming.hasOwnProperty(<span class="string">'name'</span>); <span class="regexp">//</span> <span class="keyword">true</span>
+xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="regexp">//</span> <span class="keyword">false</span>
+</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
+<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
+<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
+<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
+<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Charles" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160113/Charles/" class="article-date">
+  	<time datetime="2016-01-13T06:51:00.000Z" itemprop="datePublished">2016-01-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160113/Charles/">Charles</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>安装SSL证书 <a href="http://www.charlesproxy.com/ssl.zip" target="_blank" rel="external">链接</a></p>
+</li>
+<li><p><a href="http://www.tuicool.com/articles/UzIzIne" target="_blank" rel="external">使用Charles抓包并篡改返回数据</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Kindle-Calibre" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -382,7 +624,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
       
@@ -977,536 +1219,9 @@
 
 
   
-    <article id="post-MayDay歌词本更新日志" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151214/MayDay歌词本更新日志/" class="article-date">
-  	<time datetime="2015-12-14T14:11:00.000Z" itemprop="datePublished">2015-12-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151214/MayDay歌词本更新日志/">MayDay歌词本更新日志</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="更新日志">更新日志</h4><h5 id="2016-02-01">2016.02.01</h5><ol>
-<li>优化badge更新</li>
-<li>歌词页有歌曲时播放问题</li>
-<li>更新插件</li>
-</ol>
-<h5 id="2016-01-30">2016.01.30</h5><ol>
-<li>fix 发布按钮无响应</li>
-<li>新版图片存储切换至七牛</li>
-<li>更新专辑图片资源至七牛</li>
-<li>用户信息添加系统icon(ios/android)</li>
-<li>回复列表,点击头像查看用户信息</li>
-<li>终于…把喜欢列表给写了</li>
-</ol>
-<h5 id="2016-01-29">2016.01.29</h5><ol>
-<li>fix badge初始值</li>
-<li>修改wechat,weibo native代码–&gt;需发版</li>
-</ol>
-<h5 id="2016-01-21">2016.01.21</h5><ol>
-<li>添加选取部分歌词生成图片分享</li>
-</ol>
-<h5 id="2016-01-18">2016.01.18</h5><ol>
-<li>更新样式文件 fix大部分问题样式</li>
-<li>添加切换主题功能</li>
-<li>添加截图功能(开发中)</li>
-</ol>
-<h5 id="2015-12-25">2015.12.25</h5><ol>
-<li>登陆页样式问题</li>
-<li>个人信息页，收件箱加载问题</li>
-<li>发送页面，内容换行后遮挡(5,5s,5c)</li>
-<li>多次失败后，提示弹框不消失</li>
-<li>优化发布页面按钮显示</li>
-<li>发布时,添加加载框提示</li>
-</ol>
-<h5 id="2015-12-24">2015.12.24</h5><ol>
-<li>圣诞主题发布</li>
-<li>完善iconfont使用</li>
-<li>index不能做UI处理</li>
-<li>修复图片路径问题</li>
-</ol>
-<h5 id="2015-12-20">2015.12.20</h5><ol>
-<li>修改我想说详情页 样式</li>
-</ol>
-<h5 id="2015-12-18">2015.12.18</h5><ol>
-<li>更新ionic 1.2(未提交)</li>
-</ol>
-<h5 id="2015-12-17">2015.12.17</h5><ol>
-<li>回复列表名称显示</li>
-<li>回复后,android用户收不到推送(Server)</li>
-</ol>
-<h5 id="2015-12-16">2015.12.16</h5><ol>
-<li>个人信息天数显示</li>
-<li>长内容发送失败</li>
-</ol>
-<h5 id="2015-12-15">2015.12.15</h5><ol>
-<li>关于页面样式(ipad样式有问题)</li>
-<li>InAppBrowser调用bug</li>
-<li>回复后自动刷新</li>
-</ol>
-<h5 id="2015-12-14">2015.12.14</h5><ol>
-<li>整理设置页面</li>
-</ol>
-<h5 id="issue">issue</h5><ol>
-<li>手机网络发送失败</li>
-</ol>
-<h5 id="待完善">待完善</h5><ol>
-<li>签到日历</li>
-<li>草稿箱</li>
-<li><del>歌词页右上角菜单(评论/喜欢/)</del></li>
-<li>登录流程,2次授权</li>
-<li><del>登录引导对话框</del></li>
-<li><del>歌词页面</del></li>
-<li><del>badge需要重新登录才能更新状态</del></li>
-<li><del>…我操…忘了…</del></li>
-<li><del>更新提示(需要双击home键,杀死app后重新启动.)</del></li>
-<li>添加登陆后自动更新状态接口.</li>
-<li><a href="http://electron.atom.io/" target="_blank" rel="external">http://electron.atom.io/</a></li>
-</ol>
-<h3 id="android更新日志">android更新日志</h3><h5 id="2015_0122(2-2-4)">2015 0122(2.2.4)</h5><ul>
-<li>修复 推送不能成功接收</li>
-<li>动画类更换(未完成,先过年再说 o(≧v≦)o~~).</li>
-</ul>
-<h5 id="2015_0122(2-2-3)">2015 0122(2.2.3)</h5><ul>
-<li>个人信息页面添加签到信息入口.(修复签到静态变量应用的bug);</li>
-<li>修复 查看用户微博时,如果没有安装新浪微博不能打开浏览器的问题</li>
-<li>修改 收信箱新消息提醒策略</li>
-<li>添加 我想说分享功能(限制为自己的帖子)</li>
-<li>添加收件箱功能.(之前的提醒看过就没有了,现在所有提醒会一直在收件箱中,以便查看历史记录).</li>
-<li>修正当提醒(主贴是自己的)和回复(主贴是别人的)同时弹出提醒跳转页面错误的问题.</li>
-<li>设置页面添加是否使用系统默认emoji表情选项.(有些系统会自定义一套emoji,如果你认为比app里的好看,你可以使用系统的.)</li>
-<li>正式支持emoji表情.(//修改数据库相关字段为blob)</li>
-<li>草稿箱添加长按删除.</li>
-<li>修改我想说正文行间距,便于阅读.</li>
-<li>修正了更新数据库,第一次进入看不到数据的问题.</li>
-<li>添加更新签名.  (用户页面现在可以更新头像/更新个性签名)</li>
-</ul>
-<h5 id="1219(2-9-0)">1219(2.9.0)</h5><ul>
-<li>优化注册登录流程</li>
-<li>添加签到小功能.(据说以后会有小礼品…待定)</li>
-<li>添加草稿箱功能.(看到一些小伙伴写那么那么长文,很是感动哇~ so,小伙伴们继续加油吧~)</li>
-</ul>
-<h5 id="1205">1205</h5><ul>
-<li>修改背景模糊选项</li>
-<li>修改歌词页背景选择大图后失败bug</li>
-<li>修复新浪授权SSO方式失败问题</li>
-<li>修复更新头像信息逻辑</li>
-</ul>
-<p>歌词模块</p>
-<ul>
-<li>全新的数据更新策略,专辑信息更新更灵活.</li>
-<li>全新的歌词模块UI.歌词背景模糊特效,让背景图片更加贴合歌词.</li>
-<li>主要页面支持侧滑退出.(如果你是MX,你又不喜欢用小光圈上划手势退出,这个你能用的上.)</li>
-<li>重写歌词选取功能.不再有闪烁的小光标,更轻松的复制和分享.</li>
-</ul>
-<p>悬浮窗功能</p>
-<ul>
-<li>全新的悬浮窗功能模块,由之前单一的快捷方式改为可以支持App/联系人/快捷方式三种方式.</li>
-</ul>
-<p>其他</p>
-<ul>
-<li>新增博客模块,目前收集了阿信和石头的博客内容.(如果你有其他团员的文章数据,欢迎提供,特别是刚结婚那位的,个人超喜欢他的文笔)</li>
-<li>头像支持修改.终于…终于…支持了.后续会添加更多用户信息元,可数据的修改.</li>
-<li>支持图片发送,新版本中去除了板块选择,并开放了图片上传功能.</li>
-<li>我想说图片浏览,支持大图浏览,并保存本地.so,多多分享和五月天有关的图片吧.</li>
-</ul>
-<h5 id="Tips">Tips</h5><ul>
-<li>新的歌词本里需要用到读取联系人权限.用途为:在悬浮窗中添加联系人.如果你介意,现在大部分Android手机都有权限管理模块,关闭就是了,不影响其他功能的使用.</li>
-<li><p>miui(不仅仅是小米用户,刷了miui rom应该都有这个可能)用户如果出现悬浮小人不能动的情况,可以在设置-》应用-》歌词本应用页面 将 “显示悬浮窗”选项开启即可.</p>
-</li>
-<li><p>悬浮框-“快捷方式”的使用.功能原理就是读取桌面上的所有快捷方式,比如你可以先将你经常使用到的微信联系人创建快捷方式到桌面,在使用在悬浮框的设置页面,读取桌面的快捷方式将你需要的内容添加到小阿信里面.</p>
-</li>
-</ul>
-<h5 id="2-2-1">2.2.1</h5><ol>
-<li>更新末日为明日/更新专辑封面。</li>
-<li>67场演唱会数据补全。</li>
-<li>演唱会签到功能。</li>
-<li>个人信息页,添加信息汇总统计。</li>
-<li>在歌词页直接进行字体设置。</li>
-<li>推荐我想说/新增歌词提醒推送功能。</li>
-<li>帮助页添加手动检测版本/和网盘链接(如果升级功能不能正常下载,可以自行至网盘进行下载。)</li>
-<li>头像缓存文件不再显示(请删除之前的文件)。</li>
-<li>增量更新功能。</li>
-</ol>
-<h5 id="2-1">2.1</h5><ol>
-<li>长按悬浮框可更换其他图案.增加了悬浮框的稳定性.</li>
-<li>修改歌词页UI.新增“我喜欢”按钮.</li>
-<li>添加歌词页歌词切换动画</li>
-<li>修改”最佳作词人”排列顺序.</li>
-<li>个人信息页UI修改. 点击个人信息可产看自己的我想说.</li>
-<li>回复自己的背景色区分</li>
-<li>分享</li>
-<li>字体设置移到歌词页</li>
-<li>地理位置彩蛋</li>
-<li>增量更新</li>
-</ol>
-<h5 id="2-0">2.0</h5><ol>
-<li>修改分类页面  更换为ListView 形式.(周一)</li>
-<li>排行榜页面.  跳转至歌词页.   (1,23, 用图片？)(周一)</li>
-<li>个人信息页,添加”我想说”</li>
-<li>个人页 布局 </li>
-<li>个人页/侧滑菜单使用圆形头像</li>
-<li>小悬浮框 雅安加油</li>
-<li>bginfo /悬浮框 添加url属性.  逻辑:url非空,点击动作为跳转至url</li>
-<li>发布页面,去除歌单功能/添加回复页相同表情动画.</li>
-<li>修改获取状态栏高度位置. onTouch时触发</li>
-</ol>
-<h5 id="1-9-0">1.9.0</h5><ol>
-<li>分类页面 ListView动画效果实现</li>
-<li>检测喜欢歌词页面  更多实现.  UI、信息显示的完善</li>
-<li>排行榜页 </li>
-<li>闽南 图标</li>
-<li>歌词页</li>
-<li>选词功能实现</li>
-</ol>
-<h5 id="1-8-0">1.8.0</h5><ol>
-<li>直接调用微博客户端登陆.SSO</li>
-<li>检查快捷方式不稳定. </li>
-<li>快捷方式图片选择Grid</li>
-<li>歌词翻转效果</li>
-<li>修改ActionBar 背景色</li>
-<li>使用prefrence 保存快捷方式位置.</li>
-<li>根据所选歌词掉落相关图片彩蛋</li>
-<li>点击发送弹出分类选择.</li>
-</ol>
-<h5 id="1-7-0">1.7.0</h5><ol>
-<li>微博登录</li>
-<li>多用户选择</li>
-<li>回复自己的用蓝色标记.</li>
-<li>我想说列表滑动到底部自动加载.(去除之前还要按一下”加载更多”)</li>
-<li>桌面的’小阿信’希望在你们的手机上效果还好,你们能喜欢. 类似快捷方式的模块,位置可以自由拖动.默认是打开歌词本,当然你也可以在设置中,选择其他应用,比如微博/QQ等.</li>
-<li>类似微信的小彩蛋.</li>
-<li>明日场次已经添加.</li>
-<li>搜索排序.其他歌词放置最后.</li>
-<li>《天机》之前给忘了,已经添加.</li>
-</ol>
-<h5 id="1-6-0">1.6.0</h5><ol>
-<li>我们模块,刷新后,bitmap的回收。</li>
-<li>添加”我们” 分页加载.</li>
-<li>添加 板块   导航</li>
-<li>诺亚方舟 （倒计时程序）</li>
-<li>修改网络加载模块</li>
-</ol>
-<h5 id="1-5-0">1.5.0</h5><ol>
-<li>新的侧滑菜单UI.用户相关操作请点击用户名.</li>
-<li>新增的”我们”模块.</li>
-<li>个人信息页,增加更新地理位置信息.提交地理位置后会在”我们”模块中显示.(如果你介意位置信息,请不要点.~)</li>
-<li>新启动画面.以后可以使用用户提交的图片来做启动画面.(欢迎大家踊跃提交喽~)</li>
-<li>完整的”夜用型”配色,各种不侧漏,晚上随你怎么用.</li>
-<li>调整了缓存文件夹.</li>
-<li>优化之前刷新崩溃的问题.(貌似没有彻底解决,但是应该会好些.)</li>
-<li>优化提醒结构.超过三分钟无效提醒,将自动清除.</li>
-<li>优化”我想说”的布局,虽然依然是坨屎…</li>
-<li>优化标签的显示效果.</li>
-</ol>
-<h5 id="1-3-9">1.3.9</h5><ol>
-<li>用户信息页  </li>
-<li>提示定位信息(歌词本用户可以在地图上看到你.PS:如果你介意地理信息暴露,可以微博@我,哪个市也好,该功能只是为了玩,没别的意思.)</li>
-</ol>
-<h5 id="1-3-8">1.3.8</h5><p>//完成</p>
-<ul>
-<li>我想说 标签（默认贴/生日贴/笑话贴/晚安贴/连线贴（发号码可直接跳转拨号））</li>
-<li>创建歌单</li>
-<li>下拉刷新 </li>
-<li>用户信息页,查看用户发帖接口</li>
-<li>歌词页,查看该歌曲我想说接口</li>
-<li>好友关系异常,跳转授权页提示绑定.</li>
-<li>根据标签区分颜色(效果不明显,通过前缀代替)</li>
-<li>整理专辑图片(200*200)<br>//修改</li>
-<li>演唱会坐标</li>
-<li>图片浏览</li>
-</ul>
-<p>等待图/下载异常</p>
-<ul>
-<li>Map气泡处理</li>
-<li>演唱会倒数天数异常</li>
-<li>全局亮度调节<br>//优化</li>
-<li>歌单排序部分代码完善</li>
-<li>Item中歌单 内容  进行编辑<br>bug:</li>
-<li>修改Item 宽度,点击title事件</li>
-<li>刷新</li>
-</ul>
-<h5 id="1-3-7">1.3.7</h5><p>新的分享模块.支持带图片的微博和直接@好友.<br>增加个人信息页.右上角,点击自己的用户名可查看.目前仅支持编辑自我描述.(性别和头像均来自新浪微博.). 所以,请先登录歌词本后在进行新浪授权.<br>我想说头像显示. 点击头像可以查看该用户信息(默认性别为女.) 没头像的,可以点击用户名进行查看.<br>如果该用户绑定新浪微博,支持在应用内直接加关注.<br>搜索支持歌名搜索.<br>我想说UI做了一点点小调整.<br>新图标,更换未遂…</p>
-<h5 id="1-3-6">1.3.6</h5><ol>
-<li>修改HeadItem  Bug</li>
-<li>添加倒计时天数</li>
-<li>支持发表情</li>
-<li><p>支持Html代码</p>
-</li>
-<li><p>屏幕亮度调节</p>
-</li>
-<li>关于页添加说明文档</li>
-<li>是否添加’我想说’随意发帖</li>
-<li>继续完善Activity跳转动画.</li>
-<li>提醒(铃音/震动)</li>
-<li>翻页可行性.</li>
-</ol>
-<h5 id="1-3-5">1.3.5</h5><p>Update:</p>
-<ol>
-<li>‘我想说’回复提醒功能.</li>
-<li>点击用户的留言,可以对该用户进行回复.</li>
-<li>歌词字体自定义功能. </li>
-<li>歌词页常亮.<br>Bug:</li>
-<li>繁体无法正常使用搜索功能.</li>
-<li>显示注音时,无简繁体切换.</li>
-<li>回复列表拖动时’黑块’.</li>
-<li>当回复内容过长时,内容被省略.</li>
-<li>当主题内容过长,可能造成部分机型无法拖动回复列表或遮盖.</li>
-<li>部分机型可能出现输入界面字体与背景色混淆看不清输入内容.</li>
-</ol>
-<ul>
-<li>说明:<ul>
-<li>自定义字体功能:<br>请将你喜欢的字体更名为def.ttf 放置SD中 mayday/font/ 目录下.并在设置页勾选即可.<br><em>:当使用自定义字体,并选择显示繁体时,可能会出现字体显示不完整,与歌词本无关,切换一个完整字体即可.
-</em>:部分字体可能显示不便于阅读,可能尝试勾选显示粗体进行微调.</li>
-<li>‘我想说’提醒功能:<br>目前正处于提醒功能的第一版,可能会出现提示的内容有偏差,或错误.如果你有耐心,可能将Bug告知咸鱼,帮咸鱼完善我想说. 如果没有,可以在设置页面勾选关闭提醒,以免影响你的正常使用.</li>
-</ul>
-</li>
-</ul>
-<h5 id="1-3-2">1.3.2</h5><ol>
-<li>地图</li>
-<li>“我想说”回复功能</li>
-<li>闽南语歌词拼音转换</li>
-<li>新UI  左上角 点击可以直接退出.</li>
-</ol>
-<h5 id="1-3-1">1.3.1</h5><ol>
-<li>更新歌曲接口/根据ID  inster操作.</li>
-<li>修改 联合添加 +1的操作.</li>
-<li>发布者  高亮显示</li>
-<li>字数限制,过长用…表示.  添加详细页Activity.</li>
-<li>rootid  （回复内容）</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MayDay歌词本/">MayDay歌词本</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-appStore 大坑逼" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151209/appStore 大坑逼/" class="article-date">
-  	<time datetime="2015-12-09T14:45:00.000Z" itemprop="datePublished">2015-12-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151209/appStore 大坑逼/">appStore 大坑逼</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="14-3_Details">14.3 Details</h3><p>Your app enables the display of user-generated content but does not have the required precautions in place.</p>
-<p>Next Steps</p>
-<p>It is necessary that you put all of the following precautions in place:</p>
-<ul>
-<li>Require that users agree to terms (EULA) and these terms must make it clear that there is no tolerance for objectionable content</li>
-<li>Use moderators to flag and remove inappropriate content and offensive users</li>
-<li>Users need a mechanism to block abusive users (for example: 用户黑名单)</li>
-<li>Developer must act on objectionable content reports within 24 hours by removing the content and ejecting the user who provided the offending content</li>
-<li>Developer needs a method for ejecting users who violate the terms of the EULA</li>
-</ul>
-<blockquote>
-<p>添加举报功能.杯具…说是没有用户协议,类似告知用户那些是不可以做的版规.又杯具,说是还要一个黑名单功能.这些不一定要后台实现的…假的也行.</p>
-</blockquote>
-<h3 id="8-5_Details">8.5 Details</h3><p>We found that your app includes lyrics which may be copyrighted. The use of third-party copyrighted materials requires documented evidence of your right to use such content in your app.</p>
-<p>Next Steps</p>
-<p>Please provide documentary evidence of rights to use this content. Once Legal has reviewed your documentation and confirms its validity, we will proceed with the review of your app.</p>
-<blockquote>
-<p>使用了第三方内容,需要授权文件</p>
-</blockquote>
-<h3 id="22-2_Details">22.2 Details</h3><p>Your app or its metadata contains misleading content. Specifically, your app name misleads the user this app containing lyrics info.</p>
-<p>Next Steps</p>
-<p>Please remove or revise any misleading content in your app and its metadata.</p>
-<blockquote>
-<p>因为应用提供歌词内容，但是歌词属于使用第三方内容需要授权,所以只能拿掉.拿掉以后说我的名称与内容不符,误导用户,所以只能更换应用名称.</p>
-</blockquote>
-<h3 id="17-2_Details">17.2 Details</h3><p>In addition, we noticed that your app requires users to register with personal information to access non account-based features. Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.</p>
-<p>Next Steps</p>
-<p>User registration that requires the sharing of personal information must be optional or tied to account-specific functionality. Additionally, the requested information must be relevant to the features.</p>
-<blockquote>
-<p>因为应用有注册模块,需要填写性别.但是他们又没发现哪里有用到性别的地方,于是乎他们就认为你收集用户信息(性别).</p>
-</blockquote>
-<p>We noticed that your app uses Sina Weibo login for authentication purposes but does not include account-based features offered by that site, which does not comply with the App Store Review Guidelines.</p>
-<p>In order to use Sina Weibo for authentication, your app must include significant account-specific functionality from Sina Weibo. For example, your app should include sufficient account-based features from Sina Weibo other than pulling profile information or sharing on the user’s page.</p>
-<p>Next Steps</p>
-<p>Please revise your app to implement your own authentication mechanism, or incorporate significant account-specific functionality from Sina Weibo. </p>
-<blockquote>
-<p>使用微博账号当作系统账号使用.杯具了…这个是不允许的。你要么有自己创建用户名和密码体系，要么使用第三方账号认证后，在app内明确提供该第三方的其它基于账号的功能。换句话说，第三方认证只能帮你做认证关联，不能直接挖掘用户信息作为你的app的账户。这会让Apple认为你无故暴露用户隐私。</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-cordova" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/20151207/cordova/" class="article-date">
-  	<time datetime="2015-12-07T09:46:00.000Z" itemprop="datePublished">2015-12-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151207/cordova/">cordova &amp; ionic &amp; angularJs</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">widget</span> <span class="attribute">id</span>=<span class="value">"io.cordova.hellocordova"</span></span><br><span class="line">	  <span class="attribute">version</span>=<span class="value">"0.0.1"</span> 				//版本号</span><br><span class="line">      <span class="attribute">android-versionCode</span>=<span class="value">"7"</span>	    //<span class="attribute">android</span> <span class="attribute">build</span></span><br><span class="line">      <span class="attribute">ios-CFBundleVersion</span>=<span class="value">"7"</span>		//<span class="attribute">ios</span>     <span class="attribute">build</span></span><br><span class="line">      <span class="attribute">windows-packageVersion</span>=<span class="value">"1.0.1.2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><a href="http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2" target="_blank" rel="external">http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2</a></p>
-<ol>
-<li>提交appstore会收到邮件“Missing push notification entitlement”的邮件<br><a href="http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti" target="_blank" rel="external">http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti</a><br><strong>需要重新生成一下provisioning，选择的AppID中需要包含Push Notifacation的，用生成的provisioning再重新Archive就好了</strong></li>
-<li><p><a href="http://stackoverflow.com/questions/20419574/saving-dataurlbase64-to-file-on-phonegap-android" target="_blank" rel="external">Saving dataURL(base64) to file on PhoneGap (android)</a></p>
-</li>
-<li><p><a href="http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/" target="_blank" rel="external"> angular的post请求，后台接收参数为null的解决方案</a></p>
-</li>
-<li><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="external">ionic 文本选择</a></p>
-</li>
-<li><p>ionic $ionicview生命周期</p>
-<ul>
-<li>$ionicView.loaded<br><br>视图已经被加载了。这事件只发生一次当视图被创建并添加到Dom中。当跳出页面并且被缓存了的话，再次访问这个页面时这个时间将不会被激活。Loaded事件是个好方式让你为这个视图设置你的代码； 然而，他并不是我们推荐的时间去监听视图被激活。</li>
-<li>$ionicView.enter<br><br>进入视图并被激活。这事件被激活来判断这个视图是第一个加载还是被缓存了的。</li>
-<li>$ionicView.leave<br><br>离开这个视图并且不是活动页面。调用这个事件判断应该被缓存还是摧毁。</li>
-<li>$ionicView.beforeEnter<br><br>视图即将被打开变成活动页面。</li>
-<li>$ionicView.beforeLeave<br><br>视图将被关闭并且不是活动页面。</li>
-<li>$ionicView.afterEnter<br><br>进入视图并是当前的活动页面</li>
-<li>$ionicView.afterLeave<br><br>已经离开视图，并成为非激活页面</li>
-<li>$ionicView.unloaded<br><br>视图的Controller已经被摧毁并且他的页面元素也从Dom中移除</li>
-</ul>
-</li>
-<li><p><a href="http://bubkoo.com/2014/01/02/angular/ui-router/guide/url-routing/" target="_blank" rel="external"><br>学习 ui-router - 路由控制</a></p>
-</li>
-<li><p>state 设置 cache<br> 开发过程中会遇到某些页面重复使用的情况.比如用户信息页. 当我打开了两个用户页面,就是出现element错乱,本来想过去当前页面的,却获取更早的页面.对复用性高的,可以将其缓存关闭.</p>
-</li>
-<li><p><a href="http://www.gajotres.net/using-views-events-to-create-javascript-pure-ionic-splash-screen/" target="_blank" rel="external">自定义启动页面(未验证)</a></p>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cordova/">cordova</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic/">ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </div>
