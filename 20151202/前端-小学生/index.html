@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://willnewii.github.io">
+  <title>前端-小学生 | 诗人的咸鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="动画GSAP，专业的Web动画库
+PromiseJavaScript Promise API
+一年级HTML 最佳实践
+各种「弹窗」有学名，从此不再分不清
+gulp
+前端构建工具gulp入门教程
+gulp plugins 插件介绍 ~推荐~
+Gulp-ruby-sass 介绍
+
+文章
+像 Sublime Text 一样使用 Chrome DevTools
+
+Chrome 35个开发者工具的小技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端-小学生">
+<meta property="og:url" content="http://willnewii.github.io/20151202/前端-小学生/index.html">
+<meta property="og:site_name" content="诗人的咸鱼">
+<meta property="og:description" content="动画GSAP，专业的Web动画库
+PromiseJavaScript Promise API
+一年级HTML 最佳实践
+各种「弹窗」有学名，从此不再分不清
+gulp
+前端构建工具gulp入门教程
+gulp plugins 插件介绍 ~推荐~
+Gulp-ruby-sass 介绍
+
+文章
+像 Sublime Text 一样使用 Chrome DevTools
+
+Chrome 35个开发者工具的小技巧">
+<meta property="og:updated_time" content="2016-05-30T06:15:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端-小学生">
+<meta name="twitter:description" content="动画GSAP，专业的Web动画库
+PromiseJavaScript Promise API
+一年级HTML 最佳实践
+各种「弹窗」有学名，从此不再分不清
+gulp
+前端构建工具gulp入门教程
+gulp plugins 插件介绍 ~推荐~
+Gulp-ruby-sass 介绍
+
+文章
+像 Sublime Text 一样使用 Chrome DevTools
+
+Chrome 35个开发者工具的小技巧">
+  
+    <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">诗人的咸鱼</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+				<li><a href="/tags/Android">Android</a></li>
+	        
+				<li><a href="/tags/前端">前端</a></li>
+	        
+				<li><a href="/tags/快捷键">快捷键</a></li>
+	        
+				<li><a href="/tags/杂记">杂记</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">诗人的咸鱼</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">诗人的咸鱼</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/Android">Android</a></li>
+		        
+					<li><a href="/tags/前端">前端</a></li>
+		        
+					<li><a href="/tags/快捷键">快捷键</a></li>
+		        
+					<li><a href="/tags/杂记">杂记</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-前端-小学生" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端-小学生
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="动画">动画</h4><p><a href="http://www.tuicool.com/articles/fIrmueF" target="_blank" rel="external">GSAP，专业的Web动画库</a></p>
+<h4 id="Promise">Promise</h4><p><a href="https://segmentfault.com/a/1190000004476610" target="_blank" rel="external">JavaScript Promise API</a></p>
+<h4 id="一年级">一年级</h4><p><a href="https://github.com/dyygtfx/html-best-practices" target="_blank" rel="external">HTML 最佳实践</a></p>
+<p><a href="http://likaiwen.cn/post/design/ge-chong-dan-chuang-you-xue-ming-cong-ci-bu-zai-fen-bu-qing" target="_blank" rel="external">各种「弹窗」有学名，从此不再分不清</a></p>
+<h4 id="gulp">gulp</h4><ul>
+<li><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a></li>
+<li><a href="http://colobu.com/2014/11/17/gulp-plugins-introduction/" target="_blank" rel="external">gulp plugins 插件介绍 ~推荐~</a></li>
+<li><a href="http://www.zuojj.com/archives/550.html" target="_blank" rel="external">Gulp-ruby-sass 介绍</a></li>
+</ul>
+<h4 id="文章">文章</h4><ul>
+<li><p><a href="http://chinagdg.org/2015/12/%E5%83%8F-sublime-text-%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8-chrome-devtools/" target="_blank" rel="external">像 Sublime Text 一样使用 Chrome DevTools</a></p>
+</li>
+<li><p><a href="http://www.w3cplus.com/tools/dev-tips.html" target="_blank" rel="external">Chrome 35个开发者工具的小技巧</a></p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
+</li>
+</ul>
+<h4 id="手册/API">手册/API</h4><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></p>
+<p><a href="http://www.css88.com/book/css/quicksearch.htm" target="_blank" rel="external">CSS3参考手册</a></p>
+<p><a href="http://www.ziqiangxuetang.com/cssref/css-reference.html" target="_blank" rel="external">CSS 参考手册(有示例)</a></p>
+<p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程(推荐-廖雪峰的教程)</a></p>
+<h4 id="iconfont">iconfont</h4><p><a href="http://www.iconfont.cn/" target="_blank" rel="external">淘宝的iconfont库</a></p>
+<p><a href="https://icons8.com/" target="_blank" rel="external">icons8</a></p>
+<h4 id="资源站">资源站</h4><p><a href="https://github.com/amfe/article/issues" target="_blank" rel="external">貌似是个淘宝前端</a></p>
+<p><a href="https://www.awesomes.cn/repos/Applications/frameworks" target="_blank" rel="external">awesomes「 也许是最好的开源前端库、框架和插件集合 」</a></p>
+<p><a href="http://www.zcfy.cc/article/85" target="_blank" rel="external">网页性能： 缓存效率实践</a></p>
+<p><a href="http://www.htmleaf.com/" target="_blank" rel="external">jQuery之家(不少特效可以偷点来用~)</a></p>
+<p><a href="https://github.com/dyygtfx/WebDev-Source" target="_blank" rel="external">web开发的一些资料，不仅仅是前端资料</a></p>
+<p><a href="http://tool.oschina.net/codeformat/js/" target="_blank" rel="external">在线工具-代码格式化</a></p>
+<p><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus 大漠</a></p>
+<p><a href="http://caniuse.com/" target="_blank" rel="external">caniuse…</a></p>
+<p><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="external">JavaScript 标准参考教程 </a></p>
+<h4 id="NodeJs">NodeJs</h4><p><a href="http://www.runoob.com/nodejs/nodejs-restful-api.html" target="_blank" rel="external">Node.js RESTful API</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/20151202/前端-小学生/" class="archive-article-date">
+  	<time datetime="2015-12-02T08:14:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-12-02</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/20151207/cordova/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          cordova &amp; ionic &amp; angularJs
+        
+      </div>
+    </a>
+  
+  
+    <a href="/20151127/Mac笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="前端-小学生" data-title="前端-小学生" data-url="http://willnewii.github.io/20151202/前端-小学生/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"willnewiiblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 诗人的咸鱼
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+        <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js" type="text/javascript"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Android/" style="font-size: 18px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12px;">cordova</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 14px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 16px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12px;">软件</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">咸鱼一只...</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

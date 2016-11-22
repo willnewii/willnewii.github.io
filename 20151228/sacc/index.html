@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://willnewii.github.io">
+  <title>sass笔记 | 诗人的咸鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Sass 和 SCSS其实是同一种东西，我们平时都称之为Sass，两者之间不同之处有以下两点：
+
+文件扩展名不同，Sass是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名
+
+语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。
+
+Sass 和 CSS 写法的确存在一定的差">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass笔记">
+<meta property="og:url" content="http://willnewii.github.io/20151228/sacc/index.html">
+<meta property="og:site_name" content="诗人的咸鱼">
+<meta property="og:description" content="Sass 和 SCSS其实是同一种东西，我们平时都称之为Sass，两者之间不同之处有以下两点：
+
+文件扩展名不同，Sass是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名
+
+语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。
+
+Sass 和 CSS 写法的确存在一定的差">
+<meta property="og:image" content="http://willnewii.github.io/img/混合宏vs继承vs占位符.jpg">
+<meta property="og:updated_time" content="2016-01-05T13:20:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sass笔记">
+<meta name="twitter:description" content="Sass 和 SCSS其实是同一种东西，我们平时都称之为Sass，两者之间不同之处有以下两点：
+
+文件扩展名不同，Sass是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名
+
+语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。
+
+Sass 和 CSS 写法的确存在一定的差">
+  
+    <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">诗人的咸鱼</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+				<li><a href="/tags/Android">Android</a></li>
+	        
+				<li><a href="/tags/前端">前端</a></li>
+	        
+				<li><a href="/tags/快捷键">快捷键</a></li>
+	        
+				<li><a href="/tags/杂记">杂记</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">诗人的咸鱼</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">诗人的咸鱼</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/Android">Android</a></li>
+		        
+					<li><a href="/tags/前端">前端</a></li>
+		        
+					<li><a href="/tags/快捷键">快捷键</a></li>
+		        
+					<li><a href="/tags/杂记">杂记</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-sacc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sass笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Sass_和_SCSS">Sass 和 SCSS</h3><p>其实是同一种东西，我们平时都称之为Sass，两者之间不同之处有以下两点：</p>
+<ol>
+<li><p>文件扩展名不同，Sass是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名</p>
+</li>
+<li><p>语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。</p>
+</li>
+<li><p>Sass 和 CSS 写法的确存在一定的差异，由于 Sass 是基于 Ruby 写出来，所以其延续了 Ruby 的书写规范。在书写 Sass 时不带有大括号和分号，其主要是依靠严格的缩进方式来控制的</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">body</span></span><br><span class="line">     <span class="attribute">color</span>: <span class="hexcolor">#fff</span></span><br><span class="line">     <span class="attribute">background</span>: <span class="hexcolor">#f36</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SCSS 和 CSS 写法无差别，这也是 Sass 后来越来越受大众喜欢原因之一。简单点说，把你现有的“.css”文件直接修改成“.scss”即可使用。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">body</span><span class="rules">&#123;</span><br><span class="line">     <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">     <span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#f36</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Scss编译网站">Scss编译网站</h3><p><a href="http://www.sassmeister.com/" target="_blank" rel="external">http://www.sassmeister.com/</a></p>
+<h3 id="知识点">知识点</h3><ol>
+<li><p>普通变量和默认变量</p>
+<ol>
+<li><p>普通变量定义后可以全局范围使用.</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$fontSize</span>:<span class="number">12</span>px;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>默认变量一般是用来设置默认值，然后根据需求来覆盖的，覆盖的方式也很简单，只需要在默认变量之前重新声明下变量即可。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$baseLineHeight</span>: <span class="number">1.5</span> !<span class="keyword">default</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>混合宏 @mixin @includ      &amp;父类选择 hover</p>
+<ol>
+<li><p>默认值</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@mixin border-radius(<span class="variable">$radius</span>:<span class="number">3</span>px)&#123;</span><br><span class="line">    -webkit-border-radius: <span class="variable">$radius</span>;</span><br><span class="line">    border-radius: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多参数</p>
+</li>
+</ol>
+</li>
+<li><p>继承 @extend</p>
+<ol>
+<li>不能继承选择器序列</li>
+</ol>
+</li>
+<li><p>占位符 %placeholder</p>
+</li>
+<li><p>混合宏 VS 继承 VS 占位符</p>
+<ol>
+<li>如果在样式文件中调用同一个混合宏，会产生多个对应的样式代码，造成代码的冗余，这也是 CSSer 无法忍受的一件事情。不过他并不是一无事处，他可以传参数。<strong>如果你的代码块中涉及到变量，建议使用混合宏来创建相同的代码块。</strong></li>
+<li>使用继承后，编译出来的 CSS 会将使用继承的代码块合并到一起，通过组合选择器的方式向大家展现。<strong>如果你的代码块不需要专任何变量参数，而且有一个基类已在文件中存在，那么建议使用 Sass 的继承。</strong></li>
+<li>“占位符是独立定义，不调用的时候是不会在 CSS 中产生任何代码；继承是首先有一个基类存在，不管调用与不调用，基类的样式都将会出现在编译出来的 CSS 代码中。”<br><img src="/img/混合宏vs继承vs占位符.jpg" alt="混合宏 VS 继承 VS 占位符">  </li>
+</ol>
+</li>
+<li><p>插值语句 #{ }</p>
+</li>
+<li><p>注释</p>
+<ol>
+<li>/<em>显示</em>/        </li>
+<li>//不显示</li>
+</ol>
+</li>
+<li><p>计算</p>
+<ol>
+<li><p>加减乘除</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$list</span>: twitter,facebook,github,weibo;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from <span class="number">1</span> through length(<span class="variable">$list</span>)&#123;</span><br><span class="line">  .icon-#&#123;nth(<span class="variable">$list</span>,<span class="variable">$i</span>)&#125;&#123;</span><br><span class="line">    background-postion: <span class="number">0</span>+<span class="number">20</span>px * <span class="variable">$i</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">/*除法*/</span><br><span class="line">p &#123;</span><br><span class="line">  font: <span class="number">10</span>px/<span class="number">8</span>px;             // 纯 CSS，不是除法运算</span><br><span class="line">  <span class="variable">$width</span>: <span class="number">1000</span>px;</span><br><span class="line">  width: <span class="variable">$width</span>/<span class="number">2</span>;            // 使用了变量，是除法运算</span><br><span class="line">  width: round(<span class="number">1.5</span>)/<span class="number">2</span>;        // 使用了函数，是除法运算</span><br><span class="line">  width: <span class="number">100</span>px / <span class="number">2</span>;           // 编译结果：<span class="number">100</span>px / <span class="number">2</span></span><br><span class="line">  height: (<span class="number">500</span>px/<span class="number">2</span>);          // 使用了圆括号，是除法运算</span><br><span class="line">  margin-left: <span class="number">5</span>px + <span class="number">8</span>px/<span class="number">2</span>px; // 使用了加（+）号，是除法运算</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>颜色运算 <strong>所有算数运算都支持颜色值，并且是分段运算的。也就是说，红、绿和蓝各颜色分段单独进行运算。</strong></p>
+</li>
+<li>字符串计算  <figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Hello"</span> + <span class="string">""</span> + <span class="string">"Sass!"</span>;   ==  <span class="string">" Hello Sass! "</span></span><br><span class="line">e + -<span class="built_in">resize</span>;              ==  e-<span class="built_in">resize</span>;</span><br><span class="line"><span class="string">"Foo "</span> + Bar;             ==  <span class="string">"Foo Bar"</span></span><br><span class="line">sans- + <span class="string">"serif"</span>;          ==  sans-serif;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li>@at-root @if type_of unitless  等操作符<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@mixin col-sm(<span class="variable">$width</span>: <span class="number">50</span>%) &#123;</span><br><span class="line">  @if type_of(<span class="variable">$width</span>) != number &#123;</span><br><span class="line">    @error <span class="string">'$width必须是一个数据类型,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @if not unitless(<span class="variable">$width</span>)&#123;</span><br><span class="line">    @if unit(<span class="variable">$width</span>) != <span class="string">'%'</span>&#123;</span><br><span class="line">      @error  <span class="string">'$width必须是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;@else &#123;</span><br><span class="line">    @warn  <span class="string">'$width应该是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    <span class="variable">$width</span>: (percentage(<span class="variable">$width</span>)/<span class="number">100</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @media (min-width: <span class="number">768</span>px) &#123;</span><br><span class="line">    width: <span class="variable">$width</span>;</span><br><span class="line">    float: left;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="tips">tips</h3><ol>
+<li>类名：应该有语义化的表现,而不是强调视觉性 </li>
+</ol>
+<p><a href="http://www.w3cplus.com/sassguide/syntax.html" target="_blank" rel="external">sass语法</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/20151228/sacc/" class="archive-article-date">
+  	<time datetime="2015-12-28T07:08:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-12-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/20151229/compass笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          compass笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/20151218/Cordova笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Cordova笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="sacc" data-title="sass笔记" data-url="http://willnewii.github.io/20151228/sacc/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"willnewiiblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 诗人的咸鱼
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+        <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js" type="text/javascript"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Android/" style="font-size: 18px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12px;">cordova</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 14px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 16px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12px;">软件</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">咸鱼一只...</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
