@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-08-05T10:24:44.000Z</updated>
+  <updated>2016-11-11T03:31:28.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[关于Thunderbolt]]></title>
+    <link href="http://willnewii.github.io/20161111/Thunderbolt/"/>
+    <id>http://willnewii.github.io/20161111/Thunderbolt/</id>
+    <published>2016-11-11T03:30:00.000Z</published>
+    <updated>2016-11-11T03:31:28.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="名词解释">名词解释</h4><p>美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命名为“Thunderbolt（雷电）”。Thunderbolt的研发初衷是为了替代并统一目前电脑上数量繁多性能参差不齐的扩展接口，比如SCSI, SATA, USB, FireWire和 PCI Express。Thunderbolt 是苹果与英特尔（Intel）的合作产物，由Intel开发，通过和苹果的技术合作推向市场。<br><strong>原来不是苹果独家</strong></p>
+<h4 id="原理性能">原理性能</h4><p>Thunderbolt连接技术融合了PCI Express数据传输技术和DisplayPort显示技术，由一颗Intel专用控制芯片进行驱动，通过PCI Express x4、DisplayPort总线与系统芯片组相连。其中PCI Express用于数据传输，DisplayPort则用于显示信号传输，亦可通过直接连接英特尔处理器集成图形核心进行DisplayPort显示输出。<br><strong>所以他可以传输图像,又可以传输数据</strong></p>
+<h4 id="Thunderbolt_3">Thunderbolt 3</h4><p>Thunderbolt和USB同样是数据端口。英特尔周二宣布,Thunderbolt 3将改变其形式与USB Type-C统一端口。将不再使用以前的方块式的接口，而是兼容USB3.1的标准，但是仍会保留标志性的闪电logo。<br><strong>Thunderbolt3兼容USB Type-C,就是长的像Type-C 的Thunderbolt3</strong></p>
+<h4 id="菊花链(daisy_chain)">菊花链(daisy chain)</h4><p>像给自己的air连接两台显示器.<a href="https://www.zhihu.com/question/22600143" target="_blank" rel="external">Macbook Air 能否连双显示器（非苹果显示器）？</a></p>
+<h4 id="资料">资料</h4><ul>
+<li><a href="http://baike.baidu.com/link?url=6q-lfP_Llb0YKPuXuA1k8oZrKJebV81VXdlch31beke5nJULzGgl1OOs3fAv5VoSP7B01IYCVhpn5UaUYjrfla" target="_blank" rel="external">USB Type-C百度百科</a></li>
+<li><a href="http://www.ggjrw.com/zixun/hulianwang/2015-06-03/3943.html" target="_blank" rel="external">Thunderbolt3兼容USB Type-C，完爆USB 3.1</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="名词解释">名词解释</h4><p>美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命名为“Thunderbolt（雷电）”。Thunderbolt的研发初衷是为了替代并统一目前电脑上数量繁]]>
+    </summary>
+    
+      <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Element]]></title>
@@ -1081,76 +1104,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     </summary>
     
       <category term="css" scheme="http://willnewii.github.io/tags/css/"/>
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Cordova笔记]]></title>
-    <link href="http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/"/>
-    <id>http://willnewii.github.io/20151218/Cordova笔记/</id>
-    <published>2015-12-18T06:21:00.000Z</published>
-    <updated>2016-06-18T14:39:58.000Z</updated>
-    <content type="html"><![CDATA[<ul>
-<li><p>Push<br>push选用了jPush.因为貌似只有他们家只官方支持了Cordova.<br><a href="https://github.com/jpush/jpush-phonegap-plugin" target="_blank" rel="external">https://github.com/jpush/jpush-phonegap-plugin</a></p>
-<ul>
-<li>关于配置证书<br> <a href="https://leancloud.cn/docs/ios_push_cert.html" target="_blank" rel="external">iOS 推送证书设置指南 by LeanCloud</a><br>搜了很多文章,都把这个步骤写的异常玄乎.推荐LeanCloud的文档</li>
-</ul>
-</li>
-<li><p>截图需求</p>
-<ul>
-<li>cordova有一个截图的插件暂时没用过,有需要的可以去看看<a href="https://github.com/gitawego/cordova-screenshot" target="_blank" rel="external">https://github.com/gitawego/cordova-screenshot</a></li>
-</ul>
-<ol>
-<li><a href="https://html2canvas.hertzen.com/" target="_blank" rel="external">html2canvas</a> 可以根据元素来生成canvas对象,然后你在按需操作.</li>
-</ol>
-</li>
-<li><p>canvas保存</p>
-<ul>
-<li><a href="http://blog.csdn.net/cuixiping/article/details/45932793" target="_blank" rel="external">DataURL与File,Blob,canvas对象之间的互相转换的Javascript</a></li>
-</ul>
-</li>
-<li><p>目录结构</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">____src</span><br><span class="line"></span>|<span class="string"> </span>|<span class="string">____css(由compass生成)</span><br><span class="line"></span>|<span class="string"> </span>|____iconfont</span><br><span class="line">|<span class="string"> </span>|____js</span><br><span class="line">|<span class="string"> </span>|<span class="string"> </span>|____controller</span><br><span class="line">|<span class="string"> </span>|<span class="string"> </span>|____services</span><br><span class="line">|<span class="string"> </span>|<span class="string"> </span>|____util</span><br><span class="line">|<span class="string"> </span>|____scss</span><br><span class="line">|<span class="string">____www</span><br><span class="line"></span>|<span class="string"> </span>|<span class="string">____dist(由gulp生成)</span><br><span class="line"></span>|<span class="string"> </span>|____img</span><br><span class="line">|<span class="string"> </span>|____templates</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>升级: cordova platform update ios@latest</p>
-</li>
-<li><p>cordova 升级4.0 问题<br><a href="https://github.com/jpush/jpush-phonegap-plugin/issues/111" target="_blank" rel="external">update_cordova_subproject command for cordova-ios 4.0.0-dev results in a build error</a></p>
-</li>
-</ul>
-<ol>
-<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">widget</span> <span class="attribute">id</span>=<span class="value">"io.cordova.hellocordova"</span></span><br><span class="line">	  <span class="attribute">version</span>=<span class="value">"0.0.1"</span> 				//版本号</span><br><span class="line">      <span class="attribute">android-versionCode</span>=<span class="value">"7"</span>	    //<span class="attribute">android</span> <span class="attribute">build</span></span><br><span class="line">      <span class="attribute">ios-CFBundleVersion</span>=<span class="value">"7"</span>		//<span class="attribute">ios</span>     <span class="attribute">build</span></span><br><span class="line">      <span class="attribute">windows-packageVersion</span>=<span class="value">"1.0.1.2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><a href="http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2" target="_blank" rel="external">http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2</a></p>
-<ol>
-<li><p>提交appstore会收到邮件“Missing push notification entitlement”的邮件<br><a href="http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti" target="_blank" rel="external">http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti</a></p>
-</li>
-<li><p><a href="http://stackoverflow.com/questions/20419574/saving-dataurlbase64-to-file-on-phonegap-android" target="_blank" rel="external">Saving dataURL(base64) to file on PhoneGap (android)</a></p>
-</li>
-<li><p><a href="http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/" target="_blank" rel="external"> angular的post请求，后台接收参数为null的解决方案</a></p>
-</li>
-<li><p><a href="http://wex5.com/cn/?p=11382" target="_blank" rel="external">cordova插件清单</a></p>
-</li>
-</ol>
-<h4 id="Angular">Angular</h4><ul>
-<li><a href="https://github.com/angular-ui/ui-router/wiki" target="_blank" rel="external">ui-router wiki</a></li>
-<li><a href="http://blog.csdn.net/yy374864125/article/details/43702153" target="_blank" rel="external">angular ui-router - 管理状态</a></li>
-<li><a href="http://blog.jobbole.com/62249/" target="_blank" rel="external">AngularJS 指令实践指南</a></li>
-</ul>
-<h3 id="资料">资料</h3><p><a href="http://park.jobdeer.com/discussion/22/%E4%BD%BF%E7%94%A8-html2canvas-%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E6%88%AA%E5%9B%BE%E5%B9%B6%E4%B8%8B%E8%BD%BD" target="_blank" rel="external">使用-html2canvas-实现浏览器截图并下载</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<ul>
-<li><p>Push<br>push选用了jPush.因为貌似只有他们家只官方支持了Cordova.<br><a href="https://github.com/jpush/jpush-phonegap-plugin" target="_blank" rel="ex]]>
-    </summary>
-    
-      <category term="cordova" scheme="http://willnewii.github.io/tags/cordova/"/>
-    
-      <category term="ios" scheme="http://willnewii.github.io/tags/ios/"/>
     
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
