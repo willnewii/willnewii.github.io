@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-12-01T04:24:52.000Z</updated>
+  <updated>2016-12-02T07:04:06.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -13,6 +13,652 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[intellij IDEA 快捷键]]></title>
+    <link href="http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://willnewii.github.io/20161202/intellij IDEA 快捷键/</id>
+    <published>2016-12-02T07:03:00.000Z</published>
+    <updated>2016-12-02T07:04:06.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="js:忽略相关目录">js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
+<h4 id="查看改行代码的修改记录">查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
+<h4 id="抽取">抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
+<h4 id="函数重构Refactor">函数重构Refactor</h4><h4 id="让主先行">让主先行</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先写你关心的,再写动词</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.sout</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.return</span></span><br><span class="line"> name<span class="class">.null</span> 			<span class="comment">//判断name==null</span></span><br><span class="line"> name<span class="class">.nn</span>   			<span class="comment">//判断name!=null</span></span><br><span class="line"> count<span class="class">.for</span>			<span class="comment">//for循环</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>跳转到父类</td>
+<td>cmd+u</td>
+<td>Navigate-&gt;Super method</td>
+</tr>
+<tr>
+<td>跳转到定义</td>
+<td>cmd+b</td>
+<td>Navigate-&gt;declaration</td>
+</tr>
+<tr>
+<td>跳转到实现</td>
+<td>cmd+alt+b</td>
+<td>Navigate-&gt;implementation(s)</td>
+</tr>
+<tr>
+<td>返回</td>
+<td>cmd+[</td>
+<td>Navigate-&gt;Back</td>
+</tr>
+<tr>
+<td>显示文件路径</td>
+<td>alt+cmd+F12</td>
+<td>Navigate-&gt;File Path</td>
+<td>不用再目录里右键Reveal in Finder</td>
+</tr>
+<tr>
+<td>double shift</td>
+<td></td>
+<td>search Everywhere</td>
+</tr>
+<tr>
+<td>code</td>
+<td></td>
+</tr>
+<tr>
+<td>增强选择-扩大</td>
+<td></td>
+<td>Edit-&gt;extend selection</td>
+</tr>
+<tr>
+<td>增强选择-收缩</td>
+<td></td>
+<td>Edit-&gt;shrink selection</td>
+</tr>
+<tr>
+<td>显示参数信息</td>
+<td>cmd+p</td>
+<td>View-&gt;Paramaeter Info</td>
+</tr>
+<tr>
+<td>提取</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>变量提取</td>
+<td>alt+cmd+v</td>
+<td>Refactor-&gt;Extract-&gt;Variable</td>
+</tr>
+<tr>
+<td>方法提取</td>
+<td>alt+cmd+m</td>
+<td>Refactor-&gt;Extract-&gt;Method</td>
+</tr>
+<tr>
+<td>移动</td>
+<td></td>
+</tr>
+<tr>
+<td>单词移动</td>
+<td>alt</td>
+</tr>
+<tr>
+<td>行尾首</td>
+<td>cmd</td>
+</tr>
+</tbody>
+</table>
+<p><strong>add:2016-12-02</strong></p>
+<h4 id="常用快捷键">常用快捷键</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>action</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复制当前行</td>
+<td>duplicate Line or block</td>
+<td>cmd+d</td>
+<td></td>
+</tr>
+<tr>
+<td>删除当前行</td>
+<td>delete line</td>
+<td>cmd+backspace</td>
+<td></td>
+</tr>
+<tr>
+<td>上下移动当前行</td>
+<td>move line up/down</td>
+<td>alt+shift+up/down</td>
+<td></td>
+</tr>
+<tr>
+<td>移动到指定行</td>
+<td>Line</td>
+<td>cmd+g</td>
+<td></td>
+</tr>
+<tr>
+<td>多文本选择</td>
+<td>add selection for next occurrence</td>
+<td>Ctrl+G</td>
+<td></td>
+</tr>
+<tr>
+<td>列选择</td>
+<td></td>
+<td>Alt+MouseDrag</td>
+<td></td>
+</tr>
+<tr>
+<td>当前文件方法列表</td>
+<td>File Structure</td>
+<td>cmd+F12</td>
+<td></td>
+</tr>
+<tr>
+<td>合并行和文字</td>
+<td>join lines</td>
+<td>ctrl+shift+j</td>
+<td></td>
+</tr>
+<tr>
+<td>代码提示</td>
+<td>basic</td>
+<td>ctrl+/</td>
+<td>记得按tab…</td>
+</tr>
+<tr>
+<td>显示文件路径</td>
+<td>File Path</td>
+<td>alt+cmd+F12</td>
+<td>不用再目录里右键Reveal in Finder</td>
+</tr>
+<tr>
+<td>路径中查找</td>
+<td>Find in Path</td>
+<td>shift+ctrl+F</td>
+<td>有个预览功能,屌</td>
+</tr>
+<tr>
+<td>方法调用路径</td>
+<td></td>
+<td>ctrl+alt+h</td>
+<td></td>
+</tr>
+<tr>
+<td>显示参数信息</td>
+<td>Parameter Info</td>
+<td>cmd+p</td>
+<td>显示方法需要的参数</td>
+</tr>
+<tr>
+<td>打开文件</td>
+<td>class</td>
+<td>cmd+o</td>
+<td></td>
+</tr>
+<tr>
+<td>重写方法列表</td>
+<td>override method</td>
+<td>cmd+n</td>
+<td></td>
+</tr>
+<tr>
+<td>快速查看定义</td>
+<td>quick definition</td>
+<td>cmd+shift+i</td>
+<td></td>
+</tr>
+<tr>
+<td>扩大/收缩选中部分</td>
+<td>Collapse</td>
+<td>cmd+ -/+</td>
+<td></td>
+</tr>
+<tr>
+<td>大小写转换</td>
+<td>Unshelve</td>
+<td>cmd+shift+u</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h4 id="跳转">跳转</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>action</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最近打开的文件</td>
+<td>Recent Files</td>
+<td>cmd+e</td>
+<td></td>
+</tr>
+<tr>
+<td>最近编辑的文件</td>
+<td>Recently Changed Files</td>
+<td>cmd+shift+e</td>
+<td></td>
+</tr>
+<tr>
+<td>显示使用的地方</td>
+<td>Find Usage</td>
+<td>alt+F7 cmd+alt+F7</td>
+<td></td>
+</tr>
+<tr>
+<td>跳到声明</td>
+<td>declaration</td>
+<td>cmd+b</td>
+<td></td>
+</tr>
+<tr>
+<td>跳到实现</td>
+<td>implementation</td>
+<td>cmd+alt+b</td>
+<td></td>
+</tr>
+<tr>
+<td>跳到类型声明</td>
+<td>Type declaration</td>
+<td>cmd+shift+b</td>
+<td></td>
+</tr>
+<tr>
+<td>跳到父类</td>
+<td>Super Method</td>
+<td>cmd+u</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Code">Code</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>action</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>格式化代码</td>
+<td>Reformat Code</td>
+<td>cmd+alt+l</td>
+<td></td>
+</tr>
+<tr>
+<td>移动方法</td>
+<td>Move Statement</td>
+<td>cmd+delete+up/down</td>
+<td></td>
+</tr>
+<tr>
+<td>包裹代码块</td>
+<td>Surround With</td>
+<td>cmd+alt+t</td>
+<td>添加包裹代码块(if、for、try等)</td>
+</tr>
+<tr>
+<td>反向包裹代码块</td>
+<td>Surround With</td>
+<td>cmd+shift+delete</td>
+<td>删除包裹的代码块</td>
+</tr>
+<tr>
+<td>选择于</td>
+<td></td>
+<td>alt+F1</td>
+<td>select Target,可用于快速打开文件目录</td>
+</tr>
+<tr>
+<td>弹出VCS操作</td>
+<td>VCS Operations Popup</td>
+<td>Ctrl+V</td>
+<td></td>
+</tr>
+<tr>
+<td>查找方法</td>
+<td>Find Action</td>
+<td>cmd+shift+a</td>
+</tr>
+<tr>
+<td>隐藏所有面板</td>
+<td>hide all tool windows</td>
+<td>cmd+shift+F12</td>
+</tr>
+</tbody>
+</table>
+<h4 id="书签">书签</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>action</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开关书签</td>
+<td>Toggle Bookmark</td>
+<td>F3</td>
+<td></td>
+</tr>
+<tr>
+<td>用助记符开关书签</td>
+<td>Toggle Bookmark with Mnemonic</td>
+<td>cmd+f3</td>
+<td></td>
+</tr>
+<tr>
+<td>显示书签</td>
+<td>Show Bookmark</td>
+<td>shift+F3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="插件">插件</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>下载</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CodeGlance</td>
+<td><a href="https://github.com/Vektah/CodeGlance" target="_blank" rel="external">https://github.com/Vektah/CodeGlance</a></td>
+<td>代码地图</td>
+<td></td>
+</tr>
+<tr>
+<td>adb-idea</td>
+<td><a href="https://github.com/pbreault/adb-idea" target="_blank" rel="external">https://github.com/pbreault/adb-idea</a></td>
+<td>快速清空应用缓存,删除,重新启动,停止</td>
+</tr>
+<tr>
+<td>GsonFormat</td>
+<td><a href="https://github.com/zzz40500/GsonFormat" target="_blank" rel="external">https://github.com/zzz40500/GsonFormat</a></td>
+<td>json转换对象</td>
+</tr>
+</tbody>
+</table>
+<p><strong>add:215-11-25</strong></p>
+<h4 id="参考">参考</h4><ul>
+<li><a href="http://www.jianshu.com/p/364b94a664ff" target="_blank" rel="external">Intellij IDEA 一些不为人知的技巧</a></li>
+<li><a href="https://v.qq.com/x/page/t0163iqlus1.html" target="_blank" rel="external">操作视频1</a></li>
+<li><a href="https://github.com/lightningMan/config/blob/master/intellij/shortcut-readme.md" target="_blank" rel="external">shortcut-readme</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="js:忽略相关目录">js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
+<h4 id="查看改行代码的修改记录">查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
+<h4 id="抽取">抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
+<h4 id="函数重构Refactor">函数重构Refactor</h4><h4 id="让主先行">让主先行</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先写你关心的,再写动词</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.sout</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.return</span></span><br><span class="line"> name<span class="class">.null</span> 			<span class="comment">//判断name==null</span></span><br><span class="line"> name<span class="class">.nn</span>   			<span class="comment">//判断name!=null</span></span><br><span class="line"> count<span class="class">.for</span>			<span class="comment">//for循环</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>跳转到父类</td>
+<td>cmd+u</td>
+<td>Navigate-&gt;Super method</td>
+</tr>
+<tr>
+<td>跳转到定义</td>
+<td>cmd+b</td>
+<td>Navigate-&gt;declaration</td>
+</tr>
+<tr>
+<td>跳转到实现</td>
+<td>cmd+alt+b</td>
+<td>Navigate-&gt;implementation(s)</td>
+</tr>
+<tr>
+<td>返回</td>
+<td>cmd+[</td>
+<td>Navigate-&gt;Back</td>
+</tr>
+<tr>
+<td>显示文件路径</td>
+<td>alt+cmd+F12</td>
+<td>Navigate-&gt;File Path</td>
+<td>不用再目录里右键Reveal in Finder</td>
+</tr>
+<tr>
+<td>double shift</td>
+<td></td>
+<td>search Everywhere</td>
+</tr>
+<tr>
+<td>code</td>
+<td></td>
+</tr>
+<tr>
+<td>增强选择-扩大</td>
+<td></td>
+<td>Edit-&gt;extend selection</td>
+</tr>
+<tr>
+<td>增强选择-收缩</td>
+<td></td>
+<td>Edit-&gt;shrink selection</td>
+</tr>
+<tr>
+<td>显示参数信息</td>
+<td>cmd+p</td>
+<td>View-&gt;Paramaeter Info</td>
+</tr>
+<tr>
+<td>提取</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>变量提取</td>
+<td>alt+cmd+v</td>
+<td>Refactor-&gt;Extract-&gt;Variable</td>
+</tr>
+<tr>
+<td>方法提取</td>
+<td>alt+cmd+m</td>
+<td>Refactor-&gt;Extract-&gt;Method</td>
+</tr>
+<tr>
+<td>移动</td>
+<td></td>
+</tr>
+<tr>
+<td>单词移动</td>
+<td>alt</td>
+</tr>
+<tr>
+<td>行尾首</td>
+<td>cmd</td>
+</tr>
+</tbody>
+</table>
+<p><strong>add:2016-12-02</strong></p>
+<h4 id="常用快捷键">常用快捷键</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>action</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复制当前行</td>
+<td>duplicate Line or block</td>
+<td>cmd+d</td>
+<td></td>
+</tr>
+<tr>
+<td>删除当前行</td>
+<td>delete line</td>
+<td>cmd+backspace</td>
+<td></td>
+</tr>
+<tr>
+<td>上下移动当前行</td>
+<td>move line up/down</td>
+<td>alt+shift+up/down</td>
+<td></td>
+</tr>
+<tr>
+<td>移动到指定行</td>
+<td>Line</td>
+<td>cmd+g</td>
+<td></td>
+</tr>
+<tr>
+<td>多文本选择</td>
+<td>add selection for next occurrence</td>
+<td>Ctrl+G</td>
+<td></td>
+</tr>
+<tr>
+<td>列选择</td>
+<td></td>
+<td>Alt+MouseDrag</td>
+<td></td>
+</tr>
+<tr>
+<td>当前文件方法列表</td>
+<td>File Structure</td>
+<td>cmd+F12</td>
+<td></td>
+</tr>
+<tr>
+<td>合并行和文字</td>
+<td>join lines</td>
+<td>ctrl+shift+j</td>
+<td></td>
+</tr>
+<tr>
+<td>代码提示</td>
+<td>basic</td>
+<td>ctrl+/</td>
+<td>记得按tab…</td>
+</tr>
+<tr>
+<td>显示文件路径</td>
+<td>File Path</td>
+<td>alt+cmd+F12</td>
+<td>不用再目录里右键Reveal in Finder</td>
+</tr>
+<tr>
+<td>路径中查找</td>
+<td>Find in Path</td>
+<td>shift+ctrl+F</td>
+<td>有个预览功能,屌</td>
+</tr>
+<tr>
+<td>方法调用路径</td>
+<td></td>
+<td>ctrl+alt+h</td>
+<td></td>
+</tr>
+<tr>
+<td>显示参数信息</td>
+<td>Parameter Info</td>
+<td>cmd+p</td>
+<td>显示方法需要的参数</td>
+</tr>
+<tr>
+<td>打开文件</td>
+<td>class</td>
+<td>cmd+o</td>
+<td></td>
+</tr>
+<tr>
+<td>重写方法列表</td>
+<td>override method</td>
+<td>cmd+n</td>
+<td></td>
+</tr>
+<tr>
+<td>快速查看定义</td>
+<td>quick definition</td>
+<td>cmd+shift+i</td>
+<td></td>
+</tr>
+<tr>
+<td>扩大/收缩选中部分</td>
+<td>Collapse</td>
+<td>cmd+ -/+</td>
+<td></td>
+</tr>
+<tr>
+<td>大小写转换</td>
+<td>Unshelve</td>
+<td>cmd+shift+u</td>
+<td></td>
+</tr>
+</tbody>
+</table>]]>
+    
+    </summary>
+    
+      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[github.io 自定义域名]]></title>
+    <link href="http://willnewii.github.io/20161201/github-io-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/"/>
+    <id>http://willnewii.github.io/20161201/github-io-自定义域名/</id>
+    <published>2016-12-01T08:00:48.000Z</published>
+    <updated>2016-12-01T08:03:05.000Z</updated>
+    <content type="html"><![CDATA[<p>最近想把github.io的页面绑定一个域名,看了一下教程,操作如下:</p>
+<ol>
+<li><p>首先在你的username.github.io项目页面,点击settings.Options-&gt;GitHub Pages-&gt;Custom domain 填写上你需要绑定的域名,然后save. 设置完,你在访问原pages域名应该会自动跳转的你刚填写的域名上,但是没有东西…因为你还没有添加映射.</p>
+</li>
+<li><p>打开你的域名管理页面.添加一条解析记录.</p>
+<ul>
+<li>记录类型  CNAME  </li>
+<li>主机记录  blog(我就像绑定一个子域名)   </li>
+<li>记录值 username.github.io(这里是指向你的pages页面) </li>
+</ul>
+</li>
+</ol>
+<p>这样设置完,你就可以通过自己的域名进行访问了.</p>
+<h4 id="参考">参考</h4><p><a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">using-a-custom-domain-with-github-pages</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近想把github.io的页面绑定一个域名,看了一下教程,操作如下:</p>
+<ol>
+<li><p>首先在你的username.github.io项目页面,点击settings.Options-&gt;GitHub Pages-&gt;Custom domain 填写上]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[选个dock真难呀...]]></title>
@@ -898,136 +1544,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
 </code></pre><ol>
 <li>row（默认值）：主轴为水平方向，起点在左端。</li>
 <li]]>
-    </summary>
-    
-      <category term="css" scheme="http://willnewii.github.io/tags/css/"/>
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[ css定位]]></title>
-    <link href="http://willnewii.github.io/20160104/css/"/>
-    <id>http://willnewii.github.io/20160104/css/</id>
-    <published>2016-01-04T02:54:00.000Z</published>
-    <updated>2016-02-17T10:19:37.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="CSS_定位_(Positioning)">CSS 定位 (Positioning)</h3><p>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们的内容显示在行中，即“行内框”。</p>
-<h4 id="display_属性规定元素应该生成的框的类型。">display <strong><em>属性规定元素应该生成的框的类型。</em></strong></h4><pre><code>您可以使用 <span class="attribute">display</span> 属性改变生成的框的类型。这意味着，通过将 <span class="attribute">display</span> 属性设置为 <span class="value">block</span>，可以让行内元素（比如 &lt;<span class="tag">a</span>&gt; 元素）表现得像块级元素一样。还可以通过把 <span class="attribute">display</span> 设置为 <span class="attribute">none</span>，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间。
-</code></pre><ul>
-<li>block-level elements (块级元素)<ul>
-<li>block元素通常被现实为独立的一块，会单独换一行；</li>
-</ul>
-<ol>
-<li>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。</li>
-</ol>
-</li>
-</ul>
-<ol>
-<li>inline elements (内联元素)<ul>
-<li>inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
-</ul>
-<ol>
-<li>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
-</ol>
-</li>
-<li>block，inline和inline-block细节对比<ul>
-<li>display:block<ol>
-<li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
-<li>block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</li>
-<li>block元素可以设置margin和padding属性。</li>
-</ol>
-</li>
-</ul>
-<ol>
-<li>display:inline<ol>
-<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
-<li>inline元素设置width,height属性无效。</li>
-<li><del>~inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</del>~</li>
-</ol>
-</li>
-<li>display:inline-block<ol>
-<li>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h4 id="position_属性规定元素的定位类型。">position <strong><em>属性规定元素的定位类型。</em></strong></h4><ol>
-<li>relative 生成相对定位的元素，相对于其正常位置进行定位。</li>
-<li>absolute 生成绝对定位的元素，<strong><em>相对于 static 定位以外的第一个父元素进行定位。将对象从文档流中拖出，使用 left ， right ， top ， bottom 等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位。</em></strong></li>
-<li>fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
-<li>static    默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</li>
-</ol>
-<h4 id="overflow_属性规定当内容溢出元素框时发生的事情。">overflow <strong><em>属性规定当内容溢出元素框时发生的事情。</em></strong></h4><ol>
-<li>visible 默认值。内容不会被修剪，会呈现在元素框之外。</li>
-<li>hidden 内容会被修剪，并且其余内容是不可见的。</li>
-<li>scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</li>
-<li>auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</li>
-<li>inherit 规定应该从父元素继承 overflow 属性的值。</li>
-</ol>
-<h3 id="float">float</h3><ol>
-<li>初衷:为了实现文字环绕 <ol>
-<li>浮动会是父元素高度塌陷</li>
-<li>清楚浮动带来的影响 </li>
-</ol>
-</li>
-<li>浮动的影响：<ol>
-<li>元素block块状化（砖头化）</li>
-<li>破坏性造成的紧密排列特性（去空格化）</li>
-<li>滥用浮动容易造成砌砖布局，砌砖布局的问题</li>
-</ol>
-</li>
-<li>尽量少使用 float：left来进行布局：<ol>
-<li>容错性比较糟糕，容易出问题；</li>
-<li>全部用固定尺寸，代码不易重用；</li>
-<li>与IE7不兼容；</li>
-</ol>
-</li>
-</ol>
-<p>css盒模型</p>
-<h4 id="资料">资料</h4><ul>
-<li><a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">block，inline和inline-block概念和区别</a></li>
-<li><a href="http://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank" rel="external">CSS position 属性</a></li>
-<li><a href="http://www.5icool.org/a/200912/28.html" target="_blank" rel="external">CSS样式的postion属性absolute和fixed的区别</a></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="CSS_定位_(Positioning)">CSS 定位 (Positioning)</h3><p>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们]]>
-    </summary>
-    
-      <category term="css" scheme="http://willnewii.github.io/tags/css/"/>
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[compass笔记]]></title>
-    <link href="http://willnewii.github.io/20151229/compass%E7%AC%94%E8%AE%B0/"/>
-    <id>http://willnewii.github.io/20151229/compass笔记/</id>
-    <published>2015-12-29T03:57:00.000Z</published>
-    <updated>2016-01-05T02:01:23.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="知识点">知识点</h3><ol>
-<li>require ‘compass/import-once/activate’<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一般生产的config.rb文件头部会有 <span class="built_in">require</span> <span class="string">'compass/import-once/activate'</span>：这个插件的作用是防止sass的 <span class="property">@import</span> 多次引入重复的文件，引入这个插件后即使写多次 <span class="property">@import</span> <span class="string">"aa"</span>,也只会引入一次aa。</span><br><span class="line">      <span class="number">1.</span> 若确实想多次引入aa ，则应写成 <span class="property">@import</span> <span class="string">"aa!"</span> ，末尾添加叹号，则会多次引入。</span><br><span class="line">      <span class="number">2.</span> sass中的<span class="property">@import</span> 会重复引入同一插件。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>用normalize替换compass内置的的reset</p>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">normalize</span>是compass的插件，<span class="built_in">normalize</span>改良了compass/reset ,统一了跨浏览器差异，而不是都清<span class="number">0</span>；</span><br><span class="line">      <span class="number">1.</span> gem install compass-<span class="built_in">normalize</span>  </span><br><span class="line">      <span class="number">2.</span> require 'compass-<span class="built_in">normalize</span>'</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>叹号使用</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果将config.rb配置文件中设置  output_style = <span class="symbol">:compressed</span> 生成的压缩css文件中的注释会被删除，如何防止注释被删除？在注释的开头加<span class="string">"!"</span>，则注释会保留，即使设置了 output_style = <span class="symbol">:compressed</span>。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>常用图片可以转换成base64,减少图片请求</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">缺点:多消耗<span class="number">50</span>%的资源，多使用<span class="number">4</span>倍内存,不知道ie6，<span class="number">7</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>资料<br><a href="http://www.ruanyifeng.com/blog/2012/11/compass.html" target="_blank" rel="external">Compass用法指南</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="知识点">知识点</h3><ol>
-<li>require ‘compass/import-once/activate’<figure class="highlight coffeescript"><table><tr><td class="gutter"><pr]]>
     </summary>
     
       <category term="css" scheme="http://willnewii.github.io/tags/css/"/>

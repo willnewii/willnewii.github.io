@@ -158,6 +158,129 @@
       <div class="body-wrap">
         
   
+    <article id="post-倩倩Design" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160314/倩倩Design/">储倩 设计 作品</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="APP下载w">APP下载w</h3><h3 id="APP设计">APP设计</h3><ul>
+<li><a href="https://modao.cc/app/Vz8GZZGNw4ohPxr10Z4w" target="_blank" rel="external">尼玛去哪儿之台湾</a></li>
+<li><a href="https://modao.cc/app/yoalEe1zV2KCjlybyC0b" target="_blank" rel="external">好车贷</a></li>
+<li><a href="https://modao.cc/app/fg8BDPcGugf051KhN6Wh15n0W7fyzW9" target="_blank" rel="external">MayDay歌词本2.0</a></li>
+</ul>
+<h3 id="icon设计">icon设计</h3><ul>
+<li>中国风<br>  <img src="http://ww2.sinaimg.cn/large/6482edf0gw1f1wa02a5tlj20ku1vw4qp.jpg" alt="2"></li>
+<li>简·净<br>  <img src="http://ww3.sinaimg.cn/large/6482edf0gw1f1w9zxvsrwj21732pg4eb.jpg" alt="3"></li>
+</ul>
+<h3 id="banner">banner</h3><p><img src="http://ww4.sinaimg.cn/large/6482edf0gw1f1wa09g2maj21cy3uyhdu.jpg" alt="1"></p>
+<h3 id="手绘">手绘</h3><p><img src="http://ww3.sinaimg.cn/large/6482edf0gw1f1w9zza5lbj21kw1kw13w.jpg" alt="4"><br><img src="http://ww4.sinaimg.cn/large/6482edf0gw1f2cgqfv9w9j21ji1ji16h.jpg" alt="5"></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/20160314/倩倩Design/" class="archive-article-date">
+  	<time datetime="2016-03-14T04:23:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-03-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-持续集成-应用1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160313/持续集成-应用1/">持续集成 应用-1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
+<h4 id="什么是持续集成">什么是持续集成</h4><p>　　持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。<br>　　高大上的答案,来自百度…</p>
+<h4 id="说说工作上的场景">说说工作上的场景</h4><ul>
+<li><p>啥时候发新包<br>在测试阶段,当进行一轮测试后,测试人员就要等着发新包.</p>
+<ul>
+<li>这是一个被动行为.如果开发人员不推进,测试人员将永远处于等待状态.(为什么测试人员不去搭建一个编译环境…)</li>
+<li>大家都有一种”默契”,代码相关的产出物都应该由开发人员来搞.跟其他人没毛关系</li>
+<li>理论上,只要代码库被更新,测试人员就可以进行新的测试,不需要等待开发人员的推进.</li>
+</ul>
+</li>
+<li><p>驱动工作的是代码库<br>　　一直以来,大家习惯的工作流程是确认bug,修改bug,提交代码,编译新包,交付测试.这一切的行为需要开发人员驱动.<br>　　那么让我们试想一下,把这个流程由开发人员驱动,改为代码库驱动.<br>　　以持续集成的方式:当代码库发生变更,系统就要进行集成工作.自动化构建,产生新包,供测试人员测试.在这个过程中开发人员不需要与测试人员进行沟通,一切由代码库驱动.<br>　　(发散一下,我们使用的mantis,其实跟代码也没有关系.而github的issue,则是紧密围绕代码产生和关闭的.)</p>
+</li>
+</ul>
+<h4 id="当前实现效果(使用jenkins构建android应用)">当前实现效果(使用jenkins构建android应用)</h4><p>　　当代码库更新后,相关人员进入jenkins后台,执行build操作即可.当build成功后,jenkins会发邮件通知相关工作人员任务状态.如果构建成功,测试人员下载新包,即可进行测试.<br>　　开发人员的工作是修复bug,提交代码.测试,上线,打渠道包的一系列构建任务都可以交给jenkins完成.</p>
+<h4 id="TODO">TODO</h4><ul>
+<li>通过hooks,当版本库发生变化,自动通知jenkins构建新版本</li>
+<li>通过区分branch,可以实现构建不同版本的包.你爱测那个测那个…</li>
+<li>自动化测试…</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/20160313/持续集成-应用1/" class="archive-article-date">
+  	<time datetime="2016-03-13T09:14:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-03-13</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作流程/">工作流程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Git小结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -874,199 +997,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
 
 
   
-    <article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20160104/css/"> css定位</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="CSS_定位_(Positioning)">CSS 定位 (Positioning)</h3><p>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们的内容显示在行中，即“行内框”。</p>
-<h4 id="display_属性规定元素应该生成的框的类型。">display <strong><em>属性规定元素应该生成的框的类型。</em></strong></h4><pre><code>您可以使用 <span class="attribute">display</span> 属性改变生成的框的类型。这意味着，通过将 <span class="attribute">display</span> 属性设置为 <span class="value">block</span>，可以让行内元素（比如 &lt;<span class="tag">a</span>&gt; 元素）表现得像块级元素一样。还可以通过把 <span class="attribute">display</span> 设置为 <span class="attribute">none</span>，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间。
-</code></pre><ul>
-<li>block-level elements (块级元素)<ul>
-<li>block元素通常被现实为独立的一块，会单独换一行；</li>
-</ul>
-<ol>
-<li>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。</li>
-</ol>
-</li>
-</ul>
-<ol>
-<li>inline elements (内联元素)<ul>
-<li>inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
-</ul>
-<ol>
-<li>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
-</ol>
-</li>
-<li>block，inline和inline-block细节对比<ul>
-<li>display:block<ol>
-<li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
-<li>block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</li>
-<li>block元素可以设置margin和padding属性。</li>
-</ol>
-</li>
-</ul>
-<ol>
-<li>display:inline<ol>
-<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
-<li>inline元素设置width,height属性无效。</li>
-<li><del>~inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</del>~</li>
-</ol>
-</li>
-<li>display:inline-block<ol>
-<li>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h4 id="position_属性规定元素的定位类型。">position <strong><em>属性规定元素的定位类型。</em></strong></h4><ol>
-<li>relative 生成相对定位的元素，相对于其正常位置进行定位。</li>
-<li>absolute 生成绝对定位的元素，<strong><em>相对于 static 定位以外的第一个父元素进行定位。将对象从文档流中拖出，使用 left ， right ， top ， bottom 等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位。</em></strong></li>
-<li>fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
-<li>static    默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</li>
-</ol>
-<h4 id="overflow_属性规定当内容溢出元素框时发生的事情。">overflow <strong><em>属性规定当内容溢出元素框时发生的事情。</em></strong></h4><ol>
-<li>visible 默认值。内容不会被修剪，会呈现在元素框之外。</li>
-<li>hidden 内容会被修剪，并且其余内容是不可见的。</li>
-<li>scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</li>
-<li>auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</li>
-<li>inherit 规定应该从父元素继承 overflow 属性的值。</li>
-</ol>
-<h3 id="float">float</h3><ol>
-<li>初衷:为了实现文字环绕 <ol>
-<li>浮动会是父元素高度塌陷</li>
-<li>清楚浮动带来的影响 </li>
-</ol>
-</li>
-<li>浮动的影响：<ol>
-<li>元素block块状化（砖头化）</li>
-<li>破坏性造成的紧密排列特性（去空格化）</li>
-<li>滥用浮动容易造成砌砖布局，砌砖布局的问题</li>
-</ol>
-</li>
-<li>尽量少使用 float：left来进行布局：<ol>
-<li>容错性比较糟糕，容易出问题；</li>
-<li>全部用固定尺寸，代码不易重用；</li>
-<li>与IE7不兼容；</li>
-</ol>
-</li>
-</ol>
-<p>css盒模型</p>
-<h4 id="资料">资料</h4><ul>
-<li><a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">block，inline和inline-block概念和区别</a></li>
-<li><a href="http://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank" rel="external">CSS position 属性</a></li>
-<li><a href="http://www.5icool.org/a/200912/28.html" target="_blank" rel="external">CSS样式的postion属性absolute和fixed的区别</a></li>
-</ul>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/20160104/css/" class="archive-article-date">
-  	<time datetime="2016-01-04T02:54:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-04</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-compass笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151229/compass笔记/">compass笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="知识点">知识点</h3><ol>
-<li>require ‘compass/import-once/activate’<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一般生产的config.rb文件头部会有 <span class="built_in">require</span> <span class="string">'compass/import-once/activate'</span>：这个插件的作用是防止sass的 <span class="property">@import</span> 多次引入重复的文件，引入这个插件后即使写多次 <span class="property">@import</span> <span class="string">"aa"</span>,也只会引入一次aa。</span><br><span class="line">      <span class="number">1.</span> 若确实想多次引入aa ，则应写成 <span class="property">@import</span> <span class="string">"aa!"</span> ，末尾添加叹号，则会多次引入。</span><br><span class="line">      <span class="number">2.</span> sass中的<span class="property">@import</span> 会重复引入同一插件。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>用normalize替换compass内置的的reset</p>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">normalize</span>是compass的插件，<span class="built_in">normalize</span>改良了compass/reset ,统一了跨浏览器差异，而不是都清<span class="number">0</span>；</span><br><span class="line">      <span class="number">1.</span> gem install compass-<span class="built_in">normalize</span>  </span><br><span class="line">      <span class="number">2.</span> require 'compass-<span class="built_in">normalize</span>'</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>叹号使用</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果将config.rb配置文件中设置  output_style = <span class="symbol">:compressed</span> 生成的压缩css文件中的注释会被删除，如何防止注释被删除？在注释的开头加<span class="string">"!"</span>，则注释会保留，即使设置了 output_style = <span class="symbol">:compressed</span>。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>常用图片可以转换成base64,减少图片请求</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">缺点:多消耗<span class="number">50</span>%的资源，多使用<span class="number">4</span>倍内存,不知道ie6，<span class="number">7</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>资料<br><a href="http://www.ruanyifeng.com/blog/2012/11/compass.html" target="_blank" rel="external">Compass用法指南</a></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/20151229/compass笔记/" class="archive-article-date">
-  	<time datetime="2015-12-29T03:57:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-12-29</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1138,7 +1068,7 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Android/" style="font-size: 18px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12px;">cordova</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 14px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 16px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12px;">软件</a>
+    				<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
     			</div>
     	</section>
     
