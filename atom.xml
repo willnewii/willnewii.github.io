@@ -665,7 +665,7 @@
     <link href="http://willnewii.github.io/20161201/%E9%80%89%E4%B8%AAdock%E7%9C%9F%E9%9A%BE%E5%91%80/"/>
     <id>http://willnewii.github.io/20161201/选个dock真难呀/</id>
     <published>2016-12-01T04:19:54.000Z</published>
-    <updated>2016-12-01T04:24:52.000Z</updated>
+    <updated>2016-12-05T03:22:13.000Z</updated>
     <content type="html"><![CDATA[<p>自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&gt;belkin的<a href="http://www.belkin.com/us/F4U085/p/P-F4U085/" target="_blank" rel="external">Thunderbolt™ 2 Express Dock HD with Cable</a>,一见倾心,一见钟情！！！!然后就深深的中毒了.思前想后一个月还是买了.</p>
 <p>这个设备提供了2个雷电口(因为有一个雷电口要连接主机,其实只有一个),1个hdmi,3个usb,还有耳机口.<br>本来是以为可以通过1个HDMI连接一台显示器,再通过一个雷电口转接线,再连接另外一个显示器.谁知道结果是只有一个显示器工作.本来是因为连接线或者显示设备的问题.就一个搜索,后来在<a href="http://www.caldigit.com/thunderbolt-2-dock-TS2/index-cn.asp" target="_blank" rel="external">thunderbolt-2-dock-TS2</a>(另外一款同类型产品)的官网找到了解释.</p>
 <p><strong>要同时支援两个屏幕输出的先决条件为，其中一台必需是Thunderbolt显示器，而另一台则是非Thunderbolt显示器(HDMI, DVI, mDP)。如果想要同时使用两台非Thunderbolt的显示器时，则必须确定在同一个菊链群组中除了TS2还有其他的Thunderbolt设备，再藉由此设备的连接埠串联第二台非Thunderbolt显示器。 (例如，电脑+CalDigit TS2+另一部Thunderbolt设备。)</strong></p>
@@ -675,7 +675,12 @@
 <li>组一个菊花链群组.我理解的就是你要有两台dock类型的设备,各自连上一个显示器.或者是自己的显示器支持菊花链,貌似也可以.(⊙o⊙)…听起来很复杂对不对…这个我也没有实践过,所以实施难度不得而知.</li>
 </ol>
 <p>总结:单凭一个dock,外接两个显示器,基本上不可行(要不你有苹果显示器,要不你用两个dock组一个群组).而且,这个结论应该是针对同类型的dock,而不止belkin一家.最新款的Thunderbolt™ 3 Express Dock HD with Cable,不再讨论范围内，</p>
-<h3 id="dell_d3100"><a href="http://accessories.ap.dell.com/sna/productdetail.aspx?c=cn&amp;l=zh&amp;s=dhs&amp;cs=cndhs1&amp;sku=452-11717" target="_blank" rel="external">dell d3100</a></h3>]]></content>
+<h3 id="dell_d3100"><a href="http://accessories.ap.dell.com/sna/productdetail.aspx?c=cn&amp;l=zh&amp;s=dhs&amp;cs=cndhs1&amp;sku=452-11717" target="_blank" rel="external">dell d3100</a></h3><p>这是在一顿查找过程中看到的第二个类型的dock.基于DisplayLink<a href="http://baike.baidu.com/link?url=cDRcvhQBFn8ORoaqRJjH-G9yUrrXG_us5VpwD7vocTmmukraiiASa4cIfbV7vAXvfxbjb2jYc5tuQSMaICjjd8tybZV3nR5eSvOkxmpOl5m" target="_blank" rel="external">(百度百科)</a>技术.</p>
+<p>DisplayLink是一个通过USB接口实现显示器连接到电脑的连接技术，可以非常简单、方便的连接电脑和多个显示设备。该技术可以通过USB接口扩展虚拟的电脑的桌面。目前DisplayLink技术最多可以支持6台显示器同时显示32位色彩的任意分辨率画面。</p>
+<p>跟贝尔金们相比,一个是基于雷电接口,一个是基于USB.听起来是low了好多…不过没有连接上的限制.而且目前以前的方案就这两种.于是就入手了一台.</p>
+<p>今天刚到货,通过两个HDMI接口,连接两台显示器,然后一个usb连接测试手机,一个usb连接键盘,一个耳机口.基本完成了我之前对belkin所预期的任务.而且现在air还空出来了一个雷电口,爽~</p>
+<p>PS：在网上看到说,USB在数据传输上本来不如雷电的,在扩展出去可能会更慢,甚至影响使用.如果你只是需要一个快速传输数据的hub,应该belkin们更适合.</p>
+]]></content>
     <summary type="html">
     <![CDATA[<p>自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&gt;belkin的<a href="http://www.belkin.com/us/F4U085/p/P-F4U085/" target="_blank" ]]>
     </summary>
