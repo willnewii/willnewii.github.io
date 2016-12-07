@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-12-02T07:04:06.000Z</updated>
+  <updated>2016-12-07T08:16:57.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -15,11 +15,115 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[vimium 快捷键]]></title>
+    <link href="http://willnewii.github.io/20161207/imium-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://willnewii.github.io/20161207/imium-快捷键/</id>
+    <published>2016-12-07T07:30:00.000Z</published>
+    <updated>2016-12-07T08:16:57.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="滚动操作">滚动操作</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>j</td>
+<td>向下细微滚动窗口</td>
+</tr>
+<tr>
+<td>k</td>
+<td>向上细微滚动窗口</td>
+</tr>
+<tr>
+<td>d</td>
+<td>向下滚动半个屏幕 </td>
+</tr>
+<tr>
+<td>u</td>
+<td>向上移动半个屏幕</td>
+</tr>
+<tr>
+<td>g+g(连续按两下g</td>
+<td>回到顶部</td>
+</tr>
+<tr>
+<td>G</td>
+<td>到达页面底部</td>
+</tr>
+<tr>
+<td>f</td>
+<td>将当前网页上的所有可见链接/输入框分配一个快捷键，输入后就可以打开或者跳转到对应的输入框。如果按的是F，那么将在新窗口中打开页面</td>
+</tr>
+</tbody>
+</table>
+<h4 id="标签操作">标签操作</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J</td>
+<td>下一个标签页 </td>
+</tr>
+<tr>
+<td>K</td>
+<td>上一个标签页</td>
+</tr>
+<tr>
+<td>x</td>
+<td>关闭当前页面 </td>
+</tr>
+<tr>
+<td>X</td>
+<td>恢复刚刚关闭的页面</td>
+</tr>
+<tr>
+<td>H</td>
+<td>后退 </td>
+</tr>
+<tr>
+<td>L</td>
+<td>前进</td>
+</tr>
+<tr>
+<td>r</td>
+<td>刷新</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="滚动操作">滚动操作</h4><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>j</td>
+<td>向下细微滚动窗口</td>
+</tr>
+<tr>
+<td]]>
+    </summary>
+    
+      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[intellij IDEA 快捷键]]></title>
     <link href="http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20161202/intellij IDEA 快捷键/</id>
     <published>2016-12-02T07:03:00.000Z</published>
-    <updated>2016-12-02T07:04:06.000Z</updated>
+    <updated>2016-12-07T07:29:01.000Z</updated>
     <content type="html"><![CDATA[<h4 id="js:忽略相关目录">js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
 <h4 id="查看改行代码的修改记录">查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
 <h4 id="抽取">抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
@@ -629,14 +733,16 @@
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
     
+      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[github.io 自定义域名]]></title>
     <link href="http://willnewii.github.io/20161201/github-io-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/"/>
     <id>http://willnewii.github.io/20161201/github-io-自定义域名/</id>
-    <published>2016-12-01T08:00:48.000Z</published>
-    <updated>2016-12-01T08:03:05.000Z</updated>
+    <published>2016-12-01T08:00:00.000Z</published>
+    <updated>2016-12-07T07:30:23.000Z</updated>
     <content type="html"><![CDATA[<p>最近想把github.io的页面绑定一个域名,看了一下教程,操作如下:</p>
 <ol>
 <li><p>首先在你的username.github.io项目页面,点击settings.Options-&gt;GitHub Pages-&gt;Custom domain 填写上你需要绑定的域名,然后save. 设置完,你在访问原pages域名应该会自动跳转的你刚填写的域名上,但是没有东西…因为你还没有添加映射.</p>
@@ -658,14 +764,16 @@
 <li><p>首先在你的username.github.io项目页面,点击settings.Options-&gt;GitHub Pages-&gt;Custom domain 填写上]]>
     </summary>
     
+      <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[选个dock真难呀...]]></title>
     <link href="http://willnewii.github.io/20161201/%E9%80%89%E4%B8%AAdock%E7%9C%9F%E9%9A%BE%E5%91%80/"/>
     <id>http://willnewii.github.io/20161201/选个dock真难呀/</id>
-    <published>2016-12-01T04:19:54.000Z</published>
-    <updated>2016-12-05T03:22:13.000Z</updated>
+    <published>2016-12-01T04:19:00.000Z</published>
+    <updated>2016-12-07T07:29:43.000Z</updated>
     <content type="html"><![CDATA[<p>自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&gt;belkin的<a href="http://www.belkin.com/us/F4U085/p/P-F4U085/" target="_blank" rel="external">Thunderbolt™ 2 Express Dock HD with Cable</a>,一见倾心,一见钟情！！！!然后就深深的中毒了.思前想后一个月还是买了.</p>
 <p>这个设备提供了2个雷电口(因为有一个雷电口要连接主机,其实只有一个),1个hdmi,3个usb,还有耳机口.<br>本来是以为可以通过1个HDMI连接一台显示器,再通过一个雷电口转接线,再连接另外一个显示器.谁知道结果是只有一个显示器工作.本来是因为连接线或者显示设备的问题.就一个搜索,后来在<a href="http://www.caldigit.com/thunderbolt-2-dock-TS2/index-cn.asp" target="_blank" rel="external">thunderbolt-2-dock-TS2</a>(另外一款同类型产品)的官网找到了解释.</p>
 <p><strong>要同时支援两个屏幕输出的先决条件为，其中一台必需是Thunderbolt显示器，而另一台则是非Thunderbolt显示器(HDMI, DVI, mDP)。如果想要同时使用两台非Thunderbolt的显示器时，则必须确定在同一个菊链群组中除了TS2还有其他的Thunderbolt设备，再藉由此设备的连接埠串联第二台非Thunderbolt显示器。 (例如，电脑+CalDigit TS2+另一部Thunderbolt设备。)</strong></p>
@@ -685,6 +793,8 @@
     <![CDATA[<p>自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&gt;belkin的<a href="http://www.belkin.com/us/F4U085/p/P-F4U085/" target="_blank" ]]>
     </summary>
     
+      <category term="设备" scheme="http://willnewii.github.io/tags/%E8%AE%BE%E5%A4%87/"/>
+    
   </entry>
   
   <entry>
@@ -692,7 +802,7 @@
     <link href="http://willnewii.github.io/20161111/Thunderbolt/"/>
     <id>http://willnewii.github.io/20161111/Thunderbolt/</id>
     <published>2016-11-11T03:30:00.000Z</published>
-    <updated>2016-11-11T03:31:28.000Z</updated>
+    <updated>2016-12-07T07:29:58.000Z</updated>
     <content type="html"><![CDATA[<h4 id="名词解释">名词解释</h4><p>美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命名为“Thunderbolt（雷电）”。Thunderbolt的研发初衷是为了替代并统一目前电脑上数量繁多性能参差不齐的扩展接口，比如SCSI, SATA, USB, FireWire和 PCI Express。Thunderbolt 是苹果与英特尔（Intel）的合作产物，由Intel开发，通过和苹果的技术合作推向市场。<br><strong>原来不是苹果独家</strong></p>
 <h4 id="原理性能">原理性能</h4><p>Thunderbolt连接技术融合了PCI Express数据传输技术和DisplayPort显示技术，由一颗Intel专用控制芯片进行驱动，通过PCI Express x4、DisplayPort总线与系统芯片组相连。其中PCI Express用于数据传输，DisplayPort则用于显示信号传输，亦可通过直接连接英特尔处理器集成图形核心进行DisplayPort显示输出。<br><strong>所以他可以传输图像,又可以传输数据</strong></p>
 <h4 id="Thunderbolt_3">Thunderbolt 3</h4><p>Thunderbolt和USB同样是数据端口。英特尔周二宣布,Thunderbolt 3将改变其形式与USB Type-C统一端口。将不再使用以前的方块式的接口，而是兼容USB3.1的标准，但是仍会保留标志性的闪电logo。<br><strong>Thunderbolt3兼容USB Type-C,就是长的像Type-C 的Thunderbolt3</strong></p>
@@ -707,6 +817,8 @@
     </summary>
     
       <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="设备" scheme="http://willnewii.github.io/tags/%E8%AE%BE%E5%A4%87/"/>
     
   </entry>
   
@@ -1460,100 +1572,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     </summary>
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Flex 布局]]></title>
-    <link href="http://willnewii.github.io/20160105/Flex-%E5%B8%83%E5%B1%80/"/>
-    <id>http://willnewii.github.io/20160105/Flex-布局/</id>
-    <published>2016-01-05T04:17:00.000Z</published>
-    <updated>2016-01-13T08:24:40.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="容器属性">容器属性</h3><ol>
-<li><p>flex-direction</p>
-<pre><code>属性决定主轴的方向（即项目的排列方向）。
-</code></pre><ol>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。<blockquote>
-<p>LinearLayout.orientation<br>horizontal-&gt;row,vertical-column</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>flex-wrap</p>
-<pre><code>默认情况下，项目都排在一条线（又称<span class="string">"轴线"</span>）上。flex-<span class="operator">wrap</span>属性定义，如果一条轴线排不下，如何换行。
-</code></pre><ol>
-<li>nowrap（默认）：不换行。</li>
-<li>wrap：换行，第一行在上方。</li>
-<li>wrap-reverse：换行，第一行在下方。</li>
-</ol>
-</li>
-<li><p>flex-flow</p>
-<pre><code><span class="attribute">flex-flow</span>属性是<span class="attribute">flex-direction</span>属性和<span class="attribute">flex-wrap</span>属性的简写形式，默认值为row <span class="value">nowrap</span>。
-</code></pre></li>
-<li><p>justify-content</p>
-<pre><code>属性定义了项目在主轴上的对齐方式。
-</code></pre><ol>
-<li>flex-start（默认值）：左对齐</li>
-<li>flex-end：右对齐</li>
-<li>center： 居中</li>
-<li>space-between：两端对齐，项目之间的间隔都相等。</li>
-<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
-</ol>
-</li>
-<li><p>align-items</p>
-<pre><code>属性定义项目在交叉轴上如何对齐。
-</code></pre></li>
-<li><p>align-content <strong>5，6没太明白区别在哪里</strong></p>
-<pre><code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
-</code></pre><blockquote>
-<p>android:gravity </p>
-</blockquote>
-</li>
-</ol>
-<h3 id="项目属性">项目属性</h3><ol>
-<li>order    default 0<pre><code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为<span class="number">0</span>。
-</code></pre></li>
-<li><p>flex-grow    default 0</p>
-<pre><code>属性定义项目的放大比例，默认为<span class="number">0</span>，即如果存在剩余空间，也不放大。
-</code></pre><p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
-<blockquote>
-<p>LinearLayout.weight</p>
-</blockquote>
-</li>
-<li><p>flex-shrink  default 1 </p>
-<pre><code>属性定义了项目的缩小比例，默认为<span class="number">1</span>，即如果空间不足，该项目将缩小。
-</code></pre><p> 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
-</li>
-<li><p>flex-basis</p>
-<pre><code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<span class="keyword">auto</span>，即项目的本来大小。
-</code></pre></li>
-<li><p>flex default 0 1 auto</p>
-<pre><code><span class="attribute">flex</span>属性是<span class="attribute">flex-grow</span>, <span class="attribute">flex-shrink</span> 和 <span class="attribute">flex-basis</span>的简写，默认值为0 1 <span class="attribute">auto</span>。后两个属性可选。
-</code></pre></li>
-<li><p>align-self</p>
-<pre><code><span class="keyword">align</span>-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<span class="keyword">align</span>-items属性。默认值为<span class="keyword">auto</span>，表示继承父元素的<span class="keyword">align</span>-items属性，如果没有父元素，则等同于stretch。
-</code></pre><blockquote>
-<p>android:layout_gravity</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="资料">资料</h3><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">Flex 布局教程：实例篇</a><br><a href="http://philipwalton.github.io/solved-by-flexbox/" target="_blank" rel="external">solved-by-flexbox</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="容器属性">容器属性</h3><ol>
-<li><p>flex-direction</p>
-<pre><code>属性决定主轴的方向（即项目的排列方向）。
-</code></pre><ol>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li]]>
-    </summary>
-    
-      <category term="css" scheme="http://willnewii.github.io/tags/css/"/>
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

@@ -158,6 +158,59 @@
       <div class="body-wrap">
         
   
+    <article id="post-ViewPager设置滑动速度" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151126/ViewPager设置滑动速度/">ViewPager设置滑动速度</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
+<h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span><br><span class="line"> * reflection mechanism.</span><br><span class="line"> *  </span><br><span class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</span><br><span class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * set animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@param</span> time</span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * get current animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@return</span></span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/20151126/ViewPager设置滑动速度/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/20151126/ViewPager设置滑动速度/" class="archive-article-date">
+  	<time datetime="2015-11-26T03:21:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-11-26</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-杂记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -693,7 +746,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
+    				<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 17.5px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设备/" style="font-size: 12.5px;">设备</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
     			</div>
     	</section>
     

@@ -158,6 +158,52 @@
       <div class="body-wrap">
         
   
+    <article id="post-android-问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160331/android-问题/">android 开发问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="webview_切后台,再回来_无焦点(不弹软键盘)">webview 切后台,再回来 无焦点(不弹软键盘)</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</span><br><span class="line">            <span class="annotation">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">switch</span> (event.getAction ()) &#123;</span><br><span class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_DOWN :</span><br><span class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_UP :</span><br><span class="line">                        <span class="keyword">if</span> (!v.hasFocus()) &#123;</span><br><span class="line">                            v.setFocusableInTouchMode(<span class="keyword">true</span>);</span><br><span class="line">                            <span class="comment">//v.setFocusable(true);</span></span><br><span class="line">                            <span class="comment">//v.requestFocus ();</span></span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">break</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="微信分享_提示_hit_push_hold！！！">微信分享 提示 hit push hold！！！</h4><p>原因是你分享的微信账号在其他手机登陆了，但是本机还没有退出登陆，导致没有权限分享。重新进入微信并登陆就好了。</p>
+<h4 id="webview_error提示_net::ERR_CACHE_MISS">webview error提示 net::ERR_CACHE_MISS</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">19</span>) &#123;</span><br><span class="line"> 	mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/20160331/android-问题/" class="archive-article-date">
+  	<time datetime="2016-03-31T04:12:55.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-03-31</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-倩倩Design" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -876,127 +922,6 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
 
 
   
-    <article id="post-Flex-布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20160105/Flex-布局/">Flex 布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="容器属性">容器属性</h3><ol>
-<li><p>flex-direction</p>
-<pre><code>属性决定主轴的方向（即项目的排列方向）。
-</code></pre><ol>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。<blockquote>
-<p>LinearLayout.orientation<br>horizontal-&gt;row,vertical-column</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>flex-wrap</p>
-<pre><code>默认情况下，项目都排在一条线（又称<span class="string">"轴线"</span>）上。flex-<span class="operator">wrap</span>属性定义，如果一条轴线排不下，如何换行。
-</code></pre><ol>
-<li>nowrap（默认）：不换行。</li>
-<li>wrap：换行，第一行在上方。</li>
-<li>wrap-reverse：换行，第一行在下方。</li>
-</ol>
-</li>
-<li><p>flex-flow</p>
-<pre><code><span class="attribute">flex-flow</span>属性是<span class="attribute">flex-direction</span>属性和<span class="attribute">flex-wrap</span>属性的简写形式，默认值为row <span class="value">nowrap</span>。
-</code></pre></li>
-<li><p>justify-content</p>
-<pre><code>属性定义了项目在主轴上的对齐方式。
-</code></pre><ol>
-<li>flex-start（默认值）：左对齐</li>
-<li>flex-end：右对齐</li>
-<li>center： 居中</li>
-<li>space-between：两端对齐，项目之间的间隔都相等。</li>
-<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
-</ol>
-</li>
-<li><p>align-items</p>
-<pre><code>属性定义项目在交叉轴上如何对齐。
-</code></pre></li>
-<li><p>align-content <strong>5，6没太明白区别在哪里</strong></p>
-<pre><code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
-</code></pre><blockquote>
-<p>android:gravity </p>
-</blockquote>
-</li>
-</ol>
-<h3 id="项目属性">项目属性</h3><ol>
-<li>order    default 0<pre><code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为<span class="number">0</span>。
-</code></pre></li>
-<li><p>flex-grow    default 0</p>
-<pre><code>属性定义项目的放大比例，默认为<span class="number">0</span>，即如果存在剩余空间，也不放大。
-</code></pre><p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
-<blockquote>
-<p>LinearLayout.weight</p>
-</blockquote>
-</li>
-<li><p>flex-shrink  default 1 </p>
-<pre><code>属性定义了项目的缩小比例，默认为<span class="number">1</span>，即如果空间不足，该项目将缩小。
-</code></pre><p> 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
-</li>
-<li><p>flex-basis</p>
-<pre><code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<span class="keyword">auto</span>，即项目的本来大小。
-</code></pre></li>
-<li><p>flex default 0 1 auto</p>
-<pre><code><span class="attribute">flex</span>属性是<span class="attribute">flex-grow</span>, <span class="attribute">flex-shrink</span> 和 <span class="attribute">flex-basis</span>的简写，默认值为0 1 <span class="attribute">auto</span>。后两个属性可选。
-</code></pre></li>
-<li><p>align-self</p>
-<pre><code><span class="keyword">align</span>-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<span class="keyword">align</span>-items属性。默认值为<span class="keyword">auto</span>，表示继承父元素的<span class="keyword">align</span>-items属性，如果没有父元素，则等同于stretch。
-</code></pre><blockquote>
-<p>android:layout_gravity</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="资料">资料</h3><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">Flex 布局教程：实例篇</a><br><a href="http://philipwalton.github.io/solved-by-flexbox/" target="_blank" rel="external">solved-by-flexbox</a></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/20160105/Flex-布局/" class="archive-article-date">
-  	<time datetime="2016-01-05T04:17:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-05</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1068,7 +993,7 @@ xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="re
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 12.5px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 15px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
+    				<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 17.5px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设备/" style="font-size: 12.5px;">设备</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
     			</div>
     	</section>
     
