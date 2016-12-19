@@ -23,21 +23,22 @@
   
     <link rel="icon" href="/img/favicon.ico">
   
-  <link rel="stylesheet" href="/main.css" type="text/css">
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css" type="text/css">
+  
+
   
 
 </head>
 
 <body>
-  <div id="container">
-    <div class="left-col">
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
       <div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
-			
 		</a>
 
 		<hgroup>
@@ -59,7 +60,7 @@
 	        
 				<li><a href="/tags/前端">前端</a></li>
 	        
-				<li><a href="/tags/快捷键">快捷键</a></li>
+				<li><a href="/tags/cheatsheet">cheatsheet</a></li>
 	        
 				<li><a href="/tags/杂记">杂记</a></li>
 	        
@@ -69,22 +70,17 @@
 	        
     		
     			
-    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
     			
             
     			
-    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
     			
             
     			
-    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
-    			
-    			
-            
-    			
-    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
     			
             
@@ -92,11 +88,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+					<a class="github" target="_blank" href="https://github.com/willnewii" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+					<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 			</div>
 		</nav>
@@ -104,18 +100,16 @@
 </div>
 
     </div>
-    <div class="mid-col">
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       <nav id="mobile-nav">
   	<div class="overlay">
-  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
   		<h1 class="header-author js-mobile-header hide">诗人的咸鱼</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				
-					<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
-				
+				<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">诗人的咸鱼</h1>
@@ -134,20 +128,23 @@
 		        
 					<li><a href="/tags/前端">前端</a></li>
 		        
-					<li><a href="/tags/快捷键">快捷键</a></li>
+					<li><a href="/tags/cheatsheet">cheatsheet</a></li>
 		        
 					<li><a href="/tags/杂记">杂记</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
 		        
 				</ul>
 			</nav>
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/willnewii" title="github">github</a>
+						<a class="github" target="_blank" href="https://github.com/willnewii" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1686302192" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 				</div>
 			</nav>
@@ -155,14 +152,16 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-        
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            
   
-    <article id="post-ViewPager设置滑动速度" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ViewPager设置滑动速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -172,22 +171,24 @@
     </h1>
   
 
+        <a href="/20151126/ViewPager设置滑动速度/" class="archive-article-date">
+  	<time datetime="2015-11-26T03:21:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-26</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
 <h5 id="新建类FixedSpeedScoller继承自scroller类">新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span><br><span class="line"> * reflection mechanism.</span><br><span class="line"> *  </span><br><span class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</span><br><span class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * set animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@param</span> time</span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * get current animation time</span><br><span class="line">     *  </span><br><span class="line">     * <span class="doctag">@return</span></span><br><span class="line">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/20151126/ViewPager设置滑动速度/#more">more >></a>
-        </p>
+        
+          <a class="article-more-a" href="/20151126/ViewPager设置滑动速度/#more">more >></a>
+        
+      
+
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20151126/ViewPager设置滑动速度/" class="archive-article-date">
-  	<time datetime="2015-11-26T03:21:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-11-26</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
@@ -196,6 +197,13 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151126/ViewPager设置滑动速度/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -208,14 +216,9 @@
 
 
 
-
-
   
-    <article id="post-杂记" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-杂记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -225,6 +228,9 @@
     </h1>
   
 
+        <a href="/20151125/杂记/" class="archive-article-date">
+  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -256,12 +262,11 @@
 <p>批量删除文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="label">$1</span> == <span class="string">"!"</span>) &#123; <span class="keyword">print</span> <span class="label">$2&#125;</span>&#125;' | xargs svn <span class="keyword">rm</span></span><br></pre></td></tr></table></figure></p>
 
       
+
+      
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20151125/杂记/" class="archive-article-date">
-  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-11-25</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
@@ -270,6 +275,13 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151125/杂记/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -282,14 +294,9 @@
 
 
 
-
-
   
-    <article id="post-Android相关文章" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Android相关文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -299,6 +306,9 @@
     </h1>
   
 
+        <a href="/20151125/Android相关文章/" class="archive-article-date">
+  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -320,12 +330,11 @@
 <h3 id="issue">issue</h3><p><a href="http://blog.csdn.net/jiangtianhao13269230/article/details/48757727" target="_blank" rel="external">android 6.0(api 23) SDK，不再提供org.apache.http.*(只保留几个类). 用xUtils会出现问题</a></p>
 
       
+
+      
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20151125/Android相关文章/" class="archive-article-date">
-  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-11-25</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
@@ -334,6 +343,13 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151125/Android相关文章/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -346,14 +362,9 @@
 
 
 
-
-
   
-    <article id="post-Android 优化文章" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Android 优化文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -363,6 +374,9 @@
     </h1>
   
 
+        <a href="/20151125/Android 优化文章/" class="archive-article-date">
+  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -384,12 +398,11 @@
 <p>APP优化知识图谱<br><img src="http://img.blog.csdn.net/20150719151037884" alt="APP优化知识图谱"></p>
 
       
+
+      
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20151125/Android 优化文章/" class="archive-article-date">
-  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-11-25</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
@@ -398,11 +411,18 @@
 
       
 	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
+	<i class="icon-book icon"></i>
 	<a class="article-category-link" href="/categories/test/">test</a>
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151125/Android 优化文章/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -415,14 +435,9 @@
 
 
 
-
-
   
-    <article id="post-MarkDown语法" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-MarkDown语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -432,6 +447,9 @@
     </h1>
   
 
+        <a href="/20151101/MarkDown语法/" class="archive-article-date">
+  	<time datetime="2015-11-01T10:36:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-01</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -448,16 +466,15 @@
 <p>引用</p>
 <blockquote>
 <p>引用中的引用<br>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/20151101/MarkDown语法/#more">more >></a>
-        </p>
+        
+          <a class="article-more-a" href="/20151101/MarkDown语法/#more">more >></a>
+        
+      
+
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20151101/MarkDown语法/" class="archive-article-date">
-  	<time datetime="2015-11-01T10:36:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-11-01</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
@@ -466,6 +483,13 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151101/MarkDown语法/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -478,14 +502,9 @@
 
 
 
-
-
   
-    <article id="post-Atom编辑器" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Atom编辑器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -495,6 +514,9 @@
     </h1>
   
 
+        <a href="/20151018/Atom编辑器/" class="archive-article-date">
+  	<time datetime="2015-10-18T10:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-18</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -583,24 +605,30 @@
 </tr>
 </tbody>
 </table>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/20151018/Atom编辑器/#more">more >></a>
-        </p>
+        
+          <a class="article-more-a" href="/20151018/Atom编辑器/#more">more >></a>
+        
+      
+
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20151018/Atom编辑器/" class="archive-article-date">
-  	<time datetime="2015-10-18T10:36:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-10-18</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/快捷键/">快捷键</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cheatsheet/">cheatsheet</a></li></ul>
 	</div>
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151018/Atom编辑器/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -613,14 +641,9 @@
 
 
 
-
-
   
-    <article id="post-macbook不识别部分Android手机" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-macbook不识别部分Android手机" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -630,6 +653,9 @@
     </h1>
   
 
+        <a href="/20141215/macbook不识别部分Android手机/" class="archive-article-date">
+  	<time datetime="2014-12-15T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-12-15</time>
+</a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -646,12 +672,11 @@
 </ul>
 
       
+
+      
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/20141215/macbook不识别部分Android手机/" class="archive-article-date">
-  	<time datetime="2014-12-15T07:20:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-12-15</time>
-</a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
@@ -660,12 +685,17 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20141215/macbook不识别部分Android手机/">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-
 
 
 
@@ -682,6 +712,8 @@
   
 
 
+          </div>
+        </div>
       </div>
       <footer id="footer">
   <div class="outer">
@@ -704,9 +736,7 @@
     </div>
     <script>
 	var yiliaConfig = {
-		fancybox: true,
 		mathjax: false,
-		animate: true,
 		isHome: true,
 		isPost: false,
 		isArchive: false,
@@ -718,47 +748,149 @@
 	}
 </script>
 
-<script src="/./main.js" type="text/javascript"></script>
+<script src="/./main.js?v=4.0.0.js" type="text/javascript"></script>
 
 
     
-<div class="tools-col">
-  <ul class="btn-wrap">
-    
-      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
-    
-    
-      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
-    
-    
-      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
-    
-    
-      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
-    
-  </ul>
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-wrap">
     
-    	<section class="tools-section tools-section-all chose">
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">设备</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">工作流程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">cheatsheet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">cordova</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">ionic</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">MayDay歌词本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">angular2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">soft</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
     	</section>
     
 
     
-    	<section class="tools-section tools-section-tag">
-    			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/MayDay歌词本/" style="font-size: 10px;">MayDay歌词本</a> <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/cordova/" style="font-size: 12.5px;">cordova</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/工作流程/" style="font-size: 12.5px;">工作流程</a> <a href="/tags/快捷键/" style="font-size: 15px;">快捷键</a> <a href="/tags/杂记/" style="font-size: 17.5px;">杂记</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设备/" style="font-size: 12.5px;">设备</a> <a href="/tags/软件/" style="font-size: 12.5px;">软件</a>
-    			</div>
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-friends">
+    	<section class="tools-section tools-section-friends" q-show="friends">
   		
     	</section>
     
 
     
-    	<section class="tools-section tools-section-me">
+    	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
   	  		<div class="aboutme-wrap" id="js-aboutme">咸鱼一只...</div>
   	  	

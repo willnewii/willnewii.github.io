@@ -4,7 +4,7 @@
   <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://willnewii.github.io/"/>
-  <updated>2016-12-07T08:16:57.000Z</updated>
+  <updated>2016-12-19T09:59:55.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://willnewii.github.io/20161207/imium-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20161207/imium-快捷键/</id>
     <published>2016-12-07T07:30:00.000Z</published>
-    <updated>2016-12-07T08:16:57.000Z</updated>
+    <updated>2016-12-19T09:59:55.000Z</updated>
     <content type="html"><![CDATA[<h4 id="滚动操作">滚动操作</h4><table>
 <thead>
 <tr>
@@ -114,7 +114,7 @@
 <td]]>
     </summary>
     
-      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <category term="cheatsheet" scheme="http://willnewii.github.io/tags/cheatsheet/"/>
     
   </entry>
   
@@ -123,7 +123,7 @@
     <link href="http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20161202/intellij IDEA 快捷键/</id>
     <published>2016-12-02T07:03:00.000Z</published>
-    <updated>2016-12-07T07:29:01.000Z</updated>
+    <updated>2016-12-19T10:02:34.000Z</updated>
     <content type="html"><![CDATA[<h4 id="js:忽略相关目录">js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
 <h4 id="查看改行代码的修改记录">查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
 <h4 id="抽取">抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
@@ -733,7 +733,7 @@
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
     
-      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <category term="cheatsheet" scheme="http://willnewii.github.io/tags/cheatsheet/"/>
     
   </entry>
   
@@ -942,7 +942,7 @@
     <link href="http://willnewii.github.io/20160504/iTerm2-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20160504/iTerm2-快捷键/</id>
     <published>2016-05-04T07:39:00.000Z</published>
-    <updated>2016-05-04T07:39:57.000Z</updated>
+    <updated>2016-12-19T10:02:48.000Z</updated>
     <content type="html"><![CDATA[<h4 id="编辑">编辑</h4><table>
 <thead>
 <tr>
@@ -1093,7 +1093,7 @@
 <]]>
     </summary>
     
-      <category term="快捷键" scheme="http://willnewii.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <category term="cheatsheet" scheme="http://willnewii.github.io/tags/cheatsheet/"/>
     
   </entry>
   

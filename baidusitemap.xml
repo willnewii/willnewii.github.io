@@ -4,14 +4,67 @@
 
     
   <url>
+    <loc>http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <lastmod>2016-12-19T10:03:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Atom编辑器</title>
+        <pubTime>2015-10-18T10:36:00.000Z</pubTime>
+        
+        <tag>cheatsheet</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160504/iTerm2-%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2016-12-19T10:02:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>iTerm2 快捷键</title>
+        <pubTime>2016-05-04T07:39:00.000Z</pubTime>
+        
+        <tag>cheatsheet</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2016-12-19T10:02:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>intellij IDEA 快捷键</title>
+        <pubTime>2016-12-02T07:03:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>cheatsheet</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://willnewii.github.io/20161207/imium-%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2016-12-07T08:16:57.000Z</lastmod>
+    <lastmod>2016-12-19T09:59:55.000Z</lastmod>
     <data>
         <display>
         <title>vimium 快捷键</title>
         <pubTime>2016-12-07T07:30:00.000Z</pubTime>
         
-        <tag>快捷键</tag>
+        <tag>cheatsheet</tag>
          
          
            
@@ -65,25 +118,6 @@
         <pubTime>2016-12-01T04:19:00.000Z</pubTime>
         
         <tag>设备</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2016-12-07T07:29:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>intellij IDEA 快捷键</title>
-        <pubTime>2016-12-02T07:03:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>快捷键</tag>
          
          
            
@@ -237,40 +271,6 @@
         <pubTime>2015-12-02T08:14:41.000Z</pubTime>
         
         <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    <lastmod>2016-05-05T06:40:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>Atom编辑器</title>
-        <pubTime>2015-10-18T10:36:41.000Z</pubTime>
-        
-        <tag>快捷键</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20160504/iTerm2-%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2016-05-04T07:39:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>iTerm2 快捷键</title>
-        <pubTime>2016-05-04T07:39:00.000Z</pubTime>
-        
-        <tag>快捷键</tag>
          
          
            
