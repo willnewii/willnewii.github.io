@@ -6,24 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://willnewii.github.io">
-  <title>git笔记 | 诗人的咸鱼</title>
+  <title>树莓派与homebridge  (三)  插件篇 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git移除某文件夹的版本控制thinkphp框架，Apps/Runtime下目录移出版本控制.git rm -r -n –cached  /Runtime/\      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。
-git rm -r –cached  /Runtime/\      //最终执行命令.
-git commit -m”移除Runtime">
+  <meta name="description" content="电器开关控制-homebridge-gpio-wpi
+更新或安装 wiringPi
+安装 安装过程中会报一堆错误,不过貌似不影响安装.
+1npm install -g homebridge-gpio-wpi
+
+修改homebridge的config文件
+1234567891011&amp;#123;  &quot;accessories&quot;: [    &amp;#123;      &quot;accessory&quot;: &quot;GPIO&quot;,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git笔记">
-<meta property="og:url" content="http://willnewii.github.io/20160120/git/index.html">
+<meta property="og:title" content="树莓派与homebridge  (三)  插件篇">
+<meta property="og:url" content="http://willnewii.github.io/20170105/树莓派与homebridge-三-插件篇/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="git移除某文件夹的版本控制thinkphp框架，Apps/Runtime下目录移出版本控制.git rm -r -n –cached  /Runtime/\      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。
-git rm -r –cached  /Runtime/\      //最终执行命令.
-git commit -m”移除Runtime">
-<meta property="og:updated_time" content="2016-01-25T07:50:06.000Z">
+<meta property="og:description" content="电器开关控制-homebridge-gpio-wpi
+更新或安装 wiringPi
+安装 安装过程中会报一堆错误,不过貌似不影响安装.
+1npm install -g homebridge-gpio-wpi
+
+修改homebridge的config文件
+1234567891011&amp;#123;  &quot;accessories&quot;: [    &amp;#123;      &quot;accessory&quot;: &quot;GPIO&quot;,">
+<meta property="og:updated_time" content="2017-01-05T10:12:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git笔记">
-<meta name="twitter:description" content="git移除某文件夹的版本控制thinkphp框架，Apps/Runtime下目录移出版本控制.git rm -r -n –cached  /Runtime/\      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。
-git rm -r –cached  /Runtime/\      //最终执行命令.
-git commit -m”移除Runtime">
+<meta name="twitter:title" content="树莓派与homebridge  (三)  插件篇">
+<meta name="twitter:description" content="电器开关控制-homebridge-gpio-wpi
+更新或安装 wiringPi
+安装 安装过程中会报一堆错误,不过貌似不影响安装.
+1npm install -g homebridge-gpio-wpi
+
+修改homebridge的config文件
+1234567891011&amp;#123;  &quot;accessories&quot;: [    &amp;#123;      &quot;accessory&quot;: &quot;GPIO&quot;,">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -183,47 +195,49 @@ git commit -m”移除Runtime">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-树莓派与homebridge-三-插件篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git笔记
+      树莓派与homebridge  (三)  插件篇
     </h1>
   
 
         
-        <a href="/20160120/git/" class="archive-article-date">
-  	<time datetime="2016-01-20T03:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-20</time>
+        <a href="/20170105/树莓派与homebridge-三-插件篇/" class="archive-article-date">
+  	<time datetime="2017-01-05T10:11:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
-<p>git rm -r –cached  <em>/Runtime/\</em>      //最终执行命令.</p>
-<p>git commit -m”移除Runtime目录下所有文件的版本控制”    //提交</p>
-<p>git push origin master   //提交到远程服务器</p>
-<p>若用git status命令查看，则Apps/Runtime/目录下文件出现在结果列表里， 我们不希望这个目录下的文件出现，则在项目根目录下，和.git 同级目录下，新建一个.gitignore文件，<br>把.gitignore提交到远程服务器。 则.Apps/Runtime目录就不会被提交了。</p>
-<h4 id="git_am">git am</h4><p>git am –abort</p>
-<h4 id="git_flow">git flow</h4><p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></p>
-<h4 id="git_常用指令">git 常用指令</h4><p><a href="http://stormzhang.com/git/2014/01/27/git-common-command/" target="_blank" rel="external">http://stormzhang.com/git/2014/01/27/git-common-command/</a></p>
-<h4 id="git_submodule的使用">git submodule的使用</h4><p><a href="http://www.stormzhang.com/git/2014/02/13/git-submodule/" target="_blank" rel="external">http://www.stormzhang.com/git/2014/02/13/git-submodule/</a></p>
-<h4 id="git_文档">git 文档</h4><ul>
-<li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
+        <h4 id="电器开关控制-homebridge-gpio-wpi">电器开关控制-homebridge-gpio-wpi</h4><ol>
+<li>更新或安装 <a href="http://wiringpi.com/download-and-install/" target="_blank" rel="external">wiringPi</a></li>
+<li><p>安装 安装过程中会报一堆错误,不过貌似不影响安装.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> homebridge-gpio-wpi</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
+<li><p>修改homebridge的config文件</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;</span><br><span class="line">  <span class="string">"accessories"</span>: <span class="collection">[</span><br><span class="line">    <span class="collection">&#123;</span><br><span class="line">      <span class="string">"accessory"</span>: <span class="string">"GPIO"</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"GPIO2"</span>,        //设备名称</span><br><span class="line">      <span class="string">"pin"</span>: <span class="number">27</span>,              //对应的针脚号 <span class="list">(<span class="keyword">BCM</span>)</span></span><br><span class="line">      <span class="string">"duration"</span>: <span class="number">4000</span>,   </span><br><span class="line">      <span class="string">"inverted"</span>: <span class="string">"false"</span></span><br><span class="line">    &#125;</span></span><br><span class="line">  ]</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="external">Git分支管理策略</a></p>
+</ol>
+<p>duration 节点应该删除,不然会报错.<a href="https://github.com/rsg98/homebridge-gpio-wpi/issues/1" target="_blank" rel="external">issue#1</a></p>
+<ol>
+<li><p>set-gpio.sh</p>
 </li>
-<li><p><a href="http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png" target="_blank" rel="external">Git 常用命令图</a></p>
+<li><p>code</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpio <span class="keyword">export</span> <span class="number">4</span> out</span><br><span class="line">homebridge</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></p>
-</li>
+</ol>
+<h4 id="温度,湿度检测-homebridge-dht-sensor">温度,湿度检测-<a href="https://www.npmjs.com/package/homebridge-dht-sensor" target="_blank" rel="external">homebridge-dht-sensor</a></h4><ul>
+<li>支持设备:DHT11或DHT22</li>
+<li>需要先安装<a href="http://www.airspayce.com/mikem/bcm2835/" target="_blank" rel="external">bcm2835</a></li>
 </ul>
+<p>具体操作可以看<a href="https://www.npmjs.com/package/node-dht-sensor" target="_blank" rel="external">node-dht-sensor</a>的README.</p>
+<h4 id="针脚图">针脚图</h4><p>针脚图 安装过wiringpi 你可以通过命令’gpio readall’打印出来<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">+-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+</span><br><span class="line"> |<span class="string"> BCM </span>|<span class="string"> wPi </span>|<span class="string">   Name  </span>|<span class="string"> Mode </span>|<span class="string"> V </span>|<span class="string"> Physical </span>|<span class="string"> V </span>|<span class="string"> Mode </span>|<span class="string"> Name    </span>|<span class="string"> wPi </span>|<span class="string"> BCM </span>|</span><br><span class="line"> +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">    3.3v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string">  1 </span>||<span class="string"> 2  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 5v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   2 </span>|<span class="string">   8 </span>|<span class="string">   SDA.1 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string">  3 </span>||<span class="string"> 4  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 5V      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   3 </span>|<span class="string">   9 </span>|<span class="string">   SCL.1 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string">  5 </span>||<span class="string"> 6  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   4 </span>|<span class="string">   7 </span>|<span class="string"> GPIO. 7 </span>|<span class="string">  OUT </span>|<span class="string"> 1 </span>|<span class="string">  7 </span>||<span class="string"> 8  </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> TxD     </span>|<span class="string"> 15  </span>|<span class="string"> 14  </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string">  9 </span>||<span class="string"> 10 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> RxD     </span>|<span class="string"> 16  </span>|<span class="string"> 15  </span>|</span><br><span class="line"> |<span class="string">  17 </span>|<span class="string">   0 </span>|<span class="string"> GPIO. 0 </span>|<span class="string">  OUT </span>|<span class="string"> 0 </span>|<span class="string"> 11 </span>||<span class="string"> 12 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 1 </span>|<span class="string"> 1   </span>|<span class="string"> 18  </span>|</span><br><span class="line"> |<span class="string">  27 </span>|<span class="string">   2 </span>|<span class="string"> GPIO. 2 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 13 </span>||<span class="string"> 14 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">  22 </span>|<span class="string">   3 </span>|<span class="string"> GPIO. 3 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 15 </span>||<span class="string"> 16 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 4 </span>|<span class="string"> 4   </span>|<span class="string"> 23  </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">    3.3v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 17 </span>||<span class="string"> 18 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 5 </span>|<span class="string"> 5   </span>|<span class="string"> 24  </span>|</span><br><span class="line"> |<span class="string">  10 </span>|<span class="string">  12 </span>|<span class="string">    MOSI </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 19 </span>||<span class="string"> 20 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   9 </span>|<span class="string">  13 </span>|<span class="string">    MISO </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 21 </span>||<span class="string"> 22 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 6 </span>|<span class="string"> 6   </span>|<span class="string"> 25  </span>|</span><br><span class="line"> |<span class="string">  11 </span>|<span class="string">  14 </span>|<span class="string">    SCLK </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 23 </span>||<span class="string"> 24 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> CE0     </span>|<span class="string"> 10  </span>|<span class="string"> 8   </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 25 </span>||<span class="string"> 26 </span>|<span class="string"> 0 </span>|<span class="string"> OUT  </span>|<span class="string"> CE1     </span>|<span class="string"> 11  </span>|<span class="string"> 7   </span>|</span><br><span class="line"> |<span class="string">   0 </span>|<span class="string">  30 </span>|<span class="string">   SDA.0 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 27 </span>||<span class="string"> 28 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> SCL.0   </span>|<span class="string"> 31  </span>|<span class="string"> 1   </span>|</span><br><span class="line"> |<span class="string">   5 </span>|<span class="string">  21 </span>|<span class="string"> GPIO.21 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 29 </span>||<span class="string"> 30 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   6 </span>|<span class="string">  22 </span>|<span class="string"> GPIO.22 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 31 </span>||<span class="string"> 32 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.26 </span>|<span class="string"> 26  </span>|<span class="string"> 12  </span>|</span><br><span class="line"> |<span class="string">  13 </span>|<span class="string">  23 </span>|<span class="string"> GPIO.23 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 33 </span>||<span class="string"> 34 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">  19 </span>|<span class="string">  24 </span>|<span class="string"> GPIO.24 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 35 </span>||<span class="string"> 36 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.27 </span>|<span class="string"> 27  </span>|<span class="string"> 16  </span>|</span><br><span class="line"> |<span class="string">  26 </span>|<span class="string">  25 </span>|<span class="string"> GPIO.25 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 37 </span>||<span class="string"> 38 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.28 </span>|<span class="string"> 28  </span>|<span class="string"> 20  </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 39 </span>||<span class="string"> 40 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.29 </span>|<span class="string"> 29  </span>|<span class="string"> 21  </span>|</span><br><span class="line"> +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+</span><br><span class="line"> |<span class="string"> BCM </span>|<span class="string"> wPi </span>|<span class="string">   Name  </span>|<span class="string"> Mode </span>|<span class="string"> V </span>|<span class="string"> Physical </span>|<span class="string"> V </span>|<span class="string"> Mode </span>|<span class="string"> Name    </span>|<span class="string"> wPi </span>|<span class="string"> BCM </span>|</span><br><span class="line"> +-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -237,7 +251,7 @@ git commit -m”移除Runtime">
 		<ul class="article-tag-list">
 			 
         <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color3">笔记</a>
+        	<a href="javascript:void(0)" class="article-tag-list-link color4">IOT</a>
         </li>
       
 		</ul>
@@ -293,7 +307,7 @@ git commit -m”移除Runtime">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://willnewii.github.io/20160120/git/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://willnewii.github.io/20170105/树莓派与homebridge-三-插件篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +321,9 @@ git commit -m”移除Runtime">
   
 <nav id="article-nav">
   
-    <a href="/20160215/ES6-资源/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ES6笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/20160120/JS笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS笔记</div>
+    <a href="/20161229/树莓派与homebridge-二-安装篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树莓派与homebridge  (二)  安装篇</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -332,7 +337,7 @@ git commit -m”移除Runtime">
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="git" data-title="git笔记" data-url="http://willnewii.github.io/20160120/git/"></div>
+	<div class="ds-thread" data-thread-key="树莓派与homebridge-三-插件篇" data-title="树莓派与homebridge  (三)  插件篇" data-url="http://willnewii.github.io/20170105/树莓派与homebridge-三-插件篇/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
