@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[诗人的咸鱼]]></title>
-  <subtitle><![CDATA[生活不止有眼前的苟且,还有诗和远方]]></subtitle>
+  <title>诗人的咸鱼</title>
+  <subtitle>生活不止有眼前的苟且,还有诗和远方</subtitle>
   <link href="/atom.xml" rel="self"/>
+  
   <link href="http://willnewii.github.io/"/>
   <updated>2017-01-05T10:12:24.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
-    <name><![CDATA[诗人的咸鱼]]></name>
+    <name>诗人的咸鱼</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[树莓派与homebridge  (三)  插件篇]]></title>
+    <title>树莓派与homebridge  (三)  插件篇</title>
     <link href="http://willnewii.github.io/20170105/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8Ehomebridge-%E4%B8%89-%E6%8F%92%E4%BB%B6%E7%AF%87/"/>
     <id>http://willnewii.github.io/20170105/树莓派与homebridge-三-插件篇/</id>
     <published>2017-01-05T10:11:00.000Z</published>
     <updated>2017-01-05T10:12:24.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="电器开关控制-homebridge-gpio-wpi">电器开关控制-homebridge-gpio-wpi</h4><ol>
+    
+    <content type="html"><![CDATA[<h4 id="电器开关控制-homebridge-gpio-wpi"><a href="#电器开关控制-homebridge-gpio-wpi" class="headerlink" title="电器开关控制-homebridge-gpio-wpi"></a>电器开关控制-homebridge-gpio-wpi</h4><ol>
 <li>更新或安装 <a href="http://wiringpi.com/download-and-install/" target="_blank" rel="external">wiringPi</a></li>
 <li><p>安装 安装过程中会报一堆错误,不过貌似不影响安装.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> homebridge-gpio-wpi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g homebridge-gpio-wpi</div></pre></td></tr></table></figure>
 </li>
 <li><p>修改homebridge的config文件</p>
-<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;</span><br><span class="line">  <span class="string">"accessories"</span>: <span class="collection">[</span><br><span class="line">    <span class="collection">&#123;</span><br><span class="line">      <span class="string">"accessory"</span>: <span class="string">"GPIO"</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"GPIO2"</span>,        //设备名称</span><br><span class="line">      <span class="string">"pin"</span>: <span class="number">27</span>,              //对应的针脚号 <span class="list">(<span class="keyword">BCM</span>)</span></span><br><span class="line">      <span class="string">"duration"</span>: <span class="number">4000</span>,   </span><br><span class="line">      <span class="string">"inverted"</span>: <span class="string">"false"</span></span><br><span class="line">    &#125;</span></span><br><span class="line">  ]</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"accessories"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="string">"accessory"</span>: <span class="string">"GPIO"</span>,</div><div class="line">      <span class="string">"name"</span>: <span class="string">"GPIO2"</span>,        //设备名称</div><div class="line">      <span class="string">"pin"</span>: <span class="number">27</span>,              //对应的针脚号 (<span class="name">BCM</span>)</div><div class="line">      <span class="string">"duration"</span>: <span class="number">4000</span>,   </div><div class="line">      <span class="string">"inverted"</span>: <span class="string">"false"</span></div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>duration 节点应该删除,不然会报错.<a href="https://github.com/rsg98/homebridge-gpio-wpi/issues/1" target="_blank" rel="external">issue#1</a></p>
@@ -34,96 +36,105 @@
 <li><p>set-gpio.sh</p>
 </li>
 <li><p>code</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpio <span class="keyword">export</span> <span class="number">4</span> out</span><br><span class="line">homebridge</span><br></pre></td></tr></table></figure>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gpio <span class="keyword">export</span> <span class="number">4</span> <span class="keyword">out</span></div><div class="line">homebridge</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="温度,湿度检测-homebridge-dht-sensor">温度,湿度检测-<a href="https://www.npmjs.com/package/homebridge-dht-sensor" target="_blank" rel="external">homebridge-dht-sensor</a></h4><ul>
+<h4 id="温度-湿度检测-homebridge-dht-sensor"><a href="#温度-湿度检测-homebridge-dht-sensor" class="headerlink" title="温度,湿度检测-homebridge-dht-sensor"></a>温度,湿度检测-<a href="https://www.npmjs.com/package/homebridge-dht-sensor" target="_blank" rel="external">homebridge-dht-sensor</a></h4><ul>
 <li>支持设备:DHT11或DHT22</li>
 <li>需要先安装<a href="http://www.airspayce.com/mikem/bcm2835/" target="_blank" rel="external">bcm2835</a></li>
 </ul>
 <p>具体操作可以看<a href="https://www.npmjs.com/package/node-dht-sensor" target="_blank" rel="external">node-dht-sensor</a>的README.</p>
-<h4 id="针脚图">针脚图</h4><p>针脚图 安装过wiringpi 你可以通过命令’gpio readall’打印出来<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">+-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+</span><br><span class="line"> |<span class="string"> BCM </span>|<span class="string"> wPi </span>|<span class="string">   Name  </span>|<span class="string"> Mode </span>|<span class="string"> V </span>|<span class="string"> Physical </span>|<span class="string"> V </span>|<span class="string"> Mode </span>|<span class="string"> Name    </span>|<span class="string"> wPi </span>|<span class="string"> BCM </span>|</span><br><span class="line"> +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">    3.3v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string">  1 </span>||<span class="string"> 2  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 5v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   2 </span>|<span class="string">   8 </span>|<span class="string">   SDA.1 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string">  3 </span>||<span class="string"> 4  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 5V      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   3 </span>|<span class="string">   9 </span>|<span class="string">   SCL.1 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string">  5 </span>||<span class="string"> 6  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   4 </span>|<span class="string">   7 </span>|<span class="string"> GPIO. 7 </span>|<span class="string">  OUT </span>|<span class="string"> 1 </span>|<span class="string">  7 </span>||<span class="string"> 8  </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> TxD     </span>|<span class="string"> 15  </span>|<span class="string"> 14  </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string">  9 </span>||<span class="string"> 10 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> RxD     </span>|<span class="string"> 16  </span>|<span class="string"> 15  </span>|</span><br><span class="line"> |<span class="string">  17 </span>|<span class="string">   0 </span>|<span class="string"> GPIO. 0 </span>|<span class="string">  OUT </span>|<span class="string"> 0 </span>|<span class="string"> 11 </span>||<span class="string"> 12 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 1 </span>|<span class="string"> 1   </span>|<span class="string"> 18  </span>|</span><br><span class="line"> |<span class="string">  27 </span>|<span class="string">   2 </span>|<span class="string"> GPIO. 2 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 13 </span>||<span class="string"> 14 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">  22 </span>|<span class="string">   3 </span>|<span class="string"> GPIO. 3 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 15 </span>||<span class="string"> 16 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 4 </span>|<span class="string"> 4   </span>|<span class="string"> 23  </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">    3.3v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 17 </span>||<span class="string"> 18 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 5 </span>|<span class="string"> 5   </span>|<span class="string"> 24  </span>|</span><br><span class="line"> |<span class="string">  10 </span>|<span class="string">  12 </span>|<span class="string">    MOSI </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 19 </span>||<span class="string"> 20 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   9 </span>|<span class="string">  13 </span>|<span class="string">    MISO </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 21 </span>||<span class="string"> 22 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 6 </span>|<span class="string"> 6   </span>|<span class="string"> 25  </span>|</span><br><span class="line"> |<span class="string">  11 </span>|<span class="string">  14 </span>|<span class="string">    SCLK </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 23 </span>||<span class="string"> 24 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> CE0     </span>|<span class="string"> 10  </span>|<span class="string"> 8   </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 25 </span>||<span class="string"> 26 </span>|<span class="string"> 0 </span>|<span class="string"> OUT  </span>|<span class="string"> CE1     </span>|<span class="string"> 11  </span>|<span class="string"> 7   </span>|</span><br><span class="line"> |<span class="string">   0 </span>|<span class="string">  30 </span>|<span class="string">   SDA.0 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 27 </span>||<span class="string"> 28 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> SCL.0   </span>|<span class="string"> 31  </span>|<span class="string"> 1   </span>|</span><br><span class="line"> |<span class="string">   5 </span>|<span class="string">  21 </span>|<span class="string"> GPIO.21 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 29 </span>||<span class="string"> 30 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">   6 </span>|<span class="string">  22 </span>|<span class="string"> GPIO.22 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 31 </span>||<span class="string"> 32 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.26 </span>|<span class="string"> 26  </span>|<span class="string"> 12  </span>|</span><br><span class="line"> |<span class="string">  13 </span>|<span class="string">  23 </span>|<span class="string"> GPIO.23 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 33 </span>||<span class="string"> 34 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</span><br><span class="line"> |<span class="string">  19 </span>|<span class="string">  24 </span>|<span class="string"> GPIO.24 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 35 </span>||<span class="string"> 36 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.27 </span>|<span class="string"> 27  </span>|<span class="string"> 16  </span>|</span><br><span class="line"> |<span class="string">  26 </span>|<span class="string">  25 </span>|<span class="string"> GPIO.25 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 37 </span>||<span class="string"> 38 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.28 </span>|<span class="string"> 28  </span>|<span class="string"> 20  </span>|</span><br><span class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 39 </span>||<span class="string"> 40 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.29 </span>|<span class="string"> 29  </span>|<span class="string"> 21  </span>|</span><br><span class="line"> +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+</span><br><span class="line"> |<span class="string"> BCM </span>|<span class="string"> wPi </span>|<span class="string">   Name  </span>|<span class="string"> Mode </span>|<span class="string"> V </span>|<span class="string"> Physical </span>|<span class="string"> V </span>|<span class="string"> Mode </span>|<span class="string"> Name    </span>|<span class="string"> wPi </span>|<span class="string"> BCM </span>|</span><br><span class="line"> +-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+</span><br></pre></td></tr></table></figure></p>
+<h4 id="针脚图"><a href="#针脚图" class="headerlink" title="针脚图"></a>针脚图</h4><p>针脚图 安装过wiringpi 你可以通过命令’gpio readall’打印出来<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">+-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+</div><div class="line"> |<span class="string"> BCM </span>|<span class="string"> wPi </span>|<span class="string">   Name  </span>|<span class="string"> Mode </span>|<span class="string"> V </span>|<span class="string"> Physical </span>|<span class="string"> V </span>|<span class="string"> Mode </span>|<span class="string"> Name    </span>|<span class="string"> wPi </span>|<span class="string"> BCM </span>|</div><div class="line"> +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+</div><div class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">    3.3v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string">  1 </span>||<span class="string"> 2  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 5v      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">   2 </span>|<span class="string">   8 </span>|<span class="string">   SDA.1 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string">  3 </span>||<span class="string"> 4  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 5V      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">   3 </span>|<span class="string">   9 </span>|<span class="string">   SCL.1 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string">  5 </span>||<span class="string"> 6  </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">   4 </span>|<span class="string">   7 </span>|<span class="string"> GPIO. 7 </span>|<span class="string">  OUT </span>|<span class="string"> 1 </span>|<span class="string">  7 </span>||<span class="string"> 8  </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> TxD     </span>|<span class="string"> 15  </span>|<span class="string"> 14  </span>|</div><div class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string">  9 </span>||<span class="string"> 10 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> RxD     </span>|<span class="string"> 16  </span>|<span class="string"> 15  </span>|</div><div class="line"> |<span class="string">  17 </span>|<span class="string">   0 </span>|<span class="string"> GPIO. 0 </span>|<span class="string">  OUT </span>|<span class="string"> 0 </span>|<span class="string"> 11 </span>||<span class="string"> 12 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 1 </span>|<span class="string"> 1   </span>|<span class="string"> 18  </span>|</div><div class="line"> |<span class="string">  27 </span>|<span class="string">   2 </span>|<span class="string"> GPIO. 2 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 13 </span>||<span class="string"> 14 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">  22 </span>|<span class="string">   3 </span>|<span class="string"> GPIO. 3 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 15 </span>||<span class="string"> 16 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 4 </span>|<span class="string"> 4   </span>|<span class="string"> 23  </span>|</div><div class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">    3.3v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 17 </span>||<span class="string"> 18 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 5 </span>|<span class="string"> 5   </span>|<span class="string"> 24  </span>|</div><div class="line"> |<span class="string">  10 </span>|<span class="string">  12 </span>|<span class="string">    MOSI </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 19 </span>||<span class="string"> 20 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">   9 </span>|<span class="string">  13 </span>|<span class="string">    MISO </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 21 </span>||<span class="string"> 22 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO. 6 </span>|<span class="string"> 6   </span>|<span class="string"> 25  </span>|</div><div class="line"> |<span class="string">  11 </span>|<span class="string">  14 </span>|<span class="string">    SCLK </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 23 </span>||<span class="string"> 24 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> CE0     </span>|<span class="string"> 10  </span>|<span class="string"> 8   </span>|</div><div class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 25 </span>||<span class="string"> 26 </span>|<span class="string"> 0 </span>|<span class="string"> OUT  </span>|<span class="string"> CE1     </span>|<span class="string"> 11  </span>|<span class="string"> 7   </span>|</div><div class="line"> |<span class="string">   0 </span>|<span class="string">  30 </span>|<span class="string">   SDA.0 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 27 </span>||<span class="string"> 28 </span>|<span class="string"> 1 </span>|<span class="string"> IN   </span>|<span class="string"> SCL.0   </span>|<span class="string"> 31  </span>|<span class="string"> 1   </span>|</div><div class="line"> |<span class="string">   5 </span>|<span class="string">  21 </span>|<span class="string"> GPIO.21 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 29 </span>||<span class="string"> 30 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">   6 </span>|<span class="string">  22 </span>|<span class="string"> GPIO.22 </span>|<span class="string">   IN </span>|<span class="string"> 1 </span>|<span class="string"> 31 </span>||<span class="string"> 32 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.26 </span>|<span class="string"> 26  </span>|<span class="string"> 12  </span>|</div><div class="line"> |<span class="string">  13 </span>|<span class="string">  23 </span>|<span class="string"> GPIO.23 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 33 </span>||<span class="string"> 34 </span>|<span class="string">   </span>|<span class="string">      </span>|<span class="string"> 0v      </span>|<span class="string">     </span>|<span class="string">     </span>|</div><div class="line"> |<span class="string">  19 </span>|<span class="string">  24 </span>|<span class="string"> GPIO.24 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 35 </span>||<span class="string"> 36 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.27 </span>|<span class="string"> 27  </span>|<span class="string"> 16  </span>|</div><div class="line"> |<span class="string">  26 </span>|<span class="string">  25 </span>|<span class="string"> GPIO.25 </span>|<span class="string">   IN </span>|<span class="string"> 0 </span>|<span class="string"> 37 </span>||<span class="string"> 38 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.28 </span>|<span class="string"> 28  </span>|<span class="string"> 20  </span>|</div><div class="line"> |<span class="string">     </span>|<span class="string">     </span>|<span class="string">      0v </span>|<span class="string">      </span>|<span class="string">   </span>|<span class="string"> 39 </span>||<span class="string"> 40 </span>|<span class="string"> 0 </span>|<span class="string"> IN   </span>|<span class="string"> GPIO.29 </span>|<span class="string"> 29  </span>|<span class="string"> 21  </span>|</div><div class="line"> +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+</div><div class="line"> |<span class="string"> BCM </span>|<span class="string"> wPi </span>|<span class="string">   Name  </span>|<span class="string"> Mode </span>|<span class="string"> V </span>|<span class="string"> Physical </span>|<span class="string"> V </span>|<span class="string"> Mode </span>|<span class="string"> Name    </span>|<span class="string"> wPi </span>|<span class="string"> BCM </span>|</div><div class="line"> +-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+</div></pre></td></tr></table></figure></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="电器开关控制-homebridge-gpio-wpi">电器开关控制-homebridge-gpio-wpi</h4><ol>
-<li>更新或安装 <a href="http://wiringpi.com/download-and-install/" target]]>
+    
+      &lt;h4 id=&quot;电器开关控制-homebridge-gpio-wpi&quot;&gt;&lt;a href=&quot;#电器开关控制-homebridge-gpio-wpi&quot; class=&quot;headerlink&quot; title=&quot;电器开关控制-homebridge-gpio-wpi&quot;&gt;&lt;/a&gt;电器开关控制-h
+    
     </summary>
+    
     
       <category term="IOT" scheme="http://willnewii.github.io/tags/IOT/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[树莓派与homebridge  (二)  安装篇]]></title>
+    <title>树莓派与homebridge  (二)  安装篇</title>
     <link href="http://willnewii.github.io/20161229/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8Ehomebridge-%E4%BA%8C-%E5%AE%89%E8%A3%85%E7%AF%87/"/>
     <id>http://willnewii.github.io/20161229/树莓派与homebridge-二-安装篇/</id>
     <published>2016-12-29T08:24:00.000Z</published>
     <updated>2016-12-29T08:29:55.000Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">硬件信息:</span><br><span class="line">树莓派<span class="number">3</span></span><br><span class="line">Linux raspberrypi <span class="number">4.4</span><span class="number">.38</span>-v7+ <span class="preprocessor">#<span class="number">938</span> SMP Thu Dec <span class="number">15</span> <span class="number">15</span>:<span class="number">22</span>:<span class="number">21</span> GMT <span class="number">2016</span> armv7l GNU/Linux</span></span><br></pre></td></tr></table></figure>
-<h4 id="homebridge_安装">homebridge 安装</h4><ol>
+    
+    <content type="html"><![CDATA[<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">硬件信息:</div><div class="line">树莓派<span class="selector-tag">3</span></div><div class="line"><span class="selector-tag">Linux</span> <span class="selector-tag">raspberrypi</span> <span class="selector-tag">4</span><span class="selector-class">.4</span><span class="selector-class">.38-v7</span>+ <span class="selector-id">#938</span> <span class="selector-tag">SMP</span> <span class="selector-tag">Thu</span> <span class="selector-tag">Dec</span> <span class="selector-tag">15</span> <span class="selector-tag">15</span><span class="selector-pseudo">:22</span><span class="selector-pseudo">:21</span> <span class="selector-tag">GMT</span> <span class="selector-tag">2016</span> <span class="selector-tag">armv7l</span> <span class="selector-tag">GNU</span>/<span class="selector-tag">Linux</span></div></pre></td></tr></table></figure>
+<h4 id="homebridge-安装"><a href="#homebridge-安装" class="headerlink" title="homebridge 安装"></a>homebridge 安装</h4><ol>
 <li><p>安装git 和 make</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install git <span class="keyword">make</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install git <span class="keyword">make</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>安装Node</p>
 <ul>
 <li><p>方法1(下载链接可能已经变动,需要去官网查看)</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v4.<span class="number">3.2</span>/<span class="keyword">node</span><span class="identifier"></span><span class="title">-v4</span>.<span class="number">3.2</span>-linux-armv6l.tar.gz </span><br><span class="line">tar -xvf <span class="keyword">node</span><span class="identifier"></span><span class="title">-v4</span>.<span class="number">3.2</span>-linux-armv6l.tar.gz </span><br><span class="line">cd <span class="keyword">node</span><span class="identifier"></span><span class="title">-v4</span>.<span class="number">3.2</span>-linux-armv6l</span><br><span class="line">Copy to /usr/local</span><br><span class="line">sudo cp -R * /usr/local/</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wget https://nodejs.org/dist/v4.<span class="number">3.2</span>/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">3.2</span>-linux-armv6l.tar.gz </div><div class="line">tar -xvf <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">3.2</span>-linux-armv6l.tar.gz </div><div class="line">cd <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">3.2</span>-linux-armv6l</div><div class="line">Copy to /usr/local</div><div class="line">sudo cp -R * /usr/local/</div></pre></td></tr></table></figure>
 </li>
 <li><p>方法2(这种更简单….)</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup_6.<span class="keyword">x</span> | sudo -E bash -</span><br><span class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> nodejs</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup_6.<span class="keyword">x</span> | sudo -E bash -</div><div class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> nodejs</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>安装Avahi</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libavahi-compat-libdnssd-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install libavahi-compat-libdnssd-<span class="built_in">dev</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>安装homebridge和依赖</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp</span><br><span class="line">cd /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">homebridge</span>/</span></span><br><span class="line">sudo npm install --unsafe-perm bignum</span><br><span class="line">cd /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">hap</span>-<span class="title">nodejs</span>/<span class="title">node_modules</span>/<span class="title">mdns</span></span></span><br><span class="line">sudo node-gyp <span class="constant">BUILDTYPE</span>=<span class="constant">Release</span> rebuild</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp</div><div class="line">cd /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">homebridge</span>/</span></div><div class="line">sudo npm install --unsafe-perm bignum</div><div class="line">cd /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">hap</span>-<span class="title">nodejs</span>/<span class="title">node_modules</span>/<span class="title">mdns</span></span></div><div class="line">sudo node-gyp BUILDTYPE=Release rebuild</div></pre></td></tr></table></figure>
 </li>
 <li><p>Run</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">homebridge</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">homebridge</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>至此,虽然树莓派还没有连接上什么实质性设备,但是打开系统是iOS10以上的设备,应该能看到一个叫homebridge的模块.连接试试看~<br>这样,第一步就算完成了.</p>
-<h3 id="issue">issue</h3><ul>
+<h3 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h3><ul>
 <li><p>启动的时候会有这些WARNING.作者已经说了,不影响使用,可以忽略.但是呢赶巧在办公室的时候手机死活发现不了设备.折腾了半天,后来回家,换了个wifi就好了…</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> WARNING <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> The program 'nodejs' uses the Apple Bonjour compatibility layer of Avahi</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> WARNING <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> Please fix your application to use the native API of Avahi!</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> WARNING <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> For more information see http://0pointerde/avahi-compat?s=libdns_sd&amp;e=nodejs</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> WARNING <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> The program 'nodejs' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> WARNING <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> Please fix your application to use the native API of Avahi!</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> WARNING <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> For more information see http://0pointerde/avahi-compat?s=libdns_sd&amp;e=nodejs&amp;f=DNSServiceRegister</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*** <span class="literal">WARNING</span> *** The program <span class="symbol">'nodejs</span>' uses the Apple Bonjour compatibility layer <span class="keyword">of</span> Avahi</div><div class="line">*** <span class="literal">WARNING</span> *** Please fix your application <span class="keyword">to</span> <span class="keyword">use</span> the native API <span class="keyword">of</span> Avahi!</div><div class="line">*** <span class="literal">WARNING</span> *** <span class="keyword">For</span> more information see http://<span class="number">0</span>pointerde/avahi-compat?s=libdns_sd&amp;e=nodejs</div><div class="line">*** <span class="literal">WARNING</span> *** The program <span class="symbol">'nodejs</span>' called <span class="symbol">'DNSServiceRegister</span>()' which <span class="keyword">is</span> <span class="keyword">not</span> supported (<span class="keyword">or</span> only supported partially) <span class="keyword">in</span> the Apple Bonjour compatibility layer <span class="keyword">of</span> Avahi</div><div class="line">*** <span class="literal">WARNING</span> *** Please fix your application <span class="keyword">to</span> <span class="keyword">use</span> the native API <span class="keyword">of</span> Avahi!</div><div class="line">*** <span class="literal">WARNING</span> *** <span class="keyword">For</span> more information see http://<span class="number">0</span>pointerde/avahi-compat?s=libdns_sd&amp;e=nodejs&amp;f=DNSServiceRegister</div></pre></td></tr></table></figure>
 </li>
 <li><p>Error: dns_sd.DNSServiceRegister dns service error: unknown #613 .运行后有可能会报这个错误.</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install avahi-daemon avahi-discover libnss-mdns libavahi-compat-libdnssd-<span class="built_in">dev</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install </span>avahi-daemon avahi-<span class="keyword">discover </span>libnss-mdns libavahi-compat-libdnssd-dev</div><div class="line">reboot</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="相关链接">相关链接</h4><ul>
+<h4 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h4><ul>
 <li><a href="https://github.com/nfarina/homebridge/issues/784" target="_blank" rel="external">How to create a custom accessory ? #784</a></li>
 <li><a href="https://github.com/KhaosT/HAP-NodeJS/blob/095fddad93255b091768c7117c4fa9928c2cf83f/accessories/TemperatureSensor_accessory.js" target="_blank" rel="external">TemperatureSensor_accessory.js</a></li>
 <li><a href="https://github.com/lagunacomputer/homebridge-CurrentAmbientLightLevel/blob/master/index.js" target="_blank" rel="external">CurrentAmbientLightLevel</a></li>
 </ul>
-<h4 id="参考资料">参考资料</h4><ul>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
 <li><a href="https://support.apple.com/zh-cn/HT207057" target="_blank" rel="external">自动化和远程访问 HomeKit 配件</a></li>
 <li><p><a href="http://forum.ubuntu.org.cn/viewtopic.php?t=151457" target="_blank" rel="external">upgrade 与 dist-upgrade 区别</a></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get upgrade 和 apt-get dist-upgrade 本质上是没有什么不同的。</span><br><span class="line">只不过，dist-upgrade 会识别出当依赖关系改变的情形并作出处理，而upgrade对此情形不处理。</span><br><span class="line">例如软件包 <span class="tag">a</span> 原先依赖 <span class="tag">b</span> c d，但是在源里面可能已经升级了，现在是 <span class="tag">a</span> 依赖 <span class="tag">b</span> c e。这种情况下，dist-upgrade 会删除 d 安装 e，并把 <span class="tag">a</span> 软件包升级，而 upgrade 会认为依赖关系改变而拒绝升级 <span class="tag">a</span> 软件包。</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">apt-get upgrade 和 apt-get dist-upgrade 本质上是没有什么不同的。</div><div class="line">只不过，dist-upgrade 会识别出当依赖关系改变的情形并作出处理，而upgrade对此情形不处理。</div><div class="line">例如软件包 <span class="selector-tag">a</span> 原先依赖 <span class="selector-tag">b</span> c d，但是在源里面可能已经升级了，现在是 <span class="selector-tag">a</span> 依赖 <span class="selector-tag">b</span> c e。这种情况下，dist-upgrade 会删除 d 安装 e，并把 <span class="selector-tag">a</span> 软件包升级，而 upgrade 会认为依赖关系改变而拒绝升级 <span class="selector-tag">a</span> 软件包。</div></pre></td></tr></table></figure>
 </li>
 <li><p><a href="https://developer.apple.com/reference/homekit/hmaccessorycategory/2315143-accessory_category_types" target="_blank" rel="external">accessory_category_types</a></p>
 </li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="]]>
+    
+      &lt;figure class=&quot;highlight less&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
+    
     </summary>
+    
     
       <category term="IOT" scheme="http://willnewii.github.io/tags/IOT/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[树莓派与homebridge  (一)  什么是HomeKit]]></title>
+    <title>树莓派与homebridge  (一)  什么是HomeKit</title>
     <link href="http://willnewii.github.io/20161229/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8Ehomebridge-%E4%B8%80-%E4%BB%80%E4%B9%88%E6%98%AFHomeKit/"/>
     <id>http://willnewii.github.io/20161229/树莓派与homebridge-一-什么是HomeKit/</id>
     <published>2016-12-29T08:21:00.000Z</published>
     <updated>2016-12-29T08:39:52.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="什么是HomeKit">什么是HomeKit</h3><p>HomeKit是苹果在2014年推出的智能家居平台.<br>然后没有然后了…我在网上找了半天也没有通俗定义homekit的话.个人理解就是一个苹果指定的智能家居标准.  </p>
+    
+    <content type="html"><![CDATA[<h3 id="什么是HomeKit"><a href="#什么是HomeKit" class="headerlink" title="什么是HomeKit"></a>什么是HomeKit</h3><p>HomeKit是苹果在2014年推出的智能家居平台.<br>然后没有然后了…我在网上找了半天也没有通俗定义homekit的话.个人理解就是一个苹果指定的智能家居标准.  </p>
 <p><strong>直到今年的iOS10. HomeKit 才变得不那么抽象,因为他有了新的入口,‘家庭’app.</strong></p>
-<h3 id="什么是家庭_App">什么是家庭 App</h3><p>今年iOS更新以后,有没有发现手机里多了一个跟Watch/视频 一样“没用”的app 叫 家庭.<br>来看看官方的定义</p>
+<h3 id="什么是家庭-App"><a href="#什么是家庭-App" class="headerlink" title="什么是家庭 App"></a>什么是家庭 App</h3><p>今年iOS更新以后,有没有发现手机里多了一个跟Watch/视频 一样“没用”的app 叫 家庭.<br>来看看官方的定义</p>
 <ul>
 <li>通过家庭 app，你就可以通过喜爱的 iOS 设备，安心掌控各种 HomeKit 配件。比如：用 iPhone 关灯，从 iPad 上看看门口是谁。家庭 app 能让你所有连接的设备，更高效、智能地为你工作。</li>
 <li>只需轻轻一点，各个房间就能被你一手掌控。家庭 app 会按照房间将配件分组，你可以根据它们在家中的位置轻松操控。你甚至可以对 Siri 说“关掉客厅的灯”或是“打开楼上的空调”。通过<br>3D Touch，按住一个图标，就能执行调暗灯光或是调节恒温器之类更复杂的任务。</li>
@@ -142,37 +153,41 @@
 <li>车库门 -&gt; 没车…我猜应该和窗帘类似的使用场景吧.不过首先你要有辆车,其次还要有个带车库…带车库…带车库…的房子！！！(好了,醒醒吧少年,你就当没见过这行)</li>
 <li>门锁/防盗系统 因为不是从业者,对这类安全程度还是有疑虑,不在讨论范围之内.</li>
 </ul>
-<h3 id="HomeKit_+_Home_App_+_远程控制">HomeKit + Home App + 远程控制</h3><p>再来看一张图<br><img src="http://obfmtiyt5.bkt.clouddn.com/iOS_-_Home_-_Apple__%E4%B8%AD%E5%9B%BD_%202.jpg" alt=""><br>在以后,iPhone会成为你房子的遥控器.</p>
+<h3 id="HomeKit-Home-App-远程控制"><a href="#HomeKit-Home-App-远程控制" class="headerlink" title="HomeKit + Home App + 远程控制"></a>HomeKit + Home App + 远程控制</h3><p>再来看一张图<br><img src="http://obfmtiyt5.bkt.clouddn.com/iOS_-_Home_-_Apple__%E4%B8%AD%E5%9B%BD_%202.jpg" alt=""><br>在以后,iPhone会成为你房子的遥控器.</p>
 <p>再来看一张图<br><img src="http://obfmtiyt5.bkt.clouddn.com/iOS_-_Home_-_Apple__%E4%B8%AD%E5%9B%BD_%203.jpg" alt=""><br>这应该是个装逼利器吧… 对这siri说,把灯关了…他就给关了.</p>
 <p>PS:苹果还可以通过一个常驻家中的设备(装有 tvOS 10 的 Apple TV（第 4 代）或者装有 iOS 10 的 iPad),作为家居中枢。这样你就可以通过自己的手机远程控制家里的设备了.当然,这些目前看起来更像是痒点,还不是痛点.</p>
 <p>而这些只需要一点点配置.苹果都会为你准备好.我不是果粉…但不得不说,在这个墙内,你要有逼格,你要有生态,还要有体验,还要有足够智能.好像苹果是上佳的选择.(小米的没有体验过,所以就不说是唯一啦)</p>
 <p>如果你是土豪,后面的不用看了.去苹果官网选官方配件吧…</p>
-<h3 id="树莓派&amp;HomeBridge">树莓派&amp;HomeBridge</h3><p>Homebridge是一个轻量级NodeJS服务器。可以在您的家庭网络上运行,模拟iOS HomeKit API。它支持插件,为数以千计的模块提供了一个从HomeKit到各种第三方’智能家居’设备制造商的桥梁.</p>
+<h3 id="树莓派-amp-HomeBridge"><a href="#树莓派-amp-HomeBridge" class="headerlink" title="树莓派&amp;HomeBridge"></a>树莓派&amp;HomeBridge</h3><p>Homebridge是一个轻量级NodeJS服务器。可以在您的家庭网络上运行,模拟iOS HomeKit API。它支持插件,为数以千计的模块提供了一个从HomeKit到各种第三方’智能家居’设备制造商的桥梁.</p>
 <p>小米就可以通过它,来接入到homekit中.</p>
 <p>而安装了HomeBridge的树莓派,在配合树莓派的GPIO能力,就能玩出很多花样.</p>
-<h3 id="参考资料">参考资料</h3><ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li><a href="http://baike.baidu.com/link?url=SXmlnQYkFiZz72-7Z_GEXmtnf7ZXZCnG0k-PQmI2mzDxGJcq_r1Ma_0R6XyWW_bPdtVd1GkekbJcdcCjgwexbXQH7HYmFdH5ZdO5sW3cpnu" target="_blank" rel="external">百度百科-HomeKit</a></li>
 <li><a href="http://www.apple.com/cn/ios/home/" target="_blank" rel="external">Apple-Home App</a></li>
 <li><a href="https://support.apple.com/zh-cn/HT207057" target="_blank" rel="external">Apple-自动化和远程访问 HomeKit 配件</a></li>
 <li><a href="https://support.apple.com/zh-cn/HT204903" target="_blank" rel="external">Apple-查找兼容 Apple HomeKit 的配件</a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="什么是HomeKit">什么是HomeKit</h3><p>HomeKit是苹果在2014年推出的智能家居平台.<br>然后没有然后了…我在网上找了半天也没有通俗定义homekit的话.个人理解就是一个苹果指定的智能家居标准.  </p>
-<p><strong>直]]>
+    
+      &lt;h3 id=&quot;什么是HomeKit&quot;&gt;&lt;a href=&quot;#什么是HomeKit&quot; class=&quot;headerlink&quot; title=&quot;什么是HomeKit&quot;&gt;&lt;/a&gt;什么是HomeKit&lt;/h3&gt;&lt;p&gt;HomeKit是苹果在2014年推出的智能家居平台.&lt;br&gt;然后没有然后了…
+    
     </summary>
+    
     
       <category term="IOT" scheme="http://willnewii.github.io/tags/IOT/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[vimium 快捷键]]></title>
+    <title>vimium 快捷键</title>
     <link href="http://willnewii.github.io/20161207/imium-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20161207/imium-快捷键/</id>
     <published>2016-12-07T07:30:00.000Z</published>
     <updated>2016-12-19T09:59:55.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="滚动操作">滚动操作</h4><table>
+    
+    <content type="html"><![CDATA[<h4 id="滚动操作"><a href="#滚动操作" class="headerlink" title="滚动操作"></a>滚动操作</h4><table>
 <thead>
 <tr>
 <th>快捷键</th>
@@ -210,7 +225,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="标签操作">标签操作</h4><table>
+<h4 id="标签操作"><a href="#标签操作" class="headerlink" title="标签操作"></a>标签操作</h4><table>
 <thead>
 <tr>
 <th>快捷键</th>
@@ -249,37 +264,36 @@
 </tbody>
 </table>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="滚动操作">滚动操作</h4><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>j</td>
-<td>向下细微滚动窗口</td>
-</tr>
-<tr>
-<td]]>
+    
+      &lt;h4 id=&quot;滚动操作&quot;&gt;&lt;a href=&quot;#滚动操作&quot; class=&quot;headerlink&quot; title=&quot;滚动操作&quot;&gt;&lt;/a&gt;滚动操作&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbo
+    
     </summary>
+    
     
       <category term="cheatsheet" scheme="http://willnewii.github.io/tags/cheatsheet/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[intellij IDEA 快捷键]]></title>
+    <title>intellij IDEA 快捷键</title>
     <link href="http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20161202/intellij IDEA 快捷键/</id>
     <published>2016-12-02T07:03:00.000Z</published>
     <updated>2016-12-19T10:02:34.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="js:忽略相关目录">js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
-<h4 id="查看改行代码的修改记录">查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
-<h4 id="抽取">抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
-<h4 id="函数重构Refactor">函数重构Refactor</h4><h4 id="让主先行">让主先行</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先写你关心的,再写动词</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.sout</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.return</span></span><br><span class="line"> name<span class="class">.null</span> 			<span class="comment">//判断name==null</span></span><br><span class="line"> name<span class="class">.nn</span>   			<span class="comment">//判断name!=null</span></span><br><span class="line"> count<span class="class">.for</span>			<span class="comment">//for循环</span></span><br></pre></td></tr></table></figure>
+    
+    <content type="html"><![CDATA[<h4 id="js-忽略相关目录"><a href="#js-忽略相关目录" class="headerlink" title="js:忽略相关目录"></a>js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
+<h4 id="查看改行代码的修改记录"><a href="#查看改行代码的修改记录" class="headerlink" title="查看改行代码的修改记录"></a>查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
+<h4 id="抽取"><a href="#抽取" class="headerlink" title="抽取"></a>抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
+<h4 id="函数重构Refactor"><a href="#函数重构Refactor" class="headerlink" title="函数重构Refactor"></a>函数重构Refactor</h4><h4 id="让主先行"><a href="#让主先行" class="headerlink" title="让主先行"></a>让主先行</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//先写你关心的,再写动词</span></div><div class="line"> <span class="string">"hello"</span><span class="selector-class">.sout</span></div><div class="line"> <span class="string">"hello"</span><span class="selector-class">.return</span></div><div class="line"> name<span class="selector-class">.null</span> 			<span class="comment">//判断name==null</span></div><div class="line"> name<span class="selector-class">.nn</span>   			<span class="comment">//判断name!=null</span></div><div class="line"> count<span class="selector-class">.for</span>			<span class="comment">//for循环</span></div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -369,7 +383,7 @@
 </tbody>
 </table>
 <p><strong>add:2016-12-02</strong></p>
-<h4 id="常用快捷键">常用快捷键</h4><table>
+<h4 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h4><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -490,7 +504,7 @@
 </tbody>
 </table>
 <a id="more"></a>
-<h4 id="跳转">跳转</h4><table>
+<h4 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h4><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -544,7 +558,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="Code">Code</h4><table>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -602,7 +616,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="书签">书签</h4><table>
+<h4 id="书签"><a href="#书签" class="headerlink" title="书签"></a>书签</h4><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -632,7 +646,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="插件">插件</h4><table>
+<h4 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h4><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -660,228 +674,231 @@
 </tbody>
 </table>
 <p><strong>add:215-11-25</strong></p>
-<h4 id="参考">参考</h4><ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
 <li><a href="http://www.jianshu.com/p/364b94a664ff" target="_blank" rel="external">Intellij IDEA 一些不为人知的技巧</a></li>
 <li><a href="https://v.qq.com/x/page/t0163iqlus1.html" target="_blank" rel="external">操作视频1</a></li>
 <li><a href="https://github.com/lightningMan/config/blob/master/intellij/shortcut-readme.md" target="_blank" rel="external">shortcut-readme</a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="js:忽略相关目录">js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
-<h4 id="查看改行代码的修改记录">查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
-<h4 id="抽取">抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
-<h4 id="函数重构Refactor">函数重构Refactor</h4><h4 id="让主先行">让主先行</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先写你关心的,再写动词</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.sout</span></span><br><span class="line"> <span class="string">"hello"</span><span class="class">.return</span></span><br><span class="line"> name<span class="class">.null</span> 			<span class="comment">//判断name==null</span></span><br><span class="line"> name<span class="class">.nn</span>   			<span class="comment">//判断name!=null</span></span><br><span class="line"> count<span class="class">.for</span>			<span class="comment">//for循环</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>快捷键</th>
-<th>位置</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>跳转到父类</td>
-<td>cmd+u</td>
-<td>Navigate-&gt;Super method</td>
-</tr>
-<tr>
-<td>跳转到定义</td>
-<td>cmd+b</td>
-<td>Navigate-&gt;declaration</td>
-</tr>
-<tr>
-<td>跳转到实现</td>
-<td>cmd+alt+b</td>
-<td>Navigate-&gt;implementation(s)</td>
-</tr>
-<tr>
-<td>返回</td>
-<td>cmd+[</td>
-<td>Navigate-&gt;Back</td>
-</tr>
-<tr>
-<td>显示文件路径</td>
-<td>alt+cmd+F12</td>
-<td>Navigate-&gt;File Path</td>
-<td>不用再目录里右键Reveal in Finder</td>
-</tr>
-<tr>
-<td>double shift</td>
-<td></td>
-<td>search Everywhere</td>
-</tr>
-<tr>
-<td>code</td>
-<td></td>
-</tr>
-<tr>
-<td>增强选择-扩大</td>
-<td></td>
-<td>Edit-&gt;extend selection</td>
-</tr>
-<tr>
-<td>增强选择-收缩</td>
-<td></td>
-<td>Edit-&gt;shrink selection</td>
-</tr>
-<tr>
-<td>显示参数信息</td>
-<td>cmd+p</td>
-<td>View-&gt;Paramaeter Info</td>
-</tr>
-<tr>
-<td>提取</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>变量提取</td>
-<td>alt+cmd+v</td>
-<td>Refactor-&gt;Extract-&gt;Variable</td>
-</tr>
-<tr>
-<td>方法提取</td>
-<td>alt+cmd+m</td>
-<td>Refactor-&gt;Extract-&gt;Method</td>
-</tr>
-<tr>
-<td>移动</td>
-<td></td>
-</tr>
-<tr>
-<td>单词移动</td>
-<td>alt</td>
-</tr>
-<tr>
-<td>行尾首</td>
-<td>cmd</td>
-</tr>
-</tbody>
-</table>
-<p><strong>add:2016-12-02</strong></p>
-<h4 id="常用快捷键">常用快捷键</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>复制当前行</td>
-<td>duplicate Line or block</td>
-<td>cmd+d</td>
-<td></td>
-</tr>
-<tr>
-<td>删除当前行</td>
-<td>delete line</td>
-<td>cmd+backspace</td>
-<td></td>
-</tr>
-<tr>
-<td>上下移动当前行</td>
-<td>move line up/down</td>
-<td>alt+shift+up/down</td>
-<td></td>
-</tr>
-<tr>
-<td>移动到指定行</td>
-<td>Line</td>
-<td>cmd+g</td>
-<td></td>
-</tr>
-<tr>
-<td>多文本选择</td>
-<td>add selection for next occurrence</td>
-<td>Ctrl+G</td>
-<td></td>
-</tr>
-<tr>
-<td>列选择</td>
-<td></td>
-<td>Alt+MouseDrag</td>
-<td></td>
-</tr>
-<tr>
-<td>当前文件方法列表</td>
-<td>File Structure</td>
-<td>cmd+F12</td>
-<td></td>
-</tr>
-<tr>
-<td>合并行和文字</td>
-<td>join lines</td>
-<td>ctrl+shift+j</td>
-<td></td>
-</tr>
-<tr>
-<td>代码提示</td>
-<td>basic</td>
-<td>ctrl+/</td>
-<td>记得按tab…</td>
-</tr>
-<tr>
-<td>显示文件路径</td>
-<td>File Path</td>
-<td>alt+cmd+F12</td>
-<td>不用再目录里右键Reveal in Finder</td>
-</tr>
-<tr>
-<td>路径中查找</td>
-<td>Find in Path</td>
-<td>shift+ctrl+F</td>
-<td>有个预览功能,屌</td>
-</tr>
-<tr>
-<td>方法调用路径</td>
-<td></td>
-<td>ctrl+alt+h</td>
-<td></td>
-</tr>
-<tr>
-<td>显示参数信息</td>
-<td>Parameter Info</td>
-<td>cmd+p</td>
-<td>显示方法需要的参数</td>
-</tr>
-<tr>
-<td>打开文件</td>
-<td>class</td>
-<td>cmd+o</td>
-<td></td>
-</tr>
-<tr>
-<td>重写方法列表</td>
-<td>override method</td>
-<td>cmd+n</td>
-<td></td>
-</tr>
-<tr>
-<td>快速查看定义</td>
-<td>quick definition</td>
-<td>cmd+shift+i</td>
-<td></td>
-</tr>
-<tr>
-<td>扩大/收缩选中部分</td>
-<td>Collapse</td>
-<td>cmd+ -/+</td>
-<td></td>
-</tr>
-<tr>
-<td>大小写转换</td>
-<td>Unshelve</td>
-<td>cmd+shift+u</td>
-<td></td>
-</tr>
-</tbody>
-</table>]]>
+    
+      &lt;h4 id=&quot;js-忽略相关目录&quot;&gt;&lt;a href=&quot;#js-忽略相关目录&quot; class=&quot;headerlink&quot; title=&quot;js:忽略相关目录&quot;&gt;&lt;/a&gt;js:忽略相关目录&lt;/h4&gt;&lt;p&gt;在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&amp;gt;Directories 里把不相关的目录过滤掉(excluded).&lt;/p&gt;
+&lt;h4 id=&quot;查看改行代码的修改记录&quot;&gt;&lt;a href=&quot;#查看改行代码的修改记录&quot; class=&quot;headerlink&quot; title=&quot;查看改行代码的修改记录&quot;&gt;&lt;/a&gt;查看改行代码的修改记录&lt;/h4&gt;&lt;p&gt;移动到行号位置,右键选择annotate.&lt;/p&gt;
+&lt;h4 id=&quot;抽取&quot;&gt;&lt;a href=&quot;#抽取&quot; class=&quot;headerlink&quot; title=&quot;抽取&quot;&gt;&lt;/a&gt;抽取&lt;/h4&gt;&lt;p&gt;alt+cmd+v  变量抽取&lt;br&gt;alt+cmd+f  成员变量抽取&lt;br&gt;alt+cmd+m  方法   抽取&lt;/p&gt;
+&lt;h4 id=&quot;函数重构Refactor&quot;&gt;&lt;a href=&quot;#函数重构Refactor&quot; class=&quot;headerlink&quot; title=&quot;函数重构Refactor&quot;&gt;&lt;/a&gt;函数重构Refactor&lt;/h4&gt;&lt;h4 id=&quot;让主先行&quot;&gt;&lt;a href=&quot;#让主先行&quot; class=&quot;headerlink&quot; title=&quot;让主先行&quot;&gt;&lt;/a&gt;让主先行&lt;/h4&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//先写你关心的,再写动词&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &lt;span class=&quot;string&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.sout&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &lt;span class=&quot;string&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.return&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; name&lt;span class=&quot;selector-class&quot;&gt;.null&lt;/span&gt; 			&lt;span class=&quot;comment&quot;&gt;//判断name==null&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; name&lt;span class=&quot;selector-class&quot;&gt;.nn&lt;/span&gt;   			&lt;span class=&quot;comment&quot;&gt;//判断name!=null&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; count&lt;span class=&quot;selector-class&quot;&gt;.for&lt;/span&gt;			&lt;span class=&quot;comment&quot;&gt;//for循环&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;位置&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;跳转到父类&lt;/td&gt;
+&lt;td&gt;cmd+u&lt;/td&gt;
+&lt;td&gt;Navigate-&amp;gt;Super method&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;跳转到定义&lt;/td&gt;
+&lt;td&gt;cmd+b&lt;/td&gt;
+&lt;td&gt;Navigate-&amp;gt;declaration&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;跳转到实现&lt;/td&gt;
+&lt;td&gt;cmd+alt+b&lt;/td&gt;
+&lt;td&gt;Navigate-&amp;gt;implementation(s)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;返回&lt;/td&gt;
+&lt;td&gt;cmd+[&lt;/td&gt;
+&lt;td&gt;Navigate-&amp;gt;Back&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;显示文件路径&lt;/td&gt;
+&lt;td&gt;alt+cmd+F12&lt;/td&gt;
+&lt;td&gt;Navigate-&amp;gt;File Path&lt;/td&gt;
+&lt;td&gt;不用再目录里右键Reveal in Finder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double shift&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;search Everywhere&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;code&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;增强选择-扩大&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Edit-&amp;gt;extend selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;增强选择-收缩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Edit-&amp;gt;shrink selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;显示参数信息&lt;/td&gt;
+&lt;td&gt;cmd+p&lt;/td&gt;
+&lt;td&gt;View-&amp;gt;Paramaeter Info&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;提取&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;变量提取&lt;/td&gt;
+&lt;td&gt;alt+cmd+v&lt;/td&gt;
+&lt;td&gt;Refactor-&amp;gt;Extract-&amp;gt;Variable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方法提取&lt;/td&gt;
+&lt;td&gt;alt+cmd+m&lt;/td&gt;
+&lt;td&gt;Refactor-&amp;gt;Extract-&amp;gt;Method&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;移动&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;单词移动&lt;/td&gt;
+&lt;td&gt;alt&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;行尾首&lt;/td&gt;
+&lt;td&gt;cmd&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;add:2016-12-02&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;常用快捷键&quot;&gt;&lt;a href=&quot;#常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;常用快捷键&quot;&gt;&lt;/a&gt;常用快捷键&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;action&lt;/th&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;复制当前行&lt;/td&gt;
+&lt;td&gt;duplicate Line or block&lt;/td&gt;
+&lt;td&gt;cmd+d&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;删除当前行&lt;/td&gt;
+&lt;td&gt;delete line&lt;/td&gt;
+&lt;td&gt;cmd+backspace&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上下移动当前行&lt;/td&gt;
+&lt;td&gt;move line up/down&lt;/td&gt;
+&lt;td&gt;alt+shift+up/down&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;移动到指定行&lt;/td&gt;
+&lt;td&gt;Line&lt;/td&gt;
+&lt;td&gt;cmd+g&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;多文本选择&lt;/td&gt;
+&lt;td&gt;add selection for next occurrence&lt;/td&gt;
+&lt;td&gt;Ctrl+G&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;列选择&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Alt+MouseDrag&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;当前文件方法列表&lt;/td&gt;
+&lt;td&gt;File Structure&lt;/td&gt;
+&lt;td&gt;cmd+F12&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合并行和文字&lt;/td&gt;
+&lt;td&gt;join lines&lt;/td&gt;
+&lt;td&gt;ctrl+shift+j&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;代码提示&lt;/td&gt;
+&lt;td&gt;basic&lt;/td&gt;
+&lt;td&gt;ctrl+/&lt;/td&gt;
+&lt;td&gt;记得按tab…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;显示文件路径&lt;/td&gt;
+&lt;td&gt;File Path&lt;/td&gt;
+&lt;td&gt;alt+cmd+F12&lt;/td&gt;
+&lt;td&gt;不用再目录里右键Reveal in Finder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;路径中查找&lt;/td&gt;
+&lt;td&gt;Find in Path&lt;/td&gt;
+&lt;td&gt;shift+ctrl+F&lt;/td&gt;
+&lt;td&gt;有个预览功能,屌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方法调用路径&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;ctrl+alt+h&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;显示参数信息&lt;/td&gt;
+&lt;td&gt;Parameter Info&lt;/td&gt;
+&lt;td&gt;cmd+p&lt;/td&gt;
+&lt;td&gt;显示方法需要的参数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;打开文件&lt;/td&gt;
+&lt;td&gt;class&lt;/td&gt;
+&lt;td&gt;cmd+o&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重写方法列表&lt;/td&gt;
+&lt;td&gt;override method&lt;/td&gt;
+&lt;td&gt;cmd+n&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;快速查看定义&lt;/td&gt;
+&lt;td&gt;quick definition&lt;/td&gt;
+&lt;td&gt;cmd+shift+i&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;扩大/收缩选中部分&lt;/td&gt;
+&lt;td&gt;Collapse&lt;/td&gt;
+&lt;td&gt;cmd+ -/+&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大小写转换&lt;/td&gt;
+&lt;td&gt;Unshelve&lt;/td&gt;
+&lt;td&gt;cmd+shift+u&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
     
     </summary>
+    
     
       <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
     
@@ -890,11 +907,12 @@
   </entry>
   
   <entry>
-    <title><![CDATA[github.io 自定义域名]]></title>
+    <title>github.io 自定义域名</title>
     <link href="http://willnewii.github.io/20161201/github-io-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/"/>
     <id>http://willnewii.github.io/20161201/github-io-自定义域名/</id>
     <published>2016-12-01T08:00:00.000Z</published>
     <updated>2016-12-07T07:30:23.000Z</updated>
+    
     <content type="html"><![CDATA[<p>最近想把github.io的页面绑定一个域名,看了一下教程,操作如下:</p>
 <ol>
 <li><p>首先在你的username.github.io项目页面,点击settings.Options-&gt;GitHub Pages-&gt;Custom domain 填写上你需要绑定的域名,然后save. 设置完,你在访问原pages域名应该会自动跳转的你刚填写的域名上,但是没有东西…因为你还没有添加映射.</p>
@@ -908,24 +926,29 @@
 </li>
 </ol>
 <p>这样设置完,你就可以通过自己的域名进行访问了.</p>
-<h4 id="参考">参考</h4><p><a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">using-a-custom-domain-with-github-pages</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">using-a-custom-domain-with-github-pages</a></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>最近想把github.io的页面绑定一个域名,看了一下教程,操作如下:</p>
-<ol>
-<li><p>首先在你的username.github.io项目页面,点击settings.Options-&gt;GitHub Pages-&gt;Custom domain 填写上]]>
+    
+      &lt;p&gt;最近想把github.io的页面绑定一个域名,看了一下教程,操作如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;首先在你的username.github.io项目页面,点击settings.Options-&amp;gt;GitHub Pages-&amp;gt;Custom domain 填写上
+    
     </summary>
+    
     
       <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[选个dock真难呀...]]></title>
+    <title>选个dock真难呀...</title>
     <link href="http://willnewii.github.io/20161201/%E9%80%89%E4%B8%AAdock%E7%9C%9F%E9%9A%BE%E5%91%80/"/>
     <id>http://willnewii.github.io/20161201/选个dock真难呀/</id>
     <published>2016-12-01T04:19:00.000Z</published>
     <updated>2016-12-07T07:29:43.000Z</updated>
+    
     <content type="html"><![CDATA[<p>自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&gt;belkin的<a href="http://www.belkin.com/us/F4U085/p/P-F4U085/" target="_blank" rel="external">Thunderbolt™ 2 Express Dock HD with Cable</a>,一见倾心,一见钟情！！！!然后就深深的中毒了.思前想后一个月还是买了.</p>
 <p>这个设备提供了2个雷电口(因为有一个雷电口要连接主机,其实只有一个),1个hdmi,3个usb,还有耳机口.<br>本来是以为可以通过1个HDMI连接一台显示器,再通过一个雷电口转接线,再连接另外一个显示器.谁知道结果是只有一个显示器工作.本来是因为连接线或者显示设备的问题.就一个搜索,后来在<a href="http://www.caldigit.com/thunderbolt-2-dock-TS2/index-cn.asp" target="_blank" rel="external">thunderbolt-2-dock-TS2</a>(另外一款同类型产品)的官网找到了解释.</p>
 <p><strong>要同时支援两个屏幕输出的先决条件为，其中一台必需是Thunderbolt显示器，而另一台则是非Thunderbolt显示器(HDMI, DVI, mDP)。如果想要同时使用两台非Thunderbolt的显示器时，则必须确定在同一个菊链群组中除了TS2还有其他的Thunderbolt设备，再藉由此设备的连接埠串联第二台非Thunderbolt显示器。 (例如，电脑+CalDigit TS2+另一部Thunderbolt设备。)</strong></p>
@@ -935,38 +958,47 @@
 <li>组一个菊花链群组.我理解的就是你要有两台dock类型的设备,各自连上一个显示器.或者是自己的显示器支持菊花链,貌似也可以.(⊙o⊙)…听起来很复杂对不对…这个我也没有实践过,所以实施难度不得而知.</li>
 </ol>
 <p>总结:单凭一个dock,外接两个显示器,基本上不可行(要不你有苹果显示器,要不你用两个dock组一个群组).而且,这个结论应该是针对同类型的dock,而不止belkin一家.最新款的Thunderbolt™ 3 Express Dock HD with Cable,不再讨论范围内，</p>
-<h3 id="dell_d3100"><a href="http://accessories.ap.dell.com/sna/productdetail.aspx?c=cn&amp;l=zh&amp;s=dhs&amp;cs=cndhs1&amp;sku=452-11717" target="_blank" rel="external">dell d3100</a></h3><p>这是在一顿查找过程中看到的第二个类型的dock.基于DisplayLink<a href="http://baike.baidu.com/link?url=cDRcvhQBFn8ORoaqRJjH-G9yUrrXG_us5VpwD7vocTmmukraiiASa4cIfbV7vAXvfxbjb2jYc5tuQSMaICjjd8tybZV3nR5eSvOkxmpOl5m" target="_blank" rel="external">(百度百科)</a>技术.</p>
+<h3 id="dell-d3100"><a href="#dell-d3100" class="headerlink" title="dell d3100"></a><a href="http://accessories.ap.dell.com/sna/productdetail.aspx?c=cn&amp;l=zh&amp;s=dhs&amp;cs=cndhs1&amp;sku=452-11717" target="_blank" rel="external">dell d3100</a></h3><p>这是在一顿查找过程中看到的第二个类型的dock.基于DisplayLink<a href="http://baike.baidu.com/link?url=cDRcvhQBFn8ORoaqRJjH-G9yUrrXG_us5VpwD7vocTmmukraiiASa4cIfbV7vAXvfxbjb2jYc5tuQSMaICjjd8tybZV3nR5eSvOkxmpOl5m" target="_blank" rel="external">(百度百科)</a>技术.</p>
 <p>DisplayLink是一个通过USB接口实现显示器连接到电脑的连接技术，可以非常简单、方便的连接电脑和多个显示设备。该技术可以通过USB接口扩展虚拟的电脑的桌面。目前DisplayLink技术最多可以支持6台显示器同时显示32位色彩的任意分辨率画面。</p>
 <p>跟贝尔金们相比,一个是基于雷电接口,一个是基于USB.听起来是low了好多…不过没有连接上的限制.而且目前以前的方案就这两种.于是就入手了一台.</p>
 <p>今天刚到货,通过两个HDMI接口,连接两台显示器,然后一个usb连接测试手机,一个usb连接键盘,一个耳机口.基本完成了我之前对belkin所预期的任务.而且现在air还空出来了一个雷电口,爽~</p>
 <p>PS：在网上看到说,USB在数据传输上本来不如雷电的,在扩展出去可能会更慢,甚至影响使用.如果你只是需要一个快速传输数据的hub,应该belkin们更适合.</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&gt;belkin的<a href="http://www.belkin.com/us/F4U085/p/P-F4U085/" target="_blank" ]]>
+    
+      &lt;p&gt;自己的电脑是14年的macbook air.最近想外接两个屏幕试试,于是就在网上找能支持的设备.后来就看到了他-&amp;gt;belkin的&lt;a href=&quot;http://www.belkin.com/us/F4U085/p/P-F4U085/&quot; target=&quot;_blank&quot; 
+    
     </summary>
+    
     
       <category term="设备" scheme="http://willnewii.github.io/tags/%E8%AE%BE%E5%A4%87/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[关于Thunderbolt]]></title>
+    <title>关于Thunderbolt</title>
     <link href="http://willnewii.github.io/20161111/Thunderbolt/"/>
     <id>http://willnewii.github.io/20161111/Thunderbolt/</id>
     <published>2016-11-11T03:30:00.000Z</published>
     <updated>2016-12-07T07:29:58.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="名词解释">名词解释</h4><p>美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命名为“Thunderbolt（雷电）”。Thunderbolt的研发初衷是为了替代并统一目前电脑上数量繁多性能参差不齐的扩展接口，比如SCSI, SATA, USB, FireWire和 PCI Express。Thunderbolt 是苹果与英特尔（Intel）的合作产物，由Intel开发，通过和苹果的技术合作推向市场。<br><strong>原来不是苹果独家</strong></p>
-<h4 id="原理性能">原理性能</h4><p>Thunderbolt连接技术融合了PCI Express数据传输技术和DisplayPort显示技术，由一颗Intel专用控制芯片进行驱动，通过PCI Express x4、DisplayPort总线与系统芯片组相连。其中PCI Express用于数据传输，DisplayPort则用于显示信号传输，亦可通过直接连接英特尔处理器集成图形核心进行DisplayPort显示输出。<br><strong>所以他可以传输图像,又可以传输数据</strong></p>
-<h4 id="Thunderbolt_3">Thunderbolt 3</h4><p>Thunderbolt和USB同样是数据端口。英特尔周二宣布,Thunderbolt 3将改变其形式与USB Type-C统一端口。将不再使用以前的方块式的接口，而是兼容USB3.1的标准，但是仍会保留标志性的闪电logo。<br><strong>Thunderbolt3兼容USB Type-C,就是长的像Type-C 的Thunderbolt3</strong></p>
-<h4 id="菊花链(daisy_chain)">菊花链(daisy chain)</h4><p>像给自己的air连接两台显示器.<a href="https://www.zhihu.com/question/22600143" target="_blank" rel="external">Macbook Air 能否连双显示器（非苹果显示器）？</a></p>
-<h4 id="资料">资料</h4><ul>
+    
+    <content type="html"><![CDATA[<h4 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h4><p>美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命名为“Thunderbolt（雷电）”。Thunderbolt的研发初衷是为了替代并统一目前电脑上数量繁多性能参差不齐的扩展接口，比如SCSI, SATA, USB, FireWire和 PCI Express。Thunderbolt 是苹果与英特尔（Intel）的合作产物，由Intel开发，通过和苹果的技术合作推向市场。<br><strong>原来不是苹果独家</strong></p>
+<h4 id="原理性能"><a href="#原理性能" class="headerlink" title="原理性能"></a>原理性能</h4><p>Thunderbolt连接技术融合了PCI Express数据传输技术和DisplayPort显示技术，由一颗Intel专用控制芯片进行驱动，通过PCI Express x4、DisplayPort总线与系统芯片组相连。其中PCI Express用于数据传输，DisplayPort则用于显示信号传输，亦可通过直接连接英特尔处理器集成图形核心进行DisplayPort显示输出。<br><strong>所以他可以传输图像,又可以传输数据</strong></p>
+<h4 id="Thunderbolt-3"><a href="#Thunderbolt-3" class="headerlink" title="Thunderbolt 3"></a>Thunderbolt 3</h4><p>Thunderbolt和USB同样是数据端口。英特尔周二宣布,Thunderbolt 3将改变其形式与USB Type-C统一端口。将不再使用以前的方块式的接口，而是兼容USB3.1的标准，但是仍会保留标志性的闪电logo。<br><strong>Thunderbolt3兼容USB Type-C,就是长的像Type-C 的Thunderbolt3</strong></p>
+<h4 id="菊花链-daisy-chain"><a href="#菊花链-daisy-chain" class="headerlink" title="菊花链(daisy chain)"></a>菊花链(daisy chain)</h4><p>像给自己的air连接两台显示器.<a href="https://www.zhihu.com/question/22600143" target="_blank" rel="external">Macbook Air 能否连双显示器（非苹果显示器）？</a></p>
+<h4 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h4><ul>
 <li><a href="http://baike.baidu.com/link?url=6q-lfP_Llb0YKPuXuA1k8oZrKJebV81VXdlch31beke5nJULzGgl1OOs3fAv5VoSP7B01IYCVhpn5UaUYjrfla" target="_blank" rel="external">USB Type-C百度百科</a></li>
 <li><a href="http://www.ggjrw.com/zixun/hulianwang/2015-06-03/3943.html" target="_blank" rel="external">Thunderbolt3兼容USB Type-C，完爆USB 3.1</a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="名词解释">名词解释</h4><p>美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命名为“Thunderbolt（雷电）”。Thunderbolt的研发初衷是为了替代并统一目前电脑上数量繁]]>
+    
+      &lt;h4 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h4&gt;&lt;p&gt;美国当地时间2011年2月24日，英特尔正式发布了已经宣传数月的英特尔实验室产品代号为“Light Peak”技术，并将其命
+    
     </summary>
+    
     
       <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
     
@@ -975,57 +1007,63 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Element]]></title>
+    <title>Element</title>
     <link href="http://willnewii.github.io/20160805/Element/"/>
     <id>http://willnewii.github.io/20160805/Element/</id>
     <published>2016-08-05T10:21:33.000Z</published>
     <updated>2016-08-05T10:24:44.000Z</updated>
+    
     <content type="html"><![CDATA[<ul>
 <li><a href="http://stackoverflow.com/questions/4106538/difference-between-offsetheight-and-clientheight" target="_blank" rel="external">元素位置</a><br><img src="http://obfmtiyt5.bkt.clouddn.com/zWca7.png" alt="1"></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<ul>
-<li><a href="http://stackoverflow.com/questions/4106538/difference-between-offsetheight-and-clientheight" target="_blank" rel="external]]>
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/4106538/difference-between-offsetheight-and-clientheight&quot; target=&quot;_blank&quot; rel=&quot;external
+    
     </summary>
+    
     
   </entry>
   
   <entry>
-    <title><![CDATA[ES6 笔记]]></title>
+    <title>ES6 笔记</title>
     <link href="http://willnewii.github.io/20160727/ES6-%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20160727/ES6-笔记/</id>
     <published>2016-07-27T02:35:00.000Z</published>
     <updated>2016-07-29T02:15:24.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="let_var_const_区别">let var const 区别</h3><h4 id="const">const</h4><ul>
+    
+    <content type="html"><![CDATA[<h3 id="let-var-const-区别"><a href="#let-var-const-区别" class="headerlink" title="let var const 区别"></a>let var const 区别</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
 <li>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。</li>
 </ul>
-<h4 id="const_let">const let</h4><ul>
+<h4 id="const-let"><a href="#const-let" class="headerlink" title="const let"></a>const let</h4><ul>
 <li>let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用)</li>
 <li>let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块)</li>
 <li>const 在声明时必须被赋值</li>
 </ul>
-<h3 id="函数默认值">函数默认值</h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let getFinalPrice = <span class="function"><span class="params">(price, tax=<span class="number">0.7</span>)</span> =&gt;</span> price + price * tax;</span><br><span class="line">getFinalPrice(<span class="number">500</span>); <span class="regexp">//</span> <span class="number">850</span></span><br></pre></td></tr></table></figure>
-<h3 id="模板语法和分隔符">模板语法和分隔符</h3><p>ES6 中有一种十分简洁的方法组装一堆字符串和变量。</p>
+<h3 id="函数默认值"><a href="#函数默认值" class="headerlink" title="函数默认值"></a>函数默认值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> getFinalPrice = <span class="function">(<span class="params">price, tax=<span class="number">0.7</span></span>) =&gt;</span> price + price * tax;</div><div class="line">getFinalPrice(<span class="number">500</span>); <span class="comment">// 850</span></div></pre></td></tr></table></figure>
+<h3 id="模板语法和分隔符"><a href="#模板语法和分隔符" class="headerlink" title="模板语法和分隔符"></a>模板语法和分隔符</h3><p>ES6 中有一种十分简洁的方法组装一堆字符串和变量。</p>
 <ul>
 <li>${ … } 用来渲染一个变量</li>
-<li>` 作为分隔符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="string">'Barret'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`Hi <span class="subst">$&#123;user&#125;</span>!`</span>); <span class="comment">// Hi Barret!</span></span><br></pre></td></tr></table></figure>
+<li>` 作为分隔符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> user = <span class="string">'Barret'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`Hi <span class="subst">$&#123;user&#125;</span>!`</span>); <span class="comment">// Hi Barret!</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="for…of_VS_for…in">for…of VS for…in</h3><p>for…of 用于遍历一个迭代器，如数组：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</span><br><span class="line">nicknames.size = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">of</span> nicknames) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(nickname);</span><br><span class="line">&#125;</span><br><span class="line">Result: di, boo, punkeye</span><br></pre></td></tr></table></figure></p>
-<p>for…in 用来遍历对象中的属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</span><br><span class="line">nicknames.size = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">in</span> nicknames) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(nickname);</span><br><span class="line">&#125;</span><br><span class="line">Result: <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, size</span><br></pre></td></tr></table></figure></p>
-<h3 id="Map_和_WeakMap">Map 和 WeakMap</h3><p>WeakMap 就是一个 Map，只不过它的所有 key 都是弱引用，意思就是 WeakMap 中的东西垃圾回收时不考虑，使用它不用担心内存泄漏问题。</p>
-<h3 id="Set_和_WeakSet">Set 和 WeakSet</h3><p>Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型(number,string,boolean,null,undefined)和引用类型</p>
-<p>可以通过 forEach 和 for…of 来遍历 Set 对象：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mySet.<span class="keyword">forEach</span>((item) =&gt; &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">    <span class="comment">// 1</span></span><br><span class="line">    <span class="comment">// 2</span></span><br><span class="line">    <span class="comment">// 3</span></span><br><span class="line">    <span class="comment">// 'strings'</span></span><br><span class="line">    <span class="comment">// Object &#123; a: 1, b: 2 &#125;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Promises">Promises</h3><p>ES6 对 Promise 有了原生的支持，一个 Promise 是一个等待被异步执行的对象，当它执行完成后，其状态会变成 resolved 或者 rejected。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">if</span> (<span class="comment">/* condition */</span>) &#123;</span><br><span class="line">    <span class="comment">// fulfilled successfully</span></span><br><span class="line">    resolve(<span class="comment">/* value */</span>);  </span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// error, rejected</span></span><br><span class="line">    reject(<span class="comment">/* reason */</span>);  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>每一个 Promise 都有一个 .then 方法，这个方法接受两个参数，第一个是处理 resolved 状态的回调，一个是处理 rejected 状态的回调：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p.<span class="keyword">then</span>(<span class="function"><span class="params">(val)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Resolved"</span>, val),</span><br><span class="line">       <span class="function"><span class="params">(err)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Rejected"</span>, err));</span><br></pre></td></tr></table></figure></p>
-<h3 id="模块化">模块化</h3><h4 id="export,import_命令">export,import 命令</h4><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"><span class="literal">export</span> <span class="keyword">var</span> name = <span class="string">'Rainbow'</span></span><br></pre></td></tr></table></figure>
-<p>ES6将一个文件视为一个模块，上面的模块通过 export 向外输出了一个变量。一个模块也可以同时往外面输出多个变量。<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'Rainbow'</span>;</span><br><span class="line"><span class="keyword">var</span> age = <span class="string">'24'</span>;</span><br><span class="line"><span class="literal">export</span> &#123;name, age&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>定义好模块的输出以后就可以在另外一个模块通过import引用。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//index.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;name, age&#125; <span class="keyword">from</span> <span class="string">'./test.js'</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="整体输入，module指令">整体输入，module指令</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> name;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> age;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>通过 <strong>import * as</strong> 就完成了模块整体的导入。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> test form <span class="string">'./test.js'</span>;</span><br></pre></td></tr></table></figure></p>
-<p>通过指令 <strong>module</strong> 也可以达到整体的输入。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span> test <span class="keyword">from</span> <span class="string">'test.js'</span>;</span><br><span class="line">test.getName();</span><br></pre></td></tr></table></figure></p>
-<h3 id="资源">资源</h3><ul>
+<h3 id="for…of-VS-for…in"><a href="#for…of-VS-for…in" class="headerlink" title="for…of VS for…in"></a>for…of VS for…in</h3><p>for…of 用于遍历一个迭代器，如数组：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</div><div class="line">nicknames.size = <span class="number">3</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">of</span> nicknames) &#123;</div><div class="line">  <span class="built_in">console</span>.log(nickname);</div><div class="line">&#125;</div><div class="line">Result: di, boo, punkeye</div></pre></td></tr></table></figure></p>
+<p>for…in 用来遍历对象中的属性：<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</div><div class="line">nicknames.size = <span class="number">3</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">in</span> nicknames) &#123;</div><div class="line">  <span class="built_in">console</span>.log(nickname);</div><div class="line">&#125;</div><div class="line"><span class="attribute">Result</span>: <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="built_in">size</span></div></pre></td></tr></table></figure></p>
+<h3 id="Map-和-WeakMap"><a href="#Map-和-WeakMap" class="headerlink" title="Map 和 WeakMap"></a>Map 和 WeakMap</h3><p>WeakMap 就是一个 Map，只不过它的所有 key 都是弱引用，意思就是 WeakMap 中的东西垃圾回收时不考虑，使用它不用担心内存泄漏问题。</p>
+<h3 id="Set-和-WeakSet"><a href="#Set-和-WeakSet" class="headerlink" title="Set 和 WeakSet"></a>Set 和 WeakSet</h3><p>Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型(number,string,boolean,null,undefined)和引用类型</p>
+<p>可以通过 forEach 和 for…of 来遍历 Set 对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mySet.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(item);</div><div class="line">    <span class="comment">// 1</span></div><div class="line">    <span class="comment">// 2</span></div><div class="line">    <span class="comment">// 3</span></div><div class="line">    <span class="comment">// 'strings'</span></div><div class="line">    <span class="comment">// Object &#123; a: 1, b: 2 &#125;</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><p>ES6 对 Promise 有了原生的支持，一个 Promise 是一个等待被异步执行的对象，当它执行完成后，其状态会变成 resolved 或者 rejected。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;  </div><div class="line">  <span class="keyword">if</span> (<span class="comment">/* condition */</span>) &#123;</div><div class="line">    <span class="comment">// fulfilled successfully</span></div><div class="line">    resolve(<span class="comment">/* value */</span>);  </div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// error, rejected</span></div><div class="line">    reject(<span class="comment">/* reason */</span>);  </div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>每一个 Promise 都有一个 .then 方法，这个方法接受两个参数，第一个是处理 resolved 状态的回调，一个是处理 rejected 状态的回调：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p.<span class="keyword">then</span>(<span class="function"><span class="params">(val)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Resolved"</span>, val),</div><div class="line">       <span class="function"><span class="params">(err)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Rejected"</span>, err));</div></pre></td></tr></table></figure></p>
+<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><h4 id="export-import-命令"><a href="#export-import-命令" class="headerlink" title="export,import 命令"></a>export,import 命令</h4><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> <span class="keyword">name</span> = <span class="string">'Rainbow'</span></div></pre></td></tr></table></figure>
+<p>ES6将一个文件视为一个模块，上面的模块通过 export 向外输出了一个变量。一个模块也可以同时往外面输出多个变量。<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="keyword">var</span> <span class="keyword">name</span> = <span class="string">'Rainbow'</span>;</div><div class="line"><span class="keyword">var</span> age = <span class="string">'24'</span>;</div><div class="line"><span class="keyword">export</span> <span class="comment">&#123;name, age&#125;</span>;</div></pre></td></tr></table></figure></p>
+<p>定义好模块的输出以后就可以在另外一个模块通过import引用。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">import</span> &#123;name, age&#125; <span class="keyword">from</span> <span class="string">'./test.js'</span></div></pre></td></tr></table></figure></p>
+<h4 id="整体输入，module指令"><a href="#整体输入，module指令" class="headerlink" title="整体输入，module指令"></a>整体输入，module指令</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"> </div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> name;</div><div class="line"> &#125;</div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> age;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>通过 <strong>import * as</strong> 就完成了模块整体的导入。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import * <span class="keyword">as</span> <span class="keyword">test</span> <span class="keyword">form</span> './<span class="keyword">test</span>.js';</div></pre></td></tr></table></figure></p>
+<p>通过指令 <strong>module</strong> 也可以达到整体的输入。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> test <span class="keyword">from</span> <span class="string">'test.js'</span>;</div><div class="line">test.getName();</div></pre></td></tr></table></figure></p>
+<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><ul>
 <li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
 </li>
 <li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
@@ -1036,20 +1074,24 @@
 </li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="let_var_const_区别">let var const 区别</h3><h4 id="const">const</h4><ul>
-<li>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Objec]]>
+    
+      &lt;h3 id=&quot;let-var-const-区别&quot;&gt;&lt;a href=&quot;#let-var-const-区别&quot; class=&quot;headerlink&quot; title=&quot;let var const 区别&quot;&gt;&lt;/a&gt;let var const 区别&lt;/h3&gt;&lt;h4 id=&quot;const&quot;&gt;&lt;a
+    
     </summary>
+    
     
   </entry>
   
   <entry>
-    <title><![CDATA[Angular 资料]]></title>
+    <title>Angular 资料</title>
     <link href="http://willnewii.github.io/20160721/Angular-%E8%B5%84%E6%96%99/"/>
     <id>http://willnewii.github.io/20160721/Angular-资料/</id>
     <published>2016-07-21T09:19:00.000Z</published>
     <updated>2016-07-19T02:50:41.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="Angular_2">Angular 2</h4><ul>
+    
+    <content type="html"><![CDATA[<h4 id="Angular-2"><a href="#Angular-2" class="headerlink" title="Angular 2"></a>Angular 2</h4><ul>
 <li><p><a href="https://angular.cn/" target="_blank" rel="external">angular2 中文站</a></p>
 </li>
 <li><p><a href="https://angular.cn/docs/ts/latest/cookbook/ts-to-js.html" target="_blank" rel="external">TS-to-JS</a></p>
@@ -1065,37 +1107,40 @@
 <li><p><a href="https://segmentfault.com/a/1190000003781566" target="_blank" rel="external">前端之Angular2实战：依赖注入详解与应用(2015)</a></p>
 </li>
 </ul>
-<h4 id="Angular_1-x">Angular 1.x</h4><ul>
+<h4 id="Angular-1-x"><a href="#Angular-1-x" class="headerlink" title="Angular 1.x"></a>Angular 1.x</h4><ul>
 <li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="external">Angular文档指南</a></p>
 </li>
 <li><p><a href="https://gitcafe.com/Angularjs/Angularjs-Developer-Guide/blob/master/README.md" target="_blank" rel="external">Angular中文开发指南</a></p>
 </li>
 </ul>
-<h4 id="issue">issue</h4><ul>
+<h4 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h4><ul>
 <li><a href="http://hicc.me/minify-concat-angular-js-with-gulp/" target="_blank" rel="external">使用gulp压缩合并AngularJS项目中js</a></li>
 <li><a href="http://blog.jobbole.com/62249/" target="_blank" rel="external">AngularJS 指令实践指南 </a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="Angular_2">Angular 2</h4><ul>
-<li><p><a href="https://angular.cn/" target="_blank" rel="external">angular2 中文站</a></p>
-</li>
-<li><p>]]>
+    
+      &lt;h4 id=&quot;Angular-2&quot;&gt;&lt;a href=&quot;#Angular-2&quot; class=&quot;headerlink&quot; title=&quot;Angular 2&quot;&gt;&lt;/a&gt;Angular 2&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://angular.cn/&quot; tar
+    
     </summary>
     
-      <category term="angular2" scheme="http://willnewii.github.io/tags/angular2/"/>
     
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="angular2" scheme="http://willnewii.github.io/tags/angular2/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[iTerm2 快捷键]]></title>
+    <title>iTerm2 快捷键</title>
     <link href="http://willnewii.github.io/20160504/iTerm2-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://willnewii.github.io/20160504/iTerm2-快捷键/</id>
     <published>2016-05-04T07:39:00.000Z</published>
     <updated>2016-12-19T10:02:48.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="编辑">编辑</h4><table>
+    
+    <content type="html"><![CDATA[<h4 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h4><table>
 <thead>
 <tr>
 <th>action</th>
@@ -1137,7 +1182,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="标签">标签</h4><table>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><table>
 <thead>
 <tr>
 <th>action</th>
@@ -1167,7 +1212,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="分屏">分屏</h4><table>
+<h4 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h4><table>
 <thead>
 <tr>
 <th>action</th>
@@ -1189,7 +1234,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="其他">其他</h4><table>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><table>
 <thead>
 <tr>
 <th>action</th>
@@ -1228,33 +1273,33 @@
 </tbody>
 </table>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="编辑">编辑</h4><table>
-<thead>
-<tr>
-<th>action</th>
-<th>快捷键</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>到行首</td>
-<td>ctrl + a</td>
-</tr>
-<tr>
-<]]>
+    
+      &lt;h4 id=&quot;编辑&quot;&gt;&lt;a href=&quot;#编辑&quot; class=&quot;headerlink&quot; title=&quot;编辑&quot;&gt;&lt;/a&gt;编辑&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;action&lt;/th&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+
+    
     </summary>
+    
     
       <category term="cheatsheet" scheme="http://willnewii.github.io/tags/cheatsheet/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[seajs 资源]]></title>
+    <title>seajs 资源</title>
     <link href="http://willnewii.github.io/20160416/seajs-%E8%B5%84%E6%BA%90/"/>
     <id>http://willnewii.github.io/20160416/seajs-资源/</id>
     <published>2016-04-16T03:57:32.000Z</published>
     <updated>2016-04-16T06:50:10.000Z</updated>
+    
     <content type="html"><![CDATA[<ul>
 <li><p><a href="https://github.com/seajs/seajs/issues/242" target="_blank" rel="external">CMD 模块定义规范</a></p>
 </li>
@@ -1270,64 +1315,78 @@
 </li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<ul>
-<li><p><a href="https://github.com/seajs/seajs/issues/242" target="_blank" rel="external">CMD 模块定义规范</a></p>
-</li>
-<li><p><a href="http]]>
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/seajs/seajs/issues/242&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CMD 模块定义规范&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http
+    
     </summary>
+    
     
   </entry>
   
   <entry>
-    <title><![CDATA[android 开发问题]]></title>
+    <title>android 开发问题</title>
     <link href="http://willnewii.github.io/20160331/android-%E9%97%AE%E9%A2%98/"/>
     <id>http://willnewii.github.io/20160331/android-问题/</id>
     <published>2016-03-31T04:12:55.000Z</published>
     <updated>2016-03-31T04:15:00.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="webview_切后台,再回来_无焦点(不弹软键盘)">webview 切后台,再回来 无焦点(不弹软键盘)</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</span><br><span class="line">            <span class="annotation">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">switch</span> (event.getAction ()) &#123;</span><br><span class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_DOWN :</span><br><span class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_UP :</span><br><span class="line">                        <span class="keyword">if</span> (!v.hasFocus()) &#123;</span><br><span class="line">                            v.setFocusableInTouchMode(<span class="keyword">true</span>);</span><br><span class="line">                            <span class="comment">//v.setFocusable(true);</span></span><br><span class="line">                            <span class="comment">//v.requestFocus ();</span></span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">break</span> ;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="微信分享_提示_hit_push_hold！！！">微信分享 提示 hit push hold！！！</h4><p>原因是你分享的微信账号在其他手机登陆了，但是本机还没有退出登陆，导致没有权限分享。重新进入微信并登陆就好了。</p>
-<h4 id="webview_error提示_net::ERR_CACHE_MISS">webview error提示 net::ERR_CACHE_MISS</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">19</span>) &#123;</span><br><span class="line"> 	mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <content type="html"><![CDATA[<h4 id="webview-切后台-再回来-无焦点-不弹软键盘"><a href="#webview-切后台-再回来-无焦点-不弹软键盘" class="headerlink" title="webview 切后台,再回来 无焦点(不弹软键盘)"></a>webview 切后台,再回来 无焦点(不弹软键盘)</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">                <span class="keyword">switch</span> (event.getAction ()) &#123;</div><div class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_DOWN :</div><div class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_UP :</div><div class="line">                        <span class="keyword">if</span> (!v.hasFocus()) &#123;</div><div class="line">                            v.setFocusableInTouchMode(<span class="keyword">true</span>);</div><div class="line">                            <span class="comment">//v.setFocusable(true);</span></div><div class="line">                            <span class="comment">//v.requestFocus ();</span></div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">break</span> ;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+<h4 id="微信分享-提示-hit-push-hold！！！"><a href="#微信分享-提示-hit-push-hold！！！" class="headerlink" title="微信分享 提示 hit push hold！！！"></a>微信分享 提示 hit push hold！！！</h4><p>原因是你分享的微信账号在其他手机登陆了，但是本机还没有退出登陆，导致没有权限分享。重新进入微信并登陆就好了。</p>
+<h4 id="webview-error提示-net-ERR-CACHE-MISS"><a href="#webview-error提示-net-ERR-CACHE-MISS" class="headerlink" title="webview error提示 net::ERR_CACHE_MISS"></a>webview error提示 net::ERR_CACHE_MISS</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">19</span>) &#123;</div><div class="line"> 	<span class="selector-tag">mWebView</span><span class="selector-class">.getSettings</span>()<span class="selector-class">.setCacheMode</span>(WebSettings.LOAD_CACHE_ELSE_NETWORK);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="webview_切后台,再回来_无焦点(不弹软键盘)">webview 切后台,再回来 无焦点(不弹软键盘)</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><spa]]>
+    
+      &lt;h4 id=&quot;webview-切后台-再回来-无焦点-不弹软键盘&quot;&gt;&lt;a href=&quot;#webview-切后台-再回来-无焦点-不弹软键盘&quot; class=&quot;headerlink&quot; title=&quot;webview 切后台,再回来 无焦点(不弹软键盘)&quot;&gt;&lt;/a&gt;webview 切后
+    
     </summary>
+    
     
   </entry>
   
   <entry>
-    <title><![CDATA[储倩 设计 作品]]></title>
+    <title>储倩 设计 作品</title>
     <link href="http://willnewii.github.io/20160314/%E5%80%A9%E5%80%A9Design/"/>
     <id>http://willnewii.github.io/20160314/倩倩Design/</id>
     <published>2016-03-14T04:23:12.000Z</published>
     <updated>2016-08-05T10:21:21.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="APP下载w">APP下载w</h3><h3 id="APP设计">APP设计</h3><ul>
+    
+    <content type="html"><![CDATA[<h3 id="APP下载w"><a href="#APP下载w" class="headerlink" title="APP下载w"></a>APP下载w</h3><h3 id="APP设计"><a href="#APP设计" class="headerlink" title="APP设计"></a>APP设计</h3><ul>
 <li><a href="https://modao.cc/app/Vz8GZZGNw4ohPxr10Z4w" target="_blank" rel="external">尼玛去哪儿之台湾</a></li>
 <li><a href="https://modao.cc/app/yoalEe1zV2KCjlybyC0b" target="_blank" rel="external">好车贷</a></li>
 <li><a href="https://modao.cc/app/fg8BDPcGugf051KhN6Wh15n0W7fyzW9" target="_blank" rel="external">MayDay歌词本2.0</a></li>
 </ul>
-<h3 id="icon设计">icon设计</h3><ul>
+<h3 id="icon设计"><a href="#icon设计" class="headerlink" title="icon设计"></a>icon设计</h3><ul>
 <li>中国风<br>  <img src="http://ww2.sinaimg.cn/large/6482edf0gw1f1wa02a5tlj20ku1vw4qp.jpg" alt="2"></li>
 <li>简·净<br>  <img src="http://ww3.sinaimg.cn/large/6482edf0gw1f1w9zxvsrwj21732pg4eb.jpg" alt="3"></li>
 </ul>
-<h3 id="banner">banner</h3><p><img src="http://ww4.sinaimg.cn/large/6482edf0gw1f1wa09g2maj21cy3uyhdu.jpg" alt="1"></p>
-<h3 id="手绘">手绘</h3><p><img src="http://ww3.sinaimg.cn/large/6482edf0gw1f1w9zza5lbj21kw1kw13w.jpg" alt="4"><br><img src="http://ww4.sinaimg.cn/large/6482edf0gw1f2cgqfv9w9j21ji1ji16h.jpg" alt="5"></p>
+<h3 id="banner"><a href="#banner" class="headerlink" title="banner"></a>banner</h3><p><img src="http://ww4.sinaimg.cn/large/6482edf0gw1f1wa09g2maj21cy3uyhdu.jpg" alt="1"></p>
+<h3 id="手绘"><a href="#手绘" class="headerlink" title="手绘"></a>手绘</h3><p><img src="http://ww3.sinaimg.cn/large/6482edf0gw1f1w9zza5lbj21kw1kw13w.jpg" alt="4"><br><img src="http://ww4.sinaimg.cn/large/6482edf0gw1f2cgqfv9w9j21ji1ji16h.jpg" alt="5"></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="APP下载w">APP下载w</h3><h3 id="APP设计">APP设计</h3><ul>
-<li><a href="https://modao.cc/app/Vz8GZZGNw4ohPxr10Z4w" target="_blank" rel="extern]]>
+    
+      &lt;h3 id=&quot;APP下载w&quot;&gt;&lt;a href=&quot;#APP下载w&quot; class=&quot;headerlink&quot; title=&quot;APP下载w&quot;&gt;&lt;/a&gt;APP下载w&lt;/h3&gt;&lt;h3 id=&quot;APP设计&quot;&gt;&lt;a href=&quot;#APP设计&quot; class=&quot;headerlink&quot; title=
+    
     </summary>
+    
     
   </entry>
   
   <entry>
-    <title><![CDATA[持续集成 应用-1]]></title>
+    <title>持续集成 应用-1</title>
     <link href="http://willnewii.github.io/20160313/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90-%E5%BA%94%E7%94%A81/"/>
     <id>http://willnewii.github.io/20160313/持续集成-应用1/</id>
     <published>2016-03-13T09:14:00.000Z</published>
     <updated>2016-03-14T06:50:34.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
-<h4 id="什么是持续集成">什么是持续集成</h4><p>　　持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。<br>　　高大上的答案,来自百度…</p>
-<h4 id="说说工作上的场景">说说工作上的场景</h4><ul>
+    
+    <content type="html"><![CDATA[<h4 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
+<h4 id="什么是持续集成"><a href="#什么是持续集成" class="headerlink" title="什么是持续集成"></a>什么是持续集成</h4><p>　　持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。<br>　　高大上的答案,来自百度…</p>
+<h4 id="说说工作上的场景"><a href="#说说工作上的场景" class="headerlink" title="说说工作上的场景"></a>说说工作上的场景</h4><ul>
 <li><p>啥时候发新包<br>在测试阶段,当进行一轮测试后,测试人员就要等着发新包.</p>
 <ul>
 <li>这是一个被动行为.如果开发人员不推进,测试人员将永远处于等待状态.(为什么测试人员不去搭建一个编译环境…)</li>
@@ -1338,45 +1397,50 @@
 <li><p>驱动工作的是代码库<br>　　一直以来,大家习惯的工作流程是确认bug,修改bug,提交代码,编译新包,交付测试.这一切的行为需要开发人员驱动.<br>　　那么让我们试想一下,把这个流程由开发人员驱动,改为代码库驱动.<br>　　以持续集成的方式:当代码库发生变更,系统就要进行集成工作.自动化构建,产生新包,供测试人员测试.在这个过程中开发人员不需要与测试人员进行沟通,一切由代码库驱动.<br>　　(发散一下,我们使用的mantis,其实跟代码也没有关系.而github的issue,则是紧密围绕代码产生和关闭的.)</p>
 </li>
 </ul>
-<h4 id="当前实现效果(使用jenkins构建android应用)">当前实现效果(使用jenkins构建android应用)</h4><p>　　当代码库更新后,相关人员进入jenkins后台,执行build操作即可.当build成功后,jenkins会发邮件通知相关工作人员任务状态.如果构建成功,测试人员下载新包,即可进行测试.<br>　　开发人员的工作是修复bug,提交代码.测试,上线,打渠道包的一系列构建任务都可以交给jenkins完成.</p>
-<h4 id="TODO">TODO</h4><ul>
+<h4 id="当前实现效果-使用jenkins构建android应用"><a href="#当前实现效果-使用jenkins构建android应用" class="headerlink" title="当前实现效果(使用jenkins构建android应用)"></a>当前实现效果(使用jenkins构建android应用)</h4><p>　　当代码库更新后,相关人员进入jenkins后台,执行build操作即可.当build成功后,jenkins会发邮件通知相关工作人员任务状态.如果构建成功,测试人员下载新包,即可进行测试.<br>　　开发人员的工作是修复bug,提交代码.测试,上线,打渠道包的一系列构建任务都可以交给jenkins完成.</p>
+<h4 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h4><ul>
 <li>通过hooks,当版本库发生变化,自动通知jenkins构建新版本</li>
 <li>通过区分branch,可以实现构建不同版本的包.你爱测那个测那个…</li>
 <li>自动化测试…</li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="引子">引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面]]>
+    
+      &lt;h4 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h4&gt;&lt;p&gt;　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈
+    
     </summary>
+    
     
       <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[Git小结]]></title>
+    <title>Git小结</title>
     <link href="http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/"/>
     <id>http://willnewii.github.io/20160309/Git小结/</id>
     <published>2016-03-09T07:27:00.000Z</published>
     <updated>2016-03-14T06:47:07.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="什么是版本控制">什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法， 它伴随着工程图从图的诞生一直到图的定型。 一种简单的版本控制形式，例如，赋给图的初版一个版本等级“A”。当做了第一次改变后，版本等级改为“B”，以此类推等等。</p>
-<h4 id="什么是Git">什么是Git</h4><p>　　Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
+    
+    <content type="html"><![CDATA[<h4 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法， 它伴随着工程图从图的诞生一直到图的定型。 一种简单的版本控制形式，例如，赋给图的初版一个版本等级“A”。当做了第一次改变后，版本等级改为“B”，以此类推等等。</p>
+<h4 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git"></a>什么是Git</h4><p>　　Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
 <ul>
 <li>集中式 分布式</li>
 <li>代码库的每份拷贝都带有完整的数据库，用户可以在本地修改、提交代码</li>
 <li>分支…分支…分支…重要的事情说三遍</li>
 </ul>
-<h3 id="为什么是git">为什么是git</h3><ul>
+<h3 id="为什么是git"><a href="#为什么是git" class="headerlink" title="为什么是git"></a>为什么是git</h3><ul>
 <li>google code关闭了…</li>
 <li>github是全球最大的同性交友网站…</li>
 <li>看看你使用的开源项目都托管在哪里?</li>
 <li>分支…分支…分支…重要的事情说三遍</li>
 </ul>
-<h3 id="提交方式">提交方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'svn提交'</span> //加入版本库&amp;提交服务器</span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'git提交'</span> //加入本地版本库</span><br><span class="line">git push origin <span class="keyword">master</span> //提交到远程分支</span></span><br></pre></td></tr></table></figure>
-<h3 id="branch">branch</h3><p>　　Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
+<h3 id="提交方式"><a href="#提交方式" class="headerlink" title="提交方式"></a>提交方式</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">svn commit -m <span class="string">'svn提交'</span> <span class="comment">//加入版本库&amp;提交服务器</span></div><div class="line"></div><div class="line">git commit -m <span class="string">'git提交'</span> <span class="comment">//加入本地版本库</span></div><div class="line">git <span class="keyword">push</span> origin master <span class="comment">//提交到远程分支</span></div></pre></td></tr></table></figure>
+<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><p>　　Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
 <p>　　简单、快速</p>
-<h3 id="gitflow">gitflow</h3><p><img src="/img/gitflow.png" alt="GitHub Octocat"></p>
-<h3 id="工作流程">工作流程</h3><ul>
+<h3 id="gitflow"><a href="#gitflow" class="headerlink" title="gitflow"></a>gitflow</h3><p><img src="/img/gitflow.png" alt="GitHub Octocat"></p>
+<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ul>
 <li>永久性分支<ul>
 <li>master分支<br>存放的是随时可供在生产环境中部署的代码.当开发活动告一段落，产生了一份新的可供部署的代码时，master分支上的代码会被更新。同时,每一次更新,最好添加对应的版本号标签（TAG）。</li>
 <li>develop分支<br>保存当前最新开发成果的分支。当develop分支上的代码已实现本次更新的所有功能，并通过了所有的测试后，且代码已经足够稳定时，就可以将所有的开发成果合并回master分支了</li>
@@ -1389,14 +1453,14 @@
 </ul>
 </li>
 </ul>
-<h3 id="持续集成">持续集成</h3><p><a href="http://10.101.26.196:8080/job/build-android/" target="_blank" rel="external">http://10.101.26.196:8080/job/build-android/</a></p>
-<h3 id="rebase_衍合/变基">rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</span><br></pre></td></tr></table></figure>
-<h3 id="其它">其它</h3><ul>
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><a href="http://10.101.26.196:8080/job/build-android/" target="_blank" rel="external">http://10.101.26.196:8080/job/build-android/</a></p>
+<h3 id="rebase-衍合-变基"><a href="#rebase-衍合-变基" class="headerlink" title="rebase 衍合/变基"></a>rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span> <span class="comment">--pretty=oneline</span></div><div class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</div></pre></td></tr></table></figure>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><ul>
 <li>git log</li>
 <li>stash</li>
 <li>markdown</li>
 </ul>
-<h4 id="资料">资料</h4><ul>
+<h4 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h4><ul>
 <li><p>基础知识</p>
 <ul>
 <li><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">猴子都能看懂的git入门</a></li>
@@ -1418,24 +1482,29 @@
 </li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="什么是版本控制">什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法]]>
+    
+      &lt;h4 id=&quot;什么是版本控制&quot;&gt;&lt;a href=&quot;#什么是版本控制&quot; class=&quot;headerlink&quot; title=&quot;什么是版本控制&quot;&gt;&lt;/a&gt;什么是版本控制&lt;/h4&gt;&lt;p&gt;　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每
+    
     </summary>
+    
     
       <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[ES6笔记]]></title>
+    <title>ES6笔记</title>
     <link href="http://willnewii.github.io/20160215/ES6-%E8%B5%84%E6%BA%90/"/>
     <id>http://willnewii.github.io/20160215/ES6-资源/</id>
     <published>2016-02-15T02:47:00.000Z</published>
     <updated>2016-02-17T10:21:01.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="笔记">笔记</h4><ul>
+    
+    <content type="html"><![CDATA[<h4 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h4><ul>
 <li>Arrow Function<br><br>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</li>
 </ul>
-<h4 id="教程">教程</h4><ul>
+<h4 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h4><ul>
 <li><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6入门 - 阮一峰的…</a></p>
 </li>
 <li><p><a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（上）</a></p>
@@ -1445,38 +1514,43 @@
 <li><p><a href="http://base-n.github.io/koa-generator-examples/node4/classes.html" target="_blank" rel="external">一起学koa</a></p>
 </li>
 </ul>
-<h4 id="hello_world">hello world</h4><ul>
+<h4 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h4><ul>
 <li><a href="https://segmentfault.com/a/1190000004394726?utm_source=APP&amp;utm_medium=iOS&amp;utm_campaign=socialShare" target="_blank" rel="external">使用ES6开发流程</a></li>
 <li><a href="http://www.es6fiddle.net/" target="_blank" rel="external">运行es6代码的网站</a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="笔记">笔记</h4><ul>
-<li>Arrow Function<br><br>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的th]]>
+    
+      &lt;h4 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Arrow Function&lt;br&gt;&lt;br&gt;当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在
+    
     </summary>
     
-      <category term="ES6" scheme="http://willnewii.github.io/tags/ES6/"/>
     
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="ES6" scheme="http://willnewii.github.io/tags/ES6/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[git笔记]]></title>
+    <title>git笔记</title>
     <link href="http://willnewii.github.io/20160120/git/"/>
     <id>http://willnewii.github.io/20160120/git/</id>
     <published>2016-01-20T03:47:00.000Z</published>
     <updated>2016-01-25T07:50:06.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
+    
+    <content type="html"><![CDATA[<h4 id="git移除某文件夹的版本控制"><a href="#git移除某文件夹的版本控制" class="headerlink" title="git移除某文件夹的版本控制"></a>git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
 <p>git rm -r –cached  <em>/Runtime/\</em>      //最终执行命令.</p>
 <p>git commit -m”移除Runtime目录下所有文件的版本控制”    //提交</p>
 <p>git push origin master   //提交到远程服务器</p>
 <p>若用git status命令查看，则Apps/Runtime/目录下文件出现在结果列表里， 我们不希望这个目录下的文件出现，则在项目根目录下，和.git 同级目录下，新建一个.gitignore文件，<br>把.gitignore提交到远程服务器。 则.Apps/Runtime目录就不会被提交了。</p>
-<h4 id="git_am">git am</h4><p>git am –abort</p>
-<h4 id="git_flow">git flow</h4><p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></p>
-<h4 id="git_常用指令">git 常用指令</h4><p><a href="http://stormzhang.com/git/2014/01/27/git-common-command/" target="_blank" rel="external">http://stormzhang.com/git/2014/01/27/git-common-command/</a></p>
-<h4 id="git_submodule的使用">git submodule的使用</h4><p><a href="http://www.stormzhang.com/git/2014/02/13/git-submodule/" target="_blank" rel="external">http://www.stormzhang.com/git/2014/02/13/git-submodule/</a></p>
-<h4 id="git_文档">git 文档</h4><ul>
+<h4 id="git-am"><a href="#git-am" class="headerlink" title="git am"></a>git am</h4><p>git am –abort</p>
+<h4 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h4><p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></p>
+<h4 id="git-常用指令"><a href="#git-常用指令" class="headerlink" title="git 常用指令"></a>git 常用指令</h4><p><a href="http://stormzhang.com/git/2014/01/27/git-common-command/" target="_blank" rel="external">http://stormzhang.com/git/2014/01/27/git-common-command/</a></p>
+<h4 id="git-submodule的使用"><a href="#git-submodule的使用" class="headerlink" title="git submodule的使用"></a>git submodule的使用</h4><p><a href="http://www.stormzhang.com/git/2014/02/13/git-submodule/" target="_blank" rel="external">http://www.stormzhang.com/git/2014/02/13/git-submodule/</a></p>
+<h4 id="git-文档"><a href="#git-文档" class="headerlink" title="git 文档"></a>git 文档</h4><ul>
 <li><p><a href="http://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git 中文版(推荐)</a></p>
 </li>
 <li><p><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一个成功的Git分支模型(推荐)</a></p>
@@ -1489,39 +1563,44 @@
 </li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="git移除某文件夹的版本控制">git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参]]>
+    
+      &lt;h4 id=&quot;git移除某文件夹的版本控制&quot;&gt;&lt;a href=&quot;#git移除某文件夹的版本控制&quot; class=&quot;headerlink&quot; title=&quot;git移除某文件夹的版本控制&quot;&gt;&lt;/a&gt;git移除某文件夹的版本控制&lt;/h4&gt;&lt;p&gt;thinkphp框架，Apps/Runtim
+    
     </summary>
+    
     
       <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[JS笔记]]></title>
+    <title>JS笔记</title>
     <link href="http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20160120/JS笔记/</id>
     <published>2016-01-20T03:37:00.000Z</published>
     <updated>2016-07-19T02:51:17.000Z</updated>
+    
     <content type="html"><![CDATA[<ul>
 <li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
 </li>
 <li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
 </li>
 <li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
-<h4 id="1-===">1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+<h4 id="1"><a href="#1" class="headerlink" title="1.==="></a>1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
 </li>
 </ul>
 <p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
 <p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
 <p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
-<h4 id="2-NaN">2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
-<pre><code><span class="literal">NaN</span> === <span class="literal">NaN</span>; <span class="comment">// false</span>
+<h4 id="2-NaN"><a href="#2-NaN" class="headerlink" title="2.NaN"></a>2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
+<pre><code>NaN === NaN; // false
 </code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
-<pre><code><span class="built_in">isNaN</span>(<span class="literal">NaN</span>); <span class="comment">// true</span>
-</code></pre><h4 id="3-浮点数的相等比较">3.浮点数的相等比较</h4><pre><code><span class="number">1</span> / <span class="number">3</span> === (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>); <span class="comment">// false</span>
+<pre><code>isNaN(NaN); // true
+</code></pre><h4 id="3-浮点数的相等比较"><a href="#3-浮点数的相等比较" class="headerlink" title="3.浮点数的相等比较"></a>3.浮点数的相等比较</h4><pre><code>1 / 3 === (1 - 2 / 3); // false
 </code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
-<pre><code>Math.<span class="built_in">abs</span>(<span class="number">1</span> / <span class="number">3</span> - (<span class="number">1</span> - <span class="number">2</span> / <span class="number">3</span>)) &lt; <span class="number">0.0000001</span>; <span class="comment">// true</span>
+<pre><code>Math.abs(1 / 3 - (1 - 2 / 3)) &lt; 0.0000001; // true
 </code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
 <ol>
 <li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
@@ -1534,29 +1613,33 @@
 <p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
 <p>####严格模式</p>
 <p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
-<pre><code><span class="pi">'use strict'</span>;
+<pre><code>&apos;use strict&apos;;
 </code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
 <p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
 <p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
-<pre><code><span class="string">'toString'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">true</span>
+<pre><code>&apos;toString&apos; in xiaoming; // true
 </code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
 <pre><code>var xiaoming = {
-    <span class="symbol">name:</span> <span class="string">'小明'</span>
+    name: &apos;小明&apos;
 };
-xiaoming.hasOwnProperty(<span class="string">'name'</span>); <span class="regexp">//</span> <span class="keyword">true</span>
-xiaoming.hasOwnProperty(<span class="string">'toString'</span>); <span class="regexp">//</span> <span class="keyword">false</span>
+xiaoming.hasOwnProperty(&apos;name&apos;); // true
+xiaoming.hasOwnProperty(&apos;toString&apos;); // false
 </code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
 <p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
 <p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
 <p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
 <p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<ul>
-<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
-</li>
-<li><p><a href="ht]]>
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/55364.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JS合并数组的几种方法及优劣比较&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;ht
+    
     </summary>
+    
     
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
