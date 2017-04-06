@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://willnewii.github.io/"/>
-  <updated>2017-01-05T10:12:24.000Z</updated>
+  <updated>2017-04-06T03:25:43.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -14,6 +14,124 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>awesome-github</title>
+    <link href="http://willnewii.github.io/20170406/awesome-github/"/>
+    <id>http://willnewii.github.io/20170406/awesome-github/</id>
+    <published>2017-04-06T03:19:00.000Z</published>
+    <updated>2017-04-06T03:25:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h3><ul>
+<li><p><a href="https://github.com/spetacular/bannedwords" target="_blank" rel="external">违禁词</a></p>
+</li>
+<li><p><a href="https://github.com/nowgoo/dict" target="_blank" rel="external">词库工具，用来从一段文本中找出存在于词库的词语</a></p>
+</li>
+<li><p><a href="https://github.com/amueller/word_cloud" target="_blank" rel="external">生成word_cloud</a></p>
+<ul>
+<li><img src="https://github.com/amueller/word_cloud/raw/master/examples/constitution.png" alt="word_cloud.jpg"></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/wandergis/coordtransform" target="_blank" rel="external">一个提供了百度坐标（BD09）、国测局坐标（火星坐标，GCJ02）、和WGS84坐标系之间的转换的工具模块。</a></p>
+</li>
+</ul>
+<h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3><ul>
+<li><a href="https://github.com/serbanghita/Mobile-Detect" target="_blank" rel="external">根据User-Agent检测移动设备的库-Mobile-Detect</a></li>
+</ul>
+<h3 id="js-amp-css"><a href="#js-amp-css" class="headerlink" title="js&amp;css"></a>js&amp;css</h3><ul>
+<li><p><a href="https://github.com/olistic/warriorjs" target="_blank" rel="external">一个学习js和人工智能的游戏</a></p>
+</li>
+<li><p><a href="https://github.com/webkul/csspin" target="_blank" rel="external">css 小菊花</a></p>
+<ul>
+<li><a href="https://webkul.github.io/csspin/" target="_blank" rel="external">demo</a></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/imochen/hotcss" target="_blank" rel="external">(适配)移动端布局终极解决方案 — 让移动端布局开发更加容易</a></p>
+</li>
+<li><p><a href="https://github.com/VincentGarreau/particles.js" target="_blank" rel="external">粒子特效</a></p>
+<ul>
+<li><img src="https://camo.githubusercontent.com/cdc9e740f0c04b77449e476c91e6f7770a6af6e7/687474703a2f2f76696e63656e74676172726561752e636f6d2f7061727469636c65732e6a732f6173736574732f696d672f6769746875622d73637265656e2e6a7067" alt="word_cloud.jpg">    </li>
+</ul>
+</li>
+<li><p><a href="https://github.com/juliangarnier/anime" target="_blank" rel="external">动画库-anime</a></p>
+</li>
+<li><p><a href="https://github.com/parkjs814/AlgorithmVisualizer" target="_blank" rel="external">一个算法可视化工具,方便理解、检查算法运算过程-AlgorithmVisualizer</a></p>
+<ul>
+<li><img src="https://camo.githubusercontent.com/1d2e3b7d06c18d8e4e49d34cf06622b5d405b01a/687474703a2f2f692e67697068792e636f6d2f336f3645684a46677379536858364d48654d2e676966" alt="word_cloud.jpg">  </li>
+</ul>
+</li>
+<li><p><a href="https://github.com/mycolorway/simditor" target="_blank" rel="external">一个所见即所得的编辑器</a></p>
+</li>
+</ul>
+<h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><ul>
+<li><p><a href="https://github.com/Blankj/AndroidUtilCode" target="_blank" rel="external">工具类代码</a></p>
+</li>
+<li><p><a href="https://github.com/google/flexbox-layout" target="_blank" rel="external">谷歌出的… flexbox-layout</a></p>
+</li>
+<li><p><a href="https://github.com/drakeet/MultiType" target="_blank" rel="external">Android 复杂的列表视图新写法</a></p>
+</li>
+<li><p><a href="https://github.com/alibaba/ARouter" target="_blank" rel="external">ARouter 阿里出的一个路由</a></p>
+</li>
+<li><p><a href="https://github.com/andremion/Louvre" target="_blank" rel="external">图片选取-Louvre</a></p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/andremion/Louvre/master/art/sample.gif" alt="word_cloud.jpg">    </li>
+</ul>
+</li>
+<li><p><a href="https://github.com/donglua/PhotoPicker" target="_blank" rel="external">图片选取-PhotoPicker</a></p>
+</li>
+<li><p><a href="https://github.com/Yalantis/uCrop" target="_blank" rel="external">图片剪切-uCrop</a></p>
+<ul>
+<li><img src="https://github.com/Yalantis/uCrop/raw/master/preview.gif" alt="word_cloud.jpg">  </li>
+</ul>
+</li>
+<li><p><a href="https://github.com/bingoogolapple/BGABanner-Android" target="_blank" rel="external">导航条-BGABanner-Android</a></p>
+<ul>
+<li><img src="https://cloud.githubusercontent.com/assets/8949716/17557718/dc235ec4-5f4a-11e6-92b7-144a2a1a1e3f.gif" alt=""></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/wasabeef/Blurry" target="_blank" rel="external">高斯模糊效果-Blurry</a></p>
+<ul>
+<li><img src="https://github.com/wasabeef/Blurry/raw/master/art/blurry.gif" alt=""></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">lottie-android</a></p>
+<ul>
+<li><a href="http://www.jianshu.com/p/9a2136ecbc7b" target="_blank" rel="external">Lottie开源动画库介绍与使用示例</a></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/airbnb/epoxy" target="_blank" rel="external">epoxy</a></p>
+<ul>
+<li><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/1209/6838.html" target="_blank" rel="external">Epoxy: Airbnb的安卓视图架构</a></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/jiahuanyu/CircleTimerView/" target="_blank" rel="external">圆形时间控件</a></p>
+<ul>
+<li><img src="https://github.com/jiahuanyu/CircleTimerView/blob/master/images/sample.gif" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="weixin"><a href="#weixin" class="headerlink" title="weixin"></a>weixin</h3><ul>
+<li><p><a href="https://github.com/Urinx/WeixinBot" target="_blank" rel="external">WeixinBot</a></p>
+</li>
+<li><p><a href="https://github.com/Chatie/wechaty" target="_blank" rel="external">wechaty</a></p>
+</li>
+</ul>
+<h3 id="raspberry"><a href="#raspberry" class="headerlink" title="raspberry"></a>raspberry</h3><ul>
+<li><a href="https://github.com/doublebind/raspi" target="_blank" rel="external">WebIOPi-0.7.1 Patch for Raspberry B+, Pi2, and Pi3.webiopi默认是不支持pi3 的40pin.</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Tool&quot;&gt;&lt;a href=&quot;#Tool&quot; class=&quot;headerlink&quot; title=&quot;Tool&quot;&gt;&lt;/a&gt;Tool&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/spetacular/bannedwords&quot; t
+    
+    </summary>
+    
+    
+      <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派与homebridge  (三)  插件篇</title>
@@ -1572,76 +1690,6 @@
     
     
       <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS笔记</title>
-    <link href="http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/"/>
-    <id>http://willnewii.github.io/20160120/JS笔记/</id>
-    <published>2016-01-20T03:37:00.000Z</published>
-    <updated>2016-07-19T02:51:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
-<h4 id="1"><a href="#1" class="headerlink" title="1.==="></a>1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
-</li>
-</ul>
-<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
-<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
-<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
-<h4 id="2-NaN"><a href="#2-NaN" class="headerlink" title="2.NaN"></a>2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
-<pre><code>NaN === NaN; // false
-</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
-<pre><code>isNaN(NaN); // true
-</code></pre><h4 id="3-浮点数的相等比较"><a href="#3-浮点数的相等比较" class="headerlink" title="3.浮点数的相等比较"></a>3.浮点数的相等比较</h4><pre><code>1 / 3 === (1 - 2 / 3); // false
-</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
-<pre><code>Math.abs(1 / 3 - (1 - 2 / 3)) &lt; 0.0000001; // true
-</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
-<ol>
-<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
-<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
-<li>apply &amp; call</li>
-<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
-</ol>
-<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
-<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
-<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
-<p>####严格模式</p>
-<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
-<pre><code>&apos;use strict&apos;;
-</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
-<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
-<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
-<pre><code>&apos;toString&apos; in xiaoming; // true
-</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
-<pre><code>var xiaoming = {
-    name: &apos;小明&apos;
-};
-xiaoming.hasOwnProperty(&apos;name&apos;); // true
-xiaoming.hasOwnProperty(&apos;toString&apos;); // false
-</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
-<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
-<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
-<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
-<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/55364.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JS合并数组的几种方法及优劣比较&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;ht
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

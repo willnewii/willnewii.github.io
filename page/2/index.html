@@ -178,6 +178,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ES6-笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160727/ES6-笔记/">ES6 笔记</a>
+    </h1>
+  
+
+        
+        <a href="/20160727/ES6-笔记/" class="archive-article-date">
+  	<time datetime="2016-07-27T02:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="let-var-const-区别"><a href="#let-var-const-区别" class="headerlink" title="let var const 区别"></a>let var const 区别</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
+<li>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。</li>
+</ul>
+<h4 id="const-let"><a href="#const-let" class="headerlink" title="const let"></a>const let</h4><ul>
+<li>let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用)</li>
+<li>let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块)</li>
+<li>const 在声明时必须被赋值</li>
+</ul>
+<h3 id="函数默认值"><a href="#函数默认值" class="headerlink" title="函数默认值"></a>函数默认值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> getFinalPrice = <span class="function">(<span class="params">price, tax=<span class="number">0.7</span></span>) =&gt;</span> price + price * tax;</div><div class="line">getFinalPrice(<span class="number">500</span>); <span class="comment">// 850</span></div></pre></td></tr></table></figure>
+<h3 id="模板语法和分隔符"><a href="#模板语法和分隔符" class="headerlink" title="模板语法和分隔符"></a>模板语法和分隔符</h3><p>ES6 中有一种十分简洁的方法组装一堆字符串和变量。</p>
+<ul>
+<li>${ … } 用来渲染一个变量</li>
+<li>` 作为分隔符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> user = <span class="string">'Barret'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`Hi <span class="subst">$&#123;user&#125;</span>!`</span>); <span class="comment">// Hi Barret!</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="for…of-VS-for…in"><a href="#for…of-VS-for…in" class="headerlink" title="for…of VS for…in"></a>for…of VS for…in</h3><p>for…of 用于遍历一个迭代器，如数组：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</div><div class="line">nicknames.size = <span class="number">3</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">of</span> nicknames) &#123;</div><div class="line">  <span class="built_in">console</span>.log(nickname);</div><div class="line">&#125;</div><div class="line">Result: di, boo, punkeye</div></pre></td></tr></table></figure></p>
+<p>for…in 用来遍历对象中的属性：<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> nicknames = [<span class="string">'di'</span>, <span class="string">'boo'</span>, <span class="string">'punkeye'</span>];</div><div class="line">nicknames.size = <span class="number">3</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> nickname <span class="keyword">in</span> nicknames) &#123;</div><div class="line">  <span class="built_in">console</span>.log(nickname);</div><div class="line">&#125;</div><div class="line"><span class="attribute">Result</span>: <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="built_in">size</span></div></pre></td></tr></table></figure></p>
+<h3 id="Map-和-WeakMap"><a href="#Map-和-WeakMap" class="headerlink" title="Map 和 WeakMap"></a>Map 和 WeakMap</h3><p>WeakMap 就是一个 Map，只不过它的所有 key 都是弱引用，意思就是 WeakMap 中的东西垃圾回收时不考虑，使用它不用担心内存泄漏问题。</p>
+<h3 id="Set-和-WeakSet"><a href="#Set-和-WeakSet" class="headerlink" title="Set 和 WeakSet"></a>Set 和 WeakSet</h3><p>Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型(number,string,boolean,null,undefined)和引用类型</p>
+<p>可以通过 forEach 和 for…of 来遍历 Set 对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mySet.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(item);</div><div class="line">    <span class="comment">// 1</span></div><div class="line">    <span class="comment">// 2</span></div><div class="line">    <span class="comment">// 3</span></div><div class="line">    <span class="comment">// 'strings'</span></div><div class="line">    <span class="comment">// Object &#123; a: 1, b: 2 &#125;</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><p>ES6 对 Promise 有了原生的支持，一个 Promise 是一个等待被异步执行的对象，当它执行完成后，其状态会变成 resolved 或者 rejected。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;  </div><div class="line">  <span class="keyword">if</span> (<span class="comment">/* condition */</span>) &#123;</div><div class="line">    <span class="comment">// fulfilled successfully</span></div><div class="line">    resolve(<span class="comment">/* value */</span>);  </div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// error, rejected</span></div><div class="line">    reject(<span class="comment">/* reason */</span>);  </div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>每一个 Promise 都有一个 .then 方法，这个方法接受两个参数，第一个是处理 resolved 状态的回调，一个是处理 rejected 状态的回调：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p.<span class="keyword">then</span>(<span class="function"><span class="params">(val)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Resolved"</span>, val),</div><div class="line">       <span class="function"><span class="params">(err)</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Promise Rejected"</span>, err));</div></pre></td></tr></table></figure></p>
+<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><h4 id="export-import-命令"><a href="#export-import-命令" class="headerlink" title="export,import 命令"></a>export,import 命令</h4><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> <span class="keyword">name</span> = <span class="string">'Rainbow'</span></div></pre></td></tr></table></figure>
+<p>ES6将一个文件视为一个模块，上面的模块通过 export 向外输出了一个变量。一个模块也可以同时往外面输出多个变量。<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="keyword">var</span> <span class="keyword">name</span> = <span class="string">'Rainbow'</span>;</div><div class="line"><span class="keyword">var</span> age = <span class="string">'24'</span>;</div><div class="line"><span class="keyword">export</span> <span class="comment">&#123;name, age&#125;</span>;</div></pre></td></tr></table></figure></p>
+<p>定义好模块的输出以后就可以在另外一个模块通过import引用。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">import</span> &#123;name, age&#125; <span class="keyword">from</span> <span class="string">'./test.js'</span></div></pre></td></tr></table></figure></p>
+<h4 id="整体输入，module指令"><a href="#整体输入，module指令" class="headerlink" title="整体输入，module指令"></a>整体输入，module指令</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"> </div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> name;</div><div class="line"> &#125;</div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> age;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>通过 <strong>import * as</strong> 就完成了模块整体的导入。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import * <span class="keyword">as</span> <span class="keyword">test</span> <span class="keyword">form</span> './<span class="keyword">test</span>.js';</div></pre></td></tr></table></figure></p>
+<p>通过指令 <strong>module</strong> 也可以达到整体的输入。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> test <span class="keyword">from</span> <span class="string">'test.js'</span>;</div><div class="line">test.getName();</div></pre></td></tr></table></figure></p>
+<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><ul>
+<li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
+</li>
+<li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/lihongxun945/article/details/49031383" target="_blank" rel="external">ES6详解八：模块（Module）！</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000002789651" target="_blank" rel="external">[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用</a></p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20160727/ES6-笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Angular-资料" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1002,117 +1090,9 @@
 
 
   
-    <article id="post-JS笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20160120/JS笔记/">JS笔记</a>
-    </h1>
-  
-
-        
-        <a href="/20160120/JS笔记/" class="archive-article-date">
-  	<time datetime="2016-01-20T03:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
-<h4 id="1"><a href="#1" class="headerlink" title="1.==="></a>1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
-</li>
-</ul>
-<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
-<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
-<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
-<h4 id="2-NaN"><a href="#2-NaN" class="headerlink" title="2.NaN"></a>2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
-<pre><code>NaN === NaN; // false
-</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
-<pre><code>isNaN(NaN); // true
-</code></pre><h4 id="3-浮点数的相等比较"><a href="#3-浮点数的相等比较" class="headerlink" title="3.浮点数的相等比较"></a>3.浮点数的相等比较</h4><pre><code>1 / 3 === (1 - 2 / 3); // false
-</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
-<pre><code>Math.abs(1 / 3 - (1 - 2 / 3)) &lt; 0.0000001; // true
-</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
-<ol>
-<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
-<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
-<li>apply &amp; call</li>
-<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
-</ol>
-<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
-<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
-<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
-<p>####严格模式</p>
-<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
-<pre><code>&apos;use strict&apos;;
-</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
-<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
-<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
-<pre><code>&apos;toString&apos; in xiaoming; // true
-</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
-<pre><code>var xiaoming = {
-    name: &apos;小明&apos;
-};
-xiaoming.hasOwnProperty(&apos;name&apos;); // true
-xiaoming.hasOwnProperty(&apos;toString&apos;); // false
-</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
-<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
-<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
-<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
-<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20160120/JS笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -1265,11 +1245,11 @@ xiaoming.hasOwnProperty(&apos;toString&apos;); // false
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+                <a href="javascript:void(0)" class="js-tag color5">MayDay歌词本</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">MayDay歌词本</a>
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
               </li>
              
               <li class="article-tag-list-item">
