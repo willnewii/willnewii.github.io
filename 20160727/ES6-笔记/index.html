@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>ES6 笔记 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="let var const 区别const const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。  const let let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用) let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块) const">
-<meta name="keywords">
+  <meta name="description" content="教程 ECMAScript 6入门 - 阮一峰的…  es6 手册  ES6详解八：模块（Module）！  30分钟掌握ES6/ES2015核心内容（上）  30分钟掌握ES6/ES2015核心内容（下）  ECMAScript 6 扫盲  [ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用  一起学koa   hello world 使用ES6开发流程 运行es6代码的网站  let">
+<meta name="keywords" content="前端,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6 笔记">
 <meta property="og:url" content="http://willnewii.github.io/20160727/ES6-笔记/index.html">
 <meta property="og:site_name" content="诗人的咸鱼">
-<meta property="og:description" content="let var const 区别const const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。  const let let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用) let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块) const">
-<meta property="og:updated_time" content="2016-07-29T02:15:24.000Z">
+<meta property="og:description" content="教程 ECMAScript 6入门 - 阮一峰的…  es6 手册  ES6详解八：模块（Module）！  30分钟掌握ES6/ES2015核心内容（上）  30分钟掌握ES6/ES2015核心内容（下）  ECMAScript 6 扫盲  [ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用  一起学koa   hello world 使用ES6开发流程 运行es6代码的网站  let">
+<meta property="og:updated_time" content="2017-04-07T02:38:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6 笔记">
-<meta name="twitter:description" content="let var const 区别const const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。  const let let 关键词声明的变量不具备变量提升（hoisting）特性(先定义,再使用) let 和 const 声明只在最靠近的一个块中（花括号内）有效(作用域只在当前代码块) const">
+<meta name="twitter:description" content="教程 ECMAScript 6入门 - 阮一峰的…  es6 手册  ES6详解八：模块（Module）！  30分钟掌握ES6/ES2015核心内容（上）  30分钟掌握ES6/ES2015核心内容（下）  ECMAScript 6 扫盲  [ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用  一起学koa   hello world 使用ES6开发流程 运行es6代码的网站  let">
   
     <link rel="alternative" href="/atom.xml" title="诗人的咸鱼" type="application/atom+xml">
   
@@ -198,7 +198,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="let-var-const-区别"><a href="#let-var-const-区别" class="headerlink" title="let var const 区别"></a>let var const 区别</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
+        <h4 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h4><ul>
+<li><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6入门 - 阮一峰的…</a></p>
+</li>
+<li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/lihongxun945/article/details/49031383" target="_blank" rel="external">ES6详解八：模块（Module）！</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（上）</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000004368132" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（下）</a></p>
+</li>
+<li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000002789651" target="_blank" rel="external">[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用</a></p>
+</li>
+<li><p><a href="http://base-n.github.io/koa-generator-examples/node4/classes.html" target="_blank" rel="external">一起学koa</a></p>
+</li>
+</ul>
+<h4 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h4><ul>
+<li><a href="https://segmentfault.com/a/1190000004394726?utm_source=APP&amp;utm_medium=iOS&amp;utm_campaign=socialShare" target="_blank" rel="external">使用ES6开发流程</a></li>
+<li><a href="http://www.es6fiddle.net/" target="_blank" rel="external">运行es6代码的网站</a></li>
+</ul>
+<h3 id="let-var-const-区别"><a href="#let-var-const-区别" class="headerlink" title="let var const 区别"></a>let var const 区别</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
 <li>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。</li>
 </ul>
 <h4 id="const-let"><a href="#const-let" class="headerlink" title="const let"></a>const let</h4><ul>
@@ -226,16 +248,7 @@
 <h4 id="整体输入，module指令"><a href="#整体输入，module指令" class="headerlink" title="整体输入，module指令"></a>整体输入，module指令</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"> </div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> name;</div><div class="line"> &#125;</div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> age;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <p>通过 <strong>import * as</strong> 就完成了模块整体的导入。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import * <span class="keyword">as</span> <span class="keyword">test</span> <span class="keyword">form</span> './<span class="keyword">test</span>.js';</div></pre></td></tr></table></figure></p>
 <p>通过指令 <strong>module</strong> 也可以达到整体的输入。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> test <span class="keyword">from</span> <span class="string">'test.js'</span>;</div><div class="line">test.getName();</div></pre></td></tr></table></figure></p>
-<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><ul>
-<li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
-</li>
-<li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/lihongxun945/article/details/49031383" target="_blank" rel="external">ES6详解八：模块（Module）！</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000002789651" target="_blank" rel="external">[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用</a></p>
-</li>
-</ul>
+<h4 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function<br></h4><p>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</p>
 
       
 
@@ -244,6 +257,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -447,10 +475,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
              
@@ -463,31 +487,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">angular2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cordova</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -511,11 +519,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ionic</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">

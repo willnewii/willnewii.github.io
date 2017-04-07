@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://willnewii.github.io/"/>
-  <updated>2017-04-06T03:25:43.000Z</updated>
+  <updated>2017-04-07T02:07:52.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://willnewii.github.io/20170406/awesome-github/"/>
     <id>http://willnewii.github.io/20170406/awesome-github/</id>
     <published>2017-04-06T03:19:00.000Z</published>
-    <updated>2017-04-06T03:25:43.000Z</updated>
+    <updated>2017-04-07T02:07:52.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h3><ul>
 <li><p><a href="https://github.com/spetacular/bannedwords" target="_blank" rel="external">违禁词</a></p>
@@ -66,6 +66,11 @@
 <h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><ul>
 <li><p><a href="https://github.com/Blankj/AndroidUtilCode" target="_blank" rel="external">工具类代码</a></p>
 </li>
+<li><p><a href="https://github.com/Jasonchenlijian/FastBle" target="_blank" rel="external">蓝牙快速开发框架，使用回调方式处理：scan、connect、notify、indicate、write、read等一系列蓝牙操作。-FastBle</a></p>
+<ul>
+<li><img src="https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble2.png" alt="word_cloud.jpg"></li>
+</ul>
+</li>
 <li><p><a href="https://github.com/google/flexbox-layout" target="_blank" rel="external">谷歌出的… flexbox-layout</a></p>
 </li>
 <li><p><a href="https://github.com/drakeet/MultiType" target="_blank" rel="external">Android 复杂的列表视图新写法</a></p>
@@ -78,6 +83,8 @@
 </ul>
 </li>
 <li><p><a href="https://github.com/donglua/PhotoPicker" target="_blank" rel="external">图片选取-PhotoPicker</a></p>
+</li>
+<li><p><a href="https://github.com/FinalTeam/RxGalleryFinal" target="_blank" rel="external">图片选取-RxGalleryFinal(Android图片单选/多选、拍照、裁剪、压缩。视频选择和录制。)</a></p>
 </li>
 <li><p><a href="https://github.com/Yalantis/uCrop" target="_blank" rel="external">图片剪切-uCrop</a></p>
 <ul>
@@ -102,6 +109,11 @@
 <li><p><a href="https://github.com/airbnb/epoxy" target="_blank" rel="external">epoxy</a></p>
 <ul>
 <li><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/1209/6838.html" target="_blank" rel="external">Epoxy: Airbnb的安卓视图架构</a></li>
+</ul>
+</li>
+<li><p><a href="https://github.com/wenmingvs/NotifyUtil" target="_blank" rel="external">提供多达8种最常见的App通知接口,支持Android 5.0悬浮式通知样式-NotifyUtil</a></p>
+<ul>
+<li><img src="https://camo.githubusercontent.com/41d696a579065eb8f234a00485387947655d12a0/687474703a2f2f7777332e73696e61696d672e636e2f6c617267652f3639316363313531677731663037373476737937786732306463306b307836702e676966" alt=""></li>
 </ul>
 </li>
 <li><p><a href="https://github.com/jiahuanyu/CircleTimerView/" target="_blank" rel="external">圆形时间控件</a></p>
@@ -1128,8 +1140,8 @@
     <title>Element</title>
     <link href="http://willnewii.github.io/20160805/Element/"/>
     <id>http://willnewii.github.io/20160805/Element/</id>
-    <published>2016-08-05T10:21:33.000Z</published>
-    <updated>2016-08-05T10:24:44.000Z</updated>
+    <published>2016-08-05T10:21:00.000Z</published>
+    <updated>2017-04-07T02:39:15.000Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li><a href="http://stackoverflow.com/questions/4106538/difference-between-offsetheight-and-clientheight" target="_blank" rel="external">元素位置</a><br><img src="http://obfmtiyt5.bkt.clouddn.com/zWca7.png" alt="1"></li>
@@ -1144,6 +1156,8 @@
     </summary>
     
     
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
   </entry>
   
   <entry>
@@ -1151,9 +1165,31 @@
     <link href="http://willnewii.github.io/20160727/ES6-%E7%AC%94%E8%AE%B0/"/>
     <id>http://willnewii.github.io/20160727/ES6-笔记/</id>
     <published>2016-07-27T02:35:00.000Z</published>
-    <updated>2016-07-29T02:15:24.000Z</updated>
+    <updated>2017-04-07T02:38:28.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="let-var-const-区别"><a href="#let-var-const-区别" class="headerlink" title="let var const 区别"></a>let var const 区别</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
+    <content type="html"><![CDATA[<h4 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h4><ul>
+<li><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6入门 - 阮一峰的…</a></p>
+</li>
+<li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/lihongxun945/article/details/49031383" target="_blank" rel="external">ES6详解八：模块（Module）！</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（上）</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000004368132" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（下）</a></p>
+</li>
+<li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000002789651" target="_blank" rel="external">[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用</a></p>
+</li>
+<li><p><a href="http://base-n.github.io/koa-generator-examples/node4/classes.html" target="_blank" rel="external">一起学koa</a></p>
+</li>
+</ul>
+<h4 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h4><ul>
+<li><a href="https://segmentfault.com/a/1190000004394726?utm_source=APP&amp;utm_medium=iOS&amp;utm_campaign=socialShare" target="_blank" rel="external">使用ES6开发流程</a></li>
+<li><a href="http://www.es6fiddle.net/" target="_blank" rel="external">运行es6代码的网站</a></li>
+</ul>
+<h3 id="let-var-const-区别"><a href="#let-var-const-区别" class="headerlink" title="let var const 区别"></a>let var const 区别</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
 <li>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的Object，在定义之后仍可以修改其属性。</li>
 </ul>
 <h4 id="const-let"><a href="#const-let" class="headerlink" title="const let"></a>const let</h4><ul>
@@ -1181,24 +1217,20 @@
 <h4 id="整体输入，module指令"><a href="#整体输入，module指令" class="headerlink" title="整体输入，module指令"></a>整体输入，module指令</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"> </div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> name;</div><div class="line"> &#125;</div><div class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> age;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <p>通过 <strong>import * as</strong> 就完成了模块整体的导入。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import * <span class="keyword">as</span> <span class="keyword">test</span> <span class="keyword">form</span> './<span class="keyword">test</span>.js';</div></pre></td></tr></table></figure></p>
 <p>通过指令 <strong>module</strong> 也可以达到整体的输入。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> test <span class="keyword">from</span> <span class="string">'test.js'</span>;</div><div class="line">test.getName();</div></pre></td></tr></table></figure></p>
-<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><ul>
-<li><p><a href="http://qiutc.me/post/es6-cheatsheet.html" target="_blank" rel="external">es6 手册</a></p>
-</li>
-<li><p><a href="http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/" target="_blank" rel="external">ECMAScript 6 扫盲</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/lihongxun945/article/details/49031383" target="_blank" rel="external">ES6详解八：模块（Module）！</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000002789651" target="_blank" rel="external">[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用</a></p>
-</li>
-</ul>
+<h4 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function<br></h4><p>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;let-var-const-区别&quot;&gt;&lt;a href=&quot;#let-var-const-区别&quot; class=&quot;headerlink&quot; title=&quot;let var const 区别&quot;&gt;&lt;/a&gt;let var const 区别&lt;/h3&gt;&lt;h4 id=&quot;const&quot;&gt;&lt;a
+      &lt;h4 id=&quot;教程&quot;&gt;&lt;a href=&quot;#教程&quot; class=&quot;headerlink&quot; title=&quot;教程&quot;&gt;&lt;/a&gt;教程&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://es6.ruanyifeng.com/&quot; target=&quot;_blank&quot; rel=&quot;ext
     
     </summary>
     
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -1207,7 +1239,7 @@
     <link href="http://willnewii.github.io/20160721/Angular-%E8%B5%84%E6%96%99/"/>
     <id>http://willnewii.github.io/20160721/Angular-资料/</id>
     <published>2016-07-21T09:19:00.000Z</published>
-    <updated>2016-07-19T02:50:41.000Z</updated>
+    <updated>2017-04-07T02:49:56.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Angular-2"><a href="#Angular-2" class="headerlink" title="Angular 2"></a>Angular 2</h4><ul>
 <li><p><a href="https://angular.cn/" target="_blank" rel="external">angular2 中文站</a></p>
@@ -1246,8 +1278,6 @@
     
     
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="angular2" scheme="http://willnewii.github.io/tags/angular2/"/>
     
   </entry>
   
@@ -1447,22 +1477,54 @@
   </entry>
   
   <entry>
-    <title>android 开发问题</title>
+    <title>android 笔记</title>
     <link href="http://willnewii.github.io/20160331/android-%E9%97%AE%E9%A2%98/"/>
     <id>http://willnewii.github.io/20160331/android-问题/</id>
-    <published>2016-03-31T04:12:55.000Z</published>
-    <updated>2016-03-31T04:15:00.000Z</updated>
+    <published>2016-03-31T04:12:00.000Z</published>
+    <updated>2017-04-07T02:45:08.000Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="webview-切后台-再回来-无焦点-不弹软键盘"><a href="#webview-切后台-再回来-无焦点-不弹软键盘" class="headerlink" title="webview 切后台,再回来 无焦点(不弹软键盘)"></a>webview 切后台,再回来 无焦点(不弹软键盘)</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">                <span class="keyword">switch</span> (event.getAction ()) &#123;</div><div class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_DOWN :</div><div class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_UP :</div><div class="line">                        <span class="keyword">if</span> (!v.hasFocus()) &#123;</div><div class="line">                            v.setFocusableInTouchMode(<span class="keyword">true</span>);</div><div class="line">                            <span class="comment">//v.setFocusable(true);</span></div><div class="line">                            <span class="comment">//v.requestFocus ();</span></div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">break</span> ;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h5 id="QianYiFormatEditText-java"><a href="#QianYiFormatEditText-java" class="headerlink" title="QianYiFormatEditText.java"></a>QianYiFormatEditText.java</h5><p>最近在完善EditText格式化的View.</p>
+<ol>
+<li>身份证号:格式化前15、18位 6(行政划分代码)+8(出生日期) 有可能x结尾</li>
+<li>银行卡号:格式化前16、18位</li>
+<li>手机号码:格式化前11位(3,4,4)</li>
+<li>金额:保留两位小数,货币分隔符</li>
+</ol>
+<p>按照正常的做法,添加个TextWatcher,做相应的处理,格式化成相应的格式就好了.那么问题来了,银行卡,手机卡,金额都可以限制inputtype为num.身份证应为结尾可能是x,所以不能做限制.</p>
+<p>在用默认输入法输入身份证号的过程中就会出现,将输入状态切换到数字输入状态,随便输入一个数字,输入法就又切换为了字母输入状态.<br>经过排查后,得出问题<br>    在调用TextWatcher中settext() 如果是系统默认输入法数字输入状态会切回字母输入状态.<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">removeTextChangedListener(<span class="name">mTextWatcher</span>)<span class="comment">;</span></div><div class="line">setText(<span class="name">s</span>.toString())<span class="comment">;</span></div><div class="line">setSelection(<span class="name">getText</span>().length())<span class="comment">;</span></div><div class="line">addTextChangedListener(<span class="name">mTextWatcher</span>)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<h5 id="webview"><a href="#webview" class="headerlink" title="webview"></a>webview</h5><ul>
+<li>js alert不弹出对话框<br><br>webview只是一个承载体，各种内容的渲染需要使用webviewChromClient去实现，所以set一个默认的基类WebChromeClient就行，代码如下：<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mWebView.setWebChromeClient(<span class="keyword">new</span> <span class="type">WebChromeClient</span>());</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>读取本地文件<br><br>场景：加载html页面,然后替换资源链接,直接加载本地资源.<ol>
+<li>webView.loadUrl(“file:///android_asset/demo.html”);<br>可以将页面中的链接替换成file://</li>
+<li>shouldInterceptRequest</li>
+<li>webView.loadUrl(“<a href="http://mayday5.sinaapp.com/test.html" target="_blank" rel="external">http://mayday5.sinaapp.com/test.html</a>“);<br>则提示”Not allowed to load local resource: file://storage/emulated/0/1.jpg”</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><p>webview 切后台,再回来 无焦点(不弹软键盘)</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">                <span class="keyword">switch</span> (event.getAction ()) &#123;</div><div class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_DOWN :</div><div class="line">                    <span class="keyword">case</span> MotionEvent.ACTION_UP :</div><div class="line">                        <span class="keyword">if</span> (!v.hasFocus()) &#123;</div><div class="line">                            v.setFocusableInTouchMode(<span class="keyword">true</span>);</div><div class="line">                            <span class="comment">//v.setFocusable(true);</span></div><div class="line">                            <span class="comment">//v.requestFocus ();</span></div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">break</span> ;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>webview error提示 net::ERR_CACHE_MISS</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">19</span>) &#123;</div><div class="line"> 	<span class="selector-tag">mWebView</span><span class="selector-class">.getSettings</span>()<span class="selector-class">.setCacheMode</span>(WebSettings.LOAD_CACHE_ELSE_NETWORK);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h4 id="微信分享-提示-hit-push-hold！！！"><a href="#微信分享-提示-hit-push-hold！！！" class="headerlink" title="微信分享 提示 hit push hold！！！"></a>微信分享 提示 hit push hold！！！</h4><p>原因是你分享的微信账号在其他手机登陆了，但是本机还没有退出登陆，导致没有权限分享。重新进入微信并登陆就好了。</p>
-<h4 id="webview-error提示-net-ERR-CACHE-MISS"><a href="#webview-error提示-net-ERR-CACHE-MISS" class="headerlink" title="webview error提示 net::ERR_CACHE_MISS"></a>webview error提示 net::ERR_CACHE_MISS</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">19</span>) &#123;</div><div class="line"> 	<span class="selector-tag">mWebView</span><span class="selector-class">.getSettings</span>()<span class="selector-class">.setCacheMode</span>(WebSettings.LOAD_CACHE_ELSE_NETWORK);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>]]></content>
+]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;webview-切后台-再回来-无焦点-不弹软键盘&quot;&gt;&lt;a href=&quot;#webview-切后台-再回来-无焦点-不弹软键盘&quot; class=&quot;headerlink&quot; title=&quot;webview 切后台,再回来 无焦点(不弹软键盘)&quot;&gt;&lt;/a&gt;webview 切后
+      &lt;h5 id=&quot;QianYiFormatEditText-java&quot;&gt;&lt;a href=&quot;#QianYiFormatEditText-java&quot; class=&quot;headerlink&quot; title=&quot;QianYiFormatEditText.java&quot;&gt;&lt;/a&gt;QianYiForma
     
     </summary>
     
+    
+      <category term="Android" scheme="http://willnewii.github.io/tags/Android/"/>
+    
+      <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -1535,11 +1597,11 @@
   </entry>
   
   <entry>
-    <title>Git小结</title>
+    <title>Git 小结</title>
     <link href="http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/"/>
     <id>http://willnewii.github.io/20160309/Git小结/</id>
     <published>2016-03-09T07:27:00.000Z</published>
-    <updated>2016-03-14T06:47:07.000Z</updated>
+    <updated>2017-04-07T02:39:31.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法， 它伴随着工程图从图的诞生一直到图的定型。 一种简单的版本控制形式，例如，赋给图的初版一个版本等级“A”。当做了第一次改变后，版本等级改为“B”，以此类推等等。</p>
 <h4 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git"></a>什么是Git</h4><p>　　Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
@@ -1613,51 +1675,11 @@
   </entry>
   
   <entry>
-    <title>ES6笔记</title>
-    <link href="http://willnewii.github.io/20160215/ES6-%E8%B5%84%E6%BA%90/"/>
-    <id>http://willnewii.github.io/20160215/ES6-资源/</id>
-    <published>2016-02-15T02:47:00.000Z</published>
-    <updated>2016-02-17T10:21:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h4><ul>
-<li>Arrow Function<br><br>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。<br>并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</li>
-</ul>
-<h4 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h4><ul>
-<li><p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6入门 - 阮一峰的…</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（上）</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000004368132" target="_blank" rel="external">30分钟掌握ES6/ES2015核心内容（下）</a></p>
-</li>
-<li><p><a href="http://base-n.github.io/koa-generator-examples/node4/classes.html" target="_blank" rel="external">一起学koa</a></p>
-</li>
-</ul>
-<h4 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h4><ul>
-<li><a href="https://segmentfault.com/a/1190000004394726?utm_source=APP&amp;utm_medium=iOS&amp;utm_campaign=socialShare" target="_blank" rel="external">使用ES6开发流程</a></li>
-<li><a href="http://www.es6fiddle.net/" target="_blank" rel="external">运行es6代码的网站</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Arrow Function&lt;br&gt;&lt;br&gt;当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="ES6" scheme="http://willnewii.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git笔记</title>
+    <title>git 笔记</title>
     <link href="http://willnewii.github.io/20160120/git/"/>
     <id>http://willnewii.github.io/20160120/git/</id>
     <published>2016-01-20T03:47:00.000Z</published>
-    <updated>2016-01-25T07:50:06.000Z</updated>
+    <updated>2017-04-07T02:39:40.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="git移除某文件夹的版本控制"><a href="#git移除某文件夹的版本控制" class="headerlink" title="git移除某文件夹的版本控制"></a>git移除某文件夹的版本控制</h4><p>thinkphp框架，Apps/Runtime下目录移出版本控制.<br>git rm -r -n –cached  <em>/Runtime/\</em>      //-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。</p>
 <p>git rm -r –cached  <em>/Runtime/\</em>      //最终执行命令.</p>
@@ -1688,6 +1710,78 @@
     
     </summary>
     
+    
+      <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS 笔记</title>
+    <link href="http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/"/>
+    <id>http://willnewii.github.io/20160120/JS笔记/</id>
+    <published>2016-01-20T03:37:00.000Z</published>
+    <updated>2017-04-07T02:40:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
+<h4 id="1"><a href="#1" class="headerlink" title="1.==="></a>1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
+</li>
+</ul>
+<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
+<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
+<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
+<h4 id="2-NaN"><a href="#2-NaN" class="headerlink" title="2.NaN"></a>2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
+<pre><code>NaN === NaN; // false
+</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
+<pre><code>isNaN(NaN); // true
+</code></pre><h4 id="3-浮点数的相等比较"><a href="#3-浮点数的相等比较" class="headerlink" title="3.浮点数的相等比较"></a>3.浮点数的相等比较</h4><pre><code>1 / 3 === (1 - 2 / 3); // false
+</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
+<pre><code>Math.abs(1 / 3 - (1 - 2 / 3)) &lt; 0.0000001; // true
+</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
+<ol>
+<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
+<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
+<li>apply &amp; call</li>
+<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
+</ol>
+<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
+<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
+<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
+<p>####严格模式</p>
+<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
+<pre><code>&apos;use strict&apos;;
+</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
+<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
+<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
+<pre><code>&apos;toString&apos; in xiaoming; // true
+</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
+<pre><code>var xiaoming = {
+    name: &apos;小明&apos;
+};
+xiaoming.hasOwnProperty(&apos;name&apos;); // true
+xiaoming.hasOwnProperty(&apos;toString&apos;); // false
+</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
+<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
+<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
+<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
+<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/55364.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JS合并数组的几种方法及优劣比较&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;ht
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
