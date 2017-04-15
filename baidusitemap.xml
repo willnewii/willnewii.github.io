@@ -4,6 +4,61 @@
 
     
   <url>
+    <loc>http://willnewii.github.io/20170415/awesome-chrome/</loc>
+    <lastmod>2017-04-15T13:14:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>awesome-chrome</title>
+        <pubTime>2017-04-15T13:14:00.000Z</pubTime>
+        
+        <tag>杂记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-04-07T06:21:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac 笔记</title>
+        <pubTime>2015-11-27T06:36:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>mac</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20160331/android-%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-04-07T06:13:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>android 笔记</title>
+        <pubTime>2016-03-31T04:12:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://willnewii.github.io/20151207/cordova/</loc>
     <lastmod>2017-04-07T02:50:59.000Z</lastmod>
     <data>
@@ -91,25 +146,6 @@
 
     
   <url>
-    <loc>http://willnewii.github.io/20160331/android-%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2017-04-07T02:45:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>android 笔记</title>
-        <pubTime>2016-03-31T04:12:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-07T02:43:00.000Z</lastmod>
     <data>
@@ -183,25 +219,6 @@
              
               <breadCrumb title="test" url="http://willnewii.github.io/categories/test/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-04-07T02:41:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mac 笔记</title>
-        <pubTime>2015-11-27T06:36:00.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>mac</tag>
-         
-         
-           
         </display>
     </data>
     </url>

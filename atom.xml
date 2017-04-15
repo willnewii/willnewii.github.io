@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://willnewii.github.io/"/>
-  <updated>2017-04-07T02:07:52.000Z</updated>
+  <updated>2017-04-15T13:14:09.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -14,6 +14,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>awesome-chrome</title>
+    <link href="http://willnewii.github.io/20170415/awesome-chrome/"/>
+    <id>http://willnewii.github.io/20170415/awesome-chrome/</id>
+    <published>2017-04-15T13:14:00.000Z</published>
+    <updated>2017-04-15T13:14:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="扩展工具"><a href="#扩展工具" class="headerlink" title="扩展工具"></a>扩展工具</h4><h5 id="装机必备"><a href="#装机必备" class="headerlink" title="装机必备"></a>装机必备</h5><ul>
+<li><p><a href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source=chrome-ntp-icon" target="_blank" rel="external">Adblock Plus</a><br>可用于在网页浏览时过滤视频网站广告、弹出窗口、网页横幅广告和其他显眼位置广告。润物细无声的插件.装上了你也不知道他是干嘛的…直到我用别人的电脑浏览网页,那满屏的广告…</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo?utm_source=chrome-ntp-icon" target="_blank" rel="external">crxMouse Chrome Gestures</a><br>鼠标手势,装机必备(<em>^__^</em>)</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/simpleundoclose/emhohdghchmjepmigjojkehidlielknj?utm_source=chrome-ntp-icon" target="_blank" rel="external">simple undo close</a><br>这个简单的弹出可让您轻而易举的撤销关闭的标签！</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/neater-bookmarks/ofgjggbjanlhbgaemjbkiegeebmccifi?utm_source=chrome-ntp-icon" target="_blank" rel="external">Neater Bookmarks</a><br>弹出式书签栏.装机必备.个人习惯会把默认的书签栏隐藏.</p>
+</li>
+</ul>
+<h5 id="不必备"><a href="#不必备" class="headerlink" title="不必备"></a>不必备</h5><ul>
+<li><p><a href="https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?utm_source=chrome-ntp-icon" target="_blank" rel="external">the-great-suspender</a><br>节省内存利器。它可以休眠掉那些你暂时不用的 Chrome 标签，从而释放出更多的内存和资源</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-ntp-icon" target="_blank" rel="external">tampermonkey</a><br>一款用户脚本管理器，可以通过挂载 js 脚本以实现某些页面功能。你可以在 GreasyFork、 OpenUserJS 等脚本资源网站下载你需要的脚本，来丰富你的浏览器访问的网站功能。比如解决百度云大文件下载限制、跳过网站等待验证码及登录、令 Google 直接链接至搜索结果网页，无须重定向等。</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?utm_source=chrome-ntp-icon" target="_blank" rel="external">stylish</a><br>tampermonkey是让你可以在指定的网站运行js,这个就是让你运行自定义的样式.比如,去掉百度首页的干扰元素,新浪微薄的广告等</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/anything-to-qrcode/calkaljlpglgogjfcidhlmmlgjnpmnmf?utm_source=chrome-ntp-icon" target="_blank" rel="external">anything-to-qrcode</a><br>通过右键菜单或地址栏按钮将当前页面地址、选中的文本、链接、图片地址等文本内容生成二维码，也可以解析页面中的二维码图片，完全离线可用，不依赖任何远程文件和服务，内存占用小，不常驻后台，界面简洁。</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/bookmark-manager/gmlllbghnfkpflemihljekbapjopfjik?utm_source=chrome-ntp-icon" target="_blank" rel="external">Bookmark Manager</a><br>Google出品,material design风格书签管理器.据说本来是要替代自带的书签管理器.后来又被换回去了.个人觉得还好,主要是好看！~</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?utm_source=chrome-ntp-icon" target="_blank" rel="external">Vimium</a><br>用vim的快捷键操作浏览器,基本上不用摸鼠标了…</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/reader-view/iibolhpkjjmoepndefdmdlmbpfhlgjpl?utm_source=chrome-ntp-icon" target="_blank" rel="external">阅读模式</a><br>提供与Safari阅读模式功能一致的插件，浏览文章页时候可进入友好的阅读模式，并自定义阅读功能。  如果你经常浏览资讯或者看长文章,强烈推荐！</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/send-to-kindle-by-klipme/ipkfnchcgalnafehpglfbommidgmalan?utm_source=chrome-ntp-icon" target="_blank" rel="external">Send to Kindle (by Klip.me)</a><br>炒鸡方便.可以设置你的多看或者kindle推送邮箱.看到喜欢的文章点一下,发送.</p>
+</li>
+</ul>
+<h5 id="开发向"><a href="#开发向" class="headerlink" title="开发向"></a>开发向</h5><ul>
+<li><p><a href="https://www.baidufe.com/fehelper" target="_blank" rel="external">WEB前端助手</a></p>
+<ul>
+<li>字符串编解码（Unicode/UTF8/Base64/MD5）<ul>
+<li>二维码生成器（支持当前页面生成QrCode）</li>
+<li>时间(戳)转换（Unix戳与本地时间的互转）</li>
+<li>代码美化工具（HTML/CSS/JS/XML/SQL）</li>
+<li>代码压缩工具（HTML/CSS/JS）</li>
+<li>Json串格式化（粘贴文本、手动格式化）</li>
+<li>页面取色工具（滑动鼠标随意取色）</li>
+<li>Js正则表达式（正则测试、常用正则列表）</li>
+<li>图片Base64（任意图片转DataURI格式）</li>
+<li>编码规范检测（HTML/CSS/JS规范检测）</li>
+<li>页面性能检测（页面响应时间、Header监测）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/json-handle/iahnhfdhidomcpggpaimmmahffihkfnj?utm_source=chrome-ntp-icon" target="_blank" rel="external">JSON-handle</a><br>对JSON格式的内容进行浏览和编辑，以树形图样式展现JSON文档，并可实时编辑。</p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?utm_source=chrome-ntp-icon" target="_blank" rel="external">Octotree</a><br>查看代码的时候如果目录很深你需要一个一个点.这个插件会在左边直接生成一个树状文件目录.还可以直接下载单个文件.    </p>
+</li>
+</ul>
+<h4 id="dev-tool"><a href="#dev-tool" class="headerlink" title="dev tool"></a>dev tool</h4><p><a href="http://www.w3cplus.com/tools/dev-tips.html" target="_blank" rel="external">Chorme 35个开发者工具的小技巧</a></p>
+<p><a href="https://github.com/zhangyaowu/CN-Chrome-DevTools/blob/master/md/Performance-Profiling/Performance-profiling-with-the-Timeline.md" target="_blank" rel="external">Chrome 开发者工具中文手册</a></p>
+<p><a href="http://www.oschina.net/translate/performance-optimisation-with-timeline-profiles" target="_blank" rel="external">使用Chrome DevTools的Timeline和Profiles提高Web应用程序的性能</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;扩展工具&quot;&gt;&lt;a href=&quot;#扩展工具&quot; class=&quot;headerlink&quot; title=&quot;扩展工具&quot;&gt;&lt;/a&gt;扩展工具&lt;/h4&gt;&lt;h5 id=&quot;装机必备&quot;&gt;&lt;a href=&quot;#装机必备&quot; class=&quot;headerlink&quot; title=&quot;装机必备&quot;&gt;&lt;/a
+    
+    </summary>
+    
+    
+      <category term="杂记" scheme="http://willnewii.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>awesome-github</title>
@@ -1481,9 +1555,10 @@
     <link href="http://willnewii.github.io/20160331/android-%E9%97%AE%E9%A2%98/"/>
     <id>http://willnewii.github.io/20160331/android-问题/</id>
     <published>2016-03-31T04:12:00.000Z</published>
-    <updated>2017-04-07T02:45:08.000Z</updated>
+    <updated>2017-04-07T06:13:57.000Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="QianYiFormatEditText-java"><a href="#QianYiFormatEditText-java" class="headerlink" title="QianYiFormatEditText.java"></a>QianYiFormatEditText.java</h5><p>最近在完善EditText格式化的View.</p>
+    <content type="html"><![CDATA[<h5 id="Android-5-0以上版本去掉Button自带阴影效果的方法"><a href="#Android-5-0以上版本去掉Button自带阴影效果的方法" class="headerlink" title="Android 5.0以上版本去掉Button自带阴影效果的方法"></a>Android 5.0以上版本去掉Button自带阴影效果的方法</h5><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">style</span>=”?android:attr/borderlessButtonStyle”</div></pre></td></tr></table></figure>
+<h5 id="QianYiFormatEditText-java"><a href="#QianYiFormatEditText-java" class="headerlink" title="QianYiFormatEditText.java"></a>QianYiFormatEditText.java</h5><p>最近在完善EditText格式化的View.</p>
 <ol>
 <li>身份证号:格式化前15、18位 6(行政划分代码)+8(出生日期) 有可能x结尾</li>
 <li>银行卡号:格式化前16、18位</li>
@@ -1517,7 +1592,7 @@
     
     <summary type="html">
     
-      &lt;h5 id=&quot;QianYiFormatEditText-java&quot;&gt;&lt;a href=&quot;#QianYiFormatEditText-java&quot; class=&quot;headerlink&quot; title=&quot;QianYiFormatEditText.java&quot;&gt;&lt;/a&gt;QianYiForma
+      &lt;h5 id=&quot;Android-5-0以上版本去掉Button自带阴影效果的方法&quot;&gt;&lt;a href=&quot;#Android-5-0以上版本去掉Button自带阴影效果的方法&quot; class=&quot;headerlink&quot; title=&quot;Android 5.0以上版本去掉Button自带阴影效
     
     </summary>
     
@@ -1710,78 +1785,6 @@
     
     </summary>
     
-    
-      <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS 笔记</title>
-    <link href="http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/"/>
-    <id>http://willnewii.github.io/20160120/JS笔记/</id>
-    <published>2016-01-20T03:37:00.000Z</published>
-    <updated>2017-04-07T02:40:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p><a href="http://www.jb51.net/article/55364.htm" target="_blank" rel="external">JS合并数组的几种方法及优劣比较</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/tianguook/archive/2010/09/30/1839648.html" target="_blank" rel="external">JS中数组的操作</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/onlys/articles/jQuery.html" target="_blank" rel="external">jQuery选择器总结</a><br>###比较</p>
-<h4 id="1"><a href="#1" class="headerlink" title="1.==="></a>1.===</h4><p>要特别注意相等运算符==。JavaScript在设计时，有两种比较运算符：</p>
-</li>
-</ul>
-<p>第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
-<p>第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
-<p>由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。</p>
-<h4 id="2-NaN"><a href="#2-NaN" class="headerlink" title="2.NaN"></a>2.NaN</h4><p>另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：</p>
-<pre><code>NaN === NaN; // false
-</code></pre><p>唯一能判断NaN的方法是通过isNaN()函数：</p>
-<pre><code>isNaN(NaN); // true
-</code></pre><h4 id="3-浮点数的相等比较"><a href="#3-浮点数的相等比较" class="headerlink" title="3.浮点数的相等比较"></a>3.浮点数的相等比较</h4><pre><code>1 / 3 === (1 - 2 / 3); // false
-</code></pre><p>这不是JavaScript的设计缺陷。浮点数在运算过程中会产生误差，因为计算机无法精确表示无限循环小数。要比较两个浮点数是否相等，只能计算它们之差的绝对值，看是否小于某个阈值：</p>
-<pre><code>Math.abs(1 / 3 - (1 - 2 / 3)) &lt; 0.0000001; // true
-</code></pre><p>####变量&amp;函数<br>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言</p>
-<ol>
-<li>如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量</li>
-<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部：</li>
-<li>apply &amp; call</li>
-<li>编写高阶函数，就是让函数的参数能够接收别的函数。</li>
-</ol>
-<p>#####闭包<br>我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。</p>
-<p>返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</p>
-<p>在面向对象的程序设计语言里，比如Java和C++，要在对象内部封装一个私有变量，可以用private修饰一个成员变量。<br>在没有class机制，只有函数的语言里，借助闭包，同样可以封装一个私有变量。：</p>
-<p>####严格模式</p>
-<p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
-<pre><code>&apos;use strict&apos;;
-</code></pre><p>这是一个字符串，不支持strict模式的浏览器会把它当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式运行JavaScript。</p>
-<p>###复制数组<br>    var arr = [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’];<br>    var aCopy = arr.slice();<br>    aCopy; // [‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’, ‘G’]<br>    aCopy === arr; // false</p>
-<p>###Object<br>如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：</p>
-<pre><code>&apos;toString&apos; in xiaoming; // true
-</code></pre><p>要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：</p>
-<pre><code>var xiaoming = {
-    name: &apos;小明&apos;
-};
-xiaoming.hasOwnProperty(&apos;name&apos;); // true
-xiaoming.hasOwnProperty(&apos;toString&apos;); // false
-</code></pre><p>###判断<br>JavaScript把null、undefined、0、NaN和空字符串’’视为false，其他值一概视为true，因此上述代码条件判断的结果是true。            </p>
-<p>###this<br>要保证this指向正确，必须用obj.xxx()的形式调用！</p>
-<p>###对象<br>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</p>
-<p>当我们用obj.xxx访问一个对象的属性时，JavaScript引擎先在当前对象上查找该属性，如果没有找到，就到其原型对象上找，如果还没有找到，就一直上溯到Object.prototype对象，最后，如果还没有找到，就只能返回undefined。</p>
-<p>注意，如果不写new，这就是一个普通函数，它返回undefined。但是，如果写了new，它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/55364.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JS合并数组的几种方法及优劣比较&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;ht
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
