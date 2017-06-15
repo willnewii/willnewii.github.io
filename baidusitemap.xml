@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>http://willnewii.github.io/20170615/%E5%9F%BA%E4%BA%8EDllPlugin-%E5%92%8C-DllReferencePlugin-%E7%9A%84-webpack-%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2017-06-15T08:00:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于DllPlugin 和 DllReferencePlugin 的 webpack 构建优化</title>
+        <pubTime>2017-06-15T07:39:30.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://willnewii.github.io/20170406/awesome-github/</loc>
+    <lastmod>2017-04-27T01:52:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>awesome-github</title>
+        <pubTime>2017-04-06T03:19:00.000Z</pubTime>
+        
+        <tag>杂记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://willnewii.github.io/20170415/awesome-chrome/</loc>
     <lastmod>2017-04-15T13:14:09.000Z</lastmod>
     <data>
@@ -155,9 +187,9 @@
         
         <tag>前端</tag>
          
-        <tag>笔记</tag>
-         
         <tag>cordova</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -324,23 +356,6 @@
         <tag>前端</tag>
          
         <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://willnewii.github.io/20170406/awesome-github/</loc>
-    <lastmod>2017-04-07T02:07:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>awesome-github</title>
-        <pubTime>2017-04-06T03:19:00.000Z</pubTime>
-        
-        <tag>杂记</tag>
          
          
            
