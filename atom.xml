@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://willnewii.github.io/"/>
-  <updated>2017-06-15T08:00:10.000Z</updated>
+  <updated>2017-08-02T01:27:56.000Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -16,11 +16,194 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue 中 extend / component / mixins / extends 的区别</title>
+    <link href="http://willnewii.github.io/20170706/Vue-%E4%B8%AD-extend-component-mixins-extends-%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://willnewii.github.io/20170706/Vue-中-extend-component-mixins-extends-的区别/</id>
+    <published>2017-07-06T01:25:00.000Z</published>
+    <updated>2017-08-02T01:27:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在segmentfault上看到了一个问题<a href="https://segmentfault.com/q/1010000007312426" target="_blank" rel="external">vue.extend, vue.component 区别</a>,突然有些方,好歹也写了几个小vue项目,自己都弄不清楚这些东西…</p>
+<h3 id="new-Vue-、component"><a href="#new-Vue-、component" class="headerlink" title="new Vue()、component"></a>new Vue()、component</h3><p>首先我们来约定一个<strong>选项对象</strong>  baseOptions,后面的代码会用到.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> options = &#123;</div><div class="line">    <span class="attr">template</span>: <span class="string">'&lt;p&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125; aka &#123;&#123;alias&#125;&#125;&lt;/p&gt;'</span>,</div><div class="line">    <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">firstName</span>: <span class="string">'Walter'</span>,</div><div class="line">            <span class="attr">lastName</span>: <span class="string">'White'</span>,</div><div class="line">            <span class="attr">alias</span>: <span class="string">'Heisenberg'</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    created()&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-1'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="new-Vue-source-vue-src-core-instance-index-js"><a href="#new-Vue-source-vue-src-core-instance-index-js" class="headerlink" title="new Vue() source:vue/src/core/instance/index.js"></a><a href="http://cn.vuejs.org/v2/guide/instance.html" target="_blank" rel="external">new Vue()</a> <strong>source:vue/src/core/instance/index.js</strong></h4><blockquote>
+<p>实例化一个组件.</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(baseOptions);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div></pre></td></tr></table></figure>
+<h4 id="component-source-vue-src-core-global-api-assets-js"><a href="#component-source-vue-src-core-global-api-assets-js" class="headerlink" title="component source:vue/src/core/global-api/assets.js"></a><a href="http://cn.vuejs.org/v2/api/#Vue-component" target="_blank" rel="external">component</a> <strong>source:vue/src/core/global-api/assets.js</strong></h4><blockquote>
+<p>Vue.component 是用来注册或获取全局组件的方法，其作用是将通过 Vue.extend 生成的扩展实例构造器注册（命名）为一个组件.全局注册的组件可以在所有晚于该组件注册语句构造的Vue实例中使用.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'global-component'</span>, Vue.extend(baseOptions));</div><div class="line"><span class="comment">//传入一个选项对象（自动调用 Vue.extend）,等价于上行代码.</span></div><div class="line">Vue.component(<span class="string">'global-component'</span>, baseOptions);</div><div class="line"><span class="comment">// 获取注册的组件（始终返回构造器）</span></div><div class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p>当我们需要在其他页面‘扩展’或者叫‘混合’baseOptions时,Vue中提供了多种的实现方式:extend,mixins,extends.</p>
+<h4 id="extend-source-vue-src-core-global-api-extend-js"><a href="#extend-source-vue-src-core-global-api-extend-js" class="headerlink" title="extend source:vue/src/core/global-api/extend.js"></a><a href="http://cn.vuejs.org/v2/api/#Vue-extend" target="_blank" rel="external">extend</a> <strong>source:vue/src/core/global-api/extend.js</strong></h4><blockquote>
+<p>可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> BaseComponent = Vue.extend(baseOptions);</div><div class="line"><span class="comment">//基于基础组件BaseComponent,再扩展新逻辑.</span></div><div class="line"><span class="keyword">new</span> BaseComponent(&#123;</div><div class="line">    created()&#123;</div><div class="line">        <span class="comment">//do something</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//其他自定义逻辑</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div><div class="line"><span class="comment">// -&gt; onCreated-2</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="mixins"><a href="#mixins" class="headerlink" title="mixins"></a><a href="http://cn.vuejs.org/v2/api/#mixins" target="_blank" rel="external">mixins</a></h4><blockquote>
+<p>mixins 选项接受一个混合对象的数组。这些混合实例对象可以像正常的实例对象一样包含选项,他们将在 Vue.extend() 里最终选择使用相同的选项合并逻辑合并。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">mixins</span>: [baseOptions],</div><div class="line">    created()&#123;</div><div class="line">        <span class="comment">//do something</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//其他自定义逻辑</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div><div class="line"><span class="comment">// -&gt; onCreated-2</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="extends"><a href="#extends" class="headerlink" title="extends"></a><a href="http://cn.vuejs.org/v2/api/#extends" target="_blank" rel="external">extends</a></h4><blockquote>
+<p>这和 mixins 类似，区别在于，组件自身的选项会比要扩展的源组件具有更高的优先级.</p>
+</blockquote>
+<p>官方文档是这么写的,除了优先级,可能就剩下接受参数的类型吧,mixins接受的是数组.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">extends</span>: baseOptions,</div><div class="line">    created()&#123;</div><div class="line">        <span class="comment">//do something</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//其他自定义逻辑</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div><div class="line"><span class="comment">// -&gt; onCreated-2</span></div></pre></td></tr></table></figure>
+<p>从结果上看,三种方式都能实现需求,但是形式却有不同.</p>
+<ul>
+<li>Vue.extend<ul>
+<li>Vue.extend只是创建一个构造器,他是为了创建可复用的组件.</li>
+</ul>
+</li>
+<li>mixins,extends<ul>
+<li>而mixins和extends是为了拓展组件.</li>
+</ul>
+</li>
+</ul>
+<p>从源码来看通过extend,extends和mixins三种方式接收的options,最终都是通过mergeOptions进行合并的.差异只是官方文档中提到的优先级不同extend &gt; extends &gt; mixins. 所以,如果是简单的扩展组件功能,三个方式都可以达到目的.</p>
+<p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQsjQ" alt="图片描述"></p>
+<p>而这三种方式使用场景上细化的区分,目前我也蒙圈中…</p>
+<p>//几种方式的不同示例:<br><a href="https://jsfiddle.net/willnewii/dzks1r4d/" target="_blank" rel="external">https://jsfiddle.net/willnewii/dzks1r4d/</a></p>
+<h3 id="选项对象合并策略-Vue-config-optionMergeStrategies"><a href="#选项对象合并策略-Vue-config-optionMergeStrategies" class="headerlink" title="选项对象合并策略   Vue.config.optionMergeStrategies"></a>选项对象合并策略   <strong>Vue.config.optionMergeStrategies</strong></h3><p>上面提到的选项对象,是在mergeOptions中按照一定策略进行合并的.</p>
+<p>打印Vue.config.optionMergeStrategies,你会看默认的optionMergeStrategies如下:<br><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQu03" alt="图片描述"></p>
+<ul>
+<li>mergeHook<ul>
+<li>子组件和父组件的生命周期事件会合并在一个数组里。父组件在前，子组件在后。</li>
+</ul>
+</li>
+<li>watch<ul>
+<li>子组件和父组件的watchers会合并在一个数组里。父组件在前，子组件在后。</li>
+</ul>
+</li>
+<li>mergeAssets(filters，components，directives)<ul>
+<li>首先会在子组件里查找，如果没有，才会沿着原型链向上，找父组件中对应的属性。</li>
+</ul>
+</li>
+<li>data 合并规则<ul>
+<li>无重复的属性保留</li>
+<li>同名覆盖</li>
+<li>data中的对象也是相同规则,无重复的属性保留,同名覆盖</li>
+</ul>
+</li>
+<li>props、methods、computed: 无重复保留,同名子组件覆盖父组件</li>
+</ul>
+<h5 id="mergeAssets"><a href="#mergeAssets" class="headerlink" title="mergeAssets"></a>mergeAssets</h5><p>mergeAssets合并方法里,用到了原型委托.他会先把父组件的属性放在创建的新对象的原型链上.然后扩展新对象</p>
+<blockquote>
+<p><strong>对象里查找属性的规则</strong> :举个例子，当查找一个属性时，如 obj[a] ,如果 obj 没有 a 这个属性，那么将会在 obj 对象的原型里找，如果还没有，在原型的原型上找，直到原型链的尽头，如果还没有找到，返回 undefined。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span> (<span class="params">to, _from</span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> _from) &#123;</div><div class="line">    to[key] = _from[key];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> to</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mergeAssets</span> (<span class="params">parentVal, childVal</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = <span class="built_in">Object</span>.create(parentVal || <span class="literal">null</span>);</div><div class="line">  <span class="keyword">return</span> childVal</div><div class="line">    ? extend(res, childVal)</div><div class="line">    : res</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>Vue.component 注册全局组件,为了方便</li>
+<li>Vue.extend 创建组件的构造函数,为了复用</li>
+<li>mixins、extends 为了扩展</li>
+</ul>
+<p>如果按照优先级去理解,当你需要继承一个组件时,可以使用Vue.extend().当你需要扩展组件功能的时候,可以使用extends,mixins.但目前为止还没有碰到完美诠释他们的场景,抱歉,能力有限😂 </p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><p><a href="http://mario.studio/vue-course/#/0?_k=chseqx" target="_blank" rel="external">Vue 代码详解</a></p>
+</li>
+<li><p><a href="http://www.qinshenxue.com/article/20170616121212.html" target="_blank" rel="external">Vue官方文档梳理-全局配置 合并策略</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000007087912#articleHeader4" target="_blank" rel="external">vue2.0源码解读之选项合并策略 optionMergeStrategies</a></p>
+</li>
+<li><a href="https://segmentfault.com/a/1190000009721209" target="_blank" rel="external">vue源码解读－component机制</a></li>
+</ul>
+<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul>
+<li><p>href 属性用于保持光标形状为正常的手形，也可以使用 css 实现</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span> @<span class="attr">click</span>=<span class="string">"currentView = 'home'"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>FOUC Flash Of Unstyled Content 文档样式闪烁</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在segmentfault上看到了一个问题&lt;a href=&quot;https://segmentfault.com/q/1010000007312426&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue.extend, vue.component 区别&lt;/a
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue 首屏加载优化</title>
+    <link href="http://willnewii.github.io/20170705/vue-%E9%A6%96%E5%B1%8F%E5%8A%A0%E8%BD%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://willnewii.github.io/20170705/vue-首屏加载优化/</id>
+    <published>2017-07-05T01:11:00.000Z</published>
+    <updated>2017-08-02T01:24:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="库使用情况"><a href="#库使用情况" class="headerlink" title="库使用情况"></a>库使用情况</h3><ul>
+<li>vue</li>
+<li>vue-router</li>
+<li>axios</li>
+<li>muse-ui</li>
+<li>material-icons</li>
+<li>vue-baidu-map</li>
+</ul>
+<h3 id="未优化前"><a href="#未优化前" class="headerlink" title="未优化前"></a>未优化前</h3><p>首先我们在正常情况下build<br><img src="http://obfmtiyt5.bkt.clouddn.com/img%2F3653690494-595b19a18af16_articlex" alt="图片描述"></p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><h4 id="1-按需加载"><a href="#1-按需加载" class="headerlink" title="1. 按需加载"></a>1. 按需加载</h4><p>当前流行的UI框架如iview,muse-ui,Element UI都支持按需加载,只需稍微改动一下代码.</p>
+<p>修改前：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> MuseUI <span class="keyword">from</span> <span class="string">'muse-ui'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'muse-ui/dist/muse-ui.css'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'muse-ui/dist/theme-light.css'</span></div><div class="line">Vue.use(MuseUI)</div></pre></td></tr></table></figure></p>
+<p>修改后：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> appBar <span class="keyword">from</span> <span class="string">'muse-ui/src/appBar'</span></div><div class="line"><span class="keyword">import</span> toast <span class="keyword">from</span> <span class="string">'muse-ui/src/toast'</span></div><div class="line"><span class="keyword">import</span> drawer <span class="keyword">from</span> <span class="string">'muse-ui/src/drawer'</span></div><div class="line"><span class="keyword">import</span> popup <span class="keyword">from</span> <span class="string">'muse-ui/src/popup'</span></div><div class="line"></div><div class="line">Vue.component(appBar.name, appBar);</div><div class="line">Vue.component(toast.name, toast);</div><div class="line">Vue.component(drawer.name, drawer);</div><div class="line">Vue.component(popup.name, popup);</div></pre></td></tr></table></figure></p>
+<p>这里有点麻烦的就是你要把整个项目用到的muse-ui组件都注册一遍,当然你也可以只在用到的页面做局部引用.<br>让我们来看看使用按需加载后的效果🤓</p>
+<p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQh9B" alt="图片描述"></p>
+<p>在当前项目引用了16个muse-ui组件的情况下 css减少了80kb,js减少了快200kb.</p>
+<h4 id="2-基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化"><a href="#2-基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化" class="headerlink" title="2. 基于DllPlugin 和 DllReferencePlugin 的 webpack 构建优化"></a>2. 基于DllPlugin 和 DllReferencePlugin 的 webpack 构建优化</h4><p>这一步并没有对项目产出的文件进行什么优化.而是优化了构建速度.<br>DllPlugin 预编译模块.有点像android开发中的lib Module,或者iOS的framework.<br>我们可以对项目中用到的vue,vue-router,axios,muse-ui 这些固定的,基本不变动的模块进行预编译. 具体操作不在赘述,可以看一下<a href="http://blog.mayday5.me/20170615/%E5%9F%BA%E4%BA%8EDllPlugin-%E5%92%8C-DllReferencePlugin-%E7%9A%84-webpack-%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96/" target="_blank" rel="external">这篇文章</a>,也是我写的,但是觉得自己没讲利索😂 .</p>
+<p>看一下构建时间的结果对比:</p>
+<p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQikO" alt="图片描述"></p>
+<p>before:38291ms<br>after :10089ms</p>
+<p>项目中多了core.dll.css和core.dll.js 他们就是划分出来的固定的,基本不变的模块,所以只需要编译一次,以后引用就好.有点library的感觉.这样每次构建省去了构建固定模块的时间.  时间有38s降到了10s,如果你构建比较频繁,应该还是很有用的.</p>
+<h4 id="3-异步组件-官方文档"><a href="#3-异步组件-官方文档" class="headerlink" title="3. 异步组件 官方文档"></a>3. 异步组件 <a href="https://cn.vuejs.org/v2/guide/components.html#%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6" target="_blank" rel="external">官方文档</a></h4><p>官方文档是这么介绍的:</p>
+<blockquote>
+<p>在大型应用中，我们可能需要将应用拆分为多个小模块，按需从服务器下载。为了让事情更简单， Vue.js 允许将组件定义为一个工厂函数，动态地解析组件的定义。Vue.js 只在组件需要渲染时触发工厂函数，并且把结果缓存起来，用于后面的再次渲染。</p>
+</blockquote>
+<p>修改router</p>
+<p>before：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> search <span class="keyword">from</span> <span class="string">'./search.vue'</span></div><div class="line">&#123;</div><div class="line">            <span class="attr">path</span>: <span class="string">'/search'</span>,</div><div class="line">            <span class="attr">name</span>: <span class="string">'search'</span>,</div><div class="line">            <span class="attr">component</span>: search</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>after：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> search = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([<span class="string">'./search.vue'</span>], resolve);</div><div class="line">&#123;</div><div class="line">            <span class="attr">path</span>: <span class="string">'/search'</span>,</div><div class="line">            <span class="attr">name</span>: <span class="string">'search'</span>,</div><div class="line">            <span class="attr">component</span>: search</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>具体我们来看看改造后的效果:<br><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQipH" alt="图片描述"><br>因为我的项目目前只有7个页面,即使把页面都做成异步加载,效果并不是很’喜人’,整体缩小了30kb.</p>
+<h4 id="4-优化组件加载时机"><a href="#4-优化组件加载时机" class="headerlink" title="4. 优化组件加载时机"></a>4. 优化组件加载时机</h4><p>再使用别人的组件时,上手教程都会提示让你在main.js里注册一下就好.当然这是最省事的办法.<br>但是根据项目情况,比如我的项目用到了vue-baidu-map.<br>如果你按照默认的加载方式,vue-baidu-map是会被打在vendor.js .但其实这个组件我只有某个二级页面才使用.所以让我们来调整一下加载位置看看.把注册的vue-baidu-map放在真正使用它的地方.</p>
+<p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQiuF" alt="图片描述"></p>
+<p>这样,verdor.js 又小了56kb.因为首页根本用不到vue-baidu-map. 当然这样会带来一个问题:当多个页面使用vue-baidu-map,会出现多个页面重复打包.</p>
+<p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQixp" alt="图片描述"></p>
+<p>怎么异步加载插件,这个我还没搞明白…</p>
+<h4 id="5-webpack-bundle-analyzer"><a href="#5-webpack-bundle-analyzer" class="headerlink" title="5. webpack-bundle-analyzer"></a>5. webpack-bundle-analyzer</h4><p>webpack-bundle-analyzer是用来分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的工具.你可以通过命令:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">run</span> build <span class="comment">--report</span></div></pre></td></tr></table></figure></p>
+<p>来查看依赖关系.然后再根据具体情况划分代码块.效果图就是上面那张花里胡哨的图…它清楚的告诉你了打包时模块划分的情况.</p>
+<h4 id="6-前后对比"><a href="#6-前后对比" class="headerlink" title="6. 前后对比:"></a>6. 前后对比:</h4><p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQixp" alt="图片描述"></p>
+<p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQiuF" alt="图片描述"></p>
+<p>638.7kb vs 286.2kb<br>这还是在未开启gzip的情况下.</p>
+<p>新增一张开启gzip的截图,84.8kb,相对最后的优化结果286.2kb是70%的压缩比…哈哈<br><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQlGy" alt="图片描述"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>在使用ui库时,尽量使用按需加载方式.</li>
+<li>异步加载,官方文档很详尽,改造起来也不难,可以试试</li>
+<li>合理规划三方库的引用.这个听起来有点龟毛,’收益’可能也不是很高,不过是个调整方向</li>
+<li>善用webpack-bundle-analyzer优化项目依赖</li>
+<li>服务端开启 gzip压缩,谁用谁知道！</li>
+</ol>
+<p>如果你能看到这,十分感谢你赏脸听一个android开发bb前端开发🤗 .</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://segmentfault.com/r/1250000009352622?shareId=1210000009352623" target="_blank" rel="external">Vue SPA(单页应用)首屏优化实践</a></li>
+<li><a href="https://segmentfault.com/a/1190000005969643" target="_blank" rel="external">Webpack的dll功能</a></li>
+<li><a href="https://cn.vuejs.org/v2/guide/components.html#%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6" target="_blank" rel="external">vue官方文档-异步组件</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;库使用情况&quot;&gt;&lt;a href=&quot;#库使用情况&quot; class=&quot;headerlink&quot; title=&quot;库使用情况&quot;&gt;&lt;/a&gt;库使用情况&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;vue&lt;/li&gt;
+&lt;li&gt;vue-router&lt;/li&gt;
+&lt;li&gt;axios&lt;/li&gt;
+&lt;li&gt;muse
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基于DllPlugin 和 DllReferencePlugin 的 webpack 构建优化</title>
     <link href="http://willnewii.github.io/20170615/%E5%9F%BA%E4%BA%8EDllPlugin-%E5%92%8C-DllReferencePlugin-%E7%9A%84-webpack-%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96/"/>
     <id>http://willnewii.github.io/20170615/基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化/</id>
-    <published>2017-06-15T07:39:30.000Z</published>
-    <updated>2017-06-15T08:00:10.000Z</updated>
+    <published>2017-06-15T07:39:00.000Z</published>
+    <updated>2017-08-02T01:23:49.000Z</updated>
     
     <content type="html"><![CDATA[<p>一个基于vue-cli webpack2模板创建的项目.项目中使用到了vue+vue-router+axios+muse-ui+iview<br>现在构建一次需要的时间大概是40s左右.真心受不了.虽然在开发过程中,我们不太需要关心构建时间.但是如果在开发hybridApp时,构建的次数就会增多.</p>
 <p>一般我们可以把项目分为三部分.</p>
@@ -138,6 +321,8 @@
     
     </summary>
     
+    
+      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -1763,123 +1948,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>持续集成 应用-1</title>
-    <link href="http://willnewii.github.io/20160313/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90-%E5%BA%94%E7%94%A81/"/>
-    <id>http://willnewii.github.io/20160313/持续集成-应用1/</id>
-    <published>2016-03-13T09:14:00.000Z</published>
-    <updated>2016-03-14T06:50:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h4><p>　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈不会么..<br>　　最近在看git工作流的相关应用,了解到持续集成方面的应用.恰好能解决这方面的问题.</p>
-<h4 id="什么是持续集成"><a href="#什么是持续集成" class="headerlink" title="什么是持续集成"></a>什么是持续集成</h4><p>　　持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。<br>　　高大上的答案,来自百度…</p>
-<h4 id="说说工作上的场景"><a href="#说说工作上的场景" class="headerlink" title="说说工作上的场景"></a>说说工作上的场景</h4><ul>
-<li><p>啥时候发新包<br>在测试阶段,当进行一轮测试后,测试人员就要等着发新包.</p>
-<ul>
-<li>这是一个被动行为.如果开发人员不推进,测试人员将永远处于等待状态.(为什么测试人员不去搭建一个编译环境…)</li>
-<li>大家都有一种”默契”,代码相关的产出物都应该由开发人员来搞.跟其他人没毛关系</li>
-<li>理论上,只要代码库被更新,测试人员就可以进行新的测试,不需要等待开发人员的推进.</li>
-</ul>
-</li>
-<li><p>驱动工作的是代码库<br>　　一直以来,大家习惯的工作流程是确认bug,修改bug,提交代码,编译新包,交付测试.这一切的行为需要开发人员驱动.<br>　　那么让我们试想一下,把这个流程由开发人员驱动,改为代码库驱动.<br>　　以持续集成的方式:当代码库发生变更,系统就要进行集成工作.自动化构建,产生新包,供测试人员测试.在这个过程中开发人员不需要与测试人员进行沟通,一切由代码库驱动.<br>　　(发散一下,我们使用的mantis,其实跟代码也没有关系.而github的issue,则是紧密围绕代码产生和关闭的.)</p>
-</li>
-</ul>
-<h4 id="当前实现效果-使用jenkins构建android应用"><a href="#当前实现效果-使用jenkins构建android应用" class="headerlink" title="当前实现效果(使用jenkins构建android应用)"></a>当前实现效果(使用jenkins构建android应用)</h4><p>　　当代码库更新后,相关人员进入jenkins后台,执行build操作即可.当build成功后,jenkins会发邮件通知相关工作人员任务状态.如果构建成功,测试人员下载新包,即可进行测试.<br>　　开发人员的工作是修复bug,提交代码.测试,上线,打渠道包的一系列构建任务都可以交给jenkins完成.</p>
-<h4 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h4><ul>
-<li>通过hooks,当版本库发生变化,自动通知jenkins构建新版本</li>
-<li>通过区分branch,可以实现构建不同版本的包.你爱测那个测那个…</li>
-<li>自动化测试…</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h4&gt;&lt;p&gt;　　现在的工作环境,代码基本处于私有状态,利用起来的只有开发组.测试人员就算可以访问,也没有实质性的应用.打个包…连个真机看个log…你他妈
-    
-    </summary>
-    
-    
-      <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git 小结</title>
-    <link href="http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/"/>
-    <id>http://willnewii.github.io/20160309/Git小结/</id>
-    <published>2016-03-09T07:27:00.000Z</published>
-    <updated>2017-04-07T02:39:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h4><p>　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每次改动编上序号。这种方法是工程图（engineering drawings）维护（maintenance）的标准做法， 它伴随着工程图从图的诞生一直到图的定型。 一种简单的版本控制形式，例如，赋给图的初版一个版本等级“A”。当做了第一次改变后，版本等级改为“B”，以此类推等等。</p>
-<h4 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git"></a>什么是Git</h4><p>　　Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
-<ul>
-<li>集中式 分布式</li>
-<li>代码库的每份拷贝都带有完整的数据库，用户可以在本地修改、提交代码</li>
-<li>分支…分支…分支…重要的事情说三遍</li>
-</ul>
-<h3 id="为什么是git"><a href="#为什么是git" class="headerlink" title="为什么是git"></a>为什么是git</h3><ul>
-<li>google code关闭了…</li>
-<li>github是全球最大的同性交友网站…</li>
-<li>看看你使用的开源项目都托管在哪里?</li>
-<li>分支…分支…分支…重要的事情说三遍</li>
-</ul>
-<h3 id="提交方式"><a href="#提交方式" class="headerlink" title="提交方式"></a>提交方式</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">svn commit -m <span class="string">'svn提交'</span> <span class="comment">//加入版本库&amp;提交服务器</span></div><div class="line"></div><div class="line">git commit -m <span class="string">'git提交'</span> <span class="comment">//加入本地版本库</span></div><div class="line">git <span class="keyword">push</span> origin master <span class="comment">//提交到远程分支</span></div></pre></td></tr></table></figure>
-<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><p>　　Git的分支相比SVN要轻量很多.Git的分支只是指针,并没有将仓库进行复制,每次提交都会让当前的分支向后移动,指向最后一次提交的对象.当你在切换分支时,Git也只是改变指向当前所在分支的特殊指针HEAD,所以可以快速地在各个分支之间进行切换.</p>
-<p>　　简单、快速</p>
-<h3 id="gitflow"><a href="#gitflow" class="headerlink" title="gitflow"></a>gitflow</h3><p><img src="/img/gitflow.png" alt="GitHub Octocat"></p>
-<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ul>
-<li>永久性分支<ul>
-<li>master分支<br>存放的是随时可供在生产环境中部署的代码.当开发活动告一段落，产生了一份新的可供部署的代码时，master分支上的代码会被更新。同时,每一次更新,最好添加对应的版本号标签（TAG）。</li>
-<li>develop分支<br>保存当前最新开发成果的分支。当develop分支上的代码已实现本次更新的所有功能，并通过了所有的测试后，且代码已经足够稳定时，就可以将所有的开发成果合并回master分支了</li>
-</ul>
-</li>
-<li>临时性分支<ul>
-<li>topic分支<br>修改bug,实验性,优化,更新控件</li>
-<li>一对一<br>按模块分配任务.大家以dev分支为基础,创建各自私有分支（一对一）,进行开发.这个过程中是对其他人不可见,这样在开发过程中不会污染dev分支,出现dev分支不可用的状态.</li>
-<li>一对多<br>如果有交叉任务,可以创建一个topic分支（多对一）,指定多名人员维护开发.</li>
-</ul>
-</li>
-</ul>
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><a href="http://10.101.26.196:8080/job/build-android/" target="_blank" rel="external">http://10.101.26.196:8080/job/build-android/</a></p>
-<h3 id="rebase-衍合-变基"><a href="#rebase-衍合-变基" class="headerlink" title="rebase 衍合/变基"></a>rebase 衍合/变基</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span> <span class="comment">--pretty=oneline</span></div><div class="line">git rebase -i (你需要合并的commints的前一个commit哈希值)</div></pre></td></tr></table></figure>
-<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><ul>
-<li>git log</li>
-<li>stash</li>
-<li>markdown</li>
-</ul>
-<h4 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h4><ul>
-<li><p>基础知识</p>
-<ul>
-<li><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">猴子都能看懂的git入门</a></li>
-<li><a href="http://www.cnblogs.com/gbyukg/archive/2011/12/12/2285419.html" target="_blank" rel="external">git log 参数</a></li>
-</ul>
-</li>
-<li><p>工作流</p>
-<ul>
-<li><a href="http://www.ituring.com.cn/article/56870" target="_blank" rel="external">基于git的源代码管理模型——git flow</a></li>
-<li><a href="https://coding.net/help/doc/git/git-branch.html" target="_blank" rel="external">coding-Git分支管理</a></li>
-<li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83" target="_blank" rel="external">常见工作流比较</a></li>
-</ul>
-</li>
-<li><p>进阶</p>
-<ul>
-<li><a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="external">Commit message和Change log编写指南</a></li>
-<li><a href="http://blog.fir.im/fir-im-practicesguide4/" target="_blank" rel="external">http://blog.fir.im/fir-im-practicesguide4/</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;什么是版本控制&quot;&gt;&lt;a href=&quot;#什么是版本控制&quot; class=&quot;headerlink&quot; title=&quot;什么是版本控制&quot;&gt;&lt;/a&gt;什么是版本控制&lt;/h4&gt;&lt;p&gt;　　版本控制透过文档控制（documentation control）记录程序各个模组的改动，并为每
-    
-    </summary>
-    
-    
-      <category term="工作流程" scheme="http://willnewii.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
     
   </entry>
   
