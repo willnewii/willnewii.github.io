@@ -179,6 +179,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Puppeteer-使用笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20180123/Puppeteer-使用笔记/">Puppeteer 使用笔记</a>
+    </h1>
+  
+
+        
+        <a href="/20180123/Puppeteer-使用笔记/" class="archive-article-date">
+  	<time datetime="2018-01-23T09:27:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是Puppeteer？"><a href="#什么是Puppeteer？" class="headerlink" title="什么是Puppeteer？"></a>什么是Puppeteer？</h2><ul>
+<li>是一个用户界面自动化工具</li>
+<li>是一个Nodejs的库</li>
+<li>是一个可以通过API来操作Chrome浏览器的库</li>
+<li>是一个Chrome团队维护的库</li>
+</ul>
+<h2 id="Puppeteer可以做什么？"><a href="#Puppeteer可以做什么？" class="headerlink" title="Puppeteer可以做什么？"></a>Puppeteer可以做什么？</h2><ul>
+<li>生成网页截图/PDF</li>
+<li>抓取网页内容</li>
+<li>抓取SPA网站内容<br>应该说,正常你通过chrome能做到的事,Puppeteer大概可以通过api来完成.</li>
+</ul>
+<h2 id="来点代码"><a href="#来点代码" class="headerlink" title="来点代码"></a>来点代码</h2><h3 id="截图或者保存pdf-一搜一大把的例子-你可以跳过"><a href="#截图或者保存pdf-一搜一大把的例子-你可以跳过" class="headerlink" title="截图或者保存pdf (一搜一大把的例子,你可以跳过.)"></a>截图或者保存pdf (一搜一大把的例子,你可以跳过.)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">'puppeteer'</span>);</div><div class="line"></div><div class="line"><span class="function">(<span class="params"><span class="keyword">async</span> (</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> browser = <span class="keyword">await</span> puppeteer.launch();</div><div class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> browser.newPage();</div><div class="line">    <span class="keyword">await</span> page.goto(<span class="string">'https://github.com/GoogleChrome/puppeteer/blob/master/examples/screenshot-fullpage.js'</span>);</div><div class="line">    <span class="comment">//生成全屏截图</span></div><div class="line">    <span class="keyword">await</span> page.screenshot(&#123;<span class="attr">path</span>: <span class="string">'full.png'</span>, <span class="attr">fullPage</span>: <span class="literal">true</span>&#125;);</div><div class="line">    <span class="comment">//生成pdf</span></div><div class="line">    <span class="keyword">await</span> page.pdf(&#123;<span class="attr">path</span>: <span class="string">'full.pdf'</span>&#125;);</div><div class="line">    <span class="keyword">await</span> browser.close();</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<h3 id="抓取网页数据"><a href="#抓取网页数据" class="headerlink" title="抓取网页数据"></a>抓取网页数据</h3><p>我们以京东商品详情页为例.通过puppeteer,获取商品标题和售价.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">'puppeteer'</span>);</div><div class="line"></div><div class="line"><span class="function">(<span class="params"><span class="keyword">async</span> (</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> browser = <span class="keyword">await</span> puppeteer.launch();</div><div class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> browser.newPage();</div><div class="line">    <span class="keyword">await</span> page.goto(<span class="string">'https://item.m.jd.com/ware/view.action?wareId=3719293'</span>);</div><div class="line">    <span class="keyword">let</span> data = <span class="keyword">await</span> page.evaluate(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">jdPrice</span>: <span class="built_in">document</span>.querySelector(<span class="string">'#jdPrice-copy'</span>).innerText,</div><div class="line">            <span class="attr">jdTitle</span>: <span class="built_in">document</span>.querySelector(<span class="string">'.title-text'</span>).innerText</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line"></div><div class="line">    <span class="keyword">await</span> browser.close();</div><div class="line">&#125;)();</div><div class="line"><span class="comment">//log &#123; jdPrice: '998.00',jdTitle: '【新年货】荣耀 畅玩6X 4GB 32GB 全网通4G手机 高配版 冰河银' &#125;</span></div></pre></td></tr></table></figure></p>
+<h3 id="拦截相应内容"><a href="#拦截相应内容" class="headerlink" title="拦截相应内容"></a>拦截相应内容</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">await</span> page.setRequestInterception(<span class="literal">true</span>);</div><div class="line"><span class="keyword">await</span> page.on(<span class="string">'request'</span>, request =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (request.resourceType() === <span class="string">'image'</span>)</div><div class="line">        request.abort();</div><div class="line">    <span class="keyword">else</span></div><div class="line">        request.continue();</div><div class="line">&#125;);</div><div class="line"><span class="comment">//再打开的页面内图片请求就会被拦截了</span></div></pre></td></tr></table></figure>
+<h3 id="处理响应内容"><a href="#处理响应内容" class="headerlink" title="处理响应内容"></a>处理响应内容</h3><p>有些页面数据是通过接口请求获取的.如果能直接处理接口返回数据,当然要比通过查询页面元素获取内容更方便和直接.<br>还拿jd商品详情页举例,通过分析得知有个版块,京东问答的数据是由接口返回,那么假设我们现在要获取当前商品问答数据.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//处理响应内容</span></div><div class="line"><span class="keyword">await</span> page.on(<span class="string">'response'</span>, <span class="keyword">async</span> response =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (response.url().indexOf(<span class="string">'https://item.m.jd.com/question/questionList.json'</span>) === <span class="number">0</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">await</span> response.text());</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="表单提交"><a href="#表单提交" class="headerlink" title="表单提交"></a>表单提交</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">'puppeteer'</span>);</div><div class="line"></div><div class="line"><span class="function">(<span class="params"><span class="keyword">async</span> (</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> browser = <span class="keyword">await</span> puppeteer.launch(&#123;<span class="attr">headless</span>: <span class="literal">false</span>&#125;);</div><div class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> browser.newPage();</div><div class="line"></div><div class="line">    <span class="comment">//打开京东登录页面</span></div><div class="line">    <span class="keyword">await</span> page.goto(<span class="string">'https://passport.jd.com/new/login.aspx'</span>);</div><div class="line">    <span class="comment">//登录页默认为扫码登录,所以需要先点击账户登录tab</span></div><div class="line">    <span class="keyword">await</span> page.click(<span class="string">'.login-tab.login-tab-r'</span>);</div><div class="line">    <span class="comment">//输入账户/密码</span></div><div class="line">    <span class="keyword">await</span> page.type(<span class="string">'#loginname'</span>, <span class="string">'我的用户名'</span>, &#123;<span class="attr">delay</span>: <span class="number">20</span>&#125;);</div><div class="line">    <span class="keyword">await</span> page.type(<span class="string">'#nloginpwd'</span>, <span class="string">'我的密码'</span>, &#123;<span class="attr">delay</span>: <span class="number">20</span>&#125;);</div><div class="line">    <span class="comment">//点击登录</span></div><div class="line">    <span class="keyword">await</span> page.click(<span class="string">'.btn-img.btn-entry'</span>);</div><div class="line"></div><div class="line">    <span class="comment">//await browser.close();</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20180123/Puppeteer-使用笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Vue-中-extend-component-mixins-extends-的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1435,298 +1513,6 @@
 
 
   
-    <article id="post-intellij IDEA 快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20161202/intellij IDEA 快捷键/">intellij IDEA 快捷键</a>
-    </h1>
-  
-
-        
-        <a href="/20161202/intellij IDEA 快捷键/" class="archive-article-date">
-  	<time datetime="2016-12-02T07:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="js-忽略相关目录"><a href="#js-忽略相关目录" class="headerlink" title="js:忽略相关目录"></a>js:忽略相关目录</h4><p>在搜索方法的时候,有时候会把dist目录里的方法显示出来.可以在preferences-&gt;Directories 里把不相关的目录过滤掉(excluded).</p>
-<h4 id="查看改行代码的修改记录"><a href="#查看改行代码的修改记录" class="headerlink" title="查看改行代码的修改记录"></a>查看改行代码的修改记录</h4><p>移动到行号位置,右键选择annotate.</p>
-<h4 id="抽取"><a href="#抽取" class="headerlink" title="抽取"></a>抽取</h4><p>alt+cmd+v  变量抽取<br>alt+cmd+f  成员变量抽取<br>alt+cmd+m  方法   抽取</p>
-<h4 id="函数重构Refactor"><a href="#函数重构Refactor" class="headerlink" title="函数重构Refactor"></a>函数重构Refactor</h4><h4 id="让主先行"><a href="#让主先行" class="headerlink" title="让主先行"></a>让主先行</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//先写你关心的,再写动词</span></div><div class="line"> <span class="string">"hello"</span><span class="selector-class">.sout</span></div><div class="line"> <span class="string">"hello"</span><span class="selector-class">.return</span></div><div class="line"> name<span class="selector-class">.null</span> 			<span class="comment">//判断name==null</span></div><div class="line"> name<span class="selector-class">.nn</span>   			<span class="comment">//判断name!=null</span></div><div class="line"> count<span class="selector-class">.for</span>			<span class="comment">//for循环</span></div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>快捷键</th>
-<th>位置</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>跳转到父类</td>
-<td>cmd+u</td>
-<td>Navigate-&gt;Super method</td>
-</tr>
-<tr>
-<td>跳转到定义</td>
-<td>cmd+b</td>
-<td>Navigate-&gt;declaration</td>
-</tr>
-<tr>
-<td>跳转到实现</td>
-<td>cmd+alt+b</td>
-<td>Navigate-&gt;implementation(s)</td>
-</tr>
-<tr>
-<td>返回</td>
-<td>cmd+[</td>
-<td>Navigate-&gt;Back</td>
-</tr>
-<tr>
-<td>显示文件路径</td>
-<td>alt+cmd+F12</td>
-<td>Navigate-&gt;File Path</td>
-<td>不用再目录里右键Reveal in Finder</td>
-</tr>
-<tr>
-<td>double shift</td>
-<td></td>
-<td>search Everywhere</td>
-</tr>
-<tr>
-<td>code</td>
-<td></td>
-</tr>
-<tr>
-<td>增强选择-扩大</td>
-<td></td>
-<td>Edit-&gt;extend selection</td>
-</tr>
-<tr>
-<td>增强选择-收缩</td>
-<td></td>
-<td>Edit-&gt;shrink selection</td>
-</tr>
-<tr>
-<td>显示参数信息</td>
-<td>cmd+p</td>
-<td>View-&gt;Paramaeter Info</td>
-</tr>
-<tr>
-<td>提取</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>变量提取</td>
-<td>alt+cmd+v</td>
-<td>Refactor-&gt;Extract-&gt;Variable</td>
-</tr>
-<tr>
-<td>方法提取</td>
-<td>alt+cmd+m</td>
-<td>Refactor-&gt;Extract-&gt;Method</td>
-</tr>
-<tr>
-<td>移动</td>
-<td></td>
-</tr>
-<tr>
-<td>单词移动</td>
-<td>alt</td>
-</tr>
-<tr>
-<td>行尾首</td>
-<td>cmd</td>
-</tr>
-</tbody>
-</table>
-<p><strong>add:2016-12-02</strong></p>
-<h4 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>action</th>
-<th>快捷键</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>复制当前行</td>
-<td>duplicate Line or block</td>
-<td>cmd+d</td>
-<td></td>
-</tr>
-<tr>
-<td>删除当前行</td>
-<td>delete line</td>
-<td>cmd+backspace</td>
-<td></td>
-</tr>
-<tr>
-<td>上下移动当前行</td>
-<td>move line up/down</td>
-<td>alt+shift+up/down</td>
-<td></td>
-</tr>
-<tr>
-<td>移动到指定行</td>
-<td>Line</td>
-<td>cmd+g</td>
-<td></td>
-</tr>
-<tr>
-<td>多文本选择</td>
-<td>add selection for next occurrence</td>
-<td>Ctrl+G</td>
-<td></td>
-</tr>
-<tr>
-<td>列选择</td>
-<td></td>
-<td>Alt+MouseDrag</td>
-<td></td>
-</tr>
-<tr>
-<td>当前文件方法列表</td>
-<td>File Structure</td>
-<td>cmd+F12</td>
-<td></td>
-</tr>
-<tr>
-<td>合并行和文字</td>
-<td>join lines</td>
-<td>ctrl+shift+j</td>
-<td></td>
-</tr>
-<tr>
-<td>代码提示</td>
-<td>basic</td>
-<td>ctrl+/</td>
-<td>记得按tab…</td>
-</tr>
-<tr>
-<td>显示文件路径</td>
-<td>File Path</td>
-<td>alt+cmd+F12</td>
-<td>不用再目录里右键Reveal in Finder</td>
-</tr>
-<tr>
-<td>路径中查找</td>
-<td>Find in Path</td>
-<td>shift+ctrl+F</td>
-<td>有个预览功能,屌</td>
-</tr>
-<tr>
-<td>方法调用路径</td>
-<td></td>
-<td>ctrl+alt+h</td>
-<td></td>
-</tr>
-<tr>
-<td>显示参数信息</td>
-<td>Parameter Info</td>
-<td>cmd+p</td>
-<td>显示方法需要的参数</td>
-</tr>
-<tr>
-<td>打开文件</td>
-<td>class</td>
-<td>cmd+o</td>
-<td></td>
-</tr>
-<tr>
-<td>重写方法列表</td>
-<td>override method</td>
-<td>cmd+n</td>
-<td></td>
-</tr>
-<tr>
-<td>快速查看定义</td>
-<td>quick definition</td>
-<td>cmd+shift+i</td>
-<td></td>
-</tr>
-<tr>
-<td>扩大/收缩选中部分</td>
-<td>Collapse</td>
-<td>cmd+ -/+</td>
-<td></td>
-</tr>
-<tr>
-<td>大小写转换</td>
-<td>Unshelve</td>
-<td>cmd+shift+u</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-        
-          <a class="article-more-a" href="/20161202/intellij IDEA 快捷键/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cheatsheet</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20161202/intellij IDEA 快捷键/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1741,7 +1527,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 诗人的咸鱼
+    		&copy; 2018 诗人的咸鱼
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1836,19 +1622,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">cordova</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
               <li class="article-tag-list-item">
