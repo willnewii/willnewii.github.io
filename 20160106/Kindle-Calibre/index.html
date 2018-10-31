@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>Kindle &amp; Calibre | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -38,7 +38,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -47,11 +47,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -179,7 +179,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Kindle-Calibre" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Kindle-Calibre" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -205,7 +205,7 @@
 </li>
 <li><p>html坏标签</p>
 <p> 在解析新浪博客的时候出现了返回soup找不到子节点的问题</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">soup = <span class="keyword">self</span>.index_to_soup(<span class="keyword">self</span>.url)</div><div class="line">divs = soup.findAll(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'module-categories module'</span>&#125;)</div><div class="line"><span class="keyword">print</span> len(divs)</div><div class="line"><span class="comment"># 0</span></div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">soup = <span class="keyword">self</span>.index_to_soup(<span class="keyword">self</span>.url)</span><br><span class="line">divs = soup.findAll(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'module-categories module'</span>&#125;)</span><br><span class="line"><span class="keyword">print</span> len(divs)</span><br><span class="line"><span class="comment"># 0</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>这个时候你可以打印一下soup的len.有可能就是html中有坏标签导致解析异常.所以bs只能当做String直接返回.这时你就只能靠正则,或者练练String操作的基本功啦😜,把你想要的内容截取出来.</p>
@@ -526,15 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,11 +538,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,7 +574,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

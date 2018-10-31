@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -36,7 +36,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -45,11 +45,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -179,7 +179,315 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Android相关文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mac笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151127/Mac笔记/">Mac 笔记</a>
+    </h1>
+  
+
+        
+        <a href="/20151127/Mac笔记/" class="archive-article-date">
+  	<time datetime="2015-11-27T06:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>wget 下载网站</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -r -p -<span class="built_in">np</span> -k http://xxx.com/xxx</span><br><span class="line">-r,  --recursive（递归）          specify recursive download.（指定递归下载）</span><br><span class="line">-k,  --<span class="built_in">convert</span>-links（转换链接）      make links <span class="keyword">in</span> downloaded HTML point to <span class="built_in">local</span> files.（将下载的HTML页面中的链接转换为相对链接即本地链接）</span><br><span class="line">-p,  --page-requisites（页面必需元素）    <span class="built_in">get</span> all images, etc. needed to <span class="built_in">display</span> HTML page.（下载所有的图片等页面显示所需的内容）</span><br><span class="line">-<span class="built_in">np</span>, --no-parent（不追溯至父级）          don't ascend to the parent <span class="built_in">directory</span>.</span><br><span class="line">另外断点续传用-nc参数 日志 用-o参数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加命令行快捷方式</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置magic mouse灵敏度</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">defaults</span> <span class="selector-tag">write</span> <span class="selector-tag">-g</span> <span class="selector-tag">com</span><span class="selector-class">.apple</span><span class="selector-class">.mouse</span><span class="selector-class">.scaling</span> 6<span class="selector-class">.5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mysql 外网访问</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; GRANT <span class="literal">ALL</span> PRIVILEGES <span class="keyword">ON</span> *.* <span class="keyword">TO</span> <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">'mypwd'</span> <span class="keyword">WITH</span> GRANT OPTION;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开启和禁用 Spotlight</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//关闭 关闭后会导致侧边栏标记功能不可用</span></span><br><span class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span><span class="selector-class">.plist</span></span><br><span class="line"><span class="comment">//开启</span></span><br><span class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span><span class="selector-class">.plist</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mac chrome 跨域</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a <span class="string">/Applications/Google</span>\ Chrome.app <span class="params">--args</span> <span class="params">--disable-web-security</span> <span class="params">--user-data-dir</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>duplicate symbols for architecture arm64</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Build </span>Settings里的No <span class="meta">Common</span> <span class="keyword">Blocks为NO</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载了测试版的Xcode  就把之前的给删除了.然后git就出现了错误</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">xcrun:</span> <span class="string">error:</span> invalid active developer path (<span class="regexp">/Library/</span>Developer<span class="regexp">/CommandLineTools), missing xcrun at: /</span>Library<span class="regexp">/Developer/</span>CommandLineTools<span class="regexp">/usr/</span>bin/xcrun</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决办法:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select -<span class="keyword">switch</span> <span class="regexp">/Applications/</span>Xcode-beta.app<span class="regexp">/Contents/</span>Developer</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li><p>环境变量</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/apache</span>-ant-<span class="number">1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/adt</span>-bundle-mac/sdk</span><br><span class="line">export PATH=<span class="regexp">/usr/bin</span><span class="symbol">:/bin</span><span class="symbol">:/usr/sbin</span><span class="symbol">:/sbin</span><span class="symbol">:/usr/local/bin</span></span><br><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANDROID_HOME</span>/platform-<span class="symbol">tools:</span><span class="variable">$ANDROID_HOME</span>/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANT_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>chrome 添加启动参数</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="keyword">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/Applications/Google</span>\ Chrome.app/Contents/MacOS/Chrome <span class="params">--disable-enforced-throttling</span> <span class="params">--ignore-certificate-errors</span> <span class="params">--allow-running-insecure-content</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://chenpeng.info/html/3393" target="_blank" rel="noopener">Chromium命令行启动参数</a></p>
+<ol start="6">
+<li><p>Apache 的启动</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="keyword">start</span></span><br><span class="line">/<span class="keyword">Library</span>/WebServer/<span class="keyword">Document</span>/</span><br><span class="line">sudo launchctl unload -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span><br><span class="line">如果哪天你想让它开机启动了,则将unload 改为 <span class="keyword">load</span>:</span><br><span class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打印目录树</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . <span class="string">\(</span> ! -regex <span class="string">'.*/\..*'</span> <span class="string">\)</span> -type f -depth -<span class="number">3</span> -<span class="built_in">print</span> | sed -e <span class="string">'s;[^/]*/;|____;g;s;____|; |;g'</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>( ! -regex ‘.<em>/..</em>‘ ) -type f 匹配非隐藏文件</li>
+<li>-depth -3 递归深度</li>
+</ol>
+</li>
+<li>mac php默认配置 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd.conf</span><br><span class="line">/etc/php.ini</span><br><span class="line"><span class="comment">/*资料/soft/mac/php*/</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><a href="http://www.waitsun.com/" target="_blank" rel="noopener">软件下载</a></li>
+<li><a href="http://www.isofts.org/" target="_blank" rel="noopener">mac志</a></li>
+<li><a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="noopener">每天一个linux命令目录</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151127/Mac笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ViewPager设置滑动速度" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151126/ViewPager设置滑动速度/">ViewPager设置滑动速度</a>
+    </h1>
+  
+
+        
+        <a href="/20151126/ViewPager设置滑动速度/" class="archive-article-date">
+  	<time datetime="2015-11-26T03:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
+<h5 id="新建类FixedSpeedScoller继承自scroller类"><a href="#新建类FixedSpeedScoller继承自scroller类" class="headerlink" title="新建类FixedSpeedScoller继承自scroller类"></a>新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;  </span><br><span class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </span><br><span class="line"><span class="keyword">import</span> android.widget.Scroller;  </span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</span></span><br><span class="line"><span class="comment"> * reflection mechanism.</span></span><br><span class="line"><span class="comment"> *  </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.00 2014.1.6</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Huang.xin gkx100120</span></span><br><span class="line"><span class="comment"> *  </span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">super</span>(context, interpolator);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </span><br><span class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></span><br><span class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * set animation time</span></span><br><span class="line"><span class="comment">     *  </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> time</span></span><br><span class="line"><span class="comment">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </span><br><span class="line">    mDuration = time;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * get current animation time</span></span><br><span class="line"><span class="comment">     *  </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> mDuration;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/20151126/ViewPager设置滑动速度/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151126/ViewPager设置滑动速度/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-杂记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151125/杂记/">杂记</a>
+    </h1>
+  
+
+        
+        <a href="/20151125/杂记/" class="archive-article-date">
+  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h3><ul>
+<li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="noopener">MarkDown简明语法</a></p>
+</li>
+<li><p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="noopener">MarkDown语法说明</a></p>
+</li>
+</ul>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><ul>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener">hexo你的博客(推荐:非常详细)</a></li>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="noopener">Hexo搭建Github静态博客</a></li>
+<li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="noopener">Hexo后台插件</a></li>
+<li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia主题</a></li>
+<li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子网站计数</a></li>
+</ul>
+<h3 id="iTerm-2"><a href="#iTerm-2" class="headerlink" title="iTerm 2"></a>iTerm 2</h3><ul>
+<li>command + ;  自动补全命令</li>
+<li>command + shift +h 全部显示出来</li>
+<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="noopener">iTerm 2 color schemes</a></li>
+</ul>
+<h3 id="design"><a href="#design" class="headerlink" title="design"></a>design</h3><ul>
+<li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="noopener">material design 文档动画部分的学习笔记</a></li>
+</ul>
+<h3 id="文档排版"><a href="#文档排版" class="headerlink" title="文档排版"></a>文档排版</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="noopener">文案风格指南</a></p>
+<p><a href="http://zhuanlan.zhihu.com/uicircle/20506092" target="_blank" rel="noopener">中文排版指南</a></p>
+<h3 id="SVN"><a href="#SVN" class="headerlink" title="SVN"></a>SVN</h3><p>批量添加新增文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="variable">$1</span> == <span class="string">"?"</span>) &#123; <span class="keyword">print</span> <span class="variable">$2&#125;</span>&#125;' | xargs svn add</span><br></pre></td></tr></table></figure></p>
+<p>批量删除文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="variable">$1</span> == <span class="string">"!"</span>) &#123; <span class="keyword">print</span> <span class="variable">$2&#125;</span>&#125;' | xargs svn <span class="keyword">rm</span></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151125/杂记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Android相关文章" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -267,7 +575,7 @@
 
 
   
-    <article id="post-Android 优化文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Android 优化文章" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -366,7 +674,7 @@
 
 
   
-    <article id="post-MarkDown语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MarkDown语法" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -404,7 +712,7 @@
       
 
       
-    </div>
+    </p></blockquote></blockquote></div>
     <div class="article-info article-info-index">
       
       
@@ -453,7 +761,7 @@
 
 
   
-    <article id="post-Atom编辑器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Atom编辑器" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -612,7 +920,7 @@
 
 
   
-    <article id="post-macbook不识别部分Android手机" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-macbook不识别部分Android手机" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -804,15 +1112,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -820,11 +1124,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -852,7 +1160,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

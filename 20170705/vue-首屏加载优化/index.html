@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>vue 首屏加载优化 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,7 +48,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -57,11 +57,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -189,7 +189,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue-首屏加载优化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue-首屏加载优化" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -219,8 +219,8 @@
 </ul>
 <h3 id="未优化前"><a href="#未优化前" class="headerlink" title="未优化前"></a>未优化前</h3><p>首先我们在正常情况下build<br><img src="http://obfmtiyt5.bkt.clouddn.com/img%2F3653690494-595b19a18af16_articlex" alt="图片描述"></p>
 <h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><h4 id="1-按需加载"><a href="#1-按需加载" class="headerlink" title="1. 按需加载"></a>1. 按需加载</h4><p>当前流行的UI框架如iview,muse-ui,Element UI都支持按需加载,只需稍微改动一下代码.</p>
-<p>修改前：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> MuseUI <span class="keyword">from</span> <span class="string">'muse-ui'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'muse-ui/dist/muse-ui.css'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'muse-ui/dist/theme-light.css'</span></div><div class="line">Vue.use(MuseUI)</div></pre></td></tr></table></figure></p>
-<p>修改后：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> appBar <span class="keyword">from</span> <span class="string">'muse-ui/src/appBar'</span></div><div class="line"><span class="keyword">import</span> toast <span class="keyword">from</span> <span class="string">'muse-ui/src/toast'</span></div><div class="line"><span class="keyword">import</span> drawer <span class="keyword">from</span> <span class="string">'muse-ui/src/drawer'</span></div><div class="line"><span class="keyword">import</span> popup <span class="keyword">from</span> <span class="string">'muse-ui/src/popup'</span></div><div class="line"></div><div class="line">Vue.component(appBar.name, appBar);</div><div class="line">Vue.component(toast.name, toast);</div><div class="line">Vue.component(drawer.name, drawer);</div><div class="line">Vue.component(popup.name, popup);</div></pre></td></tr></table></figure></p>
+<p>修改前：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> MuseUI <span class="keyword">from</span> <span class="string">'muse-ui'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'muse-ui/dist/muse-ui.css'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'muse-ui/dist/theme-light.css'</span></span><br><span class="line">Vue.use(MuseUI)</span><br></pre></td></tr></table></figure></p>
+<p>修改后：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> appBar <span class="keyword">from</span> <span class="string">'muse-ui/src/appBar'</span></span><br><span class="line"><span class="keyword">import</span> toast <span class="keyword">from</span> <span class="string">'muse-ui/src/toast'</span></span><br><span class="line"><span class="keyword">import</span> drawer <span class="keyword">from</span> <span class="string">'muse-ui/src/drawer'</span></span><br><span class="line"><span class="keyword">import</span> popup <span class="keyword">from</span> <span class="string">'muse-ui/src/popup'</span></span><br><span class="line"></span><br><span class="line">Vue.component(appBar.name, appBar);</span><br><span class="line">Vue.component(toast.name, toast);</span><br><span class="line">Vue.component(drawer.name, drawer);</span><br><span class="line">Vue.component(popup.name, popup);</span><br></pre></td></tr></table></figure></p>
 <p>这里有点麻烦的就是你要把整个项目用到的muse-ui组件都注册一遍,当然你也可以只在用到的页面做局部引用.<br>让我们来看看使用按需加载后的效果🤓</p>
 <p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQh9B" alt="图片描述"></p>
 <p>在当前项目引用了16个muse-ui组件的情况下 css减少了80kb,js减少了快200kb.</p>
@@ -234,15 +234,15 @@
 <p>在大型应用中，我们可能需要将应用拆分为多个小模块，按需从服务器下载。为了让事情更简单， Vue.js 允许将组件定义为一个工厂函数，动态地解析组件的定义。Vue.js 只在组件需要渲染时触发工厂函数，并且把结果缓存起来，用于后面的再次渲染。</p>
 </blockquote>
 <p>修改router</p>
-<p>before：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> search <span class="keyword">from</span> <span class="string">'./search.vue'</span></div><div class="line">&#123;</div><div class="line">            <span class="attr">path</span>: <span class="string">'/search'</span>,</div><div class="line">            <span class="attr">name</span>: <span class="string">'search'</span>,</div><div class="line">            <span class="attr">component</span>: search</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>after：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> search = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([<span class="string">'./search.vue'</span>], resolve);</div><div class="line">&#123;</div><div class="line">            <span class="attr">path</span>: <span class="string">'/search'</span>,</div><div class="line">            <span class="attr">name</span>: <span class="string">'search'</span>,</div><div class="line">            <span class="attr">component</span>: search</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>before：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> search <span class="keyword">from</span> <span class="string">'./search.vue'</span></span><br><span class="line">&#123;</span><br><span class="line">            path: <span class="string">'/search'</span>,</span><br><span class="line">            name: <span class="string">'search'</span>,</span><br><span class="line">            component: search</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>after：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> search = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([<span class="string">'./search.vue'</span>], resolve);</span><br><span class="line">&#123;</span><br><span class="line">            path: <span class="string">'/search'</span>,</span><br><span class="line">            name: <span class="string">'search'</span>,</span><br><span class="line">            component: search</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>具体我们来看看改造后的效果:<br><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQipH" alt="图片描述"><br>因为我的项目目前只有7个页面,即使把页面都做成异步加载,效果并不是很’喜人’,整体缩小了30kb.</p>
 <h4 id="4-优化组件加载时机"><a href="#4-优化组件加载时机" class="headerlink" title="4. 优化组件加载时机"></a>4. 优化组件加载时机</h4><p>再使用别人的组件时,上手教程都会提示让你在main.js里注册一下就好.当然这是最省事的办法.<br>但是根据项目情况,比如我的项目用到了vue-baidu-map.<br>如果你按照默认的加载方式,vue-baidu-map是会被打在vendor.js .但其实这个组件我只有某个二级页面才使用.所以让我们来调整一下加载位置看看.把注册的vue-baidu-map放在真正使用它的地方.</p>
 <p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQiuF" alt="图片描述"></p>
 <p>这样,verdor.js 又小了56kb.因为首页根本用不到vue-baidu-map. 当然这样会带来一个问题:当多个页面使用vue-baidu-map,会出现多个页面重复打包.</p>
 <p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQixp" alt="图片描述"></p>
 <p>怎么异步加载插件,这个我还没搞明白…</p>
-<h4 id="5-webpack-bundle-analyzer"><a href="#5-webpack-bundle-analyzer" class="headerlink" title="5. webpack-bundle-analyzer"></a>5. webpack-bundle-analyzer</h4><p>webpack-bundle-analyzer是用来分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的工具.你可以通过命令:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">run</span> build <span class="comment">--report</span></div></pre></td></tr></table></figure></p>
+<h4 id="5-webpack-bundle-analyzer"><a href="#5-webpack-bundle-analyzer" class="headerlink" title="5. webpack-bundle-analyzer"></a>5. webpack-bundle-analyzer</h4><p>webpack-bundle-analyzer是用来分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的工具.你可以通过命令:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">run</span> build <span class="comment">--report</span></span><br></pre></td></tr></table></figure></p>
 <p>来查看依赖关系.然后再根据具体情况划分代码块.效果图就是上面那张花里胡哨的图…它清楚的告诉你了打包时模块划分的情况.</p>
 <h4 id="6-前后对比"><a href="#6-前后对比" class="headerlink" title="6. 前后对比:"></a>6. 前后对比:</h4><p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQixp" alt="图片描述"></p>
 <p><img src="http://obfmtiyt5.bkt.clouddn.com/img%2FbVQiuF" alt="图片描述"></p>
@@ -493,15 +493,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -509,11 +505,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,7 +541,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

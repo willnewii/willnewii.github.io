@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>compass 笔记 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -38,7 +38,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -47,11 +47,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -179,7 +179,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-compass笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-compass笔记" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -200,18 +200,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ol>
-<li>require ‘compass/import-once/activate’<figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">一般生产的config.rb文件头部会有 require <span class="string">'compass/import-once/activate'</span>：这个插件的作用是防止sass的 @<span class="keyword">import</span> 多次引入重复的文件，引入这个插件后即使写多次 @<span class="keyword">import</span> <span class="string">"aa"</span>,也只会引入一次aa。</div><div class="line">      <span class="number">1</span>. 若确实想多次引入aa ，则应写成 @<span class="keyword">import</span> <span class="string">"aa!"</span> ，末尾添加叹号，则会多次引入。</div><div class="line">      <span class="number">2</span>. sass中的@<span class="keyword">import</span> 会重复引入同一插件。</div></pre></td></tr></table></figure>
+<li>require ‘compass/import-once/activate’<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一般生产的config.rb文件头部会有 require <span class="string">'compass/import-once/activate'</span>：这个插件的作用是防止sass的 @<span class="keyword">import</span> 多次引入重复的文件，引入这个插件后即使写多次 @<span class="keyword">import</span> <span class="string">"aa"</span>,也只会引入一次aa。</span><br><span class="line">      <span class="number">1</span>. 若确实想多次引入aa ，则应写成 @<span class="keyword">import</span> <span class="string">"aa!"</span> ，末尾添加叹号，则会多次引入。</span><br><span class="line">      <span class="number">2</span>. sass中的@<span class="keyword">import</span> 会重复引入同一插件。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol>
+<ol start="2">
 <li><p>用normalize替换compass内置的的reset</p>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">normalize</span>是compass的插件，<span class="built_in">normalize</span>改良了compass/reset ,统一了跨浏览器差异，而不是都清<span class="number">0</span>；</div><div class="line">      <span class="number">1.</span> gem install compass-<span class="built_in">normalize</span>  </div><div class="line">      <span class="number">2.</span> require 'compass-<span class="built_in">normalize</span>'</div></pre></td></tr></table></figure>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">normalize</span>是compass的插件，<span class="built_in">normalize</span>改良了compass/reset ,统一了跨浏览器差异，而不是都清<span class="number">0</span>；</span><br><span class="line">      <span class="number">1.</span> gem install compass-<span class="built_in">normalize</span>  </span><br><span class="line">      <span class="number">2.</span> require 'compass-<span class="built_in">normalize</span>'</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>叹号使用</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果将config.rb配置文件中设置  output_style = <span class="symbol">:compressed</span> 生成的压缩css文件中的注释会被删除，如何防止注释被删除？在注释的开头加<span class="string">"!"</span>，则注释会保留，即使设置了 output_style = <span class="symbol">:compressed</span>。</div></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果将config.rb配置文件中设置  output_style = <span class="symbol">:compressed</span> 生成的压缩css文件中的注释会被删除，如何防止注释被删除？在注释的开头加<span class="string">"!"</span>，则注释会保留，即使设置了 output_style = <span class="symbol">:compressed</span>。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>常用图片可以转换成base64,减少图片请求</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">缺点:多消耗<span class="number">50</span><span class="comment">%的资源，多使用4倍内存,不知道ie6，7</span></div></pre></td></tr></table></figure>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">缺点:多消耗<span class="number">50</span><span class="comment">%的资源，多使用4倍内存,不知道ie6，7</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>资料<br><a href="http://www.ruanyifeng.com/blog/2012/11/compass.html" target="_blank" rel="noopener">Compass用法指南</a></p>
@@ -451,15 +451,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -467,11 +463,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,7 +499,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -36,7 +36,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -45,11 +45,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -179,7 +179,389 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-compass笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-dialog-fox" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160106/dialog-fox/">android dialog</a>
+    </h1>
+  
+
+        
+        <a href="/20160106/dialog-fox/" class="archive-article-date">
+  	<time datetime="2016-01-06T10:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>dialog自定义View,弹出键盘</li>
+</ol>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager)getSystemService(<span class="built_in">Context</span>.INPUT_METHOD_SERVICE)<span class="comment">;</span></span><br><span class="line">imm.<span class="keyword">showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT);</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>dialog 触发点击事件,不关闭</li>
+</ol>
+<p>是通过改变mShowing状态实现的,记得在其他地方修正状态.<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 是否可以关闭对话框</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> dialog</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> isCan</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">isCanDismiss</span><span class="params">(DialogInterface dialog, <span class="keyword">boolean</span> isCan)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Field field = dialog.getClass().getSuperclass().getDeclaredField(<span class="string">"mShowing"</span>);</span><br><span class="line">        field.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        field.set(dialog, isCan);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20160106/dialog-fox/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Flex-布局" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160105/Flex-布局/">Flex 布局</a>
+    </h1>
+  
+
+        
+        <a href="/20160105/Flex-布局/" class="archive-article-date">
+  	<time datetime="2016-01-05T04:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h3><ol>
+<li><p>flex-direction</p>
+<pre><code>属性决定主轴的方向（即项目的排列方向）。
+</code></pre><ol>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。<blockquote>
+<p>LinearLayout.orientation<br>horizontal-&gt;row,vertical-column</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>flex-wrap</p>
+<pre><code>默认情况下，项目都排在一条线（又称&quot;轴线&quot;）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
+</code></pre><ol>
+<li>nowrap（默认）：不换行。</li>
+<li>wrap：换行，第一行在上方。</li>
+<li>wrap-reverse：换行，第一行在下方。</li>
+</ol>
+</li>
+<li><p>flex-flow</p>
+<pre><code>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+</code></pre></li>
+<li><p>justify-content</p>
+<pre><code>属性定义了项目在主轴上的对齐方式。
+</code></pre><ol>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ol>
+</li>
+<li><p>align-items</p>
+<pre><code>属性定义项目在交叉轴上如何对齐。
+</code></pre></li>
+<li><p>align-content <strong>5，6没太明白区别在哪里</strong></p>
+<pre><code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+</code></pre><blockquote>
+<p>android:gravity </p>
+</blockquote>
+</li>
+</ol>
+<h3 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h3><ol>
+<li>order    default 0<pre><code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+</code></pre></li>
+<li><p>flex-grow    default 0</p>
+<pre><code>属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+</code></pre><p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<blockquote>
+<p>LinearLayout.weight</p>
+</blockquote>
+</li>
+<li><p>flex-shrink  default 1 </p>
+<pre><code>属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+</code></pre><p> 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+</li>
+<li><p>flex-basis</p>
+<pre><code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+</code></pre></li>
+<li><p>flex default 0 1 auto</p>
+<pre><code>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+</code></pre></li>
+<li><p>align-self</p>
+<pre><code>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+</code></pre><blockquote>
+<p>android:layout_gravity</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">Flex 布局教程：实例篇</a><br><a href="http://philipwalton.github.io/solved-by-flexbox/" target="_blank" rel="noopener">solved-by-flexbox</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20160105/Flex-布局/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-css" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160104/css/"> css定位</a>
+    </h1>
+  
+
+        
+        <a href="/20160104/css/" class="archive-article-date">
+  	<time datetime="2016-01-04T02:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CSS-定位-Positioning"><a href="#CSS-定位-Positioning" class="headerlink" title="CSS 定位 (Positioning)"></a>CSS 定位 (Positioning)</h3><p>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们的内容显示在行中，即“行内框”。</p>
+<h4 id="display-属性规定元素应该生成的框的类型。"><a href="#display-属性规定元素应该生成的框的类型。" class="headerlink" title="display 属性规定元素应该生成的框的类型。"></a>display <strong><em>属性规定元素应该生成的框的类型。</em></strong></h4><pre><code>您可以使用 display 属性改变生成的框的类型。这意味着，通过将 display 属性设置为 block，可以让行内元素（比如 &lt;a&gt; 元素）表现得像块级元素一样。还可以通过把 display 设置为 none，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间。
+</code></pre><ul>
+<li>block-level elements (块级元素)<ul>
+<li>block元素通常被现实为独立的一块，会单独换一行；</li>
+</ul>
+<ol>
+<li>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>inline elements (内联元素)<ul>
+<li>inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
+</ul>
+<ol>
+<li>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
+</ol>
+</li>
+<li>block，inline和inline-block细节对比<ul>
+<li>display:block<ol>
+<li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
+<li>block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</li>
+<li>block元素可以设置margin和padding属性。</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>display:inline<ol>
+<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
+<li>inline元素设置width,height属性无效。</li>
+<li><del>~inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</del>~</li>
+</ol>
+</li>
+<li>display:inline-block<ol>
+<li>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="position-属性规定元素的定位类型。"><a href="#position-属性规定元素的定位类型。" class="headerlink" title="position 属性规定元素的定位类型。"></a>position <strong><em>属性规定元素的定位类型。</em></strong></h4><ol>
+<li>relative 生成相对定位的元素，相对于其正常位置进行定位。</li>
+<li>absolute 生成绝对定位的元素，<strong><em>相对于 static 定位以外的第一个父元素进行定位。将对象从文档流中拖出，使用 left ， right ， top ， bottom 等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位。</em></strong></li>
+<li>fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
+<li>static    默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</li>
+</ol>
+<h4 id="overflow-属性规定当内容溢出元素框时发生的事情。"><a href="#overflow-属性规定当内容溢出元素框时发生的事情。" class="headerlink" title="overflow 属性规定当内容溢出元素框时发生的事情。"></a>overflow <strong><em>属性规定当内容溢出元素框时发生的事情。</em></strong></h4><ol>
+<li>visible 默认值。内容不会被修剪，会呈现在元素框之外。</li>
+<li>hidden 内容会被修剪，并且其余内容是不可见的。</li>
+<li>scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</li>
+<li>auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</li>
+<li>inherit 规定应该从父元素继承 overflow 属性的值。</li>
+</ol>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><ol>
+<li>初衷:为了实现文字环绕 <ol>
+<li>浮动会是父元素高度塌陷</li>
+<li>清楚浮动带来的影响 </li>
+</ol>
+</li>
+<li>浮动的影响：<ol>
+<li>元素block块状化（砖头化）</li>
+<li>破坏性造成的紧密排列特性（去空格化）</li>
+<li>滥用浮动容易造成砌砖布局，砌砖布局的问题</li>
+</ol>
+</li>
+<li>尽量少使用 float：left来进行布局：<ol>
+<li>容错性比较糟糕，容易出问题；</li>
+<li>全部用固定尺寸，代码不易重用；</li>
+<li>与IE7不兼容；</li>
+</ol>
+</li>
+</ol>
+<p>css盒模型</p>
+<h4 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h4><ul>
+<li><a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="noopener">block，inline和inline-block概念和区别</a></li>
+<li><a href="http://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank" rel="noopener">CSS position 属性</a></li>
+<li><a href="http://www.5icool.org/a/200912/28.html" target="_blank" rel="noopener">CSS样式的postion属性absolute和fixed的区别</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20160104/css/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-compass笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -200,18 +582,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ol>
-<li>require ‘compass/import-once/activate’<figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">一般生产的config.rb文件头部会有 require <span class="string">'compass/import-once/activate'</span>：这个插件的作用是防止sass的 @<span class="keyword">import</span> 多次引入重复的文件，引入这个插件后即使写多次 @<span class="keyword">import</span> <span class="string">"aa"</span>,也只会引入一次aa。</div><div class="line">      <span class="number">1</span>. 若确实想多次引入aa ，则应写成 @<span class="keyword">import</span> <span class="string">"aa!"</span> ，末尾添加叹号，则会多次引入。</div><div class="line">      <span class="number">2</span>. sass中的@<span class="keyword">import</span> 会重复引入同一插件。</div></pre></td></tr></table></figure>
+<li>require ‘compass/import-once/activate’<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一般生产的config.rb文件头部会有 require <span class="string">'compass/import-once/activate'</span>：这个插件的作用是防止sass的 @<span class="keyword">import</span> 多次引入重复的文件，引入这个插件后即使写多次 @<span class="keyword">import</span> <span class="string">"aa"</span>,也只会引入一次aa。</span><br><span class="line">      <span class="number">1</span>. 若确实想多次引入aa ，则应写成 @<span class="keyword">import</span> <span class="string">"aa!"</span> ，末尾添加叹号，则会多次引入。</span><br><span class="line">      <span class="number">2</span>. sass中的@<span class="keyword">import</span> 会重复引入同一插件。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol>
+<ol start="2">
 <li><p>用normalize替换compass内置的的reset</p>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">normalize</span>是compass的插件，<span class="built_in">normalize</span>改良了compass/reset ,统一了跨浏览器差异，而不是都清<span class="number">0</span>；</div><div class="line">      <span class="number">1.</span> gem install compass-<span class="built_in">normalize</span>  </div><div class="line">      <span class="number">2.</span> require 'compass-<span class="built_in">normalize</span>'</div></pre></td></tr></table></figure>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">normalize</span>是compass的插件，<span class="built_in">normalize</span>改良了compass/reset ,统一了跨浏览器差异，而不是都清<span class="number">0</span>；</span><br><span class="line">      <span class="number">1.</span> gem install compass-<span class="built_in">normalize</span>  </span><br><span class="line">      <span class="number">2.</span> require 'compass-<span class="built_in">normalize</span>'</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>叹号使用</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果将config.rb配置文件中设置  output_style = <span class="symbol">:compressed</span> 生成的压缩css文件中的注释会被删除，如何防止注释被删除？在注释的开头加<span class="string">"!"</span>，则注释会保留，即使设置了 output_style = <span class="symbol">:compressed</span>。</div></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果将config.rb配置文件中设置  output_style = <span class="symbol">:compressed</span> 生成的压缩css文件中的注释会被删除，如何防止注释被删除？在注释的开头加<span class="string">"!"</span>，则注释会保留，即使设置了 output_style = <span class="symbol">:compressed</span>。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>常用图片可以转换成base64,减少图片请求</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">缺点:多消耗<span class="number">50</span><span class="comment">%的资源，多使用4倍内存,不知道ie6，7</span></div></pre></td></tr></table></figure>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">缺点:多消耗<span class="number">50</span><span class="comment">%的资源，多使用4倍内存,不知道ie6，7</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>资料<br><a href="http://www.ruanyifeng.com/blog/2012/11/compass.html" target="_blank" rel="noopener">Compass用法指南</a></p>
@@ -272,7 +654,7 @@
 
 
   
-    <article id="post-sacc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-sacc" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -299,10 +681,10 @@
 <li><p>语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。</p>
 </li>
 <li><p>Sass 和 CSS 写法的确存在一定的差异，由于 Sass 是基于 Ruby 写出来，所以其延续了 Ruby 的书写规范。在书写 Sass 时不带有大括号和分号，其主要是依靠严格的缩进方式来控制的</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span></div><div class="line">     <span class="attribute">color</span>: <span class="number">#fff</span></div><div class="line">     <span class="attribute">background</span>: <span class="number">#f36</span></div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">     <span class="attribute">color</span>: <span class="number">#fff</span></span><br><span class="line">     <span class="attribute">background</span>: <span class="number">#f36</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>SCSS 和 CSS 写法无差别，这也是 Sass 后来越来越受大众喜欢原因之一。简单点说，把你现有的“.css”文件直接修改成“.scss”即可使用。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">     <span class="attribute">color</span>:<span class="number">#fff</span>;</div><div class="line">     <span class="attribute">background</span>:<span class="number">#f36</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">     <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">     <span class="attribute">background</span>:<span class="number">#f36</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="Scss编译网站"><a href="#Scss编译网站" class="headerlink" title="Scss编译网站"></a>Scss编译网站</h3><p><a href="http://www.sassmeister.com/" target="_blank" rel="noopener">http://www.sassmeister.com/</a></p>
@@ -310,17 +692,17 @@
 <li><p>普通变量和默认变量</p>
 <ol>
 <li><p>普通变量定义后可以全局范围使用.</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">$fontSize</span>:12px;</span></div></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$fontSize</span>:12px;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>默认变量一般是用来设置默认值，然后根据需求来覆盖的，覆盖的方式也很简单，只需要在默认变量之前重新声明下变量即可。</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$baseLineHeight: <span class="number">1.5</span> !<span class="keyword">default</span><span class="comment">;</span></div></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$baseLineHeight: <span class="number">1.5</span> !<span class="keyword">default</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 <li><p>混合宏 @mixin @includ      &amp;父类选择 hover</p>
 <ol>
 <li><p>默认值</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>:<span class="number">3px</span>)&#123;</div><div class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>:<span class="number">3px</span>)&#123;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>多参数</p>
 </li>
@@ -351,17 +733,17 @@
 <li><p>计算</p>
 <ol>
 <li><p>加减乘除</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$list</span>: twitter,facebook,github,weibo;</div><div class="line"></div><div class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through length(<span class="variable">$list</span>)&#123;</div><div class="line">  <span class="selector-class">.icon-</span>#&#123;nth(<span class="variable">$list</span>,<span class="variable">$i</span>)&#125;&#123;</div><div class="line">    <span class="attribute">background</span>-postion: <span class="number">0</span>+<span class="number">20px</span> * <span class="variable">$i</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*除法*/</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">10px</span>/<span class="number">8px</span>;             <span class="comment">// 纯 CSS，不是除法运算</span></div><div class="line">  <span class="variable">$width</span>: <span class="number">1000px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>/<span class="number">2</span>;            <span class="comment">// 使用了变量，是除法运算</span></div><div class="line">  <span class="attribute">width</span>: round(<span class="number">1.5</span>)/<span class="number">2</span>;        <span class="comment">// 使用了函数，是除法运算</span></div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span> / <span class="number">2</span>;           <span class="comment">// 编译结果：100px / 2</span></div><div class="line">  <span class="attribute">height</span>: (<span class="number">500px</span>/<span class="number">2</span>);          <span class="comment">// 使用了圆括号，是除法运算</span></div><div class="line">  <span class="attribute">margin-left</span>: <span class="number">5px</span> + <span class="number">8px</span>/<span class="number">2px</span>; <span class="comment">// 使用了加（+）号，是除法运算</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$list</span>: twitter,facebook,github,weibo;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through length(<span class="variable">$list</span>)&#123;</span><br><span class="line">  <span class="selector-class">.icon-</span>#&#123;nth(<span class="variable">$list</span>,<span class="variable">$i</span>)&#125;&#123;</span><br><span class="line">    <span class="attribute">background</span>-postion: <span class="number">0</span>+<span class="number">20px</span> * <span class="variable">$i</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*除法*/</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">10px</span>/<span class="number">8px</span>;             <span class="comment">// 纯 CSS，不是除法运算</span></span><br><span class="line">  <span class="variable">$width</span>: <span class="number">1000px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>/<span class="number">2</span>;            <span class="comment">// 使用了变量，是除法运算</span></span><br><span class="line">  <span class="attribute">width</span>: round(<span class="number">1.5</span>)/<span class="number">2</span>;        <span class="comment">// 使用了函数，是除法运算</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span> / <span class="number">2</span>;           <span class="comment">// 编译结果：100px / 2</span></span><br><span class="line">  <span class="attribute">height</span>: (<span class="number">500px</span>/<span class="number">2</span>);          <span class="comment">// 使用了圆括号，是除法运算</span></span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">5px</span> + <span class="number">8px</span>/<span class="number">2px</span>; <span class="comment">// 使用了加（+）号，是除法运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>颜色运算 <strong>所有算数运算都支持颜色值，并且是分段运算的。也就是说，红、绿和蓝各颜色分段单独进行运算。</strong></p>
 </li>
-<li>字符串计算  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello"</span> + <span class="string">""</span> + <span class="string">"Sass!"</span><span class="comment">;   ==  " Hello Sass! "</span></div><div class="line">e + -resize<span class="comment">;              ==  e-resize;</span></div><div class="line"><span class="string">"Foo "</span> + <span class="keyword">Bar; </span>            ==  <span class="string">"Foo Bar"</span></div><div class="line">sans- + <span class="string">"serif"</span><span class="comment">;          ==  sans-serif;</span></div></pre></td></tr></table></figure>
+<li>字符串计算  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Hello"</span> + <span class="string">""</span> + <span class="string">"Sass!"</span><span class="comment">;   ==  " Hello Sass! "</span></span><br><span class="line">e + -resize<span class="comment">;              ==  e-resize;</span></span><br><span class="line"><span class="string">"Foo "</span> + <span class="keyword">Bar; </span>            ==  <span class="string">"Foo Bar"</span></span><br><span class="line">sans- + <span class="string">"serif"</span><span class="comment">;          ==  sans-serif;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 </ol>
 <ol>
-<li>@at-root @if type_of unitless  等操作符<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> col-sm(<span class="variable">$width</span>: 50%) &#123;</div><div class="line">  @<span class="keyword">if</span> type_of(<span class="variable">$width</span>) != number &#123;</div><div class="line">    @error <span class="string">'$width必须是一个数据类型,你输入的width是:#&#123;$width&#125;.'</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @<span class="keyword">if</span> not unitless(<span class="variable">$width</span>)&#123;</div><div class="line">    @<span class="keyword">if</span> unit(<span class="variable">$width</span>) != <span class="string">'%'</span>&#123;</div><div class="line">      @error  <span class="string">'$width必须是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;@<span class="keyword">else</span> &#123;</div><div class="line">    @<span class="keyword">warn</span>  <span class="string">'$width应该是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</div><div class="line">    <span class="variable">$width</span>: (percentage(<span class="variable">$width</span>)/<span class="number">100</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @<span class="keyword">media</span> (min-width: 768px) &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>@at-root @if type_of unitless  等操作符<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> col-sm(<span class="variable">$width</span>: 50%) &#123;</span><br><span class="line">  @<span class="keyword">if</span> type_of(<span class="variable">$width</span>) != number &#123;</span><br><span class="line">    @error <span class="string">'$width必须是一个数据类型,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @<span class="keyword">if</span> not unitless(<span class="variable">$width</span>)&#123;</span><br><span class="line">    @<span class="keyword">if</span> unit(<span class="variable">$width</span>) != <span class="string">'%'</span>&#123;</span><br><span class="line">      @error  <span class="string">'$width必须是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;@<span class="keyword">else</span> &#123;</span><br><span class="line">    @<span class="keyword">warn</span>  <span class="string">'$width应该是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    <span class="variable">$width</span>: (percentage(<span class="variable">$width</span>)/<span class="number">100</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @<span class="keyword">media</span> (min-width: 768px) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$width</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><ol>
@@ -425,7 +807,7 @@
 
 
   
-    <article id="post-Cordova笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Cordova笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -455,7 +837,7 @@
 <ul>
 <li>cordova有一个截图的插件暂时没用过,有需要的可以去看看<a href="https://github.com/gitawego/cordova-screenshot" target="_blank" rel="noopener">https://github.com/gitawego/cordova-screenshot</a></li>
 </ul>
-<ol>
+<ol start="2">
 <li><a href="https://html2canvas.hertzen.com/" target="_blank" rel="noopener">html2canvas</a> 可以根据元素来生成canvas对象,然后你在按需操作.</li>
 </ol>
 </li>
@@ -465,7 +847,7 @@
 </ul>
 </li>
 <li><p>目录结构</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">|<span class="string">____src</span></div><div class="line">|<span class="string"> </span>|<span class="string">____css(由compass生成)</span></div><div class="line">|<span class="string"> </span>|____iconfont</div><div class="line">|<span class="string"> </span>|____js</div><div class="line">|<span class="string"> </span>|<span class="string"> </span>|____controller</div><div class="line">|<span class="string"> </span>|<span class="string"> </span>|____services</div><div class="line">|<span class="string"> </span>|<span class="string"> </span>|____util</div><div class="line">|<span class="string"> </span>|____scss</div><div class="line">|<span class="string">____www</span></div><div class="line">|<span class="string"> </span>|<span class="string">____dist(由gulp生成)</span></div><div class="line">|<span class="string"> </span>|____img</div><div class="line">|<span class="string"> </span>|____templates</div></pre></td></tr></table></figure>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">____src</span></span><br><span class="line">|<span class="string"> </span>|<span class="string">____css(由compass生成)</span></span><br><span class="line">|<span class="string"> </span>|____iconfont</span><br><span class="line">|<span class="string"> </span>|____js</span><br><span class="line">|<span class="string"> </span>|<span class="string"> </span>|____controller</span><br><span class="line">|<span class="string"> </span>|<span class="string"> </span>|____services</span><br><span class="line">|<span class="string"> </span>|<span class="string"> </span>|____util</span><br><span class="line">|<span class="string"> </span>|____scss</span><br><span class="line">|<span class="string">____www</span></span><br><span class="line">|<span class="string"> </span>|<span class="string">____dist(由gulp生成)</span></span><br><span class="line">|<span class="string"> </span>|____img</span><br><span class="line">|<span class="string"> </span>|____templates</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -475,11 +857,11 @@
 </li>
 </ul>
 <ol>
-<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"io.cordova.hellocordova"</span></span></div><div class="line">	  <span class="attr">version</span>=<span class="string">"0.0.1"</span> 				//版本号</div><div class="line">      <span class="attr">android-versionCode</span>=<span class="string">"7"</span>	    //<span class="attr">android</span> <span class="attr">build</span></div><div class="line">      <span class="attr">ios-CFBundleVersion</span>=<span class="string">"7"</span>		//<span class="attr">ios</span>     <span class="attr">build</span></div><div class="line">      <span class="attr">windows-packageVersion</span>=<span class="string">"1.0.1.2"</span>&gt;</div></pre></td></tr></table></figure>
+<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"io.cordova.hellocordova"</span></span></span><br><span class="line"><span class="tag">	  <span class="attr">version</span>=<span class="string">"0.0.1"</span> 				//版本号</span></span><br><span class="line"><span class="tag">      <span class="attr">android-versionCode</span>=<span class="string">"7"</span>	    //<span class="attr">android</span> <span class="attr">build</span></span></span><br><span class="line"><span class="tag">      <span class="attr">ios-CFBundleVersion</span>=<span class="string">"7"</span>		//<span class="attr">ios</span>     <span class="attr">build</span></span></span><br><span class="line"><span class="tag">      <span class="attr">windows-packageVersion</span>=<span class="string">"1.0.1.2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><a href="http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2" target="_blank" rel="noopener">http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2</a></p>
-<ol>
+<ol start="2">
 <li><p>提交appstore会收到邮件“Missing push notification entitlement”的邮件<br><a href="http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti" target="_blank" rel="noopener">http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti</a></p>
 </li>
 <li><p><a href="http://stackoverflow.com/questions/20419574/saving-dataurlbase64-to-file-on-phonegap-android" target="_blank" rel="noopener">Saving dataURL(base64) to file on PhoneGap (android)</a></p>
@@ -512,11 +894,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cordova</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cordova</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -556,7 +938,7 @@
 
 
   
-    <article id="post-MayDay歌词本更新日志" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MayDay歌词本更新日志" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -918,7 +1300,7 @@
 
 
   
-    <article id="post-appStore 大坑逼" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-appStore 大坑逼" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1029,7 +1411,7 @@
 
 
   
-    <article id="post-cordova" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-cordova" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1050,11 +1432,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"io.cordova.hellocordova"</span></span></div><div class="line">	  <span class="attr">version</span>=<span class="string">"0.0.1"</span> 				//版本号</div><div class="line">      <span class="attr">android-versionCode</span>=<span class="string">"7"</span>	    //<span class="attr">android</span> <span class="attr">build</span></div><div class="line">      <span class="attr">ios-CFBundleVersion</span>=<span class="string">"7"</span>		//<span class="attr">ios</span>     <span class="attr">build</span></div><div class="line">      <span class="attr">windows-packageVersion</span>=<span class="string">"1.0.1.2"</span>&gt;</div></pre></td></tr></table></figure>
+<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"io.cordova.hellocordova"</span></span></span><br><span class="line"><span class="tag">	  <span class="attr">version</span>=<span class="string">"0.0.1"</span> 				//版本号</span></span><br><span class="line"><span class="tag">      <span class="attr">android-versionCode</span>=<span class="string">"7"</span>	    //<span class="attr">android</span> <span class="attr">build</span></span></span><br><span class="line"><span class="tag">      <span class="attr">ios-CFBundleVersion</span>=<span class="string">"7"</span>		//<span class="attr">ios</span>     <span class="attr">build</span></span></span><br><span class="line"><span class="tag">      <span class="attr">windows-packageVersion</span>=<span class="string">"1.0.1.2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><a href="http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2" target="_blank" rel="noopener">http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2</a></p>
-<ol>
+<ol start="2">
 <li>提交appstore会收到邮件“Missing push notification entitlement”的邮件<br><a href="http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti" target="_blank" rel="noopener">http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti</a><br><strong>需要重新生成一下provisioning，选择的AppID中需要包含Push Notifacation的，用生成的provisioning再重新Archive就好了</strong></li>
 <li><p><a href="http://stackoverflow.com/questions/20419574/saving-dataurlbase64-to-file-on-phonegap-android" target="_blank" rel="noopener">Saving dataURL(base64) to file on PhoneGap (android)</a></p>
 </li>
@@ -1138,7 +1520,7 @@
 
 
   
-    <article id="post-前端-小学生" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-前端-小学生" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1215,314 +1597,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/20151202/前端-小学生/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mac笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151127/Mac笔记/">Mac 笔记</a>
-    </h1>
-  
-
-        
-        <a href="/20151127/Mac笔记/" class="archive-article-date">
-  	<time datetime="2015-11-27T06:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>wget 下载网站</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">wget -r -p -np -k http://xxx.com/xxx</div><div class="line">-<span class="ruby">r,  --recursive（递归）          specify recursive download.（指定递归下载）</span></div><div class="line">-<span class="ruby">k,  --convert-links（转换链接）      make links <span class="keyword">in</span> downloaded HTML point to local files.（将下载的HTML页面中的链接转换为相对链接即本地链接）</span></div><div class="line">-<span class="ruby">p,  --page-requisites（页面必需元素）    get all images, etc. needed to display HTML page.（下载所有的图片等页面显示所需的内容）</span></div><div class="line">-<span class="ruby">np, --no-parent（不追溯至父级）          don<span class="string">'t ascend to the parent directory.</span></span></div><div class="line">另外断点续传用-nc参数 日志 用-o参数</div></pre></td></tr></table></figure>
-</li>
-<li><p>添加命令行快捷方式</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</div></pre></td></tr></table></figure>
-</li>
-<li><p>设置magic mouse灵敏度</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">defaults</span> <span class="selector-tag">write</span> <span class="selector-tag">-g</span> <span class="selector-tag">com</span><span class="selector-class">.apple</span><span class="selector-class">.mouse</span><span class="selector-class">.scaling</span> 6<span class="selector-class">.5</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>mysql 外网访问</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql&gt; GRANT <span class="literal">ALL</span> PRIVILEGES <span class="keyword">ON</span> *.* <span class="keyword">TO</span> <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">'mypwd'</span> <span class="keyword">WITH</span> GRANT OPTION;</div><div class="line">mysql&gt; flush privileges;</div></pre></td></tr></table></figure>
-</li>
-<li><p>开启和禁用 Spotlight</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//关闭 关闭后会导致侧边栏标记功能不可用</span></div><div class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span><span class="selector-class">.plist</span></div><div class="line"><span class="comment">//开启</span></div><div class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span><span class="selector-class">.plist</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>mac chrome 跨域</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">open</span> -a /Applications/Google\ Chrome.<span class="keyword">app</span> --<span class="keyword">args</span> --disable-web-security --user-data-<span class="keyword">dir</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>duplicate symbols for architecture arm64</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Build </span>Settings里的No <span class="meta">Common</span> <span class="keyword">Blocks为NO</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>下载了测试版的Xcode  就把之前的给删除了.然后git就出现了错误</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">xcrun:</span> <span class="string">error:</span> invalid active developer path (<span class="regexp">/Library/</span>Developer<span class="regexp">/CommandLineTools), missing xcrun at: /</span>Library<span class="regexp">/Developer/</span>CommandLineTools<span class="regexp">/usr/</span>bin/xcrun</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>解决办法:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo xcode-select -<span class="keyword">switch</span> <span class="regexp">/Applications/</span>Xcode-beta.app<span class="regexp">/Contents/</span>Developer</div></pre></td></tr></table></figure></p>
-<ol>
-<li><p>环境变量</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">export ANT_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/apache</span>-ant-<span class="number">1.9</span>.<span class="number">4</span></div><div class="line">export ANDROID_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/adt</span>-bundle-mac/sdk</div><div class="line">export PATH=<span class="regexp">/usr/bin</span><span class="symbol">:/bin</span><span class="symbol">:/usr/sbin</span><span class="symbol">:/sbin</span><span class="symbol">:/usr/local/bin</span></div><div class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANDROID_HOME</span>/platform-<span class="symbol">tools:</span><span class="variable">$ANDROID_HOME</span>/tools</div><div class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANT_HOME</span>/bin</div></pre></td></tr></table></figure>
-</li>
-<li><p>chrome 添加启动参数</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">open</span> -<span class="keyword">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/Applications/Google\</span> <span class="comment">Chrome</span><span class="string">.</span><span class="comment">app/Contents/MacOS/Chrome</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">enforced</span><span class="literal">-</span><span class="comment">throttling</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">ignore</span><span class="literal">-</span><span class="comment">certificate</span><span class="literal">-</span><span class="comment">errors</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">allow</span><span class="literal">-</span><span class="comment">running</span><span class="literal">-</span><span class="comment">insecure</span><span class="literal">-</span><span class="comment">content</span></div></pre></td></tr></table></figure>
-<p><a href="http://chenpeng.info/html/3393" target="_blank" rel="noopener">Chromium命令行启动参数</a></p>
-<ol>
-<li><p>Apache 的启动</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo apachectl <span class="keyword">start</span></div><div class="line">/<span class="keyword">Library</span>/WebServer/<span class="keyword">Document</span>/</div><div class="line">sudo launchctl unload -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</div><div class="line">如果哪天你想让它开机启动了,则将unload 改为 <span class="keyword">load</span>:</div><div class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</div></pre></td></tr></table></figure>
-</li>
-<li><p>打印目录树</p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . <span class="string">\(</span> ! -regex <span class="string">'.*/\..*'</span> <span class="string">\)</span> -type f -depth -<span class="number">3</span> -<span class="built_in">print</span> | sed -e <span class="string">'s;[^/]*/;|____;g;s;____|; |;g'</span></div></pre></td></tr></table></figure>
-<ol>
-<li>( ! -regex ‘.<em>/..</em>‘ ) -type f 匹配非隐藏文件</li>
-<li>-depth -3 递归深度</li>
-</ol>
-</li>
-<li>mac php默认配置 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/etc/apache2/httpd<span class="selector-class">.conf</span></div><div class="line">/etc/php<span class="selector-class">.ini</span></div><div class="line"><span class="comment">/*资料/soft/mac/php*/</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ul>
-<li><a href="http://www.waitsun.com/" target="_blank" rel="noopener">软件下载</a></li>
-<li><a href="http://www.isofts.org/" target="_blank" rel="noopener">mac志</a></li>
-<li><a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="noopener">每天一个linux命令目录</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20151127/Mac笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ViewPager设置滑动速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151126/ViewPager设置滑动速度/">ViewPager设置滑动速度</a>
-    </h1>
-  
-
-        
-        <a href="/20151126/ViewPager设置滑动速度/" class="archive-article-date">
-  	<time datetime="2015-11-26T03:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在使用ViewPager实现轮播组件,会遇到切换动画过块的问题.效果很不自然.其实,可以利用反射机制,修改Viewpager的滑动速度。</p>
-<h5 id="新建类FixedSpeedScoller继承自scroller类"><a href="#新建类FixedSpeedScoller继承自scroller类" class="headerlink" title="新建类FixedSpeedScoller继承自scroller类"></a>新建类FixedSpeedScoller继承自scroller类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.content.Context;  </div><div class="line"><span class="keyword">import</span> android.view.animation.Interpolator;  </div><div class="line"><span class="keyword">import</span> android.widget.Scroller;  </div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * FixedSpeedScroller for controlling sliding animation speed. It uses the java</div><div class="line"> * reflection mechanism.</div><div class="line"> *  </div><div class="line"> * <span class="doctag">@version</span> 1.00 2014.1.6</div><div class="line"> * <span class="doctag">@author</span> Huang.xin gkx100120</div><div class="line"> *  </div><div class="line"> */  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FixedSpeedScroller</span> <span class="keyword">extends</span> <span class="title">Scroller</span> </span>&#123;  </div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDuration = <span class="number">1500</span>; <span class="comment">// default time is 1500ms  </span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context)</span> </span>&#123;  </div><div class="line">    <span class="keyword">super</span>(context);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FixedSpeedScroller</span><span class="params">(Context context, Interpolator interpolator)</span> </span>&#123;  </div><div class="line">    <span class="keyword">super</span>(context, interpolator);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="meta">@Override</span>  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span> duration)</span> </span>&#123;  </div><div class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></div><div class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="meta">@Override</span>  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startScroll</span><span class="params">(<span class="keyword">int</span> startX, <span class="keyword">int</span> startY, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span> </span>&#123;  </div><div class="line">    <span class="comment">// Ignore received duration, use fixed one instead  </span></div><div class="line">    <span class="keyword">super</span>.startScroll(startX, startY, dx, dy, mDuration);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * set animation time</div><div class="line">     *  </div><div class="line">     * <span class="doctag">@param</span> time</div><div class="line">     */  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setmDuration</span><span class="params">(<span class="keyword">int</span> time)</span> </span>&#123;  </div><div class="line">    mDuration = time;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * get current animation time</div><div class="line">     *  </div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getmDuration</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">return</span> mDuration;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/20151126/ViewPager设置滑动速度/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20151126/ViewPager设置滑动速度/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-杂记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151125/杂记/">杂记</a>
-    </h1>
-  
-
-        
-        <a href="/20151125/杂记/" class="archive-article-date">
-  	<time datetime="2015-11-25T10:36:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h3><ul>
-<li><p><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="noopener">MarkDown简明语法</a></p>
-</li>
-<li><p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="noopener">MarkDown语法说明</a></p>
-</li>
-</ul>
-<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><ul>
-<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener">hexo你的博客(推荐:非常详细)</a></li>
-<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="noopener">Hexo搭建Github静态博客</a></li>
-<li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="noopener">Hexo后台插件</a></li>
-<li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia主题</a></li>
-<li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子网站计数</a></li>
-</ul>
-<h3 id="iTerm-2"><a href="#iTerm-2" class="headerlink" title="iTerm 2"></a>iTerm 2</h3><ul>
-<li>command + ;  自动补全命令</li>
-<li>command + shift +h 全部显示出来</li>
-<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="noopener">iTerm 2 color schemes</a></li>
-</ul>
-<h3 id="design"><a href="#design" class="headerlink" title="design"></a>design</h3><ul>
-<li><a href="http://www.zcool.com.cn/article/ZMTU5MzAw.html#jtss-tsina" target="_blank" rel="noopener">material design 文档动画部分的学习笔记</a></li>
-</ul>
-<h3 id="文档排版"><a href="#文档排版" class="headerlink" title="文档排版"></a>文档排版</h3><p><a href="https://open.leancloud.cn/copywriting-style-guide.html" target="_blank" rel="noopener">文案风格指南</a></p>
-<p><a href="http://zhuanlan.zhihu.com/uicircle/20506092" target="_blank" rel="noopener">中文排版指南</a></p>
-<h3 id="SVN"><a href="#SVN" class="headerlink" title="SVN"></a>SVN</h3><p>批量添加新增文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="variable">$1</span> == <span class="string">"?"</span>) &#123; <span class="keyword">print</span> <span class="variable">$2&#125;</span>&#125;' | xargs svn add</div></pre></td></tr></table></figure></p>
-<p>批量删除文件<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svn <span class="keyword">st</span> | awk '&#123;<span class="keyword">if</span> ( <span class="variable">$1</span> == <span class="string">"!"</span>) &#123; <span class="keyword">print</span> <span class="variable">$2&#125;</span>&#125;' | xargs svn <span class="keyword">rm</span></div></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20151125/杂记/">展开全文 >></a>
         </p>
       
 
@@ -1661,15 +1735,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1677,11 +1747,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1709,7 +1783,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

@@ -1,791 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
+    <loc>http://willnewii.github.io/20181031/npm-completion/</loc>
+    <lastmod>2018-10-31T02:53:56.521Z</lastmod>
+  </url>  <url>
+    <loc>http://willnewii.github.io/20180614/webkit-box-orient-vertical-webpack%E6%97%A0%E6%95%88/</loc>
+    <lastmod>2018-06-14T14:18:24.567Z</lastmod>
+  </url>  <url>
+    <loc>http://willnewii.github.io/20180608/%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0/</loc>
+    <lastmod>2018-06-08T03:16:09.951Z</lastmod>
+  </url>  <url>
     <loc>http://willnewii.github.io/20180123/Puppeteer-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2018-01-23T09:27:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>Puppeteer 使用笔记</title>
-        <pubTime>2018-01-23T09:27:22.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20170706/Vue-%E4%B8%AD-extend-component-mixins-extends-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2017-08-02T01:27:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 中 extend / component / mixins / extends 的区别</title>
-        <pubTime>2017-07-06T01:25:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20170705/vue-%E9%A6%96%E5%B1%8F%E5%8A%A0%E8%BD%BD%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2017-08-02T01:24:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>vue 首屏加载优化</title>
-        <pubTime>2017-07-05T01:11:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20170615/%E5%9F%BA%E4%BA%8EDllPlugin-%E5%92%8C-DllReferencePlugin-%E7%9A%84-webpack-%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2017-08-02T01:23:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>基于DllPlugin 和 DllReferencePlugin 的 webpack 构建优化</title>
-        <pubTime>2017-06-15T07:39:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20170406/awesome-github/</loc>
     <lastmod>2017-04-27T01:52:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>awesome-github</title>
-        <pubTime>2017-04-06T03:19:00.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20170415/awesome-chrome/</loc>
     <lastmod>2017-04-15T13:14:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>awesome-chrome</title>
-        <pubTime>2017-04-15T13:14:00.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151127/Mac%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-07T06:21:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mac 笔记</title>
-        <pubTime>2015-11-27T06:36:00.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>mac</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160331/android-%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2017-04-07T06:13:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>android 笔记</title>
-        <pubTime>2016-03-31T04:12:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151207/cordova/</loc>
     <lastmod>2017-04-07T02:50:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>cordova & ionic & angularJs</title>
-        <pubTime>2015-12-07T09:46:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>cordova</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160104/css/</loc>
     <lastmod>2017-04-07T02:50:49.000Z</lastmod>
-    <data>
-        <display>
-        <title> css定位</title>
-        <pubTime>2016-01-04T02:54:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160721/Angular-%E8%B5%84%E6%96%99/</loc>
     <lastmod>2017-04-07T02:49:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Angular 资料</title>
-        <pubTime>2016-07-21T09:19:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160113/Charles/</loc>
     <lastmod>2017-04-07T02:49:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Charles</title>
-        <pubTime>2016-01-13T06:51:00.000Z</pubTime>
-        
-        <tag>soft</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160106/Kindle-Calibre/</loc>
     <lastmod>2017-04-07T02:49:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>Kindle & Calibre</title>
-        <pubTime>2016-01-06T12:01:00.000Z</pubTime>
-        
-        <tag>soft</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151218/Cordova%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-07T02:43:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Cordova 笔记</title>
-        <pubTime>2015-12-18T06:21:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>cordova</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151228/sacc/</loc>
     <lastmod>2017-04-07T02:42:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>sass 笔记</title>
-        <pubTime>2015-12-28T07:08:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151229/compass%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-07T02:42:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>compass 笔记</title>
-        <pubTime>2015-12-29T03:57:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151125/Android%20%E4%BC%98%E5%8C%96%E6%96%87%E7%AB%A0/</loc>
     <lastmod>2017-04-07T02:42:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 优化文章</title>
-        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://willnewii.github.io/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160105/Flex-%E5%B8%83%E5%B1%80/</loc>
     <lastmod>2017-04-07T02:41:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Flex 布局</title>
-        <pubTime>2016-01-05T04:17:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160120/JS%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-07T02:40:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>JS 笔记</title>
-        <pubTime>2016-01-20T03:37:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160120/git/</loc>
     <lastmod>2017-04-07T02:39:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>git 笔记</title>
-        <pubTime>2016-01-20T03:47:00.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160309/Git%E5%B0%8F%E7%BB%93/</loc>
     <lastmod>2017-04-07T02:39:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git 小结</title>
-        <pubTime>2016-03-09T07:27:00.000Z</pubTime>
-        
-        <tag>工作流程</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160805/Element/</loc>
     <lastmod>2017-04-07T02:39:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>Element</title>
-        <pubTime>2016-08-05T10:21:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160727/ES6-%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-07T02:38:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>ES6 笔记</title>
-        <pubTime>2016-07-27T02:35:00.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151126/ViewPager%E8%AE%BE%E7%BD%AE%E6%BB%91%E5%8A%A8%E9%80%9F%E5%BA%A6/</loc>
     <lastmod>2017-02-10T04:39:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>ViewPager设置滑动速度</title>
-        <pubTime>2015-11-26T03:21:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151125/Android%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</loc>
     <lastmod>2017-02-10T04:39:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 相关文章</title>
-        <pubTime>2015-11-25T10:36:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20170105/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8Ehomebridge-%E4%B8%89-%E6%8F%92%E4%BB%B6%E7%AF%87/</loc>
     <lastmod>2017-01-05T10:12:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>树莓派与homebridge  (三)  插件篇</title>
-        <pubTime>2017-01-05T10:11:00.000Z</pubTime>
-        
-        <tag>IOT</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161229/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8Ehomebridge-%E4%B8%80-%E4%BB%80%E4%B9%88%E6%98%AFHomeKit/</loc>
     <lastmod>2016-12-29T08:39:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>树莓派与homebridge  (一)  什么是HomeKit</title>
-        <pubTime>2016-12-29T08:21:00.000Z</pubTime>
-        
-        <tag>IOT</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161229/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8Ehomebridge-%E4%BA%8C-%E5%AE%89%E8%A3%85%E7%AF%87/</loc>
     <lastmod>2016-12-29T08:29:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>树莓派与homebridge  (二)  安装篇</title>
-        <pubTime>2016-12-29T08:24:00.000Z</pubTime>
-        
-        <tag>IOT</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151018/Atom%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
     <lastmod>2016-12-19T10:03:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Atom编辑器</title>
-        <pubTime>2015-10-18T10:36:00.000Z</pubTime>
-        
-        <tag>cheatsheet</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160504/iTerm2-%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2016-12-19T10:02:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>iTerm2 快捷键</title>
-        <pubTime>2016-05-04T07:39:00.000Z</pubTime>
-        
-        <tag>cheatsheet</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161202/intellij%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2016-12-19T10:02:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>intellij IDEA 快捷键</title>
-        <pubTime>2016-12-02T07:03:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>cheatsheet</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161207/imium-%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2016-12-19T09:59:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>vimium 快捷键</title>
-        <pubTime>2016-12-07T07:30:00.000Z</pubTime>
-        
-        <tag>cheatsheet</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161201/github-io-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</loc>
     <lastmod>2016-12-07T07:30:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>github.io 自定义域名</title>
-        <pubTime>2016-12-01T08:00:00.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161111/Thunderbolt/</loc>
     <lastmod>2016-12-07T07:29:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>关于Thunderbolt</title>
-        <pubTime>2016-11-11T03:30:00.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-        <tag>设备</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20161201/%E9%80%89%E4%B8%AAdock%E7%9C%9F%E9%9A%BE%E5%91%80/</loc>
     <lastmod>2016-12-07T07:29:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>选个dock真难呀...</title>
-        <pubTime>2016-12-01T04:19:00.000Z</pubTime>
-        
-        <tag>设备</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160314/%E5%80%A9%E5%80%A9Design/</loc>
     <lastmod>2016-08-05T10:21:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>储倩 设计 作品</title>
-        <pubTime>2016-03-14T04:23:12.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160106/dialog-fox/</loc>
     <lastmod>2016-07-19T02:52:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>android dialog</title>
-        <pubTime>2016-01-06T10:22:00.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151202/%E5%89%8D%E7%AB%AF-%E5%B0%8F%E5%AD%A6%E7%94%9F/</loc>
     <lastmod>2016-05-30T06:15:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端-小学生</title>
-        <pubTime>2015-12-02T08:14:41.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160416/seajs-%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2016-04-16T06:50:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>seajs 资源</title>
-        <pubTime>2016-04-16T03:57:32.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20160313/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90-%E5%BA%94%E7%94%A81/</loc>
     <lastmod>2016-03-14T06:50:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>持续集成 应用-1</title>
-        <pubTime>2016-03-13T09:14:00.000Z</pubTime>
-        
-        <tag>工作流程</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151125/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2016-02-18T04:04:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>杂记</title>
-        <pubTime>2015-11-25T10:36:41.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151214/MayDay%E6%AD%8C%E8%AF%8D%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2016-02-02T09:14:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>MayDay歌词本更新日志</title>
-        <pubTime>2015-12-14T14:11:00.000Z</pubTime>
-        
-        <tag>MayDay歌词本</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151209/appStore%20%E5%A4%A7%E5%9D%91%E9%80%BC/</loc>
     <lastmod>2015-12-15T15:48:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>appStore 大坑逼</title>
-        <pubTime>2015-12-09T14:45:00.000Z</pubTime>
-        
-        <tag>ios</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20151101/MarkDown%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2015-11-27T12:30:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>MarkDown语法</title>
-        <pubTime>2015-11-01T10:36:41.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://willnewii.github.io/20141215/macbook%E4%B8%8D%E8%AF%86%E5%88%AB%E9%83%A8%E5%88%86Android%E6%89%8B%E6%9C%BA/</loc>
     <lastmod>2015-11-26T05:32:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>macbook不识别部分Android手机</title>
-        <pubTime>2014-12-15T07:20:00.000Z</pubTime>
-        
-        <tag>杂记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
+  </url>
 </urlset>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>sass 笔记 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -40,7 +40,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -49,11 +49,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -181,7 +181,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sacc" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sacc" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -208,10 +208,10 @@
 <li><p>语法书写方式不同，Sass是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS的语法书写和我们的 CSS 语法书写方式非常类似。</p>
 </li>
 <li><p>Sass 和 CSS 写法的确存在一定的差异，由于 Sass 是基于 Ruby 写出来，所以其延续了 Ruby 的书写规范。在书写 Sass 时不带有大括号和分号，其主要是依靠严格的缩进方式来控制的</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span></div><div class="line">     <span class="attribute">color</span>: <span class="number">#fff</span></div><div class="line">     <span class="attribute">background</span>: <span class="number">#f36</span></div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">     <span class="attribute">color</span>: <span class="number">#fff</span></span><br><span class="line">     <span class="attribute">background</span>: <span class="number">#f36</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>SCSS 和 CSS 写法无差别，这也是 Sass 后来越来越受大众喜欢原因之一。简单点说，把你现有的“.css”文件直接修改成“.scss”即可使用。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">     <span class="attribute">color</span>:<span class="number">#fff</span>;</div><div class="line">     <span class="attribute">background</span>:<span class="number">#f36</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">     <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">     <span class="attribute">background</span>:<span class="number">#f36</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="Scss编译网站"><a href="#Scss编译网站" class="headerlink" title="Scss编译网站"></a>Scss编译网站</h3><p><a href="http://www.sassmeister.com/" target="_blank" rel="noopener">http://www.sassmeister.com/</a></p>
@@ -219,17 +219,17 @@
 <li><p>普通变量和默认变量</p>
 <ol>
 <li><p>普通变量定义后可以全局范围使用.</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">$fontSize</span>:12px;</span></div></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$fontSize</span>:12px;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>默认变量一般是用来设置默认值，然后根据需求来覆盖的，覆盖的方式也很简单，只需要在默认变量之前重新声明下变量即可。</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$baseLineHeight: <span class="number">1.5</span> !<span class="keyword">default</span><span class="comment">;</span></div></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$baseLineHeight: <span class="number">1.5</span> !<span class="keyword">default</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 <li><p>混合宏 @mixin @includ      &amp;父类选择 hover</p>
 <ol>
 <li><p>默认值</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>:<span class="number">3px</span>)&#123;</div><div class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>:<span class="number">3px</span>)&#123;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>多参数</p>
 </li>
@@ -260,17 +260,17 @@
 <li><p>计算</p>
 <ol>
 <li><p>加减乘除</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$list</span>: twitter,facebook,github,weibo;</div><div class="line"></div><div class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through length(<span class="variable">$list</span>)&#123;</div><div class="line">  <span class="selector-class">.icon-</span>#&#123;nth(<span class="variable">$list</span>,<span class="variable">$i</span>)&#125;&#123;</div><div class="line">    <span class="attribute">background</span>-postion: <span class="number">0</span>+<span class="number">20px</span> * <span class="variable">$i</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*除法*/</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">10px</span>/<span class="number">8px</span>;             <span class="comment">// 纯 CSS，不是除法运算</span></div><div class="line">  <span class="variable">$width</span>: <span class="number">1000px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>/<span class="number">2</span>;            <span class="comment">// 使用了变量，是除法运算</span></div><div class="line">  <span class="attribute">width</span>: round(<span class="number">1.5</span>)/<span class="number">2</span>;        <span class="comment">// 使用了函数，是除法运算</span></div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span> / <span class="number">2</span>;           <span class="comment">// 编译结果：100px / 2</span></div><div class="line">  <span class="attribute">height</span>: (<span class="number">500px</span>/<span class="number">2</span>);          <span class="comment">// 使用了圆括号，是除法运算</span></div><div class="line">  <span class="attribute">margin-left</span>: <span class="number">5px</span> + <span class="number">8px</span>/<span class="number">2px</span>; <span class="comment">// 使用了加（+）号，是除法运算</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$list</span>: twitter,facebook,github,weibo;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through length(<span class="variable">$list</span>)&#123;</span><br><span class="line">  <span class="selector-class">.icon-</span>#&#123;nth(<span class="variable">$list</span>,<span class="variable">$i</span>)&#125;&#123;</span><br><span class="line">    <span class="attribute">background</span>-postion: <span class="number">0</span>+<span class="number">20px</span> * <span class="variable">$i</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*除法*/</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">10px</span>/<span class="number">8px</span>;             <span class="comment">// 纯 CSS，不是除法运算</span></span><br><span class="line">  <span class="variable">$width</span>: <span class="number">1000px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>/<span class="number">2</span>;            <span class="comment">// 使用了变量，是除法运算</span></span><br><span class="line">  <span class="attribute">width</span>: round(<span class="number">1.5</span>)/<span class="number">2</span>;        <span class="comment">// 使用了函数，是除法运算</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span> / <span class="number">2</span>;           <span class="comment">// 编译结果：100px / 2</span></span><br><span class="line">  <span class="attribute">height</span>: (<span class="number">500px</span>/<span class="number">2</span>);          <span class="comment">// 使用了圆括号，是除法运算</span></span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">5px</span> + <span class="number">8px</span>/<span class="number">2px</span>; <span class="comment">// 使用了加（+）号，是除法运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>颜色运算 <strong>所有算数运算都支持颜色值，并且是分段运算的。也就是说，红、绿和蓝各颜色分段单独进行运算。</strong></p>
 </li>
-<li>字符串计算  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello"</span> + <span class="string">""</span> + <span class="string">"Sass!"</span><span class="comment">;   ==  " Hello Sass! "</span></div><div class="line">e + -resize<span class="comment">;              ==  e-resize;</span></div><div class="line"><span class="string">"Foo "</span> + <span class="keyword">Bar; </span>            ==  <span class="string">"Foo Bar"</span></div><div class="line">sans- + <span class="string">"serif"</span><span class="comment">;          ==  sans-serif;</span></div></pre></td></tr></table></figure>
+<li>字符串计算  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Hello"</span> + <span class="string">""</span> + <span class="string">"Sass!"</span><span class="comment">;   ==  " Hello Sass! "</span></span><br><span class="line">e + -resize<span class="comment">;              ==  e-resize;</span></span><br><span class="line"><span class="string">"Foo "</span> + <span class="keyword">Bar; </span>            ==  <span class="string">"Foo Bar"</span></span><br><span class="line">sans- + <span class="string">"serif"</span><span class="comment">;          ==  sans-serif;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 </ol>
 <ol>
-<li>@at-root @if type_of unitless  等操作符<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> col-sm(<span class="variable">$width</span>: 50%) &#123;</div><div class="line">  @<span class="keyword">if</span> type_of(<span class="variable">$width</span>) != number &#123;</div><div class="line">    @error <span class="string">'$width必须是一个数据类型,你输入的width是:#&#123;$width&#125;.'</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @<span class="keyword">if</span> not unitless(<span class="variable">$width</span>)&#123;</div><div class="line">    @<span class="keyword">if</span> unit(<span class="variable">$width</span>) != <span class="string">'%'</span>&#123;</div><div class="line">      @error  <span class="string">'$width必须是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;@<span class="keyword">else</span> &#123;</div><div class="line">    @<span class="keyword">warn</span>  <span class="string">'$width应该是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</div><div class="line">    <span class="variable">$width</span>: (percentage(<span class="variable">$width</span>)/<span class="number">100</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @<span class="keyword">media</span> (min-width: 768px) &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>@at-root @if type_of unitless  等操作符<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> col-sm(<span class="variable">$width</span>: 50%) &#123;</span><br><span class="line">  @<span class="keyword">if</span> type_of(<span class="variable">$width</span>) != number &#123;</span><br><span class="line">    @error <span class="string">'$width必须是一个数据类型,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @<span class="keyword">if</span> not unitless(<span class="variable">$width</span>)&#123;</span><br><span class="line">    @<span class="keyword">if</span> unit(<span class="variable">$width</span>) != <span class="string">'%'</span>&#123;</span><br><span class="line">      @error  <span class="string">'$width必须是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;@<span class="keyword">else</span> &#123;</span><br><span class="line">    @<span class="keyword">warn</span>  <span class="string">'$width应该是一个百分值,你输入的width是:#&#123;$width&#125;.'</span>;</span><br><span class="line">    <span class="variable">$width</span>: (percentage(<span class="variable">$width</span>)/<span class="number">100</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @<span class="keyword">media</span> (min-width: 768px) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$width</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><ol>
@@ -513,15 +513,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -529,11 +525,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -561,7 +561,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

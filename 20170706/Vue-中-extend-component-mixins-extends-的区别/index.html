@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://willnewii.github.io">
   <title>Vue 中 extend / component / mixins / extends 的区别 | 诗人的咸鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -41,7 +41,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -50,11 +50,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="null" class="profilepic">
+		<a href="" class="profilepic">
 			<img src="https://avatars3.githubusercontent.com/u/652003?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="null">诗人的咸鱼</a></h1>
+		  <h1 class="header-author"><a href="">诗人的咸鱼</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">生活不止有眼前的苟且,还有诗和远方</p>
@@ -182,7 +182,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue-中-extend-component-mixins-extends-的区别" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Vue-中-extend-component-mixins-extends-的区别" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -203,27 +203,27 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在segmentfault上看到了一个问题<a href="https://segmentfault.com/q/1010000007312426" target="_blank" rel="noopener">vue.extend, vue.component 区别</a>,突然有些方,好歹也写了几个小vue项目,自己都弄不清楚这些东西…</p>
-<h3 id="new-Vue-、component"><a href="#new-Vue-、component" class="headerlink" title="new Vue()、component"></a>new Vue()、component</h3><p>首先我们来约定一个<strong>选项对象</strong>  baseOptions,后面的代码会用到.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> options = &#123;</div><div class="line">    <span class="attr">template</span>: <span class="string">'&lt;p&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125; aka &#123;&#123;alias&#125;&#125;&lt;/p&gt;'</span>,</div><div class="line">    <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">firstName</span>: <span class="string">'Walter'</span>,</div><div class="line">            <span class="attr">lastName</span>: <span class="string">'White'</span>,</div><div class="line">            <span class="attr">alias</span>: <span class="string">'Heisenberg'</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    created()&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-1'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="new-Vue-、component"><a href="#new-Vue-、component" class="headerlink" title="new Vue()、component"></a>new Vue()、component</h3><p>首先我们来约定一个<strong>选项对象</strong>  baseOptions,后面的代码会用到.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    template: <span class="string">'&lt;p&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125; aka &#123;&#123;alias&#125;&#125;&lt;/p&gt;'</span>,</span><br><span class="line">    data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            firstName: <span class="string">'Walter'</span>,</span><br><span class="line">            lastName: <span class="string">'White'</span>,</span><br><span class="line">            alias: <span class="string">'Heisenberg'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    created()&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-1'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h4 id="new-Vue-source-vue-src-core-instance-index-js"><a href="#new-Vue-source-vue-src-core-instance-index-js" class="headerlink" title="new Vue() source:vue/src/core/instance/index.js"></a><a href="http://cn.vuejs.org/v2/guide/instance.html" target="_blank" rel="noopener">new Vue()</a> <strong>source:vue/src/core/instance/index.js</strong></h4><blockquote>
 <p>实例化一个组件.</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(baseOptions);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(baseOptions);</span><br><span class="line"><span class="comment">// -&gt; onCreated-1</span></span><br></pre></td></tr></table></figure>
 <h4 id="component-source-vue-src-core-global-api-assets-js"><a href="#component-source-vue-src-core-global-api-assets-js" class="headerlink" title="component source:vue/src/core/global-api/assets.js"></a><a href="http://cn.vuejs.org/v2/api/#Vue-component" target="_blank" rel="noopener">component</a> <strong>source:vue/src/core/global-api/assets.js</strong></h4><blockquote>
-<p>Vue.component 是用来注册或获取全局组件的方法，其作用是将通过 Vue.extend 生成的扩展实例构造器注册（命名）为一个组件.全局注册的组件可以在所有晚于该组件注册语句构造的Vue实例中使用.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'global-component'</span>, Vue.extend(baseOptions));</div><div class="line"><span class="comment">//传入一个选项对象（自动调用 Vue.extend）,等价于上行代码.</span></div><div class="line">Vue.component(<span class="string">'global-component'</span>, baseOptions);</div><div class="line"><span class="comment">// 获取注册的组件（始终返回构造器）</span></div><div class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</div></pre></td></tr></table></figure></p>
+<p>Vue.component 是用来注册或获取全局组件的方法，其作用是将通过 Vue.extend 生成的扩展实例构造器注册（命名）为一个组件.全局注册的组件可以在所有晚于该组件注册语句构造的Vue实例中使用.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'global-component'</span>, Vue.extend(baseOptions));</span><br><span class="line"><span class="comment">//传入一个选项对象（自动调用 Vue.extend）,等价于上行代码.</span></span><br><span class="line">Vue.component(<span class="string">'global-component'</span>, baseOptions);</span><br><span class="line"><span class="comment">// 获取注册的组件（始终返回构造器）</span></span><br><span class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
 <p>当我们需要在其他页面‘扩展’或者叫‘混合’baseOptions时,Vue中提供了多种的实现方式:extend,mixins,extends.</p>
 <h4 id="extend-source-vue-src-core-global-api-extend-js"><a href="#extend-source-vue-src-core-global-api-extend-js" class="headerlink" title="extend source:vue/src/core/global-api/extend.js"></a><a href="http://cn.vuejs.org/v2/api/#Vue-extend" target="_blank" rel="noopener">extend</a> <strong>source:vue/src/core/global-api/extend.js</strong></h4><blockquote>
-<p>可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> BaseComponent = Vue.extend(baseOptions);</div><div class="line"><span class="comment">//基于基础组件BaseComponent,再扩展新逻辑.</span></div><div class="line"><span class="keyword">new</span> BaseComponent(&#123;</div><div class="line">    created()&#123;</div><div class="line">        <span class="comment">//do something</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//其他自定义逻辑</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div><div class="line"><span class="comment">// -&gt; onCreated-2</span></div></pre></td></tr></table></figure></p>
+<p>可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> BaseComponent = Vue.extend(baseOptions);</span><br><span class="line"><span class="comment">//基于基础组件BaseComponent,再扩展新逻辑.</span></span><br><span class="line"><span class="keyword">new</span> BaseComponent(&#123;</span><br><span class="line">    created()&#123;</span><br><span class="line">        <span class="comment">//do something</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//其他自定义逻辑</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// -&gt; onCreated-1</span></span><br><span class="line"><span class="comment">// -&gt; onCreated-2</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h4 id="mixins"><a href="#mixins" class="headerlink" title="mixins"></a><a href="http://cn.vuejs.org/v2/api/#mixins" target="_blank" rel="noopener">mixins</a></h4><blockquote>
-<p>mixins 选项接受一个混合对象的数组。这些混合实例对象可以像正常的实例对象一样包含选项,他们将在 Vue.extend() 里最终选择使用相同的选项合并逻辑合并。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">mixins</span>: [baseOptions],</div><div class="line">    created()&#123;</div><div class="line">        <span class="comment">//do something</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//其他自定义逻辑</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div><div class="line"><span class="comment">// -&gt; onCreated-2</span></div></pre></td></tr></table></figure></p>
+<p>mixins 选项接受一个混合对象的数组。这些混合实例对象可以像正常的实例对象一样包含选项,他们将在 Vue.extend() 里最终选择使用相同的选项合并逻辑合并。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    mixins: [baseOptions],</span><br><span class="line">    created()&#123;</span><br><span class="line">        <span class="comment">//do something</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//其他自定义逻辑</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// -&gt; onCreated-1</span></span><br><span class="line"><span class="comment">// -&gt; onCreated-2</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h4 id="extends"><a href="#extends" class="headerlink" title="extends"></a><a href="http://cn.vuejs.org/v2/api/#extends" target="_blank" rel="noopener">extends</a></h4><blockquote>
 <p>这和 mixins 类似，区别在于，组件自身的选项会比要扩展的源组件具有更高的优先级.</p>
 </blockquote>
 <p>官方文档是这么写的,除了优先级,可能就剩下接受参数的类型吧,mixins接受的是数组.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">extends</span>: baseOptions,</div><div class="line">    created()&#123;</div><div class="line">        <span class="comment">//do something</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//其他自定义逻辑</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// -&gt; onCreated-1</span></div><div class="line"><span class="comment">// -&gt; onCreated-2</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    extends: baseOptions,</span><br><span class="line">    created()&#123;</span><br><span class="line">        <span class="comment">//do something</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'onCreated-2'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//其他自定义逻辑</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// -&gt; onCreated-1</span></span><br><span class="line"><span class="comment">// -&gt; onCreated-2</span></span><br></pre></td></tr></table></figure>
 <p>从结果上看,三种方式都能实现需求,但是形式却有不同.</p>
 <ul>
 <li>Vue.extend<ul>
@@ -266,7 +266,7 @@
 <blockquote>
 <p><strong>对象里查找属性的规则</strong> :举个例子，当查找一个属性时，如 obj[a] ,如果 obj 没有 a 这个属性，那么将会在 obj 对象的原型里找，如果还没有，在原型的原型上找，直到原型链的尽头，如果还没有找到，返回 undefined。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span> (<span class="params">to, _from</span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> _from) &#123;</div><div class="line">    to[key] = _from[key];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> to</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mergeAssets</span> (<span class="params">parentVal, childVal</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = <span class="built_in">Object</span>.create(parentVal || <span class="literal">null</span>);</div><div class="line">  <span class="keyword">return</span> childVal</div><div class="line">    ? extend(res, childVal)</div><div class="line">    : res</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span> (<span class="params">to, _from</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> _from) &#123;</span><br><span class="line">    to[key] = _from[key];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> to</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mergeAssets</span> (<span class="params">parentVal, childVal</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> res = <span class="built_in">Object</span>.create(parentVal || <span class="literal">null</span>);</span><br><span class="line">  <span class="keyword">return</span> childVal</span><br><span class="line">    ? extend(res, childVal)</span><br><span class="line">    : res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>Vue.component 注册全局组件,为了方便</li>
 <li>Vue.extend 创建组件的构造函数,为了复用</li>
@@ -284,7 +284,7 @@
 </ul>
 <h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul>
 <li><p>href 属性用于保持光标形状为正常的手形，也可以使用 css 实现</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span> @<span class="attr">click</span>=<span class="string">"currentView = 'home'"</span>&gt;</span></div></pre></td></tr></table></figure>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span> @<span class="attr">click</span>=<span class="string">"currentView = 'home'"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>FOUC Flash Of Unstyled Content 文档样式闪烁</p>
 </li>
@@ -521,15 +521,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -537,11 +533,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -569,7 +569,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
