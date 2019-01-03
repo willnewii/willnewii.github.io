@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://willnewii.github.io/"/>
-  <updated>2018-10-31T02:53:56.521Z</updated>
+  <updated>2018-10-31T06:16:41.132Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <title>npm completion</title>
     <link href="http://willnewii.github.io/20181031/npm-completion/"/>
     <id>http://willnewii.github.io/20181031/npm-completion/</id>
-    <published>2018-10-31T02:47:36.000Z</published>
-    <updated>2018-10-31T02:53:56.521Z</updated>
+    <published>2018-10-31T02:47:00.000Z</published>
+    <updated>2018-10-31T06:16:41.132Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="npm-completion"><a href="#npm-completion" class="headerlink" title="npm completion"></a><a href="https://docs.npmjs.com/cli/completion" target="_blank" rel="noopener">npm completion</a></h4><p>刚发现npm 有一个自动完成命令补全的功能</p><h4 id="npm-安装-git项目"><a href="#npm-安装-git项目" class="headerlink" title="npm 安装 git项目"></a>npm 安装 git项目</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i git+https://github.com/willnewii/vue-lib.git<span class="comment">#version</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h5 id="npm-completion"><a href="#npm-completion" class="headerlink" title="npm completion"></a><a href="https://docs.npmjs.com/cli/completion" target="_blank" rel="noopener">npm completion</a></h5><p>刚发现npm 有一个自动完成命令补全的功能</p><h5 id="npm-安装-git项目"><a href="#npm-安装-git项目" class="headerlink" title="npm 安装 git项目"></a>npm 安装 git项目</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i git+https://github.com/willnewii/vue-lib.git#version</span><br></pre></td></tr></table></figure><h4 id="git-修改message"><a href="#git-修改message" class="headerlink" title="git 修改message"></a>git 修改message</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//修改最新一条</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure><h4 id="git-合并提交"><a href="#git-合并提交" class="headerlink" title="git 合并提交"></a>git 合并提交</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase -<span class="selector-tag">i</span> HEAD~<span class="number">2</span></span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h4 id=&quot;npm-completion&quot;&gt;&lt;a href=&quot;#npm-completion&quot; class=&quot;headerlink&quot; title=&quot;npm completion&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://docs.npmjs.com/cli/completi
+        &lt;h5 id=&quot;npm-completion&quot;&gt;&lt;a href=&quot;#npm-completion&quot; class=&quot;headerlink&quot; title=&quot;npm completion&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://docs.npmjs.com/cli/completi
       
     
     </summary>
@@ -38,19 +38,23 @@
   </entry>
   
   <entry>
-    <title>-webkit-box-orient: vertical webpack无效</title>
+    <title>css note</title>
     <link href="http://willnewii.github.io/20180614/webkit-box-orient-vertical-webpack%E6%97%A0%E6%95%88/"/>
     <id>http://willnewii.github.io/20180614/webkit-box-orient-vertical-webpack无效/</id>
     <published>2018-06-14T14:16:35.000Z</published>
-    <updated>2018-06-14T14:18:24.567Z</updated>
+    <updated>2018-11-07T07:18:08.792Z</updated>
     
-    <content type="html"><![CDATA[<p>Vue项目,build以后,-webkit-box-orient: vertical 会消失.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> OptimizeCSSPlugin(&#123;</span><br><span class="line">            cssProcessorOptions: &#123;</span><br><span class="line">                safe: <span class="literal">true</span>,</span><br><span class="line">                autoprefixer: <span class="literal">false</span>  &lt;== 添加改行</span><br><span class="line">            &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>transform span 无效<br>transform适用于：所有块级元素及某些内联元素</p></blockquote><blockquote><p>calc sass 语法<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width</span> : <span class="number">10px</span> ;</span><br><span class="line"><span class="selector-class">.a</span> &#123;</span><br><span class="line"><span class="attribute">width</span>:calc(<span class="number">100%</span> - #&#123;<span class="variable">$width</span>&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>Vue项目,build以后,-webkit-box-orient: vertical 会消失.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> OptimizeCSSPlugin(&#123;</span><br><span class="line">            cssProcessorOptions: &#123;</span><br><span class="line">                safe: <span class="literal">true</span>,</span><br><span class="line">                autoprefixer: <span class="literal">false</span>  &lt;== 添加改行</span><br><span class="line">            &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Vue项目,build以后,-webkit-box-orient: vertical 会消失.&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;l
+        &lt;blockquote&gt;
+&lt;p&gt;transform span 无效&lt;br&gt;transform适用于：所有块级元素及某些内联元素&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;calc sass 语法&lt;br&gt;&lt;figure class=&quot;highlight s
       
     
     </summary>

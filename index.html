@@ -192,15 +192,17 @@
 
         
         <a href="/20181031/npm-completion/" class="archive-article-date">
-  	<time datetime="2018-10-31T02:47:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
+  	<time datetime="2018-10-31T02:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="npm-completion"><a href="#npm-completion" class="headerlink" title="npm completion"></a><a href="https://docs.npmjs.com/cli/completion" target="_blank" rel="noopener">npm completion</a></h4><p>刚发现npm 有一个自动完成命令补全的功能</p>
-<h4 id="npm-安装-git项目"><a href="#npm-安装-git项目" class="headerlink" title="npm 安装 git项目"></a>npm 安装 git项目</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i git+https://github.com/willnewii/vue-lib.git<span class="comment">#version</span></span><br></pre></td></tr></table></figure>
+        <h5 id="npm-completion"><a href="#npm-completion" class="headerlink" title="npm completion"></a><a href="https://docs.npmjs.com/cli/completion" target="_blank" rel="noopener">npm completion</a></h5><p>刚发现npm 有一个自动完成命令补全的功能</p>
+<h5 id="npm-安装-git项目"><a href="#npm-安装-git项目" class="headerlink" title="npm 安装 git项目"></a>npm 安装 git项目</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i git+https://github.com/willnewii/vue-lib.git#version</span><br></pre></td></tr></table></figure>
+<h4 id="git-修改message"><a href="#git-修改message" class="headerlink" title="git 修改message"></a>git 修改message</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//修改最新一条</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+<h4 id="git-合并提交"><a href="#git-合并提交" class="headerlink" title="git 合并提交"></a>git 合并提交</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase -<span class="selector-tag">i</span> HEAD~<span class="number">2</span></span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>
       
 
       
@@ -249,7 +251,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/20180614/webkit-box-orient-vertical-webpack无效/">-webkit-box-orient: vertical webpack无效</a>
+      <a class="article-title" href="/20180614/webkit-box-orient-vertical-webpack无效/">css note</a>
     </h1>
   
 
@@ -262,7 +264,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Vue项目,build以后,-webkit-box-orient: vertical 会消失.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> OptimizeCSSPlugin(&#123;</span><br><span class="line">            cssProcessorOptions: &#123;</span><br><span class="line">                safe: <span class="literal">true</span>,</span><br><span class="line">                autoprefixer: <span class="literal">false</span>  &lt;== 添加改行</span><br><span class="line">            &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>transform span 无效<br>transform适用于：所有块级元素及某些内联元素</p>
+</blockquote>
+<blockquote>
+<p>calc sass 语法<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width</span> : <span class="number">10px</span> ;</span><br><span class="line"><span class="selector-class">.a</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>:calc(<span class="number">100%</span> - #&#123;<span class="variable">$width</span>&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>Vue项目,build以后,-webkit-box-orient: vertical 会消失.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> OptimizeCSSPlugin(&#123;</span><br><span class="line">            cssProcessorOptions: &#123;</span><br><span class="line">                safe: <span class="literal">true</span>,</span><br><span class="line">                autoprefixer: <span class="literal">false</span>  &lt;== 添加改行</span><br><span class="line">            &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
 
@@ -1341,7 +1351,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 诗人的咸鱼
+    		&copy; 2019 诗人的咸鱼
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1444,15 +1454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">cordova</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1464,7 +1470,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">MayDay歌词本</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1477,6 +1483,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">IOT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MayDay歌词本</a>
               </li>
             
             <div class="clearfix"></div>
