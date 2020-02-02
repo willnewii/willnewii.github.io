@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://willnewii.github.io/"/>
-  <updated>2018-10-31T06:16:41.132Z</updated>
+  <updated>2020-02-02T10:33:43.720Z</updated>
   <id>http://willnewii.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ID 、IC 卡</title>
+    <link href="http://willnewii.github.io/20200202/ID-%E3%80%81IC-%E5%8D%A1/"/>
+    <id>http://willnewii.github.io/20200202/ID-、IC-卡/</id>
+    <published>2020-02-02T10:33:31.000Z</published>
+    <updated>2020-02-02T10:33:43.720Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ID卡（身份识别卡-Identification-Card）"><a href="#ID卡（身份识别卡-Identification-Card）" class="headerlink" title="ID卡（身份识别卡 Identification Card）"></a>ID卡（身份识别卡 Identification Card）</h3><blockquote><p>ID 卡属于低频卡，工作频率一般是 125KHz-1000Khz。ID 卡不可写入数据，其记录内容（卡号）只可由芯片生产厂一次性写入，开发商只可读出卡号加以利用。</p></blockquote><h3 id="IC卡（集成电路卡-Integrated-Circuit-Card）"><a href="#IC卡（集成电路卡-Integrated-Circuit-Card）" class="headerlink" title="IC卡（集成电路卡 Integrated Circuit Card）"></a>IC卡（集成电路卡 Integrated Circuit Card）</h3><blockquote><p>IC 卡一般是 13.56MHz 的高频卡，跟手机 NFC 工作频率一样。所以手机 NFC 可以模拟未加密的 IC 卡，不能模拟 ID 卡。</p></blockquote><h4 id="卡类型"><a href="#卡类型" class="headerlink" title="卡类型"></a>卡类型</h4><ul><li><p>M1</p><blockquote><p>M1 卡容量 1K 字节，每张卡片都有一个 4 字节的全球唯一序列号，<strong>0 扇区不可以修改，其他扇区可反复擦写</strong>，卡上数据保存期为 10 年，可改写 10 万次，读无限次。日常使用的电梯卡、门禁卡等智能卡发卡商所使用的都是 M1 卡，可以理解为物业发的原卡（母卡）。常见校园卡、公交卡等也是 M1 卡。M1 卡仅仅适合发卡方发新卡使用。</p></blockquote></li><li><p>UID</p><blockquote><p>普通 IC 复制卡，可以重复擦写所有扇区。UID 可被重复修改，响应后门指令（意味着可被使用后门指令检测是否为克隆卡的机器发现），遇到带有防火墙的读卡器就会失效。</p></blockquote></li><li><p>CUID</p><blockquote><p>UID 的升级版，可擦写防屏蔽卡，可以重复擦写所有扇区，不响应后门指令(意味着不容易被反克隆系统发现)，可以绕过防火墙。</p></blockquote></li><li><p>FUID 卡</p><blockquote><p>不可擦写防屏蔽卡，此卡的特点 0 扇区只能写入一次，写入一次后变成 M1 卡，不能重复利用，修改后和 M1 卡完全一样，很难被屏蔽检测。</p></blockquote></li><li><p>UFUID 卡</p><blockquote><p>高级 IC 复制卡，可以理解为是 UID 和 FUID 的合成卡，需要封卡操作，不封卡就是 UID 卡，封卡后就变为 M1 卡。</p></blockquote></li><li><p>CPU 卡</p><blockquote><p>CPU 卡芯片内含有一个微处理器，配合操作系统即片上 OS，可以达到金融级别的安全等级。适用于金融、保险、交警、政府行业等多个领域。CPU 卡由 CPU 部分 7K 以及 M1 部分 1K 组成，最多破解其中 M1 部分，CPU 区域数据无法破解。实际上由于 CPU 部分和 M1 部分的数据会交互，所以基本上 CPU 卡无法破解。</p></blockquote></li><li><p><a href="https://post.smzdm.com/p/aekz9793/" target="_blank" rel="noopener">ID / IC 卡基本原理介绍与门禁卡 DIY</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;ID卡（身份识别卡-Identification-Card）&quot;&gt;&lt;a href=&quot;#ID卡（身份识别卡-Identification-Card）&quot; class=&quot;headerlink&quot; title=&quot;ID卡（身份识别卡 Identification Card）&quot;&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>npm completion</title>
@@ -679,30 +700,6 @@
       <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="笔记" scheme="http://willnewii.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Angular 资料</title>
-    <link href="http://willnewii.github.io/20160721/Angular-%E8%B5%84%E6%96%99/"/>
-    <id>http://willnewii.github.io/20160721/Angular-资料/</id>
-    <published>2016-07-21T09:19:00.000Z</published>
-    <updated>2017-04-07T02:49:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Angular-2"><a href="#Angular-2" class="headerlink" title="Angular 2"></a>Angular 2</h4><ul><li><p><a href="https://angular.cn/" target="_blank" rel="noopener">angular2 中文站</a></p></li><li><p><a href="https://angular.cn/docs/ts/latest/cookbook/ts-to-js.html" target="_blank" rel="noopener">TS-to-JS</a></p></li><li><p><a href="http://yuyang041060120.github.io/" target="_blank" rel="noopener">yuyang blog</a></p></li><li><p><a href="http://learnangular2.com/" target="_blank" rel="noopener">learnangular2 Built by the Ionic Team</a></p></li><li><p><a href="https://github.com/gf-rd/blog/issues/21" target="_blank" rel="noopener">Angular2开发指南- 翻译系列总览</a></p></li><li><p><a href="https://segmentfault.com/a/1190000004973632" target="_blank" rel="noopener">Angular2 Dependency Injection</a></p></li><li><p><a href="https://segmentfault.com/a/1190000003781566" target="_blank" rel="noopener">前端之Angular2实战：依赖注入详解与应用(2015)</a></p></li></ul><h4 id="Angular-1-x"><a href="#Angular-1-x" class="headerlink" title="Angular 1.x"></a>Angular 1.x</h4><ul><li><p><a href="http://docs.ngnice.com/guide" target="_blank" rel="noopener">Angular文档指南</a></p></li><li><p><a href="https://gitcafe.com/Angularjs/Angularjs-Developer-Guide/blob/master/README.md" target="_blank" rel="noopener">Angular中文开发指南</a></p></li></ul><h4 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h4><ul><li><a href="http://hicc.me/minify-concat-angular-js-with-gulp/" target="_blank" rel="noopener">使用gulp压缩合并AngularJS项目中js</a></li><li><a href="http://blog.jobbole.com/62249/" target="_blank" rel="noopener">AngularJS 指令实践指南 </a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Angular-2&quot;&gt;&lt;a href=&quot;#Angular-2&quot; class=&quot;headerlink&quot; title=&quot;Angular 2&quot;&gt;&lt;/a&gt;Angular 2&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://angular.cn/&quot; tar
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://willnewii.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
