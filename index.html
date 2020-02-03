@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -179,7 +179,95 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-ID-、IC-卡" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-npm-link" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200203/npm-link/">npm link</a>
+    </h1>
+  
+
+        
+        <a href="/20200203/npm-link/" class="archive-article-date">
+  	<time datetime="2020-02-03T03:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>npm link用来在本地项目和本地npm模块之间建立连接，可以在本地进行模块测试</p>
+<ol>
+<li><p>模块目录 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//相当于 npm i 模块名 -g</span><br><span class="line">npm link</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>项目目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm link 模块名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解除link</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 模块目录&amp;项目目录</span><br><span class="line">npm link 模块名</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><a href="https://docs.npmjs.com/cli/link.html" target="_blank" rel="noopener">NPM LINK</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20200203/npm-link/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ID-、IC-卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -192,7 +280,7 @@
 
         
         <a href="/20200202/ID-、IC-卡/" class="archive-article-date">
-  	<time datetime="2020-02-02T10:33:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
+  	<time datetime="2020-02-02T10:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
 </a>
         
       </header>
@@ -247,6 +335,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -281,7 +380,7 @@
 
 
   
-    <article id="post-npm-completion" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-npm-completion" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -304,7 +403,7 @@
         <h5 id="npm-completion"><a href="#npm-completion" class="headerlink" title="npm completion"></a><a href="https://docs.npmjs.com/cli/completion" target="_blank" rel="noopener">npm completion</a></h5><p>刚发现npm 有一个自动完成命令补全的功能</p>
 <h5 id="npm-安装-git项目"><a href="#npm-安装-git项目" class="headerlink" title="npm 安装 git项目"></a>npm 安装 git项目</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i git+https://github.com/willnewii/vue-lib.git#version</span><br></pre></td></tr></table></figure>
 <h4 id="git-修改message"><a href="#git-修改message" class="headerlink" title="git 修改message"></a>git 修改message</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//修改最新一条</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-<h4 id="git-合并提交"><a href="#git-合并提交" class="headerlink" title="git 合并提交"></a>git 合并提交</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase -<span class="selector-tag">i</span> HEAD~<span class="number">2</span></span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>
+<h4 id="git-合并提交"><a href="#git-合并提交" class="headerlink" title="git 合并提交"></a>git 合并提交</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> rebase -i HEAD~<span class="number">2</span></span><br><span class="line"><span class="symbol">git</span> <span class="keyword">push </span>-f</span><br></pre></td></tr></table></figure>
       
 
       
@@ -346,7 +445,7 @@
 
 
   
-    <article id="post-webkit-box-orient-vertical-webpack无效" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-webkit-box-orient-vertical-webpack无效" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -417,7 +516,7 @@
 
 
   
-    <article id="post-用-key-管理可复用的元素" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-用-key-管理可复用的元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -482,7 +581,7 @@
 
 
   
-    <article id="post-Puppeteer-使用笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Puppeteer-使用笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -560,7 +659,7 @@
 
 
   
-    <article id="post-Vue-中-extend-component-mixins-extends-的区别" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Vue-中-extend-component-mixins-extends-的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -720,7 +819,7 @@
 
 
   
-    <article id="post-vue-首屏加载优化" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-vue-首屏加载优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -845,7 +944,7 @@
 
 
   
-    <article id="post-基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -895,7 +994,7 @@
 </table>
 <p>vendor_library:比如vue,vue-router,axios 这些变动频率极低的文件可以利用 DllPlugin 和 DllReferencePlugin 进行预编译.</p>
 <p>vendor,code在开发阶段,每次构建都需要编译.但是一旦完成该次开发任务,应该调整vendor 是否加入vendor_library.</p>
-<h3 id="BundleAnalyzerPlugin-的插件使用"><a href="#BundleAnalyzerPlugin-的插件使用" class="headerlink" title="BundleAnalyzerPlugin 的插件使用"></a>BundleAnalyzerPlugin 的插件使用</h3><p>BundleAnalyzerPlugin 是分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的插件。<br><img src="http://obfmtiyt5.bkt.clouddn.com/11111%2FAZfq2ar.gif" alt=""><br>vue已经默认集成了该插件. 如果你运行 npm run build –report.就能看到当前项目的依赖情况.然后做出相应调整.</p>
+<h3 id="BundleAnalyzerPlugin-的插件使用"><a href="#BundleAnalyzerPlugin-的插件使用" class="headerlink" title="BundleAnalyzerPlugin 的插件使用"></a>BundleAnalyzerPlugin 的插件使用</h3><p>BundleAnalyzerPlugin 是分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的插件。<br><img src="http://obfmtiyt5.bkt.clouddn.com/11111%2FAZfq2ar.gif" alt><br>vue已经默认集成了该插件. 如果你运行 npm run build –report.就能看到当前项目的依赖情况.然后做出相应调整.</p>
 <h3 id="优化方向"><a href="#优化方向" class="headerlink" title="优化方向"></a>优化方向</h3><ol>
 <li>按需加载<br>muse-ui,iview 都提供了按需加载的方式,按照文档调整即可.</li>
 </ol>
@@ -960,13 +1059,13 @@
 <p>static目录如下:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">____dll</span></span><br><span class="line">|<span class="string"> </span>|____fonts</span><br><span class="line">|<span class="string"> </span>|<span class="string">____vendor-mainfest.json</span></span><br><span class="line">|<span class="string"> </span>|<span class="string">____vendor.dll.css</span></span><br><span class="line">|<span class="string"> </span>|<span class="string">____vendor.dll.js</span></span><br></pre></td></tr></table></figure></p>
 <ol start="2">
 <li><p>修改模板index.html  根据你的构建结果做修改.</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//head 标签</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./static/dll/vendor.dll.css"</span>&gt;</span></span><br><span class="line">//body 标签</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./static/dll/vendor.dll.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//head 标签</span></span><br><span class="line">&lt;link type=<span class="string">"text/css"</span> rel=<span class="string">"stylesheet"</span> href=<span class="string">"./static/dll/vendor.dll.css"</span>&gt;</span><br><span class="line"><span class="comment">//body 标签</span></span><br><span class="line">&lt;script src=<span class="string">"./static/dll/vendor.dll.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改webpack.base.conf.js</p>
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plugins: <span class="meta">[</span></span><br><span class="line">        <span class="params">...</span>,</span><br><span class="line">        <span class="literal">new</span> webpack.DllReferencePlugin(&#123;</span><br><span class="line">            context: __dirname,</span><br><span class="line">            manifest: <span class="keyword">require</span>(<span class="string">'../static/dll/vendor-mainfest.json'</span>) <span class="comment">// 指向生成的json文件</span></span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="meta">]</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack --config ./build/webpack<span class="selector-class">.dll</span><span class="selector-class">.conf</span><span class="selector-class">.js</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack <span class="params">--config</span> <span class="string">./build/webpack.dll.conf.js</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>你也可以将该语句放入npm run 中.’build:dll:report’ 是为了优化dll依赖关系,添加的另外一条命令.上文已经提过,我们可以借用BundleAnalyzerPlugin插件查看当前包的依赖情况,和包体组成情况.<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="string">"scripts"</span>:&#123;</span><br><span class="line">    <span class="string">"build:dll"</span>: <span class="string">"webpack --config ./build/webpack.dll.conf.js"</span>,</span><br><span class="line">    <span class="string">"build:dll:report"</span>: <span class="string">"npm run build:dll --report"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -1026,7 +1125,7 @@
 
 
   
-    <article id="post-awesome-chrome" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-awesome-chrome" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1124,196 +1223,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/20170415/awesome-chrome/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-awesome-github" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20170406/awesome-github/">awesome-github</a>
-    </h1>
-  
-
-        
-        <a href="/20170406/awesome-github/" class="archive-article-date">
-  	<time datetime="2017-04-06T03:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h3><ul>
-<li><p><a href="https://github.com/spetacular/bannedwords" target="_blank" rel="noopener">违禁词</a></p>
-</li>
-<li><p><a href="https://github.com/nowgoo/dict" target="_blank" rel="noopener">词库工具，用来从一段文本中找出存在于词库的词语</a></p>
-</li>
-<li><p><a href="https://github.com/amueller/word_cloud" target="_blank" rel="noopener">生成word_cloud</a></p>
-<ul>
-<li><img src="https://github.com/amueller/word_cloud/raw/master/examples/constitution.png" alt="word_cloud.jpg"></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/wandergis/coordtransform" target="_blank" rel="noopener">一个提供了百度坐标（BD09）、国测局坐标（火星坐标，GCJ02）、和WGS84坐标系之间的转换的工具模块。</a></p>
-</li>
-</ul>
-<h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3><ul>
-<li><a href="https://github.com/serbanghita/Mobile-Detect" target="_blank" rel="noopener">根据User-Agent检测移动设备的库-Mobile-Detect</a></li>
-</ul>
-<h3 id="js-amp-css"><a href="#js-amp-css" class="headerlink" title="js&amp;css"></a>js&amp;css</h3><ul>
-<li><p><a href="https://github.com/olistic/warriorjs" target="_blank" rel="noopener">一个学习js和人工智能的游戏</a></p>
-</li>
-<li><p><a href="https://github.com/webkul/csspin" target="_blank" rel="noopener">css 小菊花</a></p>
-<ul>
-<li><a href="https://webkul.github.io/csspin/" target="_blank" rel="noopener">demo</a></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/imochen/hotcss" target="_blank" rel="noopener">(适配)移动端布局终极解决方案 — 让移动端布局开发更加容易</a></p>
-</li>
-<li><p><a href="https://github.com/VincentGarreau/particles.js" target="_blank" rel="noopener">粒子特效</a></p>
-<ul>
-<li><img src="https://camo.githubusercontent.com/cdc9e740f0c04b77449e476c91e6f7770a6af6e7/687474703a2f2f76696e63656e74676172726561752e636f6d2f7061727469636c65732e6a732f6173736574732f696d672f6769746875622d73637265656e2e6a7067" alt="word_cloud.jpg">    </li>
-</ul>
-</li>
-<li><p><a href="https://github.com/juliangarnier/anime" target="_blank" rel="noopener">动画库-anime</a></p>
-</li>
-<li><p><a href="https://github.com/parkjs814/AlgorithmVisualizer" target="_blank" rel="noopener">一个算法可视化工具,方便理解、检查算法运算过程-AlgorithmVisualizer</a></p>
-<ul>
-<li><img src="https://camo.githubusercontent.com/1d2e3b7d06c18d8e4e49d34cf06622b5d405b01a/687474703a2f2f692e67697068792e636f6d2f336f3645684a46677379536858364d48654d2e676966" alt="word_cloud.jpg">  </li>
-</ul>
-</li>
-<li><p><a href="https://github.com/mycolorway/simditor" target="_blank" rel="noopener">一个所见即所得的编辑器</a></p>
-</li>
-</ul>
-<h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><ul>
-<li><p><a href="https://github.com/Blankj/AndroidUtilCode" target="_blank" rel="noopener">工具类代码</a></p>
-</li>
-<li><p><a href="https://github.com/Jasonchenlijian/FastBle" target="_blank" rel="noopener">蓝牙快速开发框架，使用回调方式处理：scan、connect、notify、indicate、write、read等一系列蓝牙操作。-FastBle</a></p>
-<ul>
-<li><img src="https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble2.png" alt="word_cloud.jpg"></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/google/flexbox-layout" target="_blank" rel="noopener">谷歌出的… flexbox-layout</a></p>
-</li>
-<li><p><a href="https://github.com/BolexLiu/PressScanCode" target="_blank" rel="noopener">一个长按扫描 View 上的二维码的工具库。webView 也可以。</a></p>
-<ul>
-<li><ul>
-<li><img src="https://github.com/BolexLiu/PressScanCode/raw/master/tips.gif" alt="word_cloud.jpg"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a href="https://github.com/drakeet/MultiType" target="_blank" rel="noopener">Android 复杂的列表视图新写法</a></p>
-</li>
-<li><p><a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">ARouter 阿里出的一个路由</a></p>
-</li>
-<li><p><a href="https://github.com/andremion/Louvre" target="_blank" rel="noopener">图片选取-Louvre</a></p>
-<ul>
-<li><img src="https://raw.githubusercontent.com/andremion/Louvre/master/art/sample.gif" alt="word_cloud.jpg">    </li>
-</ul>
-</li>
-<li><p><a href="https://github.com/donglua/PhotoPicker" target="_blank" rel="noopener">图片选取-PhotoPicker</a></p>
-</li>
-<li><p><a href="https://github.com/FinalTeam/RxGalleryFinal" target="_blank" rel="noopener">图片选取-RxGalleryFinal(Android图片单选/多选、拍照、裁剪、压缩。视频选择和录制。)</a></p>
-</li>
-<li><p><a href="https://github.com/Yalantis/uCrop" target="_blank" rel="noopener">图片剪切-uCrop</a></p>
-<ul>
-<li><img src="https://github.com/Yalantis/uCrop/raw/master/preview.gif" alt="word_cloud.jpg">  </li>
-</ul>
-</li>
-<li><p><a href="https://github.com/bingoogolapple/BGABanner-Android" target="_blank" rel="noopener">导航条-BGABanner-Android</a></p>
-<ul>
-<li><img src="https://cloud.githubusercontent.com/assets/8949716/17557718/dc235ec4-5f4a-11e6-92b7-144a2a1a1e3f.gif" alt=""></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/wasabeef/Blurry" target="_blank" rel="noopener">高斯模糊效果-Blurry</a></p>
-<ul>
-<li><img src="https://github.com/wasabeef/Blurry/raw/master/art/blurry.gif" alt=""></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/airbnb/lottie-android" target="_blank" rel="noopener">lottie-android</a></p>
-<ul>
-<li><a href="http://www.jianshu.com/p/9a2136ecbc7b" target="_blank" rel="noopener">Lottie开源动画库介绍与使用示例</a></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/airbnb/epoxy" target="_blank" rel="noopener">epoxy</a></p>
-<ul>
-<li><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/1209/6838.html" target="_blank" rel="noopener">Epoxy: Airbnb的安卓视图架构</a></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/wenmingvs/NotifyUtil" target="_blank" rel="noopener">提供多达8种最常见的App通知接口,支持Android 5.0悬浮式通知样式-NotifyUtil</a></p>
-<ul>
-<li><img src="https://camo.githubusercontent.com/41d696a579065eb8f234a00485387947655d12a0/687474703a2f2f7777332e73696e61696d672e636e2f6c617267652f3639316363313531677731663037373476737937786732306463306b307836702e676966" alt=""></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/jiahuanyu/CircleTimerView/" target="_blank" rel="noopener">圆形时间控件</a></p>
-<ul>
-<li><img src="https://github.com/jiahuanyu/CircleTimerView/blob/master/images/sample.gif" alt=""></li>
-</ul>
-</li>
-</ul>
-<h3 id="weixin"><a href="#weixin" class="headerlink" title="weixin"></a>weixin</h3><ul>
-<li><p><a href="https://github.com/Urinx/WeixinBot" target="_blank" rel="noopener">WeixinBot</a></p>
-</li>
-<li><p><a href="https://github.com/Chatie/wechaty" target="_blank" rel="noopener">wechaty</a></p>
-</li>
-</ul>
-<h3 id="raspberry"><a href="#raspberry" class="headerlink" title="raspberry"></a>raspberry</h3><ul>
-<li><a href="https://github.com/doublebind/raspi" target="_blank" rel="noopener">WebIOPi-0.7.1 Patch for Raspberry B+, Pi2, and Pi3.webiopi默认是不支持pi3 的40pin.</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20170406/awesome-github/">展开全文 >></a>
         </p>
       
 
@@ -1456,10 +1365,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
@@ -1468,11 +1373,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1480,11 +1385,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1500,7 +1409,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

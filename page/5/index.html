@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -179,7 +179,116 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-前端-小学生" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-cordova" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151207/cordova/">cordova &amp; ionic &amp; angularJs</a>
+    </h1>
+  
+
+        
+        <a href="/20151207/cordova/" class="archive-article-date">
+  	<time datetime="2015-12-07T09:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>cofig.xml添加ios build编号<br>默认生成的config是没有ios build编号的.执行cordova build ios命令后,build和version 是相同的.<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"io.cordova.hellocordova"</span></span></span><br><span class="line"><span class="tag">	  <span class="attr">version</span>=<span class="string">"0.0.1"</span> 				//版本号</span></span><br><span class="line"><span class="tag">      <span class="attr">android-versionCode</span>=<span class="string">"7"</span>	    //<span class="attr">android</span> <span class="attr">build</span></span></span><br><span class="line"><span class="tag">      <span class="attr">ios-CFBundleVersion</span>=<span class="string">"7"</span>		//<span class="attr">ios</span>     <span class="attr">build</span></span></span><br><span class="line"><span class="tag">      <span class="attr">windows-packageVersion</span>=<span class="string">"1.0.1.2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2" target="_blank" rel="noopener">http://cordova.apache.org/docs/en/latest/config_ref/index.html#link-2</a></p>
+<ol start="2">
+<li>提交appstore会收到邮件“Missing push notification entitlement”的邮件<br><a href="http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti" target="_blank" rel="noopener">http://stackoverflow.com/questions/26168713/cordova-app-that-doesnt-use-push-notifications-missing-push-notification-enti</a><br><strong>需要重新生成一下provisioning，选择的AppID中需要包含Push Notifacation的，用生成的provisioning再重新Archive就好了</strong></li>
+<li><p><a href="http://stackoverflow.com/questions/20419574/saving-dataurlbase64-to-file-on-phonegap-android" target="_blank" rel="noopener">Saving dataURL(base64) to file on PhoneGap (android)</a></p>
+</li>
+<li><p><a href="http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/" target="_blank" rel="noopener"> angular的post请求，后台接收参数为null的解决方案</a></p>
+</li>
+<li><p><a href="http://codepen.io/DaDanny/pen/ojQEox" target="_blank" rel="noopener">ionic 文本选择</a></p>
+</li>
+<li><p>ionic $ionicview生命周期</p>
+<ul>
+<li>$ionicView.loaded<br><br>视图已经被加载了。这事件只发生一次当视图被创建并添加到Dom中。当跳出页面并且被缓存了的话，再次访问这个页面时这个时间将不会被激活。Loaded事件是个好方式让你为这个视图设置你的代码； 然而，他并不是我们推荐的时间去监听视图被激活。</li>
+<li>$ionicView.enter<br><br>进入视图并被激活。这事件被激活来判断这个视图是第一个加载还是被缓存了的。</li>
+<li>$ionicView.leave<br><br>离开这个视图并且不是活动页面。调用这个事件判断应该被缓存还是摧毁。</li>
+<li>$ionicView.beforeEnter<br><br>视图即将被打开变成活动页面。</li>
+<li>$ionicView.beforeLeave<br><br>视图将被关闭并且不是活动页面。</li>
+<li>$ionicView.afterEnter<br><br>进入视图并是当前的活动页面</li>
+<li>$ionicView.afterLeave<br><br>已经离开视图，并成为非激活页面</li>
+<li>$ionicView.unloaded<br><br>视图的Controller已经被摧毁并且他的页面元素也从Dom中移除</li>
+</ul>
+</li>
+<li><p><a href="http://bubkoo.com/2014/01/02/angular/ui-router/guide/url-routing/" target="_blank" rel="noopener"><br>学习 ui-router - 路由控制</a></p>
+</li>
+<li><p>state 设置 cache<br> 开发过程中会遇到某些页面重复使用的情况.比如用户信息页. 当我打开了两个用户页面,就是出现element错乱,本来想过去当前页面的,却获取更早的页面.对复用性高的,可以将其缓存关闭.</p>
+</li>
+<li><p><a href="http://www.gajotres.net/using-views-events-to-create-javascript-pure-ionic-splash-screen/" target="_blank" rel="noopener">自定义启动页面(未验证)</a></p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cordova</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151207/cordova/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-前端-小学生" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -285,7 +394,7 @@
 
 
   
-    <article id="post-Mac笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Mac笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -307,7 +416,7 @@
       
         <ol>
 <li><p>wget 下载网站</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -r -p -<span class="built_in">np</span> -k http://xxx.com/xxx</span><br><span class="line">-r,  --recursive（递归）          specify recursive download.（指定递归下载）</span><br><span class="line">-k,  --<span class="built_in">convert</span>-links（转换链接）      make links <span class="keyword">in</span> downloaded HTML point to <span class="built_in">local</span> files.（将下载的HTML页面中的链接转换为相对链接即本地链接）</span><br><span class="line">-p,  --page-requisites（页面必需元素）    <span class="built_in">get</span> all images, etc. needed to <span class="built_in">display</span> HTML page.（下载所有的图片等页面显示所需的内容）</span><br><span class="line">-<span class="built_in">np</span>, --no-parent（不追溯至父级）          don't ascend to the parent <span class="built_in">directory</span>.</span><br><span class="line">另外断点续传用-nc参数 日志 用-o参数</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -r -p -np -k <span class="keyword">http</span>://xxx.com/xxx</span><br><span class="line">-r,  <span class="comment">--recursive（递归）          specify recursive download.（指定递归下载）</span></span><br><span class="line">-k,  <span class="comment">--convert-links（转换链接）      make links in downloaded HTML point to local files.（将下载的HTML页面中的链接转换为相对链接即本地链接）</span></span><br><span class="line">-p,  <span class="comment">--page-requisites（页面必需元素）    get all images, etc. needed to display HTML page.（下载所有的图片等页面显示所需的内容）</span></span><br><span class="line">-np, <span class="comment">--no-parent（不追溯至父级）          don't ascend to the parent directory.</span></span><br><span class="line">另外断点续传用-nc参数 日志 用-o参数</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>添加命令行快捷方式</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure>
@@ -319,7 +428,7 @@
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; GRANT <span class="literal">ALL</span> PRIVILEGES <span class="keyword">ON</span> *.* <span class="keyword">TO</span> <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">'mypwd'</span> <span class="keyword">WITH</span> GRANT OPTION;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>开启和禁用 Spotlight</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//关闭 关闭后会导致侧边栏标记功能不可用</span></span><br><span class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span><span class="selector-class">.plist</span></span><br><span class="line"><span class="comment">//开启</span></span><br><span class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span><span class="selector-class">.plist</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//关闭 关闭后会导致侧边栏标记功能不可用</span></span><br><span class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span>.plist</span><br><span class="line"><span class="comment">//开启</span></span><br><span class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com<span class="selector-class">.apple</span><span class="selector-class">.metadata</span><span class="selector-class">.mds</span>.plist</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>mac chrome 跨域</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a <span class="string">/Applications/Google</span>\ Chrome.app <span class="params">--args</span> <span class="params">--disable-web-security</span> <span class="params">--user-data-dir</span></span><br></pre></td></tr></table></figure>
@@ -334,7 +443,7 @@
 <p>解决办法:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select -<span class="keyword">switch</span> <span class="regexp">/Applications/</span>Xcode-beta.app<span class="regexp">/Contents/</span>Developer</span><br></pre></td></tr></table></figure></p>
 <ol start="2">
 <li><p>环境变量</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/apache</span>-ant-<span class="number">1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/adt</span>-bundle-mac/sdk</span><br><span class="line">export PATH=<span class="regexp">/usr/bin</span><span class="symbol">:/bin</span><span class="symbol">:/usr/sbin</span><span class="symbol">:/sbin</span><span class="symbol">:/usr/local/bin</span></span><br><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANDROID_HOME</span>/platform-<span class="symbol">tools:</span><span class="variable">$ANDROID_HOME</span>/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANT_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export ANT_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/apache</span>-ant<span class="number">-1.9</span>.<span class="number">4</span></span><br><span class="line">export ANDROID_HOME=<span class="regexp">/Users/zhangweiwei</span><span class="regexp">/Dev/adt</span>-bundle-mac/sdk</span><br><span class="line">export PATH=<span class="regexp">/usr/bin</span><span class="symbol">:/bin</span><span class="symbol">:/usr/sbin</span><span class="symbol">:/sbin</span><span class="symbol">:/usr/local/bin</span></span><br><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANDROID_HOME</span>/platform-<span class="symbol">tools:</span><span class="variable">$ANDROID_HOME</span>/tools</span><br><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:</span><span class="variable">$ANT_HOME</span>/bin</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>chrome 添加启动参数</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> -<span class="keyword">a</span> <span class="string">"Google Chrome"</span> <span class="comment">--args --disable-web-security</span></span><br></pre></td></tr></table></figure>
@@ -347,13 +456,13 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="keyword">start</span></span><br><span class="line">/<span class="keyword">Library</span>/WebServer/<span class="keyword">Document</span>/</span><br><span class="line">sudo launchctl unload -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span><br><span class="line">如果哪天你想让它开机启动了,则将unload 改为 <span class="keyword">load</span>:</span><br><span class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">System</span>/<span class="keyword">Library</span>/LaunchDaemons/org.apache.httpd.plist</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打印目录树</p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . <span class="string">\(</span> ! -regex <span class="string">'.*/\..*'</span> <span class="string">\)</span> -type f -depth -<span class="number">3</span> -<span class="built_in">print</span> | sed -e <span class="string">'s;[^/]*/;|____;g;s;____|; |;g'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">find</span> . \( ! -regex <span class="string">'.*/\..*'</span> \) -type f -depth -3 -<span class="builtin-name">print</span> | sed -e <span class="string">'s;[^/]*/;|____;g;s;____|; |;g'</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>( ! -regex ‘.<em>/..</em>‘ ) -type f 匹配非隐藏文件</li>
 <li>-depth -3 递归深度</li>
 </ol>
 </li>
-<li>mac php默认配置 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd.conf</span><br><span class="line">/etc/php.ini</span><br><span class="line"><span class="comment">/*资料/soft/mac/php*/</span></span><br></pre></td></tr></table></figure>
+<li>mac php默认配置 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd.conf</span><br><span class="line">/etc/php.ini</span><br><span class="line">/*资料/soft/mac/php*<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ul>
@@ -418,7 +527,7 @@
 
 
   
-    <article id="post-ViewPager设置滑动速度" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-ViewPager设置滑动速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -495,7 +604,7 @@
 
 
   
-    <article id="post-杂记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-杂记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -593,95 +702,7 @@
 
 
   
-    <article id="post-Android相关文章" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20151125/Android相关文章/">Android 相关文章</a>
-    </h1>
-  
-
-        
-        <a href="/20151125/Android相关文章/" class="archive-article-date">
-  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://droidyue.com/blog/2014/08/03/great-web-tools-for-android-development/" target="_blank" rel="noopener">快速提高Android开发效率的Web工具</a></p>
-<p><a href="http://v.youku.com/v_show/id_XODM4NzA3ODMy.html?f=23088492&amp;from=sub-y1.9-3.1" target="_blank" rel="noopener">Android自定义视图专辑视频</a></p>
-<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="noopener">Android Canvas绘图详解（图文）</a></p>
-<p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="noopener">Animation动画详解（二）——Interpolator插值器</a></p>
-<p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41541269/" target="_blank" rel="noopener">android官方技术文档翻译——设计时布局属性</a></p>
-<p>这些属性用于布局在工具里渲染时期，但是对运行时没有任何影响。这一点很有用，比如如果你想在编辑布局的时候把 示例数据数据放到文本框中，但又不想这些属性影响到你的应用的运行。</p>
-<p><strong>tools:context</strong></p>
-<p>这个属性通常在一个布局XML文件的根元素中设置，记录了这个布局关联到哪一个activity（例如它会用于布局编辑器中以推断默认的主题，由于主题定义在Manifest中，并与activity而不是布局相关联。你可以和在manifests中一样使用点前缀，来指定activity类，而不需要使用完整的程序包名作为前缀。</p>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><ul>
-<li><a href="http://www.jianshu.com/p/c03a8959d1a5" target="_blank" rel="noopener">Stetho 调试工具</a></li>
-<li><a href="http://www.jianshu.com/p/7db231163168" target="_blank" rel="noopener">LeakCanary 内存泄露</a></li>
-</ul>
-<h3 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h3><p><a href="http://blog.csdn.net/growth58/article/details/46729803" target="_blank" rel="noopener">Android Studio使用技巧系列教程（一）</a></p>
-<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p><a href="http://segmentfault.com/a/1190000002590577" target="_blank" rel="noopener">Android 属性 allowBackup 安全风险浅析</a></p>
-<h3 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h3><p><a href="http://blog.csdn.net/jiangtianhao13269230/article/details/48757727" target="_blank" rel="noopener">android 6.0(api 23) SDK，不再提供org.apache.http.*(只保留几个类). 用xUtils会出现问题</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/20151125/Android相关文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Android 优化文章" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Android 优化文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -780,7 +801,95 @@
 
 
   
-    <article id="post-MarkDown语法" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Android相关文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20151125/Android相关文章/">Android 相关文章</a>
+    </h1>
+  
+
+        
+        <a href="/20151125/Android相关文章/" class="archive-article-date">
+  	<time datetime="2015-11-25T10:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://droidyue.com/blog/2014/08/03/great-web-tools-for-android-development/" target="_blank" rel="noopener">快速提高Android开发效率的Web工具</a></p>
+<p><a href="http://v.youku.com/v_show/id_XODM4NzA3ODMy.html?f=23088492&amp;from=sub-y1.9-3.1" target="_blank" rel="noopener">Android自定义视图专辑视频</a></p>
+<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1212/703.html" target="_blank" rel="noopener">Android Canvas绘图详解（图文）</a></p>
+<p><a href="http://blog.csdn.net/harvic880925/article/details/40049763" target="_blank" rel="noopener">Animation动画详解（二）——Interpolator插值器</a></p>
+<p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41541269/" target="_blank" rel="noopener">android官方技术文档翻译——设计时布局属性</a></p>
+<p>这些属性用于布局在工具里渲染时期，但是对运行时没有任何影响。这一点很有用，比如如果你想在编辑布局的时候把 示例数据数据放到文本框中，但又不想这些属性影响到你的应用的运行。</p>
+<p><strong>tools:context</strong></p>
+<p>这个属性通常在一个布局XML文件的根元素中设置，记录了这个布局关联到哪一个activity（例如它会用于布局编辑器中以推断默认的主题，由于主题定义在Manifest中，并与activity而不是布局相关联。你可以和在manifests中一样使用点前缀，来指定activity类，而不需要使用完整的程序包名作为前缀。</p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><ul>
+<li><a href="http://www.jianshu.com/p/c03a8959d1a5" target="_blank" rel="noopener">Stetho 调试工具</a></li>
+<li><a href="http://www.jianshu.com/p/7db231163168" target="_blank" rel="noopener">LeakCanary 内存泄露</a></li>
+</ul>
+<h3 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h3><p><a href="http://blog.csdn.net/growth58/article/details/46729803" target="_blank" rel="noopener">Android Studio使用技巧系列教程（一）</a></p>
+<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p><a href="http://segmentfault.com/a/1190000002590577" target="_blank" rel="noopener">Android 属性 allowBackup 安全风险浅析</a></p>
+<h3 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h3><p><a href="http://blog.csdn.net/jiangtianhao13269230/article/details/48757727" target="_blank" rel="noopener">android 6.0(api 23) SDK，不再提供org.apache.http.*(只保留几个类). 用xUtils会出现问题</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/20151125/Android相关文章/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MarkDown语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -818,7 +927,7 @@
       
 
       
-    </p></blockquote></blockquote></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -867,7 +976,7 @@
 
 
   
-    <article id="post-Atom编辑器" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Atom编辑器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1026,7 +1135,7 @@
 
 
   
-    <article id="post-macbook不识别部分Android手机" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-macbook不识别部分Android手机" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1222,10 +1331,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
@@ -1234,11 +1339,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1246,11 +1351,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1266,7 +1375,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

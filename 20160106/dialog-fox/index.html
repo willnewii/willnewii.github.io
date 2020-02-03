@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -179,7 +179,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-dialog-fox" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-dialog-fox" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -202,11 +202,11 @@
         <ol>
 <li>dialog自定义View,弹出键盘</li>
 </ol>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager)getSystemService(<span class="built_in">Context</span>.INPUT_METHOD_SERVICE)<span class="comment">;</span></span><br><span class="line">imm.<span class="keyword">showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager)getSystemService(<span class="keyword">Context</span>.INPUT_METHOD_SERVICE);</span><br><span class="line">imm.showSoftInput(et_dialog_confirmphoneguardpswd,InputMethodManager.SHOW_IMPLICIT);</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>dialog 触发点击事件,不关闭</li>
 </ol>
-<p>是通过改变mShowing状态实现的,记得在其他地方修正状态.<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 是否可以关闭对话框</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> dialog</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> isCan</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">isCanDismiss</span><span class="params">(DialogInterface dialog, <span class="keyword">boolean</span> isCan)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Field field = dialog.getClass().getSuperclass().getDeclaredField(<span class="string">"mShowing"</span>);</span><br><span class="line">        field.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        field.set(dialog, isCan);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>是通过改变mShowing状态实现的,记得在其他地方修正状态.<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 是否可以关闭对话框</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * @param dialog</span></span><br><span class="line"><span class="comment"> * @param isCan</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">isCanDismiss</span><span class="params">(DialogInterface dialog, <span class="keyword">boolean</span> isCan)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Field field = dialog.getClass().getSuperclass().getDeclaredField(<span class="string">"mShowing"</span>);</span><br><span class="line">        field.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        field.<span class="built_in">set</span>(dialog, isCan);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -443,10 +443,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
@@ -455,11 +451,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -467,11 +463,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,7 +487,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

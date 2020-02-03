@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -178,7 +178,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-npm-completion" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-npm-completion" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -201,7 +201,7 @@
         <h5 id="npm-completion"><a href="#npm-completion" class="headerlink" title="npm completion"></a><a href="https://docs.npmjs.com/cli/completion" target="_blank" rel="noopener">npm completion</a></h5><p>刚发现npm 有一个自动完成命令补全的功能</p>
 <h5 id="npm-安装-git项目"><a href="#npm-安装-git项目" class="headerlink" title="npm 安装 git项目"></a>npm 安装 git项目</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i git+https://github.com/willnewii/vue-lib.git#version</span><br></pre></td></tr></table></figure>
 <h4 id="git-修改message"><a href="#git-修改message" class="headerlink" title="git 修改message"></a>git 修改message</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//修改最新一条</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-<h4 id="git-合并提交"><a href="#git-合并提交" class="headerlink" title="git 合并提交"></a>git 合并提交</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase -<span class="selector-tag">i</span> HEAD~<span class="number">2</span></span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>
+<h4 id="git-合并提交"><a href="#git-合并提交" class="headerlink" title="git 合并提交"></a>git 合并提交</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> rebase -i HEAD~<span class="number">2</span></span><br><span class="line"><span class="symbol">git</span> <span class="keyword">push </span>-f</span><br></pre></td></tr></table></figure>
       
 
       
@@ -426,10 +426,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
@@ -438,11 +434,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,11 +446,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -470,7 +470,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

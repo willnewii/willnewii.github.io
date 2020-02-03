@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -181,7 +181,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-基于DllPlugin-和-DllReferencePlugin-的-webpack-构建优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -231,7 +231,7 @@
 </table>
 <p>vendor_library:比如vue,vue-router,axios 这些变动频率极低的文件可以利用 DllPlugin 和 DllReferencePlugin 进行预编译.</p>
 <p>vendor,code在开发阶段,每次构建都需要编译.但是一旦完成该次开发任务,应该调整vendor 是否加入vendor_library.</p>
-<h3 id="BundleAnalyzerPlugin-的插件使用"><a href="#BundleAnalyzerPlugin-的插件使用" class="headerlink" title="BundleAnalyzerPlugin 的插件使用"></a>BundleAnalyzerPlugin 的插件使用</h3><p>BundleAnalyzerPlugin 是分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的插件。<br><img src="http://obfmtiyt5.bkt.clouddn.com/11111%2FAZfq2ar.gif" alt=""><br>vue已经默认集成了该插件. 如果你运行 npm run build –report.就能看到当前项目的依赖情况.然后做出相应调整.</p>
+<h3 id="BundleAnalyzerPlugin-的插件使用"><a href="#BundleAnalyzerPlugin-的插件使用" class="headerlink" title="BundleAnalyzerPlugin 的插件使用"></a>BundleAnalyzerPlugin 的插件使用</h3><p>BundleAnalyzerPlugin 是分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者的插件。<br><img src="http://obfmtiyt5.bkt.clouddn.com/11111%2FAZfq2ar.gif" alt><br>vue已经默认集成了该插件. 如果你运行 npm run build –report.就能看到当前项目的依赖情况.然后做出相应调整.</p>
 <h3 id="优化方向"><a href="#优化方向" class="headerlink" title="优化方向"></a>优化方向</h3><ol>
 <li>按需加载<br>muse-ui,iview 都提供了按需加载的方式,按照文档调整即可.</li>
 </ol>
@@ -296,13 +296,13 @@
 <p>static目录如下:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">____dll</span></span><br><span class="line">|<span class="string"> </span>|____fonts</span><br><span class="line">|<span class="string"> </span>|<span class="string">____vendor-mainfest.json</span></span><br><span class="line">|<span class="string"> </span>|<span class="string">____vendor.dll.css</span></span><br><span class="line">|<span class="string"> </span>|<span class="string">____vendor.dll.js</span></span><br></pre></td></tr></table></figure></p>
 <ol start="2">
 <li><p>修改模板index.html  根据你的构建结果做修改.</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//head 标签</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./static/dll/vendor.dll.css"</span>&gt;</span></span><br><span class="line">//body 标签</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./static/dll/vendor.dll.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//head 标签</span></span><br><span class="line">&lt;link type=<span class="string">"text/css"</span> rel=<span class="string">"stylesheet"</span> href=<span class="string">"./static/dll/vendor.dll.css"</span>&gt;</span><br><span class="line"><span class="comment">//body 标签</span></span><br><span class="line">&lt;script src=<span class="string">"./static/dll/vendor.dll.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改webpack.base.conf.js</p>
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plugins: <span class="meta">[</span></span><br><span class="line">        <span class="params">...</span>,</span><br><span class="line">        <span class="literal">new</span> webpack.DllReferencePlugin(&#123;</span><br><span class="line">            context: __dirname,</span><br><span class="line">            manifest: <span class="keyword">require</span>(<span class="string">'../static/dll/vendor-mainfest.json'</span>) <span class="comment">// 指向生成的json文件</span></span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="meta">]</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack --config ./build/webpack<span class="selector-class">.dll</span><span class="selector-class">.conf</span><span class="selector-class">.js</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack <span class="params">--config</span> <span class="string">./build/webpack.dll.conf.js</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>你也可以将该语句放入npm run 中.’build:dll:report’ 是为了优化dll依赖关系,添加的另外一条命令.上文已经提过,我们可以借用BundleAnalyzerPlugin插件查看当前包的依赖情况,和包体组成情况.<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="string">"scripts"</span>:&#123;</span><br><span class="line">    <span class="string">"build:dll"</span>: <span class="string">"webpack --config ./build/webpack.dll.conf.js"</span>,</span><br><span class="line">    <span class="string">"build:dll:report"</span>: <span class="string">"npm run build:dll --report"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -545,10 +545,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cordova</a>
               </li>
              
@@ -557,11 +553,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color1">cheatsheet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -569,11 +565,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -589,7 +589,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
